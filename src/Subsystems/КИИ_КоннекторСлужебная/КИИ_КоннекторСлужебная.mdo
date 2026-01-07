@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="aa30a2c2-54e5-4001-ab21-1bb24b39d10e">
+  <name>КИИ_КоннекторСлужебная</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор служебная</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>CommonModule.КИИ_КоннекторИИ</content>
+  <content>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</content>
+  <content>Role.КИИ_БазовыеПрава</content>
+  <content>Role.КИИ_ПолныеПрава</content>
+</mdclass:Subsystem>

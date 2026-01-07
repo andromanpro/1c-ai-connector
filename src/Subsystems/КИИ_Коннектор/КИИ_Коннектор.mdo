@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b43e9caa-ecd3-4fdc-8394-f3c94f0df0e2">
+  <name>КИИ_Коннектор</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор ИИ</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.КИИ_КартинкаПодсистемы</picture>
+  </picture>
+  <content>Catalog.КИИ_МоделиИИ</content>
+  <content>Catalog.КИИ_ЭкспертыИИ</content>
+  <content>Enum.КИИ_ТипыФорматовAPI</content>
+  <content>Enum.КИИ_ТипыАвторизации</content>
+  <content>DataProcessor.КИИ_ТестИИ</content>
+  <content>InformationRegister.КИИ_ЛогЗапросовИИ</content>
+  <content>CommonPicture.КИИ_КартинкаПодсистемы</content>
+</mdclass:Subsystem>

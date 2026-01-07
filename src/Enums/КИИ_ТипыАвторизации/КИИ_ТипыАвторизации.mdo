@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4bcdd79f-e0cb-4cbb-a00f-e2b558a30937">
+  <producedTypes>
+    <refType typeId="7bd954bb-ce80-45d6-8196-a78a7274afa4" valueTypeId="605d6500-d432-4f7c-88eb-9ec5a5062fc3"/>
+    <listType typeId="447b4acb-6b8f-449e-bca4-29bc4d8d37a1" valueTypeId="7a4db12d-3a3e-452a-93bf-1250fcce4e08"/>
+    <managerType typeId="134a9ad0-79e8-4f43-be95-065404c48a6f" valueTypeId="bdb9d4f7-1529-4f50-beaf-a3f42468d830"/>
+  </producedTypes>
+  <name>КИИ_ТипыАвторизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы авторизации</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="d3eb649b-0494-46b6-bacc-da2309595e6f">
+    <name>ApiKey</name>
+    <synonym>
+      <key>ru</key>
+      <value>Api key</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a419bfac-9b98-42f9-97f4-eff9686542be">
+    <name>Bearer</name>
+    <synonym>
+      <key>ru</key>
+      <value>Bearer Token</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4710b232-2842-44bf-94e4-20ad6affb2d5">
+    <name>OAuth2ClientCredentials</name>
+    <synonym>
+      <key>ru</key>
+      <value>OAuth 2.0 Client Credentials</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="49539956-3db7-4344-9e4f-2e4bb19c5c8d">
+    <name>XApiKey</name>
+    <synonym>
+      <key>ru</key>
+      <value>x-api-key</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="19265893-598d-46aa-afed-70494d3e07f0">
+  <producedTypes>
+    <refType typeId="9bf274c4-48f0-4bc7-b850-be349ad9bcfe" valueTypeId="d35a01af-f9c5-46eb-bad8-4a5ec68de4a4"/>
+    <listType typeId="fffc7d68-88ed-44f8-91fa-9b6cc0336abf" valueTypeId="406054f1-e993-4e74-be5c-67b188b3251f"/>
+    <managerType typeId="7c8f5136-991a-4931-be77-6825a69fee86" valueTypeId="6fe9f79f-b6b1-4400-89bb-6741cc073bbc"/>
+  </producedTypes>
+  <name>КИИ_ТипыФорматовAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы форматов API</value>
+  </synonym>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="818759c4-f7ce-4619-83c4-225f267afc6a">
+    <name>Anthropic</name>
+    <synonym>
+      <key>ru</key>
+      <value>Anthropic</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="a6455a93-04ed-4e64-8915-2917eb7f44c2">
+    <name>Google</name>
+    <synonym>
+      <key>ru</key>
+      <value>Google Gemini</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2f422719-6b6d-4e95-a88b-dae14309c2a8">
+    <name>OpenAI_Compatible</name>
+    <synonym>
+      <key>ru</key>
+      <value>OpenAI-совместимый</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c73de89e-3825-4868-ad0c-a7757e27769b">
+    <name>Yandex</name>
+    <synonym>
+      <key>ru</key>
+      <value>Yandex</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2433ee4a-cec3-41e4-94d0-531118019fff">
+    <name>GigaChat</name>
+    <synonym>
+      <key>ru</key>
+      <value>Gigachat</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

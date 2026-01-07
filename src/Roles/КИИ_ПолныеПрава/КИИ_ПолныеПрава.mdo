@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a3b824f7-f2be-4e53-a4a1-fa18ca43bd8c">
+  <name>КИИ_ПолныеПрава</name>
+  <synonym>
+    <key>ru</key>
+    <value>КИИ полные права</value>
+  </synonym>
+</mdclass:Role>

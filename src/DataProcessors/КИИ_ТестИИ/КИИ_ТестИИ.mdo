@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d42ca800-f3ce-4d4d-a2e1-d85702a80243">
+  <producedTypes>
+    <objectType typeId="46d05663-c7b5-40d8-8bb6-36e4e8edbc7a" valueTypeId="41125c08-9a4a-46ca-aa31-3bb86bd72110"/>
+    <managerType typeId="06b52eeb-562d-46eb-aa08-ea48d90d55a6" valueTypeId="e5dbc5ff-182c-4bc9-a06a-ca23c84fa941"/>
+  </producedTypes>
+  <name>КИИ_ТестИИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тест ИИ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_ТестИИ.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="8447382b-f13f-4eff-8d3e-d2edfa32ca4e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0605d1da-92cc-4046-9d01-3d7d8450d27e">
+    <name>ШаблонДиалога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон диалога</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>
