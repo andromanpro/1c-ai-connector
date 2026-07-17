@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b719978-66d3-4772-a7c7-e5ccc5ff90e1">
+  <name>КИИ_HTTPКлиент</name>
+  <synonym>
+    <key>ru</key>
+    <value>КИИ: HTTP клиент</value>
+  </synonym>
+  <comment>HTTP-клиент для расширения ИИКона. Функции HTTP-запросов, работы с JSON и преобразования типов. Адаптация на основе OpenIntegrations (MIT, Anton Tsitavets).</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

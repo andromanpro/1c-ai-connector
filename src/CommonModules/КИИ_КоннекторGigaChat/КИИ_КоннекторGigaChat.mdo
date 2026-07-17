@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e73b164a-c5b7-4c17-8f92-8d002205021a">
+  <name>КИИ_КоннекторGigaChat</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор GigaChat</value>
+  </synonym>
+  <comment>Провайдер-модуль GigaChat (Sber). Отличается от OpenAI только заголовками и авторизацией; формат тела и ответа — OpenAI-совместимый, делегируется на КИИ_КоннекторOpenAI.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

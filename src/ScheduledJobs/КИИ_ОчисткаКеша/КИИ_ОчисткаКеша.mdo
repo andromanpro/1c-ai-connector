@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="323529df-e2b6-49e6-b40e-b7fe08193736">
+  <name>КИИ_ОчисткаКеша</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очистка кеша ответов ИИ</value>
+  </synonym>
+  <comment>Удаляет просроченные записи из РегистраСведений.КИИ_КешОтветовИИ (ДатаДо &lt; ТекущаяДатаСеанса). Расписание (реком.: раз в сутки 03:00) и use настроит админ при внедрении.</comment>
+  <methodName>CommonModule.КИИ_КоннекторИИ.ОчиститьКешПросроченных</methodName>
+  <key>КИИ_Кеш</key>
+  <use>true</use>
+</mdclass:ScheduledJob>

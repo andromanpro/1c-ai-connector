@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c0d89d66-375b-48f0-8ede-48ac72f822f5">
+  <name>КИИ_СерверMCPРеестр</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Реестр инструментов</value>
+  </synonym>
+  <comment>Container-pattern: рефлексия по составу подсистемы Инструменты, агрегирование декларации tools (имя, описание, JSON-schema) через ДобавитьИнструменты(...) каждого ОМ-инструмента.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

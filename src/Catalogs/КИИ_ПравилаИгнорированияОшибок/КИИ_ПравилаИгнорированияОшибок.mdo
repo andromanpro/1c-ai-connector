@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2f0e818b-0207-49b1-84b3-95c2423a7b92">
+  <producedTypes>
+    <objectType typeId="1d4602ba-7720-4418-a2bd-6e10696270cc" valueTypeId="c6546b79-3f9c-4bcd-96f9-54abcec1d852"/>
+    <refType typeId="35fcf45c-a81b-45d2-80a5-9c9cdc2b221f" valueTypeId="ff67a47e-c76b-437a-a27d-ff73775362d7"/>
+    <selectionType typeId="ec39b16b-d623-4f66-a7a2-f123cf81327a" valueTypeId="1b5b8d0a-da98-4e5a-a4cc-502eb4d9c949"/>
+    <listType typeId="d213ac58-4b24-48e4-b252-5dd45d3c853b" valueTypeId="f85dd928-ace9-4a5f-93de-9e71e6988c9e"/>
+    <managerType typeId="a23fa7e3-8e63-46be-8379-704f90b5f099" valueTypeId="e27d7c24-cc71-4f96-a24b-23fe6583cf8b"/>
+  </producedTypes>
+  <name>КИИ_ПравилаИгнорированияОшибок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила игнорирования ошибок</value>
+  </synonym>
+  <comment>Правила подавления ошибок мониторинга: совпавшая ошибка помечается Игнорировать на этапе сбора (не идёт ни в анализ, ни в телеграм).</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <descriptionLength>150</descriptionLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <defaultListForm>Catalog.КИИ_ПравилаИгнорированияОшибок.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="3b1d9b68-be72-43f5-ae60-e08e3fed1947">
+    <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
+    <comment>Совпадение по имени события (подстрока, пустое = любое)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="42ada1ff-03bb-4c13-ad26-0fc983bf2fa6">
+    <name>Метаданные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метаданные</value>
+    </synonym>
+    <comment>Совпадение по метаданным (подстрока)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="30b41518-46dc-4057-81b0-a6802039d9d2">
+    <name>ТекстСодержит</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст содержит</value>
+    </synonym>
+    <comment>Совпадение по подстроке текста ошибки</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="a3ef7f34-64c1-4c38-a433-f375b17aca64">
+    <name>Активно</name>
+    <synonym>
+      <key>ru</key>
+      <value>Активно</value>
+    </synonym>
+    <comment>Правило включено</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <forms uuid="60d55536-bf85-4af5-a3f8-183cd0679048">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

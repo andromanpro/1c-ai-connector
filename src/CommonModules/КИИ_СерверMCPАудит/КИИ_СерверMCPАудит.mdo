@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d3d73a6-8231-4982-945f-cbbda2f610b1">
+  <name>КИИ_СерверMCPАудит</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Аудит</value>
+  </synonym>
+  <comment>Запись audit log: журнал регистрации + регистр сведений КИИ_СерверMCPАудитВызовов. Не сохраняет secrets — только хеш параметров.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

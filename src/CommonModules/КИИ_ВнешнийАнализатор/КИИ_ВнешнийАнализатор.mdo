@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4e53dc8-c6e7-4b67-af54-fb1cdf70c535">
+  <name>КИИ_ВнешнийАнализатор</name>
+  <synonym>
+    <key>ru</key>
+    <value>Внешний анализатор кода</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

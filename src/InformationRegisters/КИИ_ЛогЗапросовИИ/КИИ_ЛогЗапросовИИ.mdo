@@ -16,6 +16,7 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КИИ_ЛогЗапросовИИ.Form.ФормаЗаписи</defaultRecordForm>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Active</name>
@@ -56,6 +57,10 @@
     </pages>
   </help>
   <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Журнал запросов ИИ</value>
+  </listPresentation>
   <resources uuid="d9a3c6a9-057e-4ed1-8263-5ea4ba98a264">
     <name>ВходныеТокены</name>
     <synonym>
@@ -101,16 +106,16 @@
       <value>Всего токенов</value>
     </synonym>
     <type>
-      <types>String</types>
-      <stringQualifiers/>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
   </resources>
   <resources uuid="c070576e-3009-4629-aef4-f510711232bf">
     <name>ВыходныеТокеныВКеше</name>
@@ -171,6 +176,20 @@
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>
   </resources>
+  <resources uuid="09910f64-890d-4e4c-904f-a8fe90efb4ed">
+    <name>ИзКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Из кэша</value>
+    </synonym>
+    <comment>Истина — ответ вернулся из локального кеша, не от провайдера.</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
   <attributes uuid="73937ca5-67c5-4b22-9313-31a30ba2b408">
     <name>IDЗапроса</name>
     <synonym>
@@ -188,9 +207,7 @@
     <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="dd379cda-c63d-4745-b840-7383fd684dd4">
     <name>ДатаЗапроса</name>
@@ -255,9 +272,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="43f63d8e-ba88-4a93-8d6f-8a699a2cefc6">
     <name>ТипОбъекта</name>
@@ -275,9 +290,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="f584e9ec-4ea8-48f5-8f25-d7a5ebce9629">
     <name>ТарифСервиса</name>
@@ -295,9 +308,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="9f3c175f-c574-4e6a-8377-1471ff1d0c4f">
     <name>ХэшМодели</name>
@@ -315,9 +326,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="6ccbe4ff-1d39-4fd5-84e6-190d20af7c47">
     <name>ПричинаЗавершения</name>
@@ -335,9 +344,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="2373fcef-ecd4-40de-b7dc-f377dceb47a1">
     <name>ТекстОшибки</name>
@@ -353,9 +360,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="bc4f0237-71e3-4913-8379-9588af01d1fb">
     <name>ЭтоОшибка</name>
@@ -387,9 +392,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="4e8c329c-6cb0-45ea-aeef-46b9563db85a">
     <name>ПользовательскийПромпт</name>
@@ -405,9 +408,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="6d7fc10c-21f5-444b-a828-f4ef20e371da">
     <name>СистемныйПромпт</name>
@@ -423,9 +424,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
   </attributes>
   <attributes uuid="0c9681d7-bbd1-4454-9444-2958570a97c2">
     <name>ИсторияСообщенийJSON</name>
@@ -441,9 +440,20 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="d18a82ae-c4f6-47e9-901d-fcf16649a38c">
+    <name>КорреляцияАгента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Корреляция агента</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
   </attributes>
   <dimensions uuid="a87aa4a0-d2e9-49b3-9da6-29bda0d1b114">
     <name>УниверсальнаяДатаВМиллисекундах</name>
@@ -483,4 +493,13 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <mainFilter>true</mainFilter>
   </dimensions>
+  <forms uuid="22e26a89-cde0-4c1c-8cbe-57e762aaa2a8">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:InformationRegister>

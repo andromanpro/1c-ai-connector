@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="93949e54-5c5b-40cd-9b6a-2e6f6b2f449d">
+  <producedTypes>
+    <managerType typeId="e7932a10-53e1-4d7d-a3a4-166ebea954e9" valueTypeId="781e86cb-c956-425d-a2fa-758372a49437"/>
+    <valueManagerType typeId="5ec918dd-68b5-4522-bbf7-e1fde8b986bb" valueTypeId="c9a89dc6-a5dc-404e-b15e-f8ec2c63002d"/>
+    <valueKeyType typeId="98d6f9b2-e5d9-472a-97ac-ae9425c927fc" valueTypeId="1a28fba4-c323-4512-9660-768dcbcd2b14"/>
+  </producedTypes>
+  <name>КИИ_АдресХостаШимаАудитора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аудитор кода: хост шима (override)</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>200</length>
+    </stringQualifiers>
+  </type>
+</mdclass:Constant>

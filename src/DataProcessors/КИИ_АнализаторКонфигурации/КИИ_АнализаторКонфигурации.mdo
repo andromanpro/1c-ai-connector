@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b51f7aac-582a-4cf8-b167-96423ce16cc1">
+  <producedTypes>
+    <objectType typeId="9264ba3c-0375-4ca7-a2e7-86341cda9c7d" valueTypeId="82a56e98-afcb-4417-92ee-32aee92d0f15"/>
+    <managerType typeId="3cb467d1-c675-41bd-a3f1-4c1df32871ac" valueTypeId="d7896240-0c73-447d-9f64-3c6e72b29608"/>
+  </producedTypes>
+  <name>КИИ_АнализаторКонфигурации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализатор конфигурации</value>
+  </synonym>
+  <comment>Интерактивный инструмент анализа конфигурации: дерево метаданных, XML-дамп, EDT-интеграция</comment>
+  <attributes uuid="558e5161-b3f0-4c50-a7d9-29cb4b282ab5">
+    <name>ФильтрТиповМетаданных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фильтр типов метаданных</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c227f2a7-5ab6-4003-80f4-bfb1a596dd71">
+    <name>ПутьXMLФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Путь XML файла</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1a912237-3332-4a7a-872a-5a45e62db4f6">
+    <name>ИмяПроектаEDT</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя проекта EDT</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2483745c-cec7-4a4f-8da9-e0790b8162ff">
+    <name>ТекстПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст поиска</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="70e5e1f7-d7f7-4a78-84fe-6e75b056dca2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Анализатор конфигурации</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

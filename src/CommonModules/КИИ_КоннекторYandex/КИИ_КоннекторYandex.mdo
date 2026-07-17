@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1467cc4c-0cad-422a-86c6-6497ffe388ae">
+  <name>КИИ_КоннекторYandex</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор Yandex</value>
+  </synonym>
+  <comment>Провайдер-модуль YandexGPT (Yandex Cloud Foundation Models). Контракт: ИмяФормата, ПоддерживаетМультимодал, СформироватьЗаголовки, СформироватьТелоЗапроса, РазобратьОтвет.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2df9751a-7fdf-4ad6-a8f3-5acd65e7424c">
+  <producedTypes>
+    <refType typeId="a26446ec-24d3-4a7d-9f80-36a04fc3ebaa" valueTypeId="fd4f3829-d10a-4057-b682-64117bf1ae5a"/>
+    <listType typeId="6ba933f1-8fdc-4aca-8c62-51d15a3b6cc0" valueTypeId="6069164e-9960-4670-8624-345ce3d45241"/>
+    <managerType typeId="bf0671d8-8cdd-4f31-85f5-37a5b727eea7" valueTypeId="af32d682-6b36-4073-acbd-bd86d03e44d4"/>
+  </producedTypes>
+  <name>КИИ_ТипыМоделей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы моделей</value>
+  </synonym>
+  <comment>Разделение моделей ИИ по назначению: Чат (генерация) / Эмбеддинг (векторизация).</comment>
+  <enumValues uuid="9791073a-48d9-4dd2-958d-b12174e648f4">
+    <name>Чат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Чат</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="3ba2c5a7-2809-4400-b1f8-49e2c9429251">
+    <name>Эмбеддинг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эмбеддинг</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

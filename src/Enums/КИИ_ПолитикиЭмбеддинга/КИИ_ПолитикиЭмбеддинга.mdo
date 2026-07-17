@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2a4878c1-a004-4e14-aa00-c8013365d182">
+  <producedTypes>
+    <refType typeId="6a33baa9-bded-44a1-934f-76f3e986664f" valueTypeId="ad11cc75-f8d8-4a74-9c79-21545a17881a"/>
+    <listType typeId="3ce76ea3-d22e-4cb9-ba71-4fcf916c8a0d" valueTypeId="05b05eec-f59f-4b10-bb7f-8936c7932788"/>
+    <managerType typeId="aae98baa-b2fe-47d0-8650-6e69e6d09727" valueTypeId="aa5b2a5a-5a9a-4a6b-9850-39d2bfca665a"/>
+  </producedTypes>
+  <name>КИИ_ПолитикиЭмбеддинга</name>
+  <synonym>
+    <key>ru</key>
+    <value>Политики эмбеддинга</value>
+  </synonym>
+  <comment>Политика egress для эмбеддинга содержимого базы знаний во внешний API. ЗапрещеноВнешнее / ТолькоРФ / РазрешеноВнешнее. Применяется на категории и переопределяется на документе базы знаний.</comment>
+  <enumValues uuid="92e892f3-e3ef-4b74-a409-b751feee81b6">
+    <name>ЗапрещеноВнешнее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запрещено внешнее</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="00ba217c-d323-4a20-baa5-74e509289911">
+    <name>ТолькоРФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Только РФ</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c2454907-3952-472b-af3e-70671c54c5bb">
+    <name>РазрешеноВнешнее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разрешено внешнее</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

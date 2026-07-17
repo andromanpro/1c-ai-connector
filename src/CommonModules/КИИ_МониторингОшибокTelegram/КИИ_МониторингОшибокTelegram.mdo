@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fd3e8999-2236-41a0-b952-2074d058489c">
+  <name>КИИ_МониторингОшибокTelegram</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: Telegram</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

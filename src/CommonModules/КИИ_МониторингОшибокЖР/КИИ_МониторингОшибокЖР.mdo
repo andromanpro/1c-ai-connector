@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c51f7a8b-9de5-41bc-9065-d882b6b99cba">
+  <name>КИИ_МониторингОшибокЖР</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: чтение ЖР</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

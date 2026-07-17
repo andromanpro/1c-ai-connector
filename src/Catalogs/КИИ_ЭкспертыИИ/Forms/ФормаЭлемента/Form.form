@@ -157,6 +157,7 @@
     <extInfo xsi:type="form:InputFieldExtInfo">
       <height>10</height>
       <autoMaxHeight>true</autoMaxHeight>
+      <verticalStretch>true</verticalStretch>
       <wrap>true</wrap>
       <multiLine>true</multiLine>
       <extendedEditMultipleValues>true</extendedEditMultipleValues>

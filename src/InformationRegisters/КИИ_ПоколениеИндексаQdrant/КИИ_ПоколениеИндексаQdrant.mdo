@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="530d56d1-daef-4724-80b5-76f442939769">
+  <producedTypes>
+    <selectionType typeId="c480d434-005f-4475-baa2-f6f24b05daef" valueTypeId="c9fb7963-98fd-4965-a10c-bd60a5bb3122"/>
+    <listType typeId="2c27fb4d-d312-410a-88d2-bb15cc22e995" valueTypeId="955f14f0-a26d-4cdd-b0a6-2b0aa9d10e6b"/>
+    <managerType typeId="28071fbf-06e7-47fb-ae20-beb3422b55bc" valueTypeId="9fa10378-0835-46c5-8ca6-724350f4f988"/>
+    <recordSetType typeId="7d332cdf-4b31-488f-b924-846135ccef94" valueTypeId="35bce508-786c-449a-b3b0-baf97386e8cb"/>
+    <recordKeyType typeId="8f186ffc-0a6b-4a13-8037-bc839384a9bc" valueTypeId="bc7601bc-9ef6-439f-8c63-8e08f0fd9cd2"/>
+    <recordType typeId="32aba2c5-d524-403e-869e-7913d92b51d6" valueTypeId="9210206c-bd93-4543-8b5e-702feb84aed3"/>
+    <recordManagerType typeId="75228a12-77df-4e79-a1cc-9ace186d32df" valueTypeId="4bec4228-86cd-44fe-b98d-5d727d3103b7"/>
+  </producedTypes>
+  <name>КИИ_ПоколениеИндексаQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поколение индекса Qdrant</value>
+  </synonym>
+  <comment>Build-marker: поколение индекса по модели + флаг ИндексПостроен (readiness-gate). Независимый непериодический.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Поколение индекса Qdrant</value>
+  </recordPresentation>
+  <resources uuid="3459b0ea-42f0-4b78-8abc-8f8fa3f79e68">
+    <name>Поколение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поколение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="53166972-a276-4ab7-8b3a-1b1703600cf3">
+    <name>ИндексПостроен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индекс построен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2d828cb0-d895-4255-839a-4d4a7ac26b38">
+    <name>ДатаПостроения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата построения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2c7eae10-1ff5-41dc-b7b0-b311b4472ff5">
+    <name>Размерность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размерность</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="175011ff-9164-4f62-8c56-e21ce4bcc73b">
+    <name>КодМодели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код модели</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

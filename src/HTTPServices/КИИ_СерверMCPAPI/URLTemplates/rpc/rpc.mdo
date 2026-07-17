@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPServiceURLTemplate xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="76112a14-db11-4cc7-9d4b-dc9951bc5223">
+  <name>rpc</name>
+  <urlTemplate>/rpc</urlTemplate>
+</mdclass:HTTPServiceURLTemplate>

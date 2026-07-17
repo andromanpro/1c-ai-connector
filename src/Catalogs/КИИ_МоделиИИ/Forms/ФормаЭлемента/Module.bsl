@@ -61,10 +61,13 @@
 
 #Область РаботаСAPIКлючом
 
+//@skip-check module-unused-method
 &НаСервере
 Процедура ЗагрузитьAPIКлюч()
 	
 	Попытка
+
+		//@skip-check bsl-legacy-check-form-attribute-property-assign
 		КлючAPI = ОбщегоНазначения.ПрочитатьДанныеИзБезопасногоХранилища(
 			Объект.Ссылка,
 			"APIКлюч");

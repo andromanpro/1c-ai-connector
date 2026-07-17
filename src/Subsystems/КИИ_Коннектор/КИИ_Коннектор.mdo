@@ -23,4 +23,23 @@
   <content>InformationRegister.КИИ_ЛогЗапросовИИ</content>
   <content>CommonPicture.КИИ_КартинкаПодсистемы</content>
   <content>DataProcessor.КИИ_ТестМаркдаунПарсера</content>
+  <content>DataProcessor.КИИ_ГенераторДиаграмм</content>
+  <content>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</content>
+  <content>CommonModule.КИИ_КоннекторИИ</content>
+  <content>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</content>
+  <content>CommonModule.КИИ_МониторингОшибок</content>
+  <content>CommonModule.КИИ_TelegramУведомления</content>
+  <content>CommonModule.КИИ_HTTPКлиент</content>
+  <content>CommonModule.КИИ_АнализКонфигурации</content>
+  <content>CommonModule.КИИ_ВнешнийАнализатор</content>
+  <content>InformationRegister.КИИ_МониторингОшибокЖурнал</content>
+  <content>InformationRegister.КИИ_МониторингОшибокСтатистика</content>
+  <content>DataProcessor.КИИ_АнализаторКонфигурации</content>
+  <content>DataProcessor.КИИ_ДашбордОшибок</content>
+  <content>Catalog.КИИ_ПравилаИгнорированияОшибок</content>
+  <content>Subsystem.КИИ_СерверMCP</content>
+  <content>DataProcessor.КИИ_СерверMCPНастройки</content>
+  <content>Catalog.КИИ_КатегорииЗнаний</content>
+  <content>Catalog.КИИ_БазаЗнаний</content>
+  <content>Catalog.КИИ_ФрагментыЗнаний</content>
 </mdclass:Subsystem>

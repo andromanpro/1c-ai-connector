@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dcab6493-225f-4bac-a6c1-32273f2ef609">
+  <name>КИИ_КоннекторИИОбщий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор ИИ общий</value>
+  </synonym>
+  <comment>Общие хелперы для всех провайдер-модулей КИИ_Коннектор&lt;*>: проверка ошибки в ответе API, типы Структура/Массив.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

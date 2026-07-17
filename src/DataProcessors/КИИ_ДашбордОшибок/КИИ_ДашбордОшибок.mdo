@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fc462134-49a2-4de6-9e43-517814d6d823">
+  <producedTypes>
+    <objectType typeId="62ee7e17-4fb0-42be-81d6-603dd48eaf57" valueTypeId="f2b6950b-f3dd-40dc-83e1-baf237cbcb69"/>
+    <managerType typeId="e47c2c69-0c92-4061-bfd1-4b5c17ec4430" valueTypeId="db65cf57-4d9a-4cdf-9bd3-8997f905b4cb"/>
+  </producedTypes>
+  <name>КИИ_ДашбордОшибок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дашборд ошибок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_ДашбордОшибок.Form.Форма</defaultForm>
+  <forms uuid="3eca5777-0fa9-4264-8de2-e495cdec2edd">
+    <name>Форма</name>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

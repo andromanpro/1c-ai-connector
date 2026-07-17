@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPServiceMethod xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ed950135-2f1b-44eb-abca-b2dffbbe6bd5">
+  <name>POST</name>
+  <httpMethod>POST</httpMethod>
+  <handler>HTTPServices.КИИ_СерверMCPAPI.URLTemplates.rpc.Methods.POST</handler>
+</mdclass:HTTPServiceMethod>

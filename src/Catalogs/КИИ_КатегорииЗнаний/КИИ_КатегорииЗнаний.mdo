@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc4d694d-786e-44d4-b14a-4625ab35d4c7">
+  <producedTypes>
+    <objectType typeId="f9cf29c9-e58e-4953-8d07-62f6ee0ec145" valueTypeId="9bec2d4a-0aa8-46c5-85de-506429ea794f"/>
+    <refType typeId="247d3b59-a91a-4259-abcc-69ba12bb0609" valueTypeId="aab3108e-d3ce-4179-8283-11b87efe6d0f"/>
+    <selectionType typeId="a2f02853-7727-46b1-8061-2e1de63f0db2" valueTypeId="b50074e8-51e2-434e-a762-38843d484e02"/>
+    <listType typeId="a1131b76-5c1b-408e-b39a-1a6d7669db4d" valueTypeId="74ba4e8e-7852-46c1-ac95-4f2c41f736ea"/>
+    <managerType typeId="b2e0c121-b785-49f0-87a8-f85181df126e" valueTypeId="ad9b900c-0278-4feb-b51e-ee347262d2a7"/>
+  </producedTypes>
+  <name>КИИ_КатегорииЗнаний</name>
+  <synonym>
+    <key>ru</key>
+    <value>Категории знаний</value>
+  </synonym>
+  <comment>Категории базы знаний RAG (БСП-доки / стандарты / опыт). Несет политику egress для эмбеддинга.</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Категория данных</value>
+  </objectPresentation>
+  <descriptionLength>150</descriptionLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <attributes uuid="8fac0118-4c58-4237-b443-2826899205c5">
+    <name>ПолитикаЭмбеддинга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Политика эмбеддинга</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КИИ_ПолитикиЭмбеддинга</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+</mdclass:Catalog>

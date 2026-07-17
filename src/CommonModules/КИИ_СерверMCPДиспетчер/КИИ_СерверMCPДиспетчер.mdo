@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d83bb97c-0f77-41d6-9371-e62fe475ead3">
+  <name>КИИ_СерверMCPДиспетчер</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Диспетчер</value>
+  </synonym>
+  <comment>JSON-RPC dispatcher: парсит payload, валидирует whitelist MCP-методов (tools/list, tools/call), делегирует Реестру или конкретному Инструменту, формирует success/error response.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

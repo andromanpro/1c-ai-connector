@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="20fc2694-eb97-4db3-ada0-6a2cd77670d2">
+  <producedTypes>
+    <refType typeId="016401ad-01a9-4dea-bad9-8e05af98310e" valueTypeId="c39e56f9-8847-4a90-90ba-2f7c792e4526"/>
+    <listType typeId="8c5bee42-9941-48e7-a44a-31416b6c6d81" valueTypeId="5712a0fd-555a-4f24-91e6-29e1c387ba78"/>
+    <managerType typeId="5e4f76d8-afb5-4a4e-af5f-ed73dc1228cf" valueTypeId="260cf042-7dfe-419d-a3af-1846abf4cbde"/>
+  </producedTypes>
+  <name>КИИ_БэкендыВекторногоПоиска</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бэкенды векторного поиска</value>
+  </synonym>
+  <comment>Активный бэкенд RAG-поиска: Нативный (линейный dot в 1С) или Qdrant (внешний ANN).</comment>
+  <enumValues uuid="e329fc07-10f7-4c8e-9d95-4ea247297bb5">
+    <name>Нативный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нативный</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4764fc31-2916-48d8-98bc-4316af64ae8d">
+    <name>Qdrant</name>
+    <synonym>
+      <key>ru</key>
+      <value>Qdrant</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

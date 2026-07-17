@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7c55a7ea-76bc-463a-8724-784205fbcbb5">
+  <producedTypes>
+    <selectionType typeId="d6e08990-4700-44af-88bc-36e93b4008a2" valueTypeId="0b05eab1-b397-450e-b75f-9bd2187f00bc"/>
+    <listType typeId="8985cc85-bfc0-4310-9d0b-96fde7a0fd53" valueTypeId="a1f55dc2-029c-4cdc-a01d-3abac22d1741"/>
+    <managerType typeId="d93dab76-ebec-4470-86ff-a1b09191ed5f" valueTypeId="3273011a-7d32-45da-a940-dbf66a9b70ef"/>
+    <recordSetType typeId="9f2dafab-ce48-4549-a230-f8321844b0da" valueTypeId="1a8e5d0a-41ff-4e6a-8a2a-f0e0947b654a"/>
+    <recordKeyType typeId="71dc5e1b-6b6f-4b0e-8d88-0489dd5fca5c" valueTypeId="e750cee6-d270-4ede-aa95-5c5fed85890e"/>
+    <recordType typeId="32393dd7-0f99-4126-983d-f44ec2ab58a4" valueTypeId="83c11bd5-66d8-4971-aa74-ce34b77600e1"/>
+    <recordManagerType typeId="26e5c4b0-57bb-4af7-a20d-3010b6d4f00e" valueTypeId="dfde972b-282e-438d-8a16-1aa8512190f5"/>
+  </producedTypes>
+  <name>КИИ_СерверMCPОграниченияВызовов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Ограничения вызовов</value>
+  </synonym>
+  <comment>Скользящее окно для rate-limit: счетчик вызовов на (Вызывающий, КодМинуты). Чистка старых записей вне scope v0.1.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Счетчик вызовов MCP за минуту</value>
+  </recordPresentation>
+  <resources uuid="fdf78ebd-b716-4ee7-a3ff-879788d6d1c5">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество вызовов</value>
+    </synonym>
+    <comment>Накопленный счетчик за минуту. Reset происходит сменой КодМинуты.</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="79214b63-fddf-41fb-b71b-484de4d6a56c">
+    <name>Вызывающий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вызывающий</value>
+    </synonym>
+    <comment>Идентификатор клиента (имя пользователя или IP).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+  <dimensions uuid="dca08d09-8476-4846-8ce2-ff4908b1d439">
+    <name>КодМинуты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код минуты</value>
+    </synonym>
+    <comment>Bucket-ключ минуты в формате YYYY-MM-DD-HH-mm (UTC).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>16</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

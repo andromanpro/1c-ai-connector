@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4037f25b-3de1-4c9a-b434-75b91941a2de">
+  <producedTypes>
+    <selectionType typeId="514f999f-c12b-4c6a-87f3-339938ae71f0" valueTypeId="c6adaa85-f3cf-4b80-a846-1307309e579f"/>
+    <listType typeId="7100226a-e51f-4cb8-b277-bfd38e4e86c0" valueTypeId="ee5f81bc-9c08-430a-ba6b-f1da535f960e"/>
+    <managerType typeId="6b5bf819-76d6-4793-a3a2-5e5d11900067" valueTypeId="b42b1948-5ce1-45b6-992d-04024903e191"/>
+    <recordSetType typeId="86fc182d-6b3b-4def-91c7-f644ac50bc50" valueTypeId="0b8d065a-8d9f-4e33-9f1e-1fa1a179d156"/>
+    <recordKeyType typeId="a7cb68bb-b5db-4ea6-86c1-28492ff44043" valueTypeId="d127479d-9a4c-4489-aaac-be40d2787ef7"/>
+    <recordType typeId="13bff61d-5128-485a-8bf3-5de7fa8bfcf6" valueTypeId="750aae77-3857-4a39-8f43-4d12357615f3"/>
+    <recordManagerType typeId="55798ed4-fb48-41ab-b238-23b499881762" valueTypeId="4d92f665-16fe-476d-aa71-0ebabebe108c"/>
+  </producedTypes>
+  <name>КИИ_КешОтветовИИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кеш ответов ИИ</value>
+  </synonym>
+  <comment>Локальный 1С-кеш ответов ИИ (Phase 1). Ключ = SHA256 по нормализованному запросу (модель+промпт+инструменты+вложения). TTL через реквизит ДатаДо + регламентное задание КИИ_ОчисткаКеша.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Кешированный ответ ИИ</value>
+  </recordPresentation>
+  <resources uuid="9180831e-b5ae-4263-a7bf-33a79f300d5d">
+    <name>Модель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель</value>
+    </synonym>
+    <comment>Ссылка на модель ИИ, которой принадлежит кеш-запись (диагностика/отчеты).</comment>
+    <type>
+      <types>CatalogRef.КИИ_МоделиИИ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="034353b1-bba5-49da-8e4a-eb0a597c7407">
+    <name>ДатаСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <comment>Когда запись была закеширована.</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f19e2ad0-3a4a-48bc-94de-713c12bd31b9">
+    <name>РазмерБайт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размер (байт)</value>
+    </synonym>
+    <comment>Размер сериализованного Ответа (для cap-эвикции по объему).</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="09da52d6-2999-4b0d-bb75-2fda3305f50b">
+    <name>ВерсияСхемыКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия схемы кеша</value>
+    </synonym>
+    <comment>Версия контракта ключа, под которым была записана запись кеша. Если текущая Модель.ВерсияСхемыКеша отличается — запись протухла.</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="72cf9c93-d4ac-488c-a381-43720069d5d9">
+    <name>Ответ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответ</value>
+    </synonym>
+    <comment>Структура НовыйПараметрыОтветаИИ в ХранилищеЗначения (post-self-heal).</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="daa145a0-74ba-4e35-b4b1-3fd8d79e23ed">
+    <name>ДатаДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Действует до</value>
+    </synonym>
+    <comment>TTL записи. Если ДатаДо &lt; ТекущаяДатаСеанса() — запись протухла. Чистит регламентное задание КИИ_ОчисткаКеша.</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9b9b61d8-bdfa-4b0c-b2da-7a5b01d7725c">
+    <name>ХешЗапроса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш запроса</value>
+    </synonym>
+    <comment>SHA256-hex от нормализованного запроса. Первичный ключ кеша.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

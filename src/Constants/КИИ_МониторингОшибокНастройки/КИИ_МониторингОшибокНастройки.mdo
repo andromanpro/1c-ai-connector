@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8bdb559e-41e6-4139-8f48-5db15e86f0c6">
+  <producedTypes>
+    <managerType typeId="ccb5a9d0-785a-4bb2-9f0d-ad6fb1e5bb1e" valueTypeId="a7c4f29e-59a0-43b0-884e-69648f8190c0"/>
+    <valueManagerType typeId="7d38a653-0311-42f3-87b9-a7a7b75c8a84" valueTypeId="3c2856a9-46b2-4965-80b0-064c8dffb36f"/>
+    <valueKeyType typeId="03c9d134-5f64-4eb1-bbea-dce70ea04e0a" valueTypeId="9792aabb-76f3-44e8-8bc0-ba7489ed4ef1"/>
+  </producedTypes>
+  <name>КИИ_МониторингОшибокНастройки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: настройки (JSON)</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers/>
+  </type>
+</mdclass:Constant>

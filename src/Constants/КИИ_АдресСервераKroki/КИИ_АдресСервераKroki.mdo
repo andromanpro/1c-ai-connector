@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="60ec0298-9dcc-4b64-8e6f-121cafcdc98e">
+  <producedTypes>
+    <managerType typeId="4047a22f-e154-46d0-bc1f-874fa5913b50" valueTypeId="ea5e56ff-90eb-4d81-be18-a070f1d3507c"/>
+    <valueManagerType typeId="91d1928b-62bf-4f19-95ce-3b437bd02b5f" valueTypeId="734d126b-bdaa-440e-af30-e0ec810be049"/>
+    <valueKeyType typeId="cc59d258-a5c5-4dc3-ac65-bf525b126bc5" valueTypeId="d8f4ed45-0153-46e8-b3e9-ac39f5b92839"/>
+  </producedTypes>
+  <name>КИИ_АдресСервераKroki</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адрес сервера Kroki</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>200</length>
+    </stringQualifiers>
+  </type>
+</mdclass:Constant>

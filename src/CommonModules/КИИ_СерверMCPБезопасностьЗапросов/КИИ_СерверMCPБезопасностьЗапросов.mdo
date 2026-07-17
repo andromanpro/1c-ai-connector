@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7867fc2d-33b7-4359-9ef3-20248b27c6d2">
+  <name>КИИ_СерверMCPБезопасностьЗапросов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Безопасность запросов</value>
+  </synonym>
+  <comment>Валидация query text для execute_query: whitelist первого keyword (ВЫБРАТЬ/SELECT), запрет mutation keywords, обязательный limit (cap 1000), параметры только через &amp;.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0ef2ea3a-35f9-4bd7-bf68-a02566e85863">
+  <producedTypes>
+    <managerType typeId="b7359500-f02e-4a8e-86e6-02981923593b" valueTypeId="5a2bf43e-756a-406f-830b-4a379077defe"/>
+    <valueManagerType typeId="ccda82dd-4f21-4372-bf31-34fc8962c874" valueTypeId="64066f99-e860-4a4c-b740-08b91040a1f5"/>
+    <valueKeyType typeId="8d8439df-5371-4ba1-b196-7587175715c9" valueTypeId="900ef192-4a14-4367-9303-30aab572ae9a"/>
+  </producedTypes>
+  <name>КИИ_АдресПроксиИнтернет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адрес прокси-сервера для исходящих запросов к ИИ</value>
+  </synonym>
+  <comment>Адрес прокси-сервера в формате host:port для HTTP-запросов из КИИ_КоннекторИИ к LLM-провайдерам (OpenAI, OpenRouter, Helicone и т.д.). Пустое значение — без прокси (прямое подключение). Применяется в КИИ_КоннекторИИ.ПолучитьПрокси для http и https.</comment>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>50</length>
+    </stringQualifiers>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+</mdclass:Constant>

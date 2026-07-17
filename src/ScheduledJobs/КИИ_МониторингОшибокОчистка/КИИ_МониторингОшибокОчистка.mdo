@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="24661235-8f3e-4acc-b6f1-81f9161bf83c">
+  <name>КИИ_МониторингОшибокОчистка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: очистка устаревших данных</value>
+  </synonym>
+  <methodName>CommonModule.КИИ_МониторингОшибок.ВыполнитьОчисткуДанных</methodName>
+  <key>КИИ_МониторингОшибокОчистка</key>
+  <use>true</use>
+</mdclass:ScheduledJob>

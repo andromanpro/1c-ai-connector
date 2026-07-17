@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="899ecbf7-dd82-413b-94da-fa3026aed14a">
+  <producedTypes>
+    <objectType typeId="02151453-3195-41b0-bab6-65a2334b0c72" valueTypeId="fea2b748-1483-4757-80f8-c2e41778961c"/>
+    <managerType typeId="5ee7f389-a76d-45f8-a967-7ee2465e360d" valueTypeId="d962a0e8-68ac-48ec-9b8e-f4a590365f40"/>
+  </producedTypes>
+  <name>КИИ_ТестAPIГенераторДиаграмм</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тест API Генератора Диаграмм</value>
+  </synonym>
+  <forms uuid="68293509-d446-472e-8a30-651243cee917">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+  </forms>
+</mdclass:DataProcessor>

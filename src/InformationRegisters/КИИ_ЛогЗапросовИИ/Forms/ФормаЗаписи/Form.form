@@ -796,7 +796,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
+          <height>8</height>
           <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -837,7 +839,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
+          <height>6</height>
           <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -878,7 +882,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
+          <height>6</height>
           <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -947,7 +953,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
+          <height>8</height>
           <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -988,7 +996,9 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:InputFieldExtInfo">
+          <height>8</height>
           <autoMaxHeight>true</autoMaxHeight>
+          <verticalStretch>true</verticalStretch>
           <wrap>true</wrap>
           <multiLine>true</multiLine>
           <extendedEditMultipleValues>true</extendedEditMultipleValues>

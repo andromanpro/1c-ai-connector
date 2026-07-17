@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d36e7768-5025-4b36-87da-720096201888">
+  <name>КИИ_СерверMCPСокрытиеСекретов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Сокрытие секретов</value>
+  </synonym>
+  <comment>СкрытьСекретыВПараметрах: возвращает копию структуры с заменой значений sensitive-полей (password/token/key/secret/api_key) на &lt;redacted>.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

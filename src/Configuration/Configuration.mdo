@@ -20,13 +20,46 @@
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="9ccf9f3d-a4e1-47ed-a7ed-a354aed4f123"/>
   <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="066f8903-c1a5-4d8b-9685-00beaf8286da"/>
   <namePrefix>КИИ_</namePrefix>
-  <configurationExtensionCompatibilityMode>8.3.24</configurationExtensionCompatibilityMode>
+  <configurationExtensionCompatibilityMode>8.3.20</configurationExtensionCompatibilityMode>
   <configurationExtensionPurpose>Customization</configurationExtensionPurpose>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.0.3</version>
+  <version>1.3.0</version>
+  <content>Enum.КИИ_БэкендыВекторногоПоиска</content>
+  <content>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</content>
+  <content>InformationRegister.КИИ_ПоколениеИндексаQdrant</content>
+  <content>Constant.КИИ_ВерсияСхемыQdrant</content>
+  <content>Constant.КИИ_БэкендВекторногоПоиска</content>
+  <content>Constant.КИИ_QdrantАдрес</content>
+  <content>Constant.КИИ_ИдентификаторTenantQdrant</content>
+  <content>CommonModule.КИИ_RAGQdrant</content>
+  <content>ScheduledJob.КИИ_ОбработатьОчередьQdrant</content>
+  <content>ScheduledJob.КИИ_СверкаQdrant</content>
+  <content>ScheduledJob.КИИ_МониторингОшибокСборОшибок</content>
+  <content>ScheduledJob.КИИ_МониторингОшибокАнализИИ</content>
+  <content>CommonModule.КИИ_МониторингОшибокTelegram</content>
+  <content>CommonModule.КИИ_МониторингОшибокРегистры</content>
+  <content>CommonModule.КИИ_МониторингОшибокЖР</content>
+  <content>CommonModule.КИИ_МониторингОшибокАнализ</content>
+  <content>Role.КИИ_СерверMCPДиагностика</content>
+  <content>DataProcessor.КИИ_ДашбордОшибок</content>
+  <content>Constant.КИИ_МониторингОшибокНастройки</content>
+  <content>Constant.КИИ_МониторингОшибокМодельАнализа</content>
+  <content>Constant.КИИ_МониторингОшибокДатаСбора</content>
+  <content>CommonModule.КИИ_АгентАнализа</content>
+  <content>Constant.КИИ_АдресСервераKroki</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментДиаграмма</content>
+  <content>CommonTemplate.КИИ_ПромптМониторингаСистемный</content>
+  <content>CommonTemplate.КИИ_ПромптМониторингаПользовательский</content>
+  <content>CommonTemplate.КИИ_ПромптГлубокогоАнализа</content>
+  <content>CommonModule.КИИ_АудиторКода</content>
+  <content>ScheduledJob.КИИ_АудиторКодаАвтоанализ</content>
+  <content>Constant.КИИ_АдресХостаШимаАудитора</content>
+  <content>Constant.КИИ_ПортШимаАудитора</content>
+  <content>Catalog.КИИ_ПравилаИгнорированияОшибок</content>
+  <content>ScheduledJob.КИИ_СерверMCPАудитОчистка</content>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -50,16 +83,100 @@
   </languages>
   <subsystems>Subsystem.КИИ_Коннектор</subsystems>
   <subsystems>Subsystem.КИИ_КоннекторСлужебная</subsystems>
+  <subsystems>Subsystem.КИИ_СерверMCP</subsystems>
+  <subsystems>Subsystem.КИИ_СерверMCPИнструменты</subsystems>
   <commonPictures>CommonPicture.КИИ_КартинкаПодсистемы</commonPictures>
   <roles>Role.КИИ_БазовыеПрава</roles>
   <roles>Role.КИИ_ПолныеПрава</roles>
+  <roles>Role.КИИ_СерверMCPДиагностика</roles>
+  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаСистемный</commonTemplates>
+  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаПользовательский</commonTemplates>
+  <commonTemplates>CommonTemplate.КИИ_ПромптГлубокогоАнализа</commonTemplates>
+  <commonModules>CommonModule.КИИ_HTTPКлиент</commonModules>
+  <commonModules>CommonModule.КИИ_TelegramУведомления</commonModules>
+  <commonModules>CommonModule.КИИ_АнализКонфигурации</commonModules>
+  <commonModules>CommonModule.КИИ_ВнешнийАнализатор</commonModules>
   <commonModules>CommonModule.КИИ_КоннекторИИ</commonModules>
   <commonModules>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибок</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторOpenAI</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторИИОбщий</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторAnthropic</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторGoogle</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторYandex</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторGigaChat</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPДиспетчер</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPРеестр</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментPing</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPAuth</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPАудит</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментИнфоКонфигурации</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментДеревоМетаданных</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментСтруктураОбъекта</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментВыполнитьЗапрос</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPБезопасностьЗапросов</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPОграничения</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPСокрытиеСекретов</commonModules>
+  <commonModules>CommonModule.КИИ_RAG</commonModules>
+  <commonModules>CommonModule.КИИ_RAGQdrant</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокTelegram</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокРегистры</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокЖР</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокАнализ</commonModules>
+  <commonModules>CommonModule.КИИ_АгентАнализа</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментДиаграмма</commonModules>
+  <commonModules>CommonModule.КИИ_АудиторКода</commonModules>
+  <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
+  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_ОчисткаКеша</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_ОбновитьЭмбеддинги</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_ОбработатьОчередьQdrant</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_СверкаQdrant</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокСборОшибок</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокАнализИИ</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
+  <definedTypes>DefinedType.Сотрудник</definedTypes>
+  <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
+  <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
+  <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
+  <constants>Constant.КИИ_БэкендВекторногоПоиска</constants>
+  <constants>Constant.КИИ_QdrantАдрес</constants>
+  <constants>Constant.КИИ_ИдентификаторTenantQdrant</constants>
+  <constants>Constant.КИИ_МониторингОшибокНастройки</constants>
+  <constants>Constant.КИИ_МониторингОшибокМодельАнализа</constants>
+  <constants>Constant.КИИ_МониторингОшибокДатаСбора</constants>
+  <constants>Constant.КИИ_АдресСервераKroki</constants>
+  <constants>Constant.КИИ_АдресХостаШимаАудитора</constants>
+  <constants>Constant.КИИ_ПортШимаАудитора</constants>
+  <catalogs>Catalog._ДемоФизическиеЛица</catalogs>
   <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
   <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
+  <catalogs>Catalog.УчетныеЗаписиЭлектроннойПочты</catalogs>
+  <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_БазаЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_ФрагментыЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_ПравилаИгнорированияОшибок</catalogs>
   <enums>Enum.КИИ_ТипыАвторизации</enums>
   <enums>Enum.КИИ_ТипыФорматовAPI</enums>
+  <enums>Enum.КИИ_УровниКритичности</enums>
+  <enums>Enum.КИИ_ПолитикиЭмбеддинга</enums>
+  <enums>Enum.КИИ_ТипыМоделей</enums>
+  <enums>Enum.КИИ_БэкендыВекторногоПоиска</enums>
+  <dataProcessors>DataProcessor.КИИ_ГенераторДиаграмм</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_АнализаторКонфигурации</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_СерверMCPНастройки</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ТестИИ</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ТестМаркдаунПарсера</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ДашбордОшибок</dataProcessors>
   <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_СерверMCPАудитВызовов</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_СерверMCPОграниченияВызовов</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_КешОтветовИИ</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЭмбеддингиВерсии</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ПоколениеИндексаQdrant</informationRegisters>
 </mdclass:Configuration>

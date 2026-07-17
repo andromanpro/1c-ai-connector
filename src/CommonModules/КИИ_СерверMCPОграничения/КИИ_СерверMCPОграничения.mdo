@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a46ea495-c73f-4f45-95fb-0ee164c4cd98">
+  <name>КИИ_СерверMCPОграничения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Ограничения</value>
+  </synonym>
+  <comment>Rate-limit (60 вызовов/минуту на caller). ПроверитьЛимит до dispatch + ЗафиксироватьВызов после auth.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

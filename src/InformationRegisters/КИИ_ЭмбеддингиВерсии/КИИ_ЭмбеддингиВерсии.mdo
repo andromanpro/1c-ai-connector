@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="baf933eb-1b27-4a7b-b010-73cbd22283b9">
+  <producedTypes>
+    <selectionType typeId="70e4042b-6976-4c32-bfaf-dcf80e388c0d" valueTypeId="adcc22a7-ba0f-4c9d-aded-32854870b9d5"/>
+    <listType typeId="9034196a-ad01-44f5-ae4e-9e4c443639ee" valueTypeId="4890b8e7-be4f-4129-9a8b-0fc284d44cae"/>
+    <managerType typeId="2955734b-d1bc-487b-acef-2f9e78b2e551" valueTypeId="62e23ce6-65f7-4c47-b207-e02f4a57140b"/>
+    <recordSetType typeId="092846db-c97f-45a0-ace9-1231f8a2260c" valueTypeId="3a06a564-9986-42a9-8590-da134d9ccc65"/>
+    <recordKeyType typeId="b7dc4f53-1a00-4a84-ad2c-869a177fb093" valueTypeId="05c1f168-a0f8-4352-b0dc-bf4de1265deb"/>
+    <recordType typeId="509f06c3-878d-4e5c-9fe8-b135c4234a72" valueTypeId="6c973293-7d0d-4b3f-8d57-149d811805f7"/>
+    <recordManagerType typeId="f5e79958-af31-47e6-b6ae-c838eafa25df" valueTypeId="199ee4f1-c3dd-4abc-9252-707173cf39b0"/>
+  </producedTypes>
+  <name>КИИ_ЭмбеддингиВерсии</name>
+  <synonym>
+    <key>ru</key>
+    <value>Эмбеддинги: версии</value>
+  </synonym>
+  <comment>КодМодели → {Размерность, АдресAPI} — для миграций эмбеддингов. Непериодический, независимый.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Версия эмбеддинга модели</value>
+  </recordPresentation>
+  <resources uuid="fec2f42a-3935-46d4-b36a-a2afc65b99f0">
+    <name>Размерность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размерность</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1556813b-3cc2-4040-8a9d-300e5707e4b7">
+    <name>АдресAPI</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес API</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="c79d4395-fae0-4085-8de7-d94733a7f2b2">
+    <name>КодМодели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код модели</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>80</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

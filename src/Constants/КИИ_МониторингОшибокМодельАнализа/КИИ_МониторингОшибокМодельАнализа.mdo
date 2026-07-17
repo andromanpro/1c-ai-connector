@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d1092538-408c-4f80-a4cd-7d6f8f1f1b37">
+  <producedTypes>
+    <managerType typeId="abf745f3-06de-47e9-9e0b-a75803d99a9c" valueTypeId="7db4a376-a818-4b13-9d32-f9786b4016c9"/>
+    <valueManagerType typeId="2572aa1e-d1af-488c-bfea-59a16a0e57b2" valueTypeId="fd991e47-a42d-46f3-a70f-ec638b30f3cb"/>
+    <valueKeyType typeId="3e87a1b6-c8ff-47f7-b70f-d2facf71f309" valueTypeId="5b914e1e-80cd-4226-8dc1-7b12c7bd97ef"/>
+  </producedTypes>
+  <name>КИИ_МониторингОшибокМодельАнализа</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: модель анализа</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.КИИ_МоделиИИ</types>
+  </type>
+</mdclass:Constant>

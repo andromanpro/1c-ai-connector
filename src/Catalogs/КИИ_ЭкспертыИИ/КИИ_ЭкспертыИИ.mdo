@@ -144,12 +144,29 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <tabularSections uuid="3ac40103-d618-44c8-ae3b-cc68cf5cc4a6">
+    <producedTypes>
+      <objectType typeId="2c4b14d2-101e-4d03-b25a-2fa99c163020" valueTypeId="e0d9fadb-45bb-4dbd-8e5f-17375a368da3"/>
+      <rowType typeId="a69e8785-d875-4911-95cd-ef75f203e3bb" valueTypeId="4bdc1950-9b50-4a1c-b9f6-76dc55f42b76"/>
+    </producedTypes>
+    <name>КатегорииЗнаний</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категории знаний</value>
+    </synonym>
+    <attributes uuid="a2b7230b-086f-48f8-bcbe-3e009ae539f6">
+      <name>Категория</name>
+      <type>
+        <types>CatalogRef.КИИ_КатегорииЗнаний</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
   <forms uuid="b1931dc0-b8e1-4044-8296-bc62fcc8de48">
     <name>ФормаЭлемента</name>
     <synonym>

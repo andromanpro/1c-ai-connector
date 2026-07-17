@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cb0712d0-67cc-4800-92e6-b6508eade937">
+  <name>КИИ_КоннекторGoogle</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коннектор Google</value>
+  </synonym>
+  <comment>Провайдер-модуль Google Generative AI (Gemini). Контракт: ИмяФормата, ПоддерживаетМультимодал, СформироватьЗаголовки, СформироватьТелоЗапроса, РазобратьОтвет.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

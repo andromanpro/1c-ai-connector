@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a051408-9620-4ebc-a826-49150e29e3c4">
+  <producedTypes>
+    <managerType typeId="f9d340fe-3c83-4e52-ba0f-a39e769d41db" valueTypeId="72d0e1a8-ce18-4815-9cd9-1b1934148067"/>
+    <valueManagerType typeId="631091fe-4d7a-46dc-b5cc-f1405c9adc95" valueTypeId="84c63bd7-6907-4583-9141-b25e33736a7a"/>
+    <valueKeyType typeId="557ac12b-7bfd-45b0-81af-f9ecdb07cf1c" valueTypeId="17b25850-da41-4191-9ce3-05bed93ff4fc"/>
+  </producedTypes>
+  <name>КИИ_ПортШимаАудитора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аудитор кода: порт шима</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>5</precision>
+    </numberQualifiers>
+  </type>
+</mdclass:Constant>

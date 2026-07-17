@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a1f6fae0-82ed-411a-956a-a17158c11666">
+  <name>КИИ_МониторингОшибок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

@@ -132,9 +132,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -152,9 +150,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -177,9 +173,7 @@
     </toolTip>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -230,9 +224,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -250,9 +242,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -270,9 +260,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:StringValue">
-      <value></value>
-    </fillValue>
+    <fillValue xsi:type="core:StringValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
@@ -343,6 +331,141 @@
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="94765371-131c-45ee-af7c-a10ab8fa02be">
+    <name>СрокЖизниКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок жизни кеша (секунды)</value>
+    </synonym>
+    <comment>TTL для записей кеша ответов ИИ в секундах. 0 = не использовать кеш для модели. Дефолт 86400 (24ч).</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6c704c79-03c2-4fe6-be30-5cdf00efdf50">
+    <name>ВерсияСхемыКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия схемы кеша</value>
+    </synonym>
+    <comment>Версия контракта нормализации ключа кеша для этой модели. Инкремент = все старые записи кеша протухли. Дефолт 1.</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="89ec3e0d-9d3e-4ec4-8a27-ad0737f6359f">
+    <name>ТипМодели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип модели</value>
+    </synonym>
+    <comment>Чат / Эмбеддинг — разделение chat vs embedding.</comment>
+    <type>
+      <types>EnumRef.КИИ_ТипыМоделей</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8fd45663-af88-4d49-adc3-b7572a8c2eff">
+    <name>EndpointЭмбеддингов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Endpoint эмбеддингов</value>
+    </synonym>
+    <comment>Напр. /v1/embeddings (если ТипМодели=Эмбеддинг).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="4089fa4e-e562-437f-b1a6-628bb6cb3695">
+    <name>РазмерностьЭмбеддинга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размерность эмбеддинга</value>
+    </synonym>
+    <comment>1536/256.</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="04c44589-1eb9-4954-a7d3-c0fb6269e4a3">
+    <name>МаксТокеновВхода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макс. токенов входа</value>
+    </synonym>
+    <comment>Лимит для чанкера.</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a91176b9-767e-4422-b8ea-f18e04b44890">
+    <name>КлассEgress</name>
+    <synonym>
+      <key>ru</key>
+      <value>Класс egress</value>
+    </synonym>
+    <comment>РФ/внешний — матчится с политикой документа.</comment>
+    <type>
+      <types>EnumRef.КИИ_ПолитикиЭмбеддинга</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c19951a6-ea49-4f1b-ab57-d26e5a686e44">
+    <name>ИспользоватьПрокси</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать прокси</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="9dd21fd5-6fef-446d-8461-81159babb85c">
+    <name>ПоддерживаетИнструменты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поддерживает инструменты (function-calling)</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
   </attributes>
   <tabularSections uuid="bda728b5-d380-45e6-8aac-b991befb5653">
     <producedTypes>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca43e2a7-5e47-4a7e-9b25-e1d04e85edf2">
+  <producedTypes>
+    <managerType typeId="deabff10-f845-42a6-9b2c-5c915c32e2f1" valueTypeId="6bb11ea8-5700-4946-bebe-fc3936f0d718"/>
+    <valueManagerType typeId="e0b24a20-07a4-4ec2-b9aa-e6d4a9dcf171" valueTypeId="9cd310c3-cd18-4460-8b36-38a2226b642a"/>
+    <valueKeyType typeId="95bc499a-3c06-4887-9311-f2d294aecda8" valueTypeId="40ee88d4-a496-4bcb-b1d3-c38db0f5b263"/>
+  </producedTypes>
+  <name>КИИ_БэкендВекторногоПоиска</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бэкенд векторного поиска</value>
+  </synonym>
+  <type>
+    <types>EnumRef.КИИ_БэкендыВекторногоПоиска</types>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+</mdclass:Constant>

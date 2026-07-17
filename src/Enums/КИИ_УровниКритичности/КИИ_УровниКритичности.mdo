@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c137e933-a840-4a35-b6a1-c91d1d1e4c5b">
+  <producedTypes>
+    <refType typeId="2f528608-3bab-40ca-a575-37ca87ee469c" valueTypeId="c2f520e9-48ac-4700-bb41-59386b3acea4"/>
+    <listType typeId="47cc2eac-f480-42a4-bd4f-4d20b3e5b9bc" valueTypeId="14f6a845-5009-4202-ae30-26b6fb151e54"/>
+    <managerType typeId="fec461f5-093a-45c9-ad12-6d7d114ed7ba" valueTypeId="ed9dce56-0936-4957-b56b-d615c051d7c0"/>
+  </producedTypes>
+  <name>КИИ_УровниКритичности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уровни критичности</value>
+  </synonym>
+  <enumValues uuid="cc1bc369-94d4-45c3-805f-6bdebba1d5dd">
+    <name>Низкая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Низкая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ffd909d3-d102-4043-8b8d-3944e4c9c22f">
+    <name>Средняя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Средняя</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="0482bfa7-0182-4a46-8c9a-6175b5971fcf">
+    <name>Высокая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Высокая</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="cb0b2ba3-e404-4936-b405-2cef3e43b56f">
+    <name>Критическая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Критическая</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c9274f86-b15c-4409-9b17-a7eec855789c">
+  <name>КИИ_АнализКонфигурации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анализ конфигурации</value>
+  </synonym>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

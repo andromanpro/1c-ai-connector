@@ -7,6 +7,7 @@
   </synonym>
   <includeHelpInContents>true</includeHelpInContents>
   <content>CommonModule.КИИ_КоннекторИИ</content>
+  <content>CommonModule.КИИ_HTTPКлиент</content>
   <content>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</content>
   <content>Role.КИИ_БазовыеПрава</content>
   <content>Role.КИИ_ПолныеПрава</content>

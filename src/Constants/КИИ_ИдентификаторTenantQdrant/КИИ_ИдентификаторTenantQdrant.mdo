@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4810bb18-a0e0-4832-8cb0-0dd798a85e64">
+  <producedTypes>
+    <managerType typeId="094f0361-4495-46ca-b39a-85723562cee7" valueTypeId="5e13efbf-4cb9-4f7c-8255-32ad86af125b"/>
+    <valueManagerType typeId="a9cfebfd-9995-4770-8283-71508278dd64" valueTypeId="8509d86e-2dc7-4e73-a3ba-001f4da2e15a"/>
+    <valueKeyType typeId="4a5fd3e5-dd2d-4487-8df8-9afc18d51de3" valueTypeId="f6c0a2dd-2b90-4ff3-81d9-a96f8ec101fd"/>
+  </producedTypes>
+  <name>КИИ_ИдентификаторTenantQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Qdrant: идентификатор tenant</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>64</length>
+    </stringQualifiers>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+</mdclass:Constant>

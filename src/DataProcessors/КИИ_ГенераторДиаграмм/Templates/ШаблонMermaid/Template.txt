@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: white; font-family: Arial, sans-serif; }
+        #diagram { padding: 20px; min-height: 200px; }
+        .error { color: red; padding: 20px; font-weight: bold; }
+    </style>
+    <!-- При серверном вызове ПолучитьHTMLСДиаграммой() здесь встраивается mermaid.js.
+         При открытии в форме 1С — плейсхолдер очищается, библиотека грузится динамически. -->
+    <script>%MERMAID_JS_LIBRARY%</script>
+</head>
+<body>
+    <div id="diagram">Загрузка...</div>
+
+    <script>
+        window.loadMermaid = function() {
+            try {
+                eval(window.mermaidCode);
+                window.mermaidCode = null;
+                return true;
+            } catch (e) {
+                document.getElementById('diagram').innerHTML =
+                    '<div class="error">Ошибка загрузки: ' + e.message + '</div>';
+                return false;
+            }
+        };
+    </script>
+
+    <script>
+        window.initMermaid = function() {
+            if (typeof mermaid === 'undefined') {
+                document.getElementById('diagram').innerHTML =
+                    '<div class="error">Mermaid не загружен</div>';
+                return;
+            }
+
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: 'default',
+                securityLevel: 'strict',
+                flowchart: { htmlLabels: false }
+            });
+
+            window.renderReady = false;
+            window.extractedSVG = '';
+            window.extractedPNG = '';
+
+            // Устанавливает фон страницы без перерисовки диаграммы
+            window.setPageBackground = function(bgPage) {
+                document.body.style.background = bgPage || 'white';
+            };
+
+            // Удаляет из <body> временные div-контейнеры, которые Mermaid v8 добавляет
+            // при рендеринге (id вида 'dmmd-…'). При синтаксической ошибке они остаются
+            // в DOM поверх содержимого страницы.
+            window.cleanupMermaidOrphans = function() {
+                var children = document.body.children;
+                var toRemove = [];
+                for (var i = 0; i < children.length; i++) {
+                    var el = children[i];
+                    if (el.tagName === 'DIV' && el.id && el.id.indexOf('dmmd-') === 0) {
+                        toRemove.push(el);
+                    }
+                }
+                for (var j = 0; j < toRemove.length; j++) {
+                    document.body.removeChild(toRemove[j]);
+                }
+            };
+
+            // Сбрасывает состояние области диаграммы и убирает осиротевшие контейнеры.
+            // Параметр msg — необязательный текст (по умолчанию пусто).
+            window.clearDiagram = function(msg) {
+                var elem = document.getElementById('diagram');
+                if (elem) { elem.textContent = msg || ''; }
+                window.renderReady  = false;
+                window.extractedSVG = '';
+                window.extractedPNG = '';
+                window.cleanupMermaidOrphans();
+            };
+
+            // API для Mermaid v8
+            // theme:    'default' | 'forest' | 'dark' | 'neutral' | 'base'
+            // fontSize: '12px' | '14px' | '16px' | '18px'
+            // curve:    'basis' | 'linear' | 'cardinal'
+            // bgPage:   'white' | '#1e1e1e'
+            window.renderMermaid = function(code, theme, fontSize, curve, bgPage) {
+                var elem = document.getElementById('diagram');
+
+                // Применяем фон страницы
+                document.body.style.background = bgPage || 'white';
+
+                // Сбрасываем предыдущее состояние: очищаем #diagram и удаляем
+                // осиротевшие div-контейнеры, которые Mermaid v8 мог оставить в body.
+                window.clearDiagram();
+
+                try {
+                    // Переинициализируем с нужными параметрами перед каждым рендером.
+                    // Вызываем mermaidAPI.initialize() напрямую: в Mermaid v8 это единственный
+                    // надёжный способ передать flowchart.curve во внутренний рендер-движок.
+                    var cfg = {
+                        startOnLoad: false,
+                        theme: theme || 'default',
+                        securityLevel: 'strict',
+                        flowchart: {
+                            htmlLabels: false,
+                            curve: curve || 'basis'
+                        },
+                        themeVariables: {
+                            fontSize: fontSize || '14px'
+                        }
+                    };
+                    mermaid.mermaidAPI.initialize(cfg);
+
+                    var id = 'mmd-' + Date.now();
+                    var insertSvg = function(svgCode, bindFunctions) {
+                        elem.innerHTML = svgCode;
+                        window.extractedSVG = svgCode;
+                        window.renderReady = true;
+                        // Убираем временный контейнер, созданный Mermaid v8 в body (id = 'd' + renderId)
+                        var tmp = document.getElementById('d' + id);
+                        if (tmp && tmp.parentNode) { tmp.parentNode.removeChild(tmp); }
+                    };
+
+                    mermaid.mermaidAPI.render(id, code, insertSvg);
+
+                    // Дополнительная зачистка: на случай, если insertSvg не был вызван
+                    var tmp2 = document.getElementById('d' + id);
+                    if (tmp2 && tmp2.parentNode) { tmp2.parentNode.removeChild(tmp2); }
+
+                    return 'OK';
+
+                } catch (e) {
+                    elem.innerHTML = '<div class="error">' + e.message + '</div>';
+                    window.renderReady = false;
+                    // Зачищаем всё, что Mermaid мог добавить в body до выброса исключения
+                    window.cleanupMermaidOrphans();
+                    return 'ERROR: ' + e.message;
+                }
+            };
+
+            // Конвертация SVG → PNG через Canvas.
+            // Без callback: 1С опрашивает window.exportPNGReady через ПодключитьОбработчик.
+            // (ОписаниеОповещения нельзя вызвать как JS-функцию в IE WebBrowser 1С)
+            window.exportPNGReady = false;
+            window.exportPNG = function(scale, bgColor) {
+                scale   = (scale && scale > 0) ? Math.round(scale) : 2; // fallback = 2×
+                bgColor = bgColor || 'white';
+                window.exportPNGReady = false;
+                window.extractedPNG  = '';
+
+                if (!window.renderReady || !window.extractedSVG) {
+                    window.exportPNGReady = true; // чтобы не висеть вечно
+                    return;
+                }
+
+                try {
+                    var svgElem = document.querySelector('#diagram svg');
+                    if (!svgElem) {
+                        window.exportPNGReady = true;
+                        return;
+                    }
+
+                    // Mermaid v8 рендерит SVG с width="100%" — parseFloat("100%") = 100px.
+                    // Правильный источник размеров — атрибут viewBox ("minX minY W H").
+                    var width, height;
+                    var viewBoxAttr = svgElem.getAttribute('viewBox');
+                    if (viewBoxAttr) {
+                        var vbParts = viewBoxAttr.split(/[\s,]+/);
+                        if (vbParts.length >= 4) {
+                            width  = parseFloat(vbParts[2]);
+                            height = parseFloat(vbParts[3]);
+                        }
+                    }
+                    // Fallback: реальный размер на экране
+                    if (!width || !height) {
+                        var rect = svgElem.getBoundingClientRect();
+                        width  = rect.width;
+                        height = rect.height;
+                    }
+                    width  = width  || 800;
+                    height = height || 600;
+
+                    // Явно прописываем пиксельные размеры в SVG перед сериализацией,
+                    // иначе браузер/Image не знает, в каком масштабе рисовать.
+                    svgElem.setAttribute('width',  width);
+                    svgElem.setAttribute('height', height);
+
+                    // Масштабирование для повышения качества PNG (Retina / Hi-DPI).
+                    // scale передаётся из 1С: 1=обычное, 2=хорошее, 3=высокое.
+                    var canvas  = document.createElement('canvas');
+                    canvas.width  = width  * scale;
+                    canvas.height = height * scale;
+
+                    var ctx = canvas.getContext('2d');
+                    if (bgColor !== 'transparent') {
+                        ctx.fillStyle = bgColor;
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    }
+                    ctx.scale(scale, scale); // все последующие операции рисуются в scale×
+
+                    var svgData    = new XMLSerializer().serializeToString(svgElem);
+                    var svgEncoded = encodeURIComponent(svgData);
+                    var dataUrl    = 'data:image/svg+xml;charset=utf-8,' + svgEncoded;
+
+                    var img = new Image();
+                    img.onload = function() {
+                        ctx.drawImage(img, 0, 0); // рисуем в логических px → scale даёт 2×
+                        window.extractedPNG  = canvas.toDataURL('image/png');
+                        window.exportPNGReady = true;
+                    };
+                    img.onerror = function() {
+                        window.exportPNGReady = true; // сигнализируем, extractedPNG пустой
+                    };
+                    img.src = dataUrl;
+
+                } catch (e) {
+                    window.exportPNGReady = true;
+                }
+            };
+
+            window.clearDiagram('Mermaid готов к работе');
+        };
+
+        // Рендер встроенного кода из плейсхолдеров (%MERMAID_CODE% и др.).
+        // Вызывается двумя способами:
+        //   1. window.addEventListener('load', ...) — standalone-режим (браузер)
+        //   2. КонтекстОкна.autoRenderEmbedded() из HTMLДокументДокументСформирован 1С
+        //      (надёжнее window.load при программной установке HTML в HTMLDocumentField)
+        // Плейсхолдеры заполняются сервером через ПолучитьHTMLСДиаграммой().
+        // В режиме формы 1С (ГенераторMermaidДиаграмм) код не встроен → функция
+        // возвращает управление немедленно, рендер идёт через renderMermaid из BSL.
+        window.autoRenderEmbedded = function() {
+            var embeddedCode     = '%MERMAID_CODE%';
+            var embeddedTheme    = '%MERMAID_THEME%';
+            var embeddedFontSize = '%MERMAID_FONTSIZE%';
+            var embeddedCurve    = '%MERMAID_CURVE%';
+            var embeddedBgPage   = '%MERMAID_BGPAGE%';
+            // Если код не встроен (форма 1С или пустой вызов) — выходим
+            if (!embeddedCode || embeddedCode === '%MERMAID_CODE%') { return; }
+            if (typeof mermaid === 'undefined') {
+                document.getElementById('diagram').innerHTML =
+                    '<div class="error">Mermaid не загружен</div>';
+                return;
+            }
+            window.initMermaid();
+            window.renderMermaid(
+                embeddedCode,
+                embeddedTheme    !== '%MERMAID_THEME%'    ? embeddedTheme    : undefined,
+                embeddedFontSize !== '%MERMAID_FONTSIZE%' ? embeddedFontSize : undefined,
+                embeddedCurve    !== '%MERMAID_CURVE%'    ? embeddedCurve    : undefined,
+                embeddedBgPage   !== '%MERMAID_BGPAGE%'   ? embeddedBgPage   : undefined
+            );
+        };
+
+        // Standalone-режим: автозапуск при загрузке страницы в браузере
+        window.addEventListener('load', function() {
+            window.autoRenderEmbedded();
+        });
+    </script>
+</body>
+</html>

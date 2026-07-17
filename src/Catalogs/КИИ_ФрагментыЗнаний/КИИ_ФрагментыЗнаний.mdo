@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="10b478d0-7c09-4a16-90b5-ad16e2ea4e95">
+  <producedTypes>
+    <objectType typeId="b648b6c9-6849-4887-947c-d916c58beadb" valueTypeId="fdf4e0a8-b7f6-47e6-b1ad-c18c2af50f92"/>
+    <refType typeId="150a6c1a-2b31-4cd2-ae75-423f71e2e44d" valueTypeId="8115ba3f-7a07-439e-8dcf-55be7cb92908"/>
+    <selectionType typeId="43cb394e-6c84-4c37-b843-7eae3084237e" valueTypeId="5194394a-3005-4c4b-ba29-1c199b8f3fa0"/>
+    <listType typeId="51ca5f10-bdfe-4d09-bee5-496b5e9911e1" valueTypeId="6bac0f27-7909-4db7-b00f-83e1a550332a"/>
+    <managerType typeId="9c643b72-e635-4080-a5a6-52e7815d6ef9" valueTypeId="37769815-ce94-427c-a8be-40ee916fbc5b"/>
+  </producedTypes>
+  <name>КИИ_ФрагментыЗнаний</name>
+  <synonym>
+    <key>ru</key>
+    <value>Фрагменты знаний</value>
+  </synonym>
+  <comment>Подчиненный справочник (владелец = КИИ_БазаЗнаний). Чанки документа с нормализованным эмбеддингом, hash и кодом модели.</comment>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Фрагмент знаний</value>
+  </objectPresentation>
+  <owners>Catalog.КИИ_БазаЗнаний</owners>
+  <descriptionLength>150</descriptionLength>
+  <attributes uuid="c3148330-f36a-4ab1-9107-b8c01f05a8d0">
+    <name>НомерФрагмента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер фрагмента</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7bc44bd3-ea8f-40ab-95b0-5aff5acb28f1">
+    <name>ТекстФрагмента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст фрагмента</value>
+    </synonym>
+    <comment>Чанк + заголовок документа в начале.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="a29072a3-8a14-42ac-ae7c-36a63ad5750e">
+    <name>ХешТекстаФрагмента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш текста фрагмента</value>
+    </synonym>
+    <comment>SHA256 текста для stale detection.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="8a1fc843-cbe2-47d5-b6a0-6e3aea89176a">
+    <name>Эмбеддинг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эмбеддинг</value>
+    </synonym>
+    <comment>Нормализованный массив Число (|v|=1).</comment>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="06b69d48-76d5-4bec-9086-baeb0e8f6390">
+    <name>НормаИсходная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма исходная</value>
+    </synonym>
+    <comment>|v| до нормализации (диагностика).</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>6</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fa299b1e-d5f6-4192-b365-69e03d3ae0ba">
+    <name>КодМоделиЭмбеддинга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код модели эмбеддинга</value>
+    </synonym>
+    <comment>Напр. openrouter:text-embedding-3-small — точный фильтр поиска.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="4084cf70-f5d5-4ef8-aedf-9420886372d5">
+    <name>Размерность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размерность</value>
+    </synonym>
+    <comment>assert (1536/256).</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fbddb50e-3fd7-4dcf-b9c0-c729e902abe1">
+    <name>ДатаОбновления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата обновления</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+</mdclass:Catalog>

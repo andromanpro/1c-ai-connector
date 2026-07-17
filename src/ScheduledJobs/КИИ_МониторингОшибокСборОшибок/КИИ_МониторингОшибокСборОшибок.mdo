@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="34aa8273-7604-4426-928c-7e31b77e0e00">
+  <name>КИИ_МониторингОшибокСборОшибок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: сбор</value>
+  </synonym>
+  <methodName>CommonModule.КИИ_МониторингОшибок.ВыполнитьСборОшибок</methodName>
+</mdclass:ScheduledJob>

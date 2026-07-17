@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="73ab1929-1db0-450f-90da-50348c8323da">
+  <producedTypes>
+    <objectType typeId="597a9b21-8377-4b81-aa78-7d2ab6343bc8" valueTypeId="dc8609de-b073-4a26-a386-2dee9d691f4c"/>
+    <managerType typeId="259f1833-7bc6-4c9f-a547-231756c48aa7" valueTypeId="758d85f4-3cab-44f5-bd0c-b3d7b7fd1c77"/>
+  </producedTypes>
+  <name>КИИ_ГенераторДиаграмм</name>
+  <synonym>
+    <key>ru</key>
+    <value>Генератор диаграмм</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_ГенераторДиаграмм.Form.Форма</defaultForm>
+  <attributes uuid="9c76074b-f1a7-46a9-8482-369dfff48db5">
+    <name>ТекстЗапроса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст запроса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cf69e0ae-28c5-42e8-81a7-cc7312828b85">
+    <name>ФорматЭкспорта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат экспорта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8e8edc49-13cf-4c0c-830f-259829bc711a">
+    <name>HTMLДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>HTMLДокумент</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1882c52d-7426-49f0-9e89-87e5a05ba396">
+    <name>ОписаниеДиаграммы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание диаграммы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6ae22511-9fbc-42b6-9980-e06b92e1611b">
+    <name>Эксперт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эксперт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КИИ_ЭкспертыИИ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a88a2990-4123-4f2f-b4df-05559942d9d9">
+    <name>URLKroki</name>
+    <synonym>
+      <key>ru</key>
+      <value>URL kroki</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="08622600-2d6a-4f3a-925d-e276ef50e955">
+    <name>ВидДиаграммы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид диаграммы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="745bb6c4-5ec3-4ba0-9eaa-d4de25138391">
+    <name>ТемаДиаграммы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тема диаграммы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="670da13b-3309-48c7-9376-b0a11dd5a1e1">
+    <name>ТекущийSVG</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текущий SVG</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="894bfa9b-6444-4294-8ece-fda31c7402f8">
+    <name>КодДиаграммы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код диаграммы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="34427388-bc5f-4645-8254-c9be80f8cb94">
+    <name>РежимГенерации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим генерации</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7fc4dd1a-8103-4dab-88b1-9094ff5b883c">
+    <name>Таймаут</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таймаут</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1e89b64d-9ff3-400b-96ad-d541178f2b77">
+    <name>ИсточникKroki</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник Kroki</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="13eaab1c-5459-4c37-8fc5-17a124a53b2b">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="3a4f4eb0-ad1f-439e-90f0-0f371be3082a">
+    <name>ШаблонMermaid</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон mermaid</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="66099c08-8f24-4f47-99b4-5a1c730a3941">
+    <name>mermaid_js</name>
+    <synonym>
+      <key>ru</key>
+      <value>Mermaid js</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="933bfc52-9033-4331-a92b-4faf83486e08">
+    <name>ПромптДиаграммы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Промпт генератора диаграмм</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

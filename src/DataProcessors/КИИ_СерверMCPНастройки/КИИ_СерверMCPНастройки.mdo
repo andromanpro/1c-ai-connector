@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2ee7423-adce-4db8-bffc-c9e67862aac1">
+  <producedTypes>
+    <objectType typeId="00b4117c-272e-4a67-9c8d-3f8b4b5d1502" valueTypeId="7b959d57-c961-4218-a556-611f91e95d68"/>
+    <managerType typeId="9439cb92-616a-4023-90bd-8adfb5380107" valueTypeId="818997ab-2485-46aa-8c44-cb36341fba1d"/>
+  </producedTypes>
+  <name>КИИ_СерверMCPНастройки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Настройки</value>
+  </synonym>
+  <comment>Форма настройки HTTP Basic учетных данных runtime-MCP сервиса. Чтение/запись Константы КИИ_СерверMCPПользовательAPI + БезопасноеХранилище (пароль). Smoke-проверка ping без HTTP.</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_СерверMCPНастройки.Form.Форма</defaultForm>
+  <forms uuid="3e6e73b2-a295-4456-a337-c8d90125fa45">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настроек MCP</value>
+    </synonym>
+    <comment>Форма настройки MCP-сервиса: пользователь, пароль, проверка ping.</comment>
+  </forms>
+</mdclass:DataProcessor>

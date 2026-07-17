@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4e71451d-41c9-47fd-8e47-dd0cd7400909">
+  <name>КИИ_СерверMCPИнструменты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Контейнер инструментов</value>
+  </synonym>
+  <comment>Container-pattern: подсистема включает все ОМ-инструменты MCP. КИИ_СерверMCPРеестр делает рефлексию по составу для tools/list и dispatch tools/call.</comment>
+  <content>CommonModule.КИИ_СерверMCPИнструментPing</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментИнфоКонфигурации</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментДеревоМетаданных</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментСтруктураОбъекта</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментВыполнитьЗапрос</content>
+  <content>CommonModule.КИИ_СерверMCPИнструментДиаграмма</content>
+</mdclass:Subsystem>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="18832130-c6c1-461e-b226-7372eeac8eec">
+  <name>КИИ_ОбновитьЭмбеддинги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновить эмбеддинги базы знаний</value>
+  </synonym>
+  <comment>Пересчитывает эмбеддинги фрагментов (пустой/сталый hash/смена модели) с учетом egress-политики. Расписание и использование настраивает админ.</comment>
+  <methodName>CommonModule.КИИ_RAG.ОбновитьЭмбеддинги</methodName>
+</mdclass:ScheduledJob>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="116926b1-24a5-4d1d-a216-e33aba8de4c6">
+  <producedTypes>
+    <managerType typeId="7373aa4b-d6ee-4795-9f00-092173a124ad" valueTypeId="f4547cf5-0da5-4c94-9169-24c0eca916fc"/>
+    <valueManagerType typeId="a64e55b8-2655-4d80-9890-6691461ccfca" valueTypeId="e0ca2cb4-d0eb-43fd-b296-2c6c57782eb8"/>
+    <valueKeyType typeId="e649ae92-f696-4e35-9ece-efdfcf7738b5" valueTypeId="2334965b-cbfe-4140-8170-7c64a83d8018"/>
+  </producedTypes>
+  <name>КИИ_СерверMCPПользовательAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Пользователь API</value>
+  </synonym>
+  <comment>Имя пользователя HTTP Basic auth для /iikona-mcp/rpc. Пароль в БезопасномХранилище.</comment>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>100</length>
+    </stringQualifiers>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+</mdclass:Constant>

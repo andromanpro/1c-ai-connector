@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8c4bf892-48f2-4893-957e-efde74017a97">
+  <name>КИИ_СерверMCP</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP</value>
+  </synonym>
+  <comment>Подсистема runtime-MCP сервиса для AI-агентов. Реализует MCP-стандарт (tools/list, tools/call) поверх HTTP в ядре ИИконы.</comment>
+  <content>HTTPService.КИИ_СерверMCPAPI</content>
+  <content>CommonModule.КИИ_СерверMCPДиспетчер</content>
+  <content>CommonModule.КИИ_СерверMCPРеестр</content>
+  <content>Subsystem.КИИ_СерверMCPИнструменты</content>
+  <content>Constant.КИИ_СерверMCPПользовательAPI</content>
+  <content>InformationRegister.КИИ_СерверMCPАудитВызовов</content>
+  <content>CommonModule.КИИ_СерверMCPAuth</content>
+  <content>CommonModule.КИИ_СерверMCPАудит</content>
+  <content>CommonModule.КИИ_СерверMCPБезопасностьЗапросов</content>
+  <content>InformationRegister.КИИ_СерверMCPОграниченияВызовов</content>
+  <content>CommonModule.КИИ_СерверMCPОграничения</content>
+  <content>CommonModule.КИИ_СерверMCPСокрытиеСекретов</content>
+  <content>DataProcessor.КИИ_СерверMCPНастройки</content>
+</mdclass:Subsystem>

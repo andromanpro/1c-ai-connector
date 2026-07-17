@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonTemplate xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="faecc266-ae8d-41b5-8da9-04981ca2a8a4">
+  <name>КИИ_ПромптМониторингаПользовательский</name>
+  <synonym>
+    <key>ru</key>
+    <value>Промпт мониторинга: пользовательский</value>
+  </synonym>
+  <templateType>TextDocument</templateType>
+</mdclass:CommonTemplate>

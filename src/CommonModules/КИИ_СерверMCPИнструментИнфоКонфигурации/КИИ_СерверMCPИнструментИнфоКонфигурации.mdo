@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3b21e445-24c7-4af0-8070-54a1ed1ea0f0">
+  <name>КИИ_СерверMCPИнструментИнфоКонфигурации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Инструмент get_configuration_info</value>
+  </synonym>
+  <comment>MCP tool get_configuration_info: имя/версия конфы, расширения, режим базы (file/server), версия платформы.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

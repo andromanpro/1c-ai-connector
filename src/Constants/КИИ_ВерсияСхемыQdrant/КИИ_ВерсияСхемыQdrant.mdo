@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="232f5ff2-151c-429a-80fc-6affa89e8ebb">
+  <producedTypes>
+    <managerType typeId="00fce3f7-42a7-4a65-a02d-a765b3011fe3" valueTypeId="1f06aee7-f589-4928-9370-db2a14b5624e"/>
+    <valueManagerType typeId="0300304d-6c55-4cd8-9146-98aeb6383e7b" valueTypeId="38a9847a-9822-4a7a-972b-57435d500637"/>
+    <valueKeyType typeId="7c79a4e7-664f-4bc7-8349-cc0c34aaa310" valueTypeId="b57d6142-054f-4652-88bd-4393a2561fe3"/>
+  </producedTypes>
+  <name>КИИ_ВерсияСхемыQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версия схемы Qdrant</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>3</precision>
+    </numberQualifiers>
+  </type>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+</mdclass:Constant>

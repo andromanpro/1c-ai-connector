@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b7d3ea6-5363-4d58-bc0e-eb21f709bac8">
+  <name>КИИ_СерверMCPИнструментPing</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Инструмент Ping</value>
+  </synonym>
+  <comment>Smoke-инструмент. Контракт: ДобавитьИнструменты(Таблица), ВыполнитьИнструмент(ИмяИнструмента, Аргументы). MCP tool name: ping. Возвращает {ok: true, pong: true}.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

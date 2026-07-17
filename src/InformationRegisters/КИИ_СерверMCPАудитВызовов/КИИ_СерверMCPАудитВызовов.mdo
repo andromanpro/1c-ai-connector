@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6309650a-6583-4d8f-9405-8b3bef81d6c5">
+  <producedTypes>
+    <selectionType typeId="32f57051-73f4-4962-932b-60735837284c" valueTypeId="7fd82f3d-34e8-47d4-9f39-311627272332"/>
+    <listType typeId="44ca3e11-10df-4976-928f-20c1a1cd405e" valueTypeId="fdb7c2ce-f229-4c72-a426-9b131d71c06b"/>
+    <managerType typeId="5bd68fc9-c971-4c0c-b23b-cba92f3ff5e8" valueTypeId="ea837cd7-2f8c-4704-a3b0-96705e8e060f"/>
+    <recordSetType typeId="7a166a06-4579-41d0-bec0-2148f97bd04c" valueTypeId="d9c5a2cf-2f96-456a-8e35-1b48768bf55b"/>
+    <recordKeyType typeId="e427aea5-fd39-43bf-8ae0-2a4c5078268c" valueTypeId="7676147c-3945-44ec-b984-f3b6b4018849"/>
+    <recordType typeId="6ea0c2e2-6c77-4a8e-a11b-63a69aaa38c0" valueTypeId="4aeb3939-77d0-4cfb-95e3-dd23b5063cf2"/>
+    <recordManagerType typeId="18376ada-d5ec-4900-b745-c5a0d489761e" valueTypeId="fb9727ae-0015-4d32-8786-049c62a2bafb"/>
+  </producedTypes>
+  <name>КИИ_СерверMCPАудитВызовов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Аудит вызовов</value>
+  </synonym>
+  <comment>Audit log JSON-RPC вызовов MCP. Источник: КИИ_СерверMCPАудит.ЗаписатьВызов. Параллельно пишется в журнал регистрации.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Запись аудита вызова MCP</value>
+  </recordPresentation>
+  <resources uuid="70c7ed9e-b1a3-405a-9696-02b3d7501d7f">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата вызова</value>
+    </synonym>
+    <comment>UTC timestamp вызова MCP-сервиса.</comment>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9560fdbd-8e21-4617-8006-fc90027b163b">
+    <name>Вызывающий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вызывающий</value>
+    </synonym>
+    <comment>Идентификатор клиента (имя пользователя Basic auth или IP/hostname).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="5bf487be-3c7d-4f0e-947b-c2bb213959c6">
+    <name>Метод</name>
+    <synonym>
+      <key>ru</key>
+      <value>MCP метод</value>
+    </synonym>
+    <comment>Имя MCP-метода (tools/list, tools/call, ...).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="195b40f6-459d-40d6-843f-6a3888963ba7">
+    <name>ХешПараметров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш параметров</value>
+    </synonym>
+    <comment>SHA-256 от каноничного JSON параметров (без secrets).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="f8c53631-e566-4935-b104-ce4cd93053b1">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <comment>Статус: ok / error / partial.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="709f594a-2dd7-4f9f-adcf-5379db2e651b">
+    <name>IDЗапроса</name>
+    <synonym>
+      <key>ru</key>
+      <value>ID запроса</value>
+    </synonym>
+    <comment>JSON-RPC id из payload (для корреляции с client-side логом).</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="257f282e-a507-4937-964f-fe39eef5014f">
+    <name>ПараметрыСкрытые</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры (секреты скрыты)</value>
+    </synonym>
+    <comment>JSON параметров вызова с замененными sensitive-значениями на &lt;redacted>. Дополнение к ХешПараметров для аналитики. Тип unlimited String — variable length, не упирается в SDBL row-size limit как fixed 2000.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="b7018289-2384-43d5-931f-4aaa13f15ddf">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор записи</value>
+    </synonym>
+    <comment>UUID записи аудита (хранится как строка). Primary key.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

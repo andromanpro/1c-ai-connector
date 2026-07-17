@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e464f2a2-7521-4247-80ae-8a2d061c1261">
+  <name>КИИ_МониторингОшибокАнализИИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок: анализ ИИ</value>
+  </synonym>
+  <methodName>CommonModule.КИИ_МониторингОшибок.ВыполнитьАнализИИ</methodName>
+</mdclass:ScheduledJob>

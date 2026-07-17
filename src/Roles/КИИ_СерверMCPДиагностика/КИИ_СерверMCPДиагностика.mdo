@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cfe8cdda-31c3-4886-a5a5-fc405f18f568">
+  <name>КИИ_СерверMCPДиагностика</name>
+  <synonym>
+    <key>ru</key>
+    <value>КИИ Сервер MCP: диагностический доступ (read-only)</value>
+  </synonym>
+  <comment>Least-privilege роль MCP-сервера. Дает read-only диагностику продуктовых КИИ_-данных + Read/Update на инфра-регистры лимитера и аудита. Вешать на MCP-пользователя ВМЕСТО широких ролей (Полные/админ), иначе execute_query читает любые данные базы.</comment>
+</mdclass:Role>

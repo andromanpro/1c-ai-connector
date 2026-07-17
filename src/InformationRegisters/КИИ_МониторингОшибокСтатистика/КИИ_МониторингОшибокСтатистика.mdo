@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="abb984fb-71ed-4df8-9b3f-d3fb73eeae00">
+  <producedTypes>
+    <selectionType typeId="25a3bee4-6544-44ad-bd07-01362cfcb28a" valueTypeId="697f0704-ea7e-48fc-a667-e6c122cdd24e"/>
+    <listType typeId="109129d8-4261-4661-8474-9f344f3bfeab" valueTypeId="fade65cf-bc43-437b-ba5c-57b407db0516"/>
+    <managerType typeId="d07e27eb-c42c-4991-920d-a6e40ada94c1" valueTypeId="a92afe86-a8dc-4944-a7b8-94f677a7a06c"/>
+    <recordSetType typeId="52d54ab7-e2b1-4529-9a9e-3cab25a19e73" valueTypeId="972314c2-04e2-4a3e-9d3e-a4177b77f6a0"/>
+    <recordKeyType typeId="fc8b79ba-a4ba-4cfd-aa6f-6c359a5c2fec" valueTypeId="815d899d-1232-4110-b61c-d6e36affb472"/>
+    <recordType typeId="46e394c0-57d8-4b4b-98da-895bc78af961" valueTypeId="61680761-0931-4912-8fae-0147db4c4d0b"/>
+    <recordManagerType typeId="0ef15480-7d07-4dac-bbea-2de4254fecba" valueTypeId="76313343-225d-40af-a7fe-dbf87b77aeec"/>
+  </producedTypes>
+  <name>КИИ_МониторингОшибокСтатистика</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг ошибок статистика</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.КИИ_МониторингОшибокСтатистика.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>Статистика ошибок</value>
+  </listPresentation>
+  <resources uuid="d3001223-3445-4559-b123-c0d1e2f3a4b5">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ce6b27be-b632-4fe8-998d-68f201304d56">
+    <name>ХешОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>32</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+  <forms uuid="5b78308c-865a-468b-8323-e6e1224a0089">
+    <name>ФормаСписка</name>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

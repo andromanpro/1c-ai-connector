@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b179c61-503c-4c24-ae66-43d281e117b2">
+  <name>КИИ_СерверMCPАудитОчистка</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP: очистка устаревших записей аудита</value>
+  </synonym>
+  <methodName>CommonModule.КИИ_СерверMCPАудит.ВыполнитьОчисткуАудита</methodName>
+  <key>КИИ_СерверMCPАудитОчистка</key>
+  <use>true</use>
+</mdclass:ScheduledJob>

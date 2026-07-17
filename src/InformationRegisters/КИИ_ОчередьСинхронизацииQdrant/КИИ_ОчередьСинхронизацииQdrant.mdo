@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d1f6ddcd-27aa-4bdb-b795-bbf91ac897ff">
+  <producedTypes>
+    <selectionType typeId="db7ca18d-79bb-4498-9775-6cd5a6ebc2a9" valueTypeId="4bb1ffc1-755f-4af6-9c63-50832f30edb9"/>
+    <listType typeId="aeca5de8-b5e7-41fd-bb33-241c6c7c3d56" valueTypeId="0038154e-a285-4992-982b-73df1cb661b7"/>
+    <managerType typeId="f1570631-dbd3-4241-9f2b-166fe3a9fbbc" valueTypeId="ef44de9a-58f8-4cdd-a459-cce3684bd62b"/>
+    <recordSetType typeId="ea1e3a0a-4912-486d-aae4-9eda7cba9a65" valueTypeId="79f2c379-6d74-4a91-b907-d1444060ab2d"/>
+    <recordKeyType typeId="a41ff099-1d72-4886-aefd-0736ef75b961" valueTypeId="9eb753ce-78da-45bd-b668-1f43d40df26f"/>
+    <recordType typeId="caa634b3-a300-4026-90a9-fa3209d8a64d" valueTypeId="96daeb49-0ede-4091-8370-1903351b7e69"/>
+    <recordManagerType typeId="949a79ec-65f3-4bd3-a8ad-8a008d07d23f" valueTypeId="d6d41838-5208-41bf-882c-bf5e5f307963"/>
+  </producedTypes>
+  <name>КИИ_ОчередьСинхронизацииQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очередь синхронизации Qdrant</value>
+  </synonym>
+  <comment>Outbox: очередь upsert/delete точек Qdrant. FIFO по НомерПоПорядку. Независимый непериодический.</comment>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Элемент очереди синхронизации Qdrant</value>
+  </recordPresentation>
+  <resources uuid="d549cb16-1005-4440-821e-e08e78a7728e">
+    <name>НомерПоПорядку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер по порядку</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4efdb6a9-bf19-436d-b7e1-d5345464d2ab">
+    <name>Операция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="e7cace99-7af4-49dc-8f2f-cdd86466d5c7">
+    <name>Хеш</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="daf33a7c-a410-42d1-a72f-7c24a5af7a60">
+    <name>Попыток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Попыток</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e73953f6-65de-4fbf-bfac-4b5bd453da04">
+    <name>ПоследняяОшибка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Последняя ошибка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <resources uuid="724aa8dd-77e1-4072-a16d-297a0c1f419d">
+    <name>ДатаПостановки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата постановки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6abdc6b0-0194-480f-9f2b-c31727f3663c">
+    <name>ФрагментИдентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрагмент (идентификатор)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+  <dimensions uuid="266ad85b-1ab2-4981-bc79-6f50533e5d26">
+    <name>КодМодели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код модели</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </dimensions>
+</mdclass:InformationRegister>

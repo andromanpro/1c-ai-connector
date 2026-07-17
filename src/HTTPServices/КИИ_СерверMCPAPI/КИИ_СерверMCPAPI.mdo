@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="913de952-21cd-429e-8e94-1a45f968bd7c">
+  <name>КИИ_СерверMCPAPI</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP API</value>
+  </synonym>
+  <comment>HTTPService для MCP JSON-RPC. Корневой URL iikona-mcp, шаблоны health (GET, без auth) + rpc (POST, JSON-RPC 2.0).</comment>
+  <rootURL>iikona-mcp</rootURL>
+  <urlTemplates uuid="44a4b1d9-49b9-46dc-80f8-3d9e11454640">
+    <name>health</name>
+    <synonym>
+      <key>ru</key>
+      <value>health</value>
+    </synonym>
+    <template>/health</template>
+    <methods uuid="c98e919c-6836-4fb0-a164-abd986f66fb2">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>GET</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="76112a14-db11-4cc7-9d4b-dc9951bc5223">
+    <name>rpc</name>
+    <synonym>
+      <key>ru</key>
+      <value>rpc</value>
+    </synonym>
+    <template>/rpc</template>
+    <methods uuid="ed950135-2f1b-44eb-abca-b2dffbbe6bd5">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>POST</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

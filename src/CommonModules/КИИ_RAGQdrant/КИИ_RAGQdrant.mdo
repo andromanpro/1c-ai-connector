@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2f159740-0299-41c4-8fc5-e7f90144ad99">
+  <name>КИИ_RAGQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>RAG Qdrant</value>
+  </synonym>
+  <comment>Внешний ANN-бэкенд RAG на Qdrant: tenant/коллекция/point-id, клиент (seam), outbox-диспетчер, поиск (Query API), reconciliation.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

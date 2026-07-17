@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cb4f8e28-9a02-48aa-a029-e5276cbca959">
+  <producedTypes>
+    <objectType typeId="3e3c25f3-ea79-49dc-9d40-d8d255b0a838" valueTypeId="d6914d7f-f7b2-4b43-baa9-9b365273dfe2"/>
+    <refType typeId="b9ea8bd6-ed73-4b6a-a572-1385b44aa974" valueTypeId="8db6f574-8ce3-48ab-9f7e-60cf5ffe1992"/>
+    <selectionType typeId="11f2b4b6-017a-4448-994c-b87b28f909ec" valueTypeId="2ba17641-f276-4d1e-8cbe-e037b2bd5e80"/>
+    <listType typeId="142faee5-83bd-4976-aafa-b8acd6307109" valueTypeId="e5e1aa6c-e753-4c98-b03b-f1590da6c49a"/>
+    <managerType typeId="c17a1690-e16d-477b-a017-be853d6170f6" valueTypeId="b4f8f7c7-f5ba-4f6b-8a29-707c91268efc"/>
+  </producedTypes>
+  <name>КИИ_БазаЗнаний</name>
+  <synonym>
+    <key>ru</key>
+    <value>База знаний</value>
+  </synonym>
+  <comment>Документ-уровень базы знаний RAG. Разбивается на фрагменты (КИИ_ФрагментыЗнаний). Эмбеддинг хранится на фрагменте.</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <objectPresentation>
+    <key>ru</key>
+    <value>База знаний</value>
+  </objectPresentation>
+  <descriptionLength>150</descriptionLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <defaultObjectForm>Catalog.КИИ_БазаЗнаний.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="e7aa6e5a-f85d-488a-974d-c922eafde277">
+    <name>Категория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КИИ_КатегорииЗнаний</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e91d4d4c-9703-4fc5-ae00-737e193f9fff">
+    <name>Содержимое</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержимое</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="62a0c5a8-998d-40ed-b97d-bf0e169f8baf">
+    <name>ИсточникПуть</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник (путь)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="58af6563-807c-4d57-86fa-d6f27db8a36e">
+    <name>ПолитикаЭмбеддингаПереопределение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Политика эмбеддинга (переопределение)</value>
+    </synonym>
+    <comment>Пусто = берется из Категории.</comment>
+    <type>
+      <types>EnumRef.КИИ_ПолитикиЭмбеддинга</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="03a80c69-f14e-449e-9f24-927ab6db89ef">
+    <name>ДатаОбновления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата обновления</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="ca38742d-3d0a-4eda-8900-3da4826ad58f">
+    <name>ФормаЭлемента</name>
+  </forms>
+</mdclass:Catalog>

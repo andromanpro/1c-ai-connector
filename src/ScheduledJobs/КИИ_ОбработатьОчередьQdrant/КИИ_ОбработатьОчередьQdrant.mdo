@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5fd76ee6-9a60-4f57-a161-23f765d03cd1">
+  <name>КИИ_ОбработатьОчередьQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработать очередь Qdrant</value>
+  </synonym>
+  <comment>Drain outbox: заливка/удаление точек Qdrant. По умолчанию выключен.</comment>
+  <methodName>CommonModule.КИИ_RAGQdrant.ОбработатьОчередь</methodName>
+</mdclass:ScheduledJob>

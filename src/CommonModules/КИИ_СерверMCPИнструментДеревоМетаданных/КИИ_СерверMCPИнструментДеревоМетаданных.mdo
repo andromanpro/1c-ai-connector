@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1f90e1e-4e90-412b-a82a-9eda392a4f17">
+  <name>КИИ_СерверMCPИнструментДеревоМетаданных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервер MCP - Инструмент get_metadata_tree</value>
+  </synonym>
+  <comment>MCP tool get_metadata_tree: список метаданных по фильтру (без фильтра — counts; Catalog.* — все справочники; exact ref — один объект).</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

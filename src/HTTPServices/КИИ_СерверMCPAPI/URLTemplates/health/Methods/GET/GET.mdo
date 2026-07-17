@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPServiceMethod xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b649dca3-09bf-4ab2-9178-8f94602607cf">
+  <name>GET</name>
+  <httpMethod>GET</httpMethod>
+  <handler>HTTPServices.КИИ_СерверMCPAPI.URLTemplates.health.Methods.GET</handler>
+</mdclass:HTTPServiceMethod>

@@ -47,4 +47,11 @@
       <value>Gigachat</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="56e7192e-d302-4cea-a81d-864c08d80554">
+    <name>OpenAI_ImageGen</name>
+    <synonym>
+      <key>ru</key>
+      <value>OpenAI Генерация изображений</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>
