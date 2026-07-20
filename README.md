@@ -83,8 +83,9 @@ Basic Auth, ограничение частоты, whitelist запросов, �
 правила игнорирования, статистика, HTML-дашборд. Плюс аудитор кода: по ошибке
 находит место в исходниках и объясняет причину. Аудитор работает поверх стороннего
 анализатора [rlm-tools-bsl](https://github.com/Dach-Coin/rlm-tools-bsl) (MIT):
-структурный индекс кода отдаёт метод и граф вызовов по строке ошибки; REST-шим
-для подключения входит в поставку, установка описана в руководстве.
+структурный индекс кода отдаёт метод и граф вызовов по строке ошибки; REST-шим —
+отдельный репозиторий [1c-ai-connector-audit-shim](https://github.com/andromanpro/1c-ai-connector-audit-shim),
+установка описана в руководстве.
 
 ### Генератор диаграмм
 
@@ -201,6 +202,8 @@ HTML = КИИ_МаркдаунПарсерКлиентСервер.Преобр�
   и тестовое расширение.
 - **MCP-прокси для stdio-клиентов** — [1c-ai-connector-mcp-proxy](https://github.com/andromanpro/1c-ai-connector-mcp-proxy)
   (Claude Desktop и другие клиенты без HTTP-транспорта).
+- **Аудит-шим** — [1c-ai-connector-audit-shim](https://github.com/andromanpro/1c-ai-connector-audit-shim):
+  REST-мост аудитора кода к анализатору rlm-tools-bsl.
 
 ## 🔑 Получение API ключей
 
