@@ -6,7 +6,7 @@
 
 [![Лицензия: MIT](https://img.shields.io/badge/Лицензия-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
-[![Версия](https://img.shields.io/badge/версия-1.3.0-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Версия](https://img.shields.io/badge/версия-1.3.1-green)](https://github.com/andromanpro/1c-ai-connector/releases)
 [![Тесты](https://img.shields.io/badge/YAxUnit-398-brightgreen)](#-качество-кода)
 
 ## 🎯 О проекте
@@ -117,6 +117,9 @@ Basic Auth, ограничение частоты, whitelist запросов, �
   на **8.3.27**
 - **БСП (Библиотека стандартных подсистем) 3.1.10+** — тестировалось
   на демо-базе БСП 3.1.11.392
+- **Режим совместимости интерфейса**: «Такси. Разрешить Версия 8.2» (стандарт
+  типовых конфигураций и БСП) — платформа контролирует его при установке
+  любого расширения
 - Доступ в интернет для облачных провайдеров (локальные модели работают офлайн)
 - Опционально: [Qdrant](https://qdrant.tech) для быстрого векторного поиска,
   [kroki](https://kroki.io) для рендера диаграмм,

@@ -9,7 +9,6 @@
   <objectBelonging>Adopted</objectBelonging>
   <extension xsi:type="mdclassExtension:ConfigurationExtension">
     <defaultRunMode>Checked</defaultRunMode>
-    <usePurposes>Checked</usePurposes>
     <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
   </extension>
   <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="4314dcd3-99b8-44eb-8b37-a724219062f7"/>
@@ -23,10 +22,9 @@
   <configurationExtensionCompatibilityMode>8.3.20</configurationExtensionCompatibilityMode>
   <configurationExtensionPurpose>Customization</configurationExtensionPurpose>
   <defaultRunMode>ManagedApplication</defaultRunMode>
-  <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.3.0</version>
+  <version>1.3.1</version>
   <content>Enum.КИИ_БэкендыВекторногоПоиска</content>
   <content>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</content>
   <content>InformationRegister.КИИ_ПоколениеИндексаQdrant</content>
@@ -136,7 +134,6 @@
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокАнализИИ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
-  <definedTypes>DefinedType.Сотрудник</definedTypes>
   <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
   <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
   <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
@@ -149,10 +146,8 @@
   <constants>Constant.КИИ_АдресСервераKroki</constants>
   <constants>Constant.КИИ_АдресХостаШимаАудитора</constants>
   <constants>Constant.КИИ_ПортШимаАудитора</constants>
-  <catalogs>Catalog._ДемоФизическиеЛица</catalogs>
   <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
   <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
-  <catalogs>Catalog.УчетныеЗаписиЭлектроннойПочты</catalogs>
   <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
   <catalogs>Catalog.КИИ_БазаЗнаний</catalogs>
   <catalogs>Catalog.КИИ_ФрагментыЗнаний</catalogs>
