@@ -165,8 +165,8 @@
     <type>
       <types>Number</types>
       <numberQualifiers>
-        <precision>10</precision>
-        <scale>4</scale>
+        <precision>15</precision>
+        <scale>8</scale>
         <nonNegative>true</nonNegative>
       </numberQualifiers>
     </type>
@@ -221,6 +221,7 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
     <fillValue xsi:type="core:UndefinedValue"/>

@@ -16,4 +16,16 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
+  <templates uuid="9777256f-da4c-4fa4-abbc-74a62319b7c3">
+    <name>ШаблонСтраницы</name>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="9d97986a-052b-472f-919a-f8d2b6491b0c">
+    <name>СкриптДашборда</name>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="73117bf0-a89b-4989-a196-073bcb466551">
+    <name>echarts_js</name>
+    <templateType>BinaryData</templateType>
+  </templates>
 </mdclass:DataProcessor>

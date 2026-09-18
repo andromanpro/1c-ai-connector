@@ -1,0 +1,651 @@
+(function () {
+  "use strict";
+
+  // Модель собирает сервер (КИИ_МониторингОшибокДашборд.СобратьМодель) и кладет неисполняемым JSON.
+  var dataNode = document.getElementById("dashboard-data");
+  var MODEL = {};
+  try {
+    MODEL = JSON.parse(dataNode ? dataNode.textContent : "{}") || {};
+  } catch (e) {
+    MODEL = {};
+  }
+
+  var root = document.documentElement;
+  // Хост страницы: form - HTML-поле формы 1С (кнопки команд формы видны), web - HTTP-сервис.
+  var HOST = root.getAttribute("data-host") === "form" ? "form" : "web";
+  // Атрибут hidden вместо свойства: во встроенном WebKit платформы 1С свойство может не отражаться в разметку.
+  function show(el, visible) { if (visible) { el.removeAttribute("hidden"); } else { el.setAttribute("hidden", "hidden"); } }
+  var C = {};
+  var TOKEN_NAMES = ["ink", "muted", "faint", "line", "grid", "panel", "panel-2", "accent", "secondary",
+    "crit", "high", "mid", "low", "none", "body", "display", "heat-0", "heat-1", "heat-2", "heat-3", "heat-4",
+    "funnel-1", "funnel-2", "funnel-3", "funnel-4", "on-dark", "on-bright", "ai-text", "tooltip-shadow"];
+  function camel(name) {
+    return name.split("-").map(function (part, i) { return i === 0 ? part : part.charAt(0).toUpperCase() + part.slice(1); }).join("");
+  }
+  function readTokens() {
+    var css = getComputedStyle(root);
+    TOKEN_NAMES.forEach(function (name) { C[camel(name)] = css.getPropertyValue("--" + name).trim(); });
+  }
+  readTokens();
+  var reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  var LEVELS = [
+    { key: "crit", name: "Критическая", rank: 4 },
+    { key: "high", name: "Высокая", rank: 3 },
+    { key: "mid", name: "Средняя", rank: 2 },
+    { key: "low", name: "Низкая", rank: 1 },
+    { key: "none", name: "Без оценки", rank: 0 }
+  ];
+  var LEVEL = {};
+  LEVELS.forEach(function (l) { LEVEL[l.key] = l; });
+  function paintLevels() { LEVELS.forEach(function (l) { l.color = C[l.key]; }); }
+  paintLevels();
+
+  var MONTHS = ["янв", "фев", "мар", "апр", "мая", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"];
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function parseDay(text) {
+    var parts = String(text).split("-");
+    return new Date(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2]));
+  }
+  function parseMoment(text) {
+    if (!text) { return null; }
+    var pieces = String(text).split("T");
+    var date = parseDay(pieces[0]);
+    if (pieces[1]) {
+      var time = pieces[1].split(":");
+      date.setHours(Number(time[0]) || 0, Number(time[1]) || 0);
+    }
+    return date;
+  }
+  function fmtDay(date) { return date.getDate() + " " + MONTHS[date.getMonth()]; }
+  function fmtMoment(date) { return date ? fmtDay(date) + " " + pad(date.getHours()) + ":" + pad(date.getMinutes()) : "—"; }
+  function fmtNum(n) { return Math.round(n).toLocaleString("ru-RU"); }
+  // Запрос к модели через OpenRouter стоит доли цента: суммы меньше цента показываем с четырьмя знаками, иначе «$0.00».
+  function fmtMoney(n) {
+    var value = Number(n) || 0;
+    if (value > 0 && value < 0.01) { return "$" + value.toFixed(4); }
+    return "$" + (Math.round(value * 100) / 100).toFixed(2);
+  }
+  function iso(date) { return date.getFullYear() + "-" + pad(date.getMonth() + 1) + "-" + pad(date.getDate()); }
+  // Подсказки ECharts выводятся HTML-разметкой: тексты ошибок и советы ИИ пришли из журнала и экранируются.
+  function esc(value) {
+    return String(value === null || value === undefined ? "" : value).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+  // Имя категории «__proto__» ломает словарь категорий внутри ECharts: такую подпись прячем за невидимым пробелом.
+  function safeName(value) { return value === "__proto__" ? "​" + value : value; }
+  // Разборы ИИ приходят в Markdown (так их показывает Телеграм); на странице разметка не нужна:
+  // звездочки, обратные кавычки и решетки заголовков убираем, абзацы оставляем.
+  function plainText(value) {
+    return String(value || "")
+      .replace(/\*\*|__|`/g, "")
+      .replace(/^[ \t]{0,3}#{1,6}[ \t]+/gm, "")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
+  }
+  // Подпись ошибки в одну строку: тексты из журнала регистрации многострочные; без текста - имя события.
+  function errorLabel(err) {
+    return safeName(String(err.text || err.event || "Без текста").replace(/\s+/g, " ").trim());
+  }
+  // Суть ошибки для коротких подписей. Текст исключения платформы начинается с места в коде «{Модуль(N)}:»,
+  // содержит строки кода (с табуляции) и цепочку «по причине:». Берем последнюю причину без места в коде и кода;
+  // полный текст остается в подсказке.
+  function errorGist(err) {
+    var lines = String(err.text || "").split(/\r?\n/);
+    var reasonAt = -1;
+    lines.forEach(function (line, i) { if (/^\s*по причине:/.test(line)) { reasonAt = i; } });
+    var tail = lines.slice(Math.max(reasonAt, 0));
+    if (reasonAt >= 0) { tail[0] = tail[0].replace(/^\s*по причине:\s*/, ""); }
+    var gist = tail
+      .filter(function (line) { return line.trim() && line.charAt(0) !== "\t"; })
+      .map(function (line) { return line.replace(/^\s*\{[^}]*\}:\s*/, ""); })
+      .join(" ").replace(/\s+/g, " ").trim();
+    return gist ? safeName(gist) : errorLabel(err);
+  }
+  function sum(values, from, to) { var total = 0; for (var i = from; i < to; i++) { total += values[i]; } return total; }
+
+  var DAYS = (MODEL.days || []).map(parseDay);
+  var DAY_INDEX = {};
+  (MODEL.days || []).forEach(function (text, i) { DAY_INDEX[text] = i; });
+
+  var ERRORS = (MODEL.errors || []).map(function (source) {
+    var counts = [];
+    for (var i = 0; i < DAYS.length; i++) { counts.push(0); }
+    (source.counts || []).forEach(function (pair) {
+      if (pair[0] >= 0 && pair[0] < counts.length) { counts[pair[0]] += Number(pair[1]) || 0; }
+    });
+    // Первое вхождение из журнала: раньше окна - ошибка не новая; внутри окна - индекс дня; без даты - первый день со счетчиком.
+    var firstDay = source.first ? String(source.first).split("T")[0] : "";
+    var firstIdx;
+    if (firstDay && Object.prototype.hasOwnProperty.call(DAY_INDEX, firstDay)) {
+      firstIdx = DAY_INDEX[firstDay];
+    } else if (firstDay && DAYS.length && parseDay(firstDay) < DAYS[0]) {
+      firstIdx = -1;
+    } else {
+      firstIdx = counts.findIndex(function (v) { return v > 0; });
+      if (firstIdx < 0) { firstIdx = DAYS.length; }
+    }
+    return {
+      level: LEVEL[source.level] ? source.level : "none",
+      object: source.object || "",
+      event: source.event || "",
+      text: source.text || "",
+      ai: plainText(source.ai),
+      ignored: !!source.ignored,
+      analyzed: !!source.analyzed,
+      telegram: !!source.telegram,
+      last: parseMoment(source.last),
+      counts: counts,
+      firstIdx: firstIdx
+    };
+  });
+
+  var COSTS = {};
+  (MODEL.costs || []).forEach(function (row) { COSTS[row[0]] = { tokens: Number(row[1]) || 0, cost: Number(row[2]) || 0 }; });
+
+  function compute(period) {
+    var end = DAYS.length;
+    var start = Math.max(0, end - period);
+    var prevStart = Math.max(0, start - period);
+    var daily = [];
+    for (var i = start; i < end; i++) {
+      var row = { date: DAYS[i], total: 0, unique: 0, fresh: 0, byLevel: { crit: 0, high: 0, mid: 0, low: 0, none: 0 } };
+      ERRORS.forEach(function (err) {
+        var v = err.counts[i];
+        if (v > 0) {
+          row.total += v; row.unique += 1; row.byLevel[err.level] += v;
+          if (err.firstIdx === i) { row.fresh += 1; }
+        }
+      });
+      daily.push(row);
+    }
+    var inPeriod = ERRORS.map(function (err) {
+      return { err: err, occ: sum(err.counts, start, end) };
+    }).filter(function (x) { return x.occ > 0; });
+
+    var total = daily.reduce(function (s, r) { return s + r.total; }, 0);
+    var prevTotal = ERRORS.reduce(function (s, err) { return s + sum(err.counts, prevStart, start); }, 0);
+    var fresh = inPeriod.filter(function (x) { return x.err.firstIdx >= start; }).length;
+    var severe = inPeriod.filter(function (x) { return x.err.level === "crit" || x.err.level === "high"; });
+    var ignored = inPeriod.filter(function (x) { return x.err.ignored; }).length;
+    var toAnalyze = inPeriod.length - ignored;
+    var pending = inPeriod.filter(function (x) { return !x.err.ignored && !x.err.analyzed; }).length;
+    var analyzed = toAnalyze - pending;
+    var telegram = inPeriod.filter(function (x) { return !x.err.ignored && x.err.telegram; }).length;
+
+    var tokens = [];
+    var cumulativeCost = [];
+    var runningCost = 0;
+    for (var d = start; d < end; d++) {
+      var spent = COSTS[d] || { tokens: 0, cost: 0 };
+      tokens.push(spent.tokens);
+      runningCost += spent.cost;
+      cumulativeCost.push(Math.round(runningCost * 100) / 100);
+    }
+
+    return {
+      period: period, daily: daily, inPeriod: inPeriod, total: total, prevTotal: prevTotal,
+      hasPrev: start - prevStart === period, unique: inPeriod.length, fresh: fresh, severe: severe,
+      ignored: ignored, toAnalyze: toAnalyze, pending: pending, analyzed: analyzed, telegram: telegram,
+      tokens: tokens, cumulativeCost: cumulativeCost, cost: runningCost
+    };
+  }
+
+  var baseText, tooltipStyle;
+  function paintCommon() {
+    baseText = { color: C.muted, fontFamily: C.body, fontSize: 12 };
+    tooltipStyle = {
+      backgroundColor: C.panel, borderColor: C.line, borderWidth: 1, padding: [8, 10],
+      textStyle: { color: C.ink, fontFamily: C.body, fontSize: 12 },
+      extraCssText: "box-shadow: 0 8px 24px " + C.tooltipShadow + "; border-radius: 8px;"
+    };
+  }
+  paintCommon();
+  function axisCommon() {
+    return {
+      axisLine: { lineStyle: { color: C.line } },
+      axisTick: { show: false },
+      axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11 },
+      splitLine: { lineStyle: { color: C.grid } }
+    };
+  }
+
+  var charts = {};
+  function chart(id) {
+    if (!charts[id]) { charts[id] = echarts.init(document.getElementById(id), null, { renderer: "canvas" }); }
+    return charts[id];
+  }
+
+  function spark(id, values, color) {
+    var last = values.length ? values.length - 1 : 0;
+    chart(id).setOption({
+      animation: !reduceMotion,
+      grid: { left: 0, right: 0, top: 4, bottom: 0 },
+      xAxis: { type: "category", show: false, data: values.map(function (_, i) { return i; }) },
+      yAxis: { type: "value", show: false },
+      series: [{
+        type: "line", data: values, smooth: true, symbol: "none",
+        lineStyle: { width: 1.6, color: color },
+        areaStyle: { color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+          { offset: 0, color: color + "55" }, { offset: 1, color: color + "00" }
+        ]) },
+        markPoint: {
+          symbol: "circle", symbolSize: 5, label: { show: false },
+          itemStyle: { color: color },
+          data: values.length ? [{ coord: [last, values[last]] }] : []
+        }
+      }]
+    }, true);
+  }
+
+  function renderStatus() {
+    var collectOn = !!MODEL.collectOn, analyzeOn = !!MODEL.analyzeOn;
+    var text = "Регламенты включены";
+    if (!collectOn && !analyzeOn) { text = "Регламенты выключены"; }
+    else if (collectOn && !analyzeOn) { text = "Регламенты: только сбор"; }
+    else if (!collectOn && analyzeOn) { text = "Регламенты: только анализ"; }
+    document.getElementById("schedule-text").textContent = text;
+    document.getElementById("schedule-chip").className = "chip" + (collectOn && analyzeOn ? "" : " off");
+    document.getElementById("last-run").textContent = MODEL.lastCollect || "нет данных";
+    document.getElementById("generated").textContent = MODEL.generated || "";
+    var truncated = Number(MODEL.truncated) || 0;
+    show(document.getElementById("truncated-chip"), truncated > 0);
+    document.getElementById("truncated").textContent = fmtNum(truncated);
+    show(document.getElementById("cmd-enable"), HOST === "form" && !(collectOn && analyzeOn));
+    var deep = MODEL.deep ? String(MODEL.deep) : "";
+    show(document.getElementById("deep-panel"), HOST === "form" && deep !== "");
+    document.getElementById("deep-text").textContent = deep;
+  }
+
+  function render(period) {
+    var d = compute(period);
+    var labels = d.daily.map(function (r) { return fmtDay(r.date); });
+
+    show(document.getElementById("empty-state"), d.inPeriod.length === 0);
+    document.getElementById("k-total").textContent = fmtNum(d.total);
+    var deltaEl = document.getElementById("k-total-delta");
+    if (d.hasPrev && d.prevTotal > 0) {
+      var delta = Math.round((d.total - d.prevTotal) / d.prevTotal * 100);
+      deltaEl.textContent = (delta > 0 ? "▲ " : delta < 0 ? "▼ " : "") + Math.abs(delta) + "%";
+      deltaEl.className = "delta " + (delta > 0 ? "up" : delta < 0 ? "down" : "");
+    } else {
+      deltaEl.textContent = "—";
+      deltaEl.className = "delta";
+    }
+    document.getElementById("k-unique").textContent = fmtNum(d.unique);
+    document.getElementById("k-new").textContent = fmtNum(d.fresh);
+    document.getElementById("k-severe").textContent = fmtNum(d.severe.length);
+    document.getElementById("k-severe-occ").textContent = fmtNum(d.severe.reduce(function (s, x) { return s + x.occ; }, 0));
+    var pct = d.toAnalyze > 0 ? Math.round(d.analyzed / d.toAnalyze * 100) : 100;
+    document.getElementById("k-analyzed").textContent = pct + "%";
+    document.getElementById("k-pending").textContent = fmtNum(d.pending);
+    document.getElementById("k-cost").textContent = fmtMoney(d.cost);
+    document.getElementById("k-tokens").textContent = fmtNum(d.tokens.reduce(function (s, t) { return s + t; }, 0));
+
+    spark("spark-total", d.daily.map(function (r) { return r.total; }), C.accent);
+    spark("spark-unique", d.daily.map(function (r) { return r.unique; }), C.secondary);
+    spark("spark-severe", d.daily.map(function (r) { return r.byLevel.crit + r.byLevel.high; }), C.crit);
+    spark("spark-analyzed", d.daily.map(function (r) { return r.fresh; }), C.low);
+    spark("spark-cost", d.cumulativeCost, C.mid);
+
+    chart("c-days").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ trigger: "axis", axisPointer: { type: "shadow", shadowStyle: { color: C.accent + "12" } } }, tooltipStyle),
+      legend: { top: 0, left: 0, itemWidth: 10, itemHeight: 10, textStyle: { color: C.muted, fontSize: 12 } },
+      grid: { left: 40, right: 36, top: 34, bottom: 28 },
+      xAxis: Object.assign({ type: "category", data: labels }, axisCommon(), {
+        axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11, hideOverlap: true }
+      }),
+      yAxis: [
+        Object.assign({ type: "value", minInterval: 1 }, axisCommon()),
+        Object.assign({ type: "value", minInterval: 1 }, axisCommon(), { splitLine: { show: false } })
+      ],
+      series: LEVELS.slice().reverse().map(function (level) {
+        return {
+          name: level.name, type: "bar", stack: "occ", barMaxWidth: 22,
+          itemStyle: { color: level.color, borderRadius: level.key === "crit" ? [3, 3, 0, 0] : 0 },
+          emphasis: { focus: "series" },
+          data: d.daily.map(function (r) { return r.byLevel[level.key]; })
+        };
+      }).concat([{
+        name: "Уникальные", type: "line", yAxisIndex: 1, smooth: 0.3, symbol: "circle", symbolSize: 5,
+        lineStyle: { color: C.accent, width: 2 }, itemStyle: { color: C.accent },
+        data: d.daily.map(function (r) { return r.unique; })
+      }])
+    }, true);
+
+    var levelTotals = LEVELS.map(function (level) {
+      return { name: level.name, value: d.daily.reduce(function (s, r) { return s + r.byLevel[level.key]; }, 0), itemStyle: { color: level.color } };
+    }).filter(function (item) { return item.value > 0; });
+    chart("c-donut").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ trigger: "item", formatter: function (p) { return esc(p.name) + ": " + fmtNum(p.value) + " (" + p.percent + "%)"; } }, tooltipStyle),
+      title: {
+        text: fmtNum(d.total), subtext: "вхождений", left: "center", top: "39%",
+        textStyle: { color: C.ink, fontFamily: C.display, fontWeight: "bold", fontSize: 28 },
+        subtextStyle: { color: C.muted, fontSize: 12 }
+      },
+      legend: { bottom: 0, left: "center", itemWidth: 10, itemHeight: 10, textStyle: { color: C.muted, fontSize: 12 } },
+      series: [{
+        type: "pie", radius: ["54%", "76%"], center: ["50%", "46%"], avoidLabelOverlap: true,
+        itemStyle: { borderColor: C.panel, borderWidth: 3, borderRadius: 4 },
+        label: { show: false }, emphasis: { scale: true, scaleSize: 6 },
+        data: levelTotals
+      }]
+    }, true);
+
+    // Тепловая карта: последние 17 недель окна, независимо от выбранного периода.
+    var heatStart = Math.max(0, DAYS.length - 119);
+    var heatData = [];
+    for (var h = heatStart; h < DAYS.length; h++) {
+      heatData.push([iso(DAYS[h]), ERRORS.reduce(function (s, err) { return s + err.counts[h]; }, 0)]);
+    }
+    var heatMax = heatData.reduce(function (m, x) { return Math.max(m, x[1]); }, 0);
+    chart("c-heat").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ formatter: function (p) {
+        var parts = p.value[0].split("-");
+        return Number(parts[2]) + " " + MONTHS[Number(parts[1]) - 1] + ": " + fmtNum(p.value[1]) + " вхождений";
+      } }, tooltipStyle),
+      visualMap: {
+        min: 0, max: Math.max(1, heatMax), show: false,
+        inRange: { color: [C.heat0, C.heat1, C.heat2, C.heat3, C.heat4] }
+      },
+      calendar: {
+        top: 26, left: 44, right: 12, bottom: 8,
+        range: DAYS.length ? [iso(DAYS[heatStart]), iso(DAYS[DAYS.length - 1])] : [iso(new Date()), iso(new Date())],
+        cellSize: ["auto", 18],
+        splitLine: { show: false },
+        itemStyle: { color: C.panel, borderColor: C.panel, borderWidth: 3 },
+        yearLabel: { show: false },
+        monthLabel: { nameMap: ["янв", "фев", "мар", "апр", "май", "июн", "июл", "авг", "сен", "окт", "ноя", "дек"], color: C.muted, fontSize: 11 },
+        dayLabel: { firstDay: 1, nameMap: ["вс", "пн", "вт", "ср", "чт", "пт", "сб"], color: C.faint, fontSize: 10 }
+      },
+      series: [{ type: "heatmap", coordinateSystem: "calendar", data: heatData, itemStyle: { borderRadius: 3 } }]
+    }, true);
+
+    var top = d.inPeriod.slice().sort(function (a, b) { return b.occ - a.occ; }).slice(0, 10).reverse();
+    // Ширина подписи от ширины панели и явный отступ сетки: containLabel в ECharts 6 подписи обрезает.
+    var topWidth = document.getElementById("c-top").clientWidth || 600;
+    var labelWidth = Math.max(120, Math.min(320, Math.round(topWidth * 0.42)));
+    chart("c-top").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({
+        trigger: "item",
+        formatter: function (p) {
+          var item = top[p.dataIndex];
+          var note;
+          if (item.err.ai) {
+            note = "<div style='max-width:320px;white-space:normal;margin-top:6px;color:" + C.aiText + "'>ИИ: " + esc(item.err.ai) + "</div>";
+          } else if (item.err.ignored) {
+            note = "<div style='margin-top:6px;color:" + C.muted + "'>Проигнорировано правилом</div>";
+          } else {
+            note = "<div style='margin-top:6px;color:" + C.muted + "'>Разбора ИИ пока нет</div>";
+          }
+          return "<div style='max-width:360px;white-space:normal'><b>" + esc(errorLabel(item.err)) + "</b></div>" +
+            "<div style='color:" + C.muted + "'>" + esc(item.err.object || "Без объекта") + " · " + esc(item.err.event) + "</div>" +
+            "<div style='margin-top:4px'>" + fmtNum(item.occ) + " вхождений · " + LEVEL[item.err.level].name + "</div>" + note;
+        }
+      }, tooltipStyle),
+      grid: { left: labelWidth + 16, right: 44, top: 6, bottom: 6 },
+      xAxis: Object.assign({ type: "value" }, axisCommon(), { axisLabel: { show: false } }),
+      yAxis: {
+        type: "category",
+        data: top.map(function (x) { return errorGist(x.err); }),
+        axisLine: { show: false }, axisTick: { show: false },
+        axisLabel: { color: C.ink, fontSize: 12, width: labelWidth, overflow: "truncate" }
+      },
+      series: [{
+        type: "bar", barMaxWidth: 16,
+        data: top.map(function (x) {
+          return { value: x.occ, itemStyle: { color: LEVEL[x.err.level].color, borderRadius: [0, 4, 4, 0], opacity: x.err.ignored ? 0.35 : 1 } };
+        }),
+        label: { show: true, position: "right", color: C.muted, fontFamily: C.body, fontSize: 11 }
+      }]
+    }, true);
+
+    // Плитка - объект метаданных; у ошибок без объекта - событие журнала регистрации. Ошибки одного объекта
+    // складываются в одну плитку, цвет - худшая критичность среди них.
+    // Словари без прототипа: имя объекта или события вроде «constructor» иначе вернет чужое свойство.
+    var byObject = Object.create(null);
+    d.inPeriod.forEach(function (x) {
+      var kind, name;
+      if (x.err.object) {
+        var dot = x.err.object.indexOf(".");
+        kind = dot > 0 ? x.err.object.slice(0, dot) : x.err.object;
+        name = dot > 0 ? x.err.object.slice(dot + 1) : x.err.object;
+      } else {
+        kind = "Событие";
+        name = x.err.event || "Без события";
+      }
+      kind = safeName(kind);
+      name = safeName(name);
+      var full = kind + "." + name;
+      byObject[kind] = byObject[kind] || { name: kind, children: [], index: Object.create(null) };
+      var group = byObject[kind];
+      var leaf = group.index[name];
+      if (!leaf) {
+        leaf = { name: name, value: 0, level: x.err.level, full: x.err.object ? x.err.object : "Событие журнала: " + name };
+        group.index[name] = leaf;
+        group.children.push(leaf);
+      }
+      leaf.value += x.occ;
+      if (LEVEL[x.err.level].rank > LEVEL[leaf.level].rank) { leaf.level = x.err.level; }
+    });
+    var treeData = Object.keys(byObject).map(function (k) {
+      var node = byObject[k];
+      delete node.index;
+      node.itemStyle = { borderColor: C.panel, borderWidth: 2, gapWidth: 2 };
+      node.children.forEach(function (c) { c.itemStyle = { color: LEVEL[c.level].color, borderColor: C.panel, borderWidth: 2 }; });
+      return node;
+    });
+    chart("c-tree").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ formatter: function (p) {
+        var dd = p.data || {};
+        return "<b>" + esc(dd.full || p.name) + "</b><div>" + fmtNum(p.value) + " вхождений" + (dd.level ? " · " + LEVEL[dd.level].name : "") + "</div>";
+      } }, tooltipStyle),
+      series: [{
+        type: "treemap", roam: false, nodeClick: false, breadcrumb: { show: false },
+        left: 0, right: 0, top: 0, bottom: 0,
+        upperLabel: { show: true, height: 22, color: C.ink, fontFamily: C.body, fontSize: 11, backgroundColor: "transparent" },
+        label: { show: true, color: C.onBright, fontSize: 11, fontWeight: "bold", overflow: "truncate" },
+        levels: [
+          { itemStyle: { borderColor: C.panel, borderWidth: 3, gapWidth: 3 }, upperLabel: { show: true } },
+          { itemStyle: { borderColor: C.panel, borderWidth: 1, gapWidth: 1 }, colorSaturation: [0.35, 0.6] }
+        ],
+        data: treeData
+      }]
+    }, true);
+
+    chart("c-funnel").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ trigger: "item", formatter: function (p) { return esc(p.name) + ": " + fmtNum(p.value); } }, tooltipStyle),
+      series: [{
+        type: "funnel", sort: "none", left: "4%", right: "4%", top: 8, bottom: 42, gap: 3, minSize: "28%",
+        label: { show: true, position: "inside", fontWeight: "bold", fontSize: 12,
+          formatter: function (p) { return p.name + "  " + fmtNum(p.value); } },
+        itemStyle: { borderWidth: 0 },
+        data: [
+          { name: "Собрано", value: d.unique, itemStyle: { color: C.funnel1 }, label: { color: C.onDark } },
+          { name: "К разбору", value: d.toAnalyze, itemStyle: { color: C.funnel2 }, label: { color: C.onDark } },
+          { name: "Разобрано ИИ", value: d.analyzed, itemStyle: { color: C.funnel3 }, label: { color: C.onBright } },
+          { name: "В Телеграм", value: d.telegram, itemStyle: { color: C.funnel4 }, label: { color: C.onBright } }
+        ]
+      }],
+      graphic: [{
+        type: "text", left: "center", bottom: 8,
+        style: { text: "Проигнорировано правилами: " + fmtNum(d.ignored) + " · ждут разбора: " + fmtNum(d.pending), fill: C.muted, font: "12px " + C.body }
+      }]
+    }, true);
+
+    chart("c-newrec").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ trigger: "axis" }, tooltipStyle),
+      legend: { top: 0, left: 0, itemWidth: 10, itemHeight: 10, textStyle: { color: C.muted, fontSize: 12 } },
+      grid: { left: 36, right: 12, top: 30, bottom: 26 },
+      xAxis: Object.assign({ type: "category", data: labels }, axisCommon(), {
+        axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11, hideOverlap: true }
+      }),
+      yAxis: Object.assign({ type: "value", minInterval: 1 }, axisCommon()),
+      series: [
+        { name: "Повторяющиеся", type: "line", smooth: 0.3, symbol: "none",
+          lineStyle: { width: 1.5, color: C.secondary }, areaStyle: { color: C.secondary + "47" },
+          data: d.daily.map(function (r) { return r.unique - r.fresh; }) },
+        { name: "Новые", type: "bar", barMaxWidth: 10, itemStyle: { color: C.crit, borderRadius: [2, 2, 0, 0] },
+          data: d.daily.map(function (r) { return r.fresh; }) }
+      ]
+    }, true);
+
+    chart("c-cost").setOption({
+      animation: !reduceMotion,
+      textStyle: baseText,
+      tooltip: Object.assign({ trigger: "axis", formatter: function (ps) {
+        var s = esc(ps[0].axisValue);
+        ps.forEach(function (p) { s += "<br>" + p.marker + esc(p.seriesName) + ": " + (p.seriesIndex === 0 ? fmtNum(p.value) : fmtMoney(p.value)); });
+        return s;
+      } }, tooltipStyle),
+      legend: { top: 0, left: 0, itemWidth: 10, itemHeight: 10, textStyle: { color: C.muted, fontSize: 12 } },
+      grid: { left: 44, right: 50, top: 32, bottom: 26 },
+      xAxis: Object.assign({ type: "category", data: labels }, axisCommon(), {
+        axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11, hideOverlap: true }
+      }),
+      yAxis: [
+        Object.assign({ type: "value" }, axisCommon(), {
+          axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11, formatter: function (v) { return v >= 1000 ? (v % 1000 === 0 ? v / 1000 : (v / 1000).toFixed(1)) + "k" : v; } }
+        }),
+        Object.assign({ type: "value" }, axisCommon(), { splitLine: { show: false }, axisLabel: { color: C.muted, fontFamily: C.body, fontSize: 11, formatter: function (v) { return "$" + v; } } })
+      ],
+      series: [
+        { name: "Токены", type: "bar", barMaxWidth: 14, itemStyle: { color: C.accent + "8C", borderRadius: [3, 3, 0, 0] }, data: d.tokens },
+        { name: "Стоимость нарастающим итогом", type: "line", yAxisIndex: 1, smooth: 0.3, symbol: "none",
+          lineStyle: { color: C.mid, width: 2 }, itemStyle: { color: C.mid }, data: d.cumulativeCost }
+      ]
+    }, true);
+
+    var recent = d.inPeriod.filter(function (x) { return x.err.ai; })
+      .sort(function (a, b) { return ((b.err.last ? b.err.last.getTime() : 0) - (a.err.last ? a.err.last.getTime() : 0)) || (b.occ - a.occ); })
+      .slice(0, 3);
+    var box = document.getElementById("analyses");
+    box.textContent = "";
+    if (!recent.length) {
+      var none = document.createElement("p");
+      none.className = "none";
+      none.textContent = "Разборов ИИ за период пока нет.";
+      box.appendChild(none);
+    }
+    recent.forEach(function (x) {
+      var card = document.createElement("div");
+      card.className = "analysis";
+      var stripe = document.createElement("div");
+      stripe.className = "stripe";
+      stripe.style.background = LEVEL[x.err.level].color;
+      var body = document.createElement("div");
+      var head = document.createElement("div");
+      head.className = "head";
+      var obj = document.createElement("span"); obj.className = "obj"; obj.textContent = x.err.object || "Без объекта";
+      var when = document.createElement("span"); when.textContent = "последнее вхождение " + fmtMoment(x.err.last);
+      head.appendChild(obj); head.appendChild(when);
+      var errEl = document.createElement("p"); errEl.className = "err"; errEl.textContent = errorGist(x.err); errEl.title = errorLabel(x.err);
+      var ai = document.createElement("p"); ai.className = "ai"; ai.textContent = x.err.ai; ai.title = x.err.ai;
+      var tags = document.createElement("div"); tags.className = "tags";
+      var levelTag = document.createElement("span"); levelTag.className = "tag"; levelTag.textContent = LEVEL[x.err.level].name.toLowerCase();
+      var occTag = document.createElement("span"); occTag.className = "tag"; occTag.textContent = fmtNum(x.occ) + " вхождений";
+      tags.appendChild(levelTag); tags.appendChild(occTag);
+      if (x.err.telegram) {
+        var sentTag = document.createElement("span"); sentTag.className = "tag ok"; sentTag.textContent = "отправлено в Телеграм";
+        tags.appendChild(sentTag);
+      }
+      body.appendChild(head); body.appendChild(errEl); body.appendChild(ai); body.appendChild(tags);
+      card.appendChild(stripe); card.appendChild(body);
+      box.appendChild(card);
+    });
+  }
+
+  var initialPeriod = Number(root.getAttribute("data-period"));
+  var currentPeriod = [7, 30, 90].indexOf(initialPeriod) >= 0 ? initialPeriod : 30;
+  var buttons = Array.prototype.slice.call(document.querySelectorAll(".periods button"));
+  function syncPeriodButtons() {
+    buttons.forEach(function (b) { b.setAttribute("aria-pressed", Number(b.getAttribute("data-days")) === currentPeriod ? "true" : "false"); });
+  }
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      currentPeriod = Number(btn.getAttribute("data-days"));
+      syncPeriodButtons();
+      render(currentPeriod);
+      syncFormLinks();
+    });
+  });
+
+  function isDark() { return root.getAttribute("data-theme") === "dark"; }
+  function syncToggle() {
+    document.getElementById("theme-label").textContent = isDark() ? "Светлая тема" : "Тёмная тема";
+  }
+  // Ссылки команд формы несут открытый период и тему: форма вернет страницу в том же состоянии.
+  var formLinks = Array.prototype.slice.call(document.querySelectorAll("a.form-cmd"));
+  function pageUrl() {
+    return window.location.pathname + "?days=" + currentPeriod + "&theme=" + (isDark() ? "dark" : "light");
+  }
+  // Веб-хост: адрес страницы держит открытый период и тему (F5 и закладка открывают то же), meta refresh
+  // подмененный адрес не учитывает, поэтому автообновление - таймером по этому адресу.
+  function syncAddress() {
+    if (HOST !== "web" || !window.history || !window.history.replaceState) { return; }
+    try { window.history.replaceState(null, "", pageUrl()); } catch (e) { /* адрес не меняем */ }
+  }
+  function syncFormLinks() {
+    var theme = isDark() ? "dark" : "light";
+    formLinks.forEach(function (link) {
+      link.setAttribute("href", "#iikona?command=" + link.getAttribute("data-command") + "&days=" + currentPeriod + "&theme=" + theme);
+    });
+    syncAddress();
+  }
+  var refreshSeconds = Number(root.getAttribute("data-refresh")) || 0;
+  if (HOST === "web" && refreshSeconds > 0) {
+    window.setTimeout(function () { window.location.replace(pageUrl()); }, refreshSeconds * 1000);
+  }
+  function repaint() {
+    readTokens();
+    paintLevels();
+    paintCommon();
+    Object.keys(charts).forEach(function (k) { charts[k].dispose(); delete charts[k]; });
+    render(currentPeriod);
+    syncToggle();
+  }
+  // В форме 1С тему хранит форма и передает в странице; хранилище браузера - только для веб-доступа.
+  if (HOST !== "form") {
+    try {
+      var saved = window.localStorage ? window.localStorage.getItem("iikona-dashboard-theme") : null;
+      if (saved === "dark" || saved === "light") { root.setAttribute("data-theme", saved); readTokens(); paintLevels(); paintCommon(); }
+    } catch (e) { /* хранилище недоступно: тема сервера */ }
+  }
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    try { if (HOST !== "form" && window.localStorage) { window.localStorage.setItem("iikona-dashboard-theme", next); } } catch (e) { /* не сохраняем */ }
+    root.setAttribute("data-theme", next);
+    repaint();
+    syncFormLinks();
+  });
+
+  renderStatus();
+  syncPeriodButtons();
+  render(currentPeriod);
+  syncToggle();
+  syncFormLinks();
+
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      Object.keys(charts).forEach(function (k) { charts[k].resize(); });
+      render(currentPeriod);
+    }, 120);
+  });
+})();

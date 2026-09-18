@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ab1260b6-53d1-42ba-ab85-a0185a555bfe">
+  <name>КИИ_ДашбордОшибокВеб</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дашборд ошибок (веб)</value>
+  </synonym>
+  <comment>Веб-доступ к дашборду ошибок: страница, ECharts и скрипт. Корневой URL iikona-dashboard.</comment>
+  <rootURL>iikona-dashboard</rootURL>
+  <urlTemplates uuid="6e20f80f-e222-4278-bfb4-68862dcfc152">
+    <name>page</name>
+    <template>/page</template>
+    <methods uuid="22050453-93d3-43bc-ac49-fb473f10ec8d">
+      <name>GET</name>
+      <handler>ПолучитьСтраницу</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="5e6c5eb6-7ae8-4ba1-8967-2c1a45d2d01c">
+    <name>library</name>
+    <template>/echarts</template>
+    <methods uuid="607398df-8455-44b2-8bd2-3e5136619fea">
+      <name>GET</name>
+      <handler>ПолучитьБиблиотеку</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="30d4dc90-be73-4b07-9362-9be5eca912e7">
+    <name>script</name>
+    <template>/script</template>
+    <methods uuid="7c566e5d-e83e-417b-a6c2-1da5144842bc">
+      <name>GET</name>
+      <handler>ПолучитьСкрипт</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

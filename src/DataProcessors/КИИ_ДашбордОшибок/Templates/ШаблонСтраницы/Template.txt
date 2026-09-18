@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="%DASHBOARD_THEME%" data-period="%DASHBOARD_PERIOD%" data-host="%DASHBOARD_HOST%" data-refresh="%DASHBOARD_REFRESH%">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дашборд ошибок ИИконы</title>
+<style>
+  :root {
+    --ground: #F4F7FB;
+    --panel: #FFFFFF;
+    --panel-2: #F3F7FB;
+    --line: #D7E2EE;
+    --grid: #EDF2F8;
+    --ink: #0E1A26;
+    --muted: #47586B;
+    --faint: #7B8BA0;
+    --ai-text: #243444;
+    --accent: #00B8DF;
+    --accent-text: #007A96;
+    --accent-soft: rgba(0, 184, 223, 0.14);
+    --secondary: #3B6FE0;
+    --crit: #E11D48;
+    --high: #EA6A12;
+    --mid: #D99A00;
+    --low: #149A68;
+    --none: #7A8A9E;
+    --tooltip-shadow: rgba(14, 26, 38, 0.14);
+    --heat-0: #EEF3F9;
+    --heat-1: #CBE8F4;
+    --heat-2: #86D0EA;
+    --heat-3: #2FB2DC;
+    --heat-4: #007A96;
+    --funnel-1: #0A2A43;
+    --funnel-2: #1D5C84;
+    --funnel-3: #00B8DF;
+    --funnel-4: #9ADBF0;
+    --on-dark: #FFFFFF;
+    --on-bright: #06202F;
+    --alert-border: rgba(225, 29, 72, 0.35);
+    --display: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --body: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --mono: Consolas, "Cascadia Mono", Menlo, "DejaVu Sans Mono", "Liberation Mono", "Courier New", monospace;
+    color-scheme: light;
+  }
+  /* Страницу показывает и браузер, и поле HTML-документа 1С. Встроенный WebKit платформы (уровень Safari 11) не знает
+     gap у flex, clamp() и логических отступов, поэтому здесь grid-gap, поля вместо gap и физические padding.
+     Шрифты только системные и начертания только 400 и 700: для остальных весов WebKit 1С рисует ложный полужирный. */
+  :root[data-theme="dark"] {
+    --ground: #030712;
+    --panel: #0A1322;
+    --panel-2: #0F1B2E;
+    --line: #1A2A42;
+    --grid: #13213A;
+    --ink: #E6EEF8;
+    --muted: #8397B3;
+    --faint: #56698A;
+    --ai-text: #C6D4E6;
+    --accent: #00D4FF;
+    --accent-text: #00D4FF;
+    --accent-soft: rgba(0, 212, 255, 0.14);
+    --secondary: #5B8CFF;
+    --crit: #FF3B5C;
+    --high: #FF8A3D;
+    --mid: #FFC857;
+    --low: #3DDC97;
+    --none: #5B6B80;
+    --tooltip-shadow: rgba(0, 0, 0, 0.45);
+    --heat-0: #0C1A2B;
+    --heat-1: #0B3B5C;
+    --heat-2: #006C9A;
+    --heat-3: #00A8D6;
+    --heat-4: #00D4FF;
+    --funnel-1: #1E6FA8;
+    --funnel-2: #1C8FC4;
+    --funnel-3: #00D4FF;
+    --funnel-4: #8EE3FF;
+    --on-dark: #FFFFFF;
+    --on-bright: #07101D;
+    --alert-border: rgba(255, 59, 92, 0.45);
+    color-scheme: dark;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { background: var(--ground); margin: 0; }
+  body {
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 14px;
+    line-height: 1.45;
+    text-rendering: geometricPrecision;
+  }
+  [hidden] { display: none !important; }
+  .page {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 32px 40px;
+    display: grid;
+    grid-gap: 16px;
+  }
+  header.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  header.top > .title-block { margin-right: 24px; }
+  header.top > .status { margin-top: 8px; }
+  .title-block { display: grid; grid-gap: 6px; }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+  }
+  h1 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -4px;
+  }
+  .status > * { margin: 4px; }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .chip b { margin-left: 8px; color: var(--ink); font-weight: 400; }
+  .chip.off b { color: var(--crit); }
+  .pulse {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--low);
+    box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.6);
+    animation: pulse 2.4s infinite;
+  }
+  .chip.off .pulse { background: var(--crit); animation: none; }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(61, 220, 151, 0.55); }
+    70% { box-shadow: 0 0 0 8px rgba(61, 220, 151, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(61, 220, 151, 0); }
+  }
+  .periods {
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+  }
+  .periods button {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: 400 13px var(--body);
+    padding: 6px 12px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .periods button[aria-pressed="true"] {
+    background: var(--accent-soft);
+    color: var(--accent-text);
+  }
+  .theme-toggle {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--muted);
+    font: 400 13px var(--body);
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .theme-toggle svg { width: 16px; height: 16px; margin-right: 6px; }
+  .theme-toggle:hover { color: var(--ink); }
+  .theme-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .periods button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  /* Кнопки команд формы 1С живут на странице (хост form); в веб-доступе формы нет, и они скрыты. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    color: var(--muted);
+    font: 400 13px var(--body);
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn:hover { color: var(--ink); border-color: var(--faint); }
+  .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .btn.primary { color: var(--accent-text); border-color: var(--accent); }
+  .btn.small { font-size: 12px; padding: 3px 8px; border-radius: 7px; }
+  html[data-host="web"] .form-only { display: none !important; }
+  /* В форме 1С заголовок дает сама форма: страница начинается со строки состояния и кнопок. */
+  html[data-host="form"] .page { padding-top: 12px; }
+  html[data-host="form"] .eyebrow, html[data-host="form"] h1 { display: none; }
+  .panel.deep { border-color: var(--accent); }
+  .panel.deep h2 { display: flex; align-items: center; flex-wrap: wrap; }
+  .panel.deep h2 .btn { margin-left: auto; }
+  .deep-text {
+    margin: 0;
+    font: 13px/1.5 var(--body);
+    color: var(--ai-text);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  .empty-state {
+    background: var(--panel);
+    border: 1px dashed var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: var(--muted);
+  }
+  .empty-state b { color: var(--ink); }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 12px;
+  }
+  .kpi {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px 10px;
+    display: grid;
+    grid-gap: 4px;
+    min-width: 0;
+  }
+  .kpi .label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .kpi .value {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  .kpi .sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    min-height: 18px;
+  }
+  .kpi .sub > * + * { margin-left: 8px; }
+  .kpi .sub b { color: var(--ink); font-weight: 400; font-variant-numeric: tabular-nums; }
+  .delta { font-size: 12px; font-variant-numeric: tabular-nums; }
+  .delta.up { color: var(--crit); }
+  .delta.down { color: var(--low); }
+  .kpi.alert { border-color: var(--alert-border); }
+  .kpi.alert .value { color: var(--crit); }
+  .kpi .spark { height: 34px; margin-top: 2px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-gap: 12px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-gap: 6px;
+    min-width: 0;
+  }
+  .panel h2 {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+  }
+  .panel .hint { color: var(--muted); font-size: 12px; font-weight: 400; margin-left: 6px; }
+  .s12 { grid-column: span 12; }
+  .s8 { grid-column: span 8; }
+  .s6 { grid-column: span 6; }
+  .s4 { grid-column: span 4; }
+  .chart { width: 100%; min-width: 0; }
+  .h-main { height: 300px; }
+  .h-heat { height: 200px; }
+  .h-tall { height: 360px; }
+  .h-mid { height: 290px; }
+  .analyses { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-gap: 12px; align-content: start; }
+  .analyses .none { color: var(--muted); font-size: 13px; grid-column: 1 / -1; }
+  .analysis {
+    display: grid;
+    grid-template-columns: 4px minmax(0, 1fr);
+    grid-gap: 12px;
+    padding: 10px 12px 10px 0;
+    background: var(--panel-2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .analysis .stripe { border-radius: 0 3px 3px 0; }
+  .analysis > div:last-child { display: flex; flex-direction: column; min-width: 0; }
+  .analysis .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: -2px -5px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .analysis .head > * { margin: 2px 5px; }
+  .analysis .obj, .analysis .err, .analysis .ai { overflow-wrap: break-word; word-break: break-word; }
+  .analysis .obj { font-family: var(--mono); color: var(--ink); font-size: 12px; }
+  /* Длинные тексты обрезаются по строкам, полный текст - в подсказке карточки */
+  .analysis .err {
+    margin: 4px 0 2px;
+    font-weight: 700;
+    font-size: 13px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .analysis .ai {
+    margin: 0;
+    color: var(--ai-text);
+    font-size: 13px;
+    white-space: pre-line;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+  }
+  .analysis .tags { display: flex; flex-wrap: wrap; margin: auto -3px -3px; padding-top: 6px; }
+  .analysis .tags > * { margin: 3px; }
+  .tag {
+    font-size: 11px;
+    padding: 2px 7px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+  }
+  .tag.ok { color: var(--low); }
+  footer.sources {
+    color: var(--faint);
+    font-size: 12px;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+    max-width: 90ch;
+  }
+  @media (max-width: 1180px) {
+    .page { padding: 20px 24px 32px; }
+    .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .s8, .s6, .s4 { grid-column: span 12; }
+    .analyses { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 620px) {
+    .page { padding: 16px 16px 28px; }
+    h1 { font-size: 24px; }
+    .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .kpi .value { font-size: 24px; }
+    .h-tall { height: 420px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pulse { animation: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="top">
+    <div class="title-block">
+      <span class="eyebrow">ИИкона · мониторинг ошибок</span>
+      <h1>Дашборд ИИ-дежурного</h1>
+      <div class="status">
+        <span class="chip" id="schedule-chip"><span class="pulse" aria-hidden="true"></span><b id="schedule-text">Регламенты включены</b></span>
+        <a class="btn small form-only form-cmd" id="cmd-enable" data-command="enable" href="#iikona?command=enable" hidden>Включить регламенты</a>
+        <span class="chip">Последний сбор <b id="last-run">нет данных</b></span>
+        <span class="chip">Данные на <b id="generated"></b></span>
+        <span class="chip" id="truncated-chip" hidden>Скрыто редких ошибок <b id="truncated"></b></span>
+      </div>
+    </div>
+    <div class="status">
+      <a class="btn primary form-only form-cmd" data-command="refresh" href="#iikona?command=refresh">Обновить</a>
+      <a class="btn form-only form-cmd" data-command="analyze" href="#iikona?command=analyze" title="Разбор ИИ по ошибкам, которые ждут анализа">Проанализировать</a>
+      <a class="btn form-only form-cmd" data-command="deep" href="#iikona?command=deep" title="Агент с инструментами разбирает самую частую ошибку периода">Глубокий анализ</a>
+      <div class="periods" role="group" aria-label="Период">
+        <button type="button" data-days="7" aria-pressed="false">7 дней</button>
+        <button type="button" data-days="30" aria-pressed="false">30 дней</button>
+        <button type="button" data-days="90" aria-pressed="false">90 дней</button>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <span id="theme-label">Тёмная тема</span>
+      </button>
+    </div>
+  </header>
+
+  <article class="panel deep form-only" id="deep-panel" hidden>
+    <h2>Глубокий анализ<span class="hint">самая частая ошибка периода; агент запрашивает структуру объектов и данные</span><a class="btn small form-cmd" data-command="deep-hide" href="#iikona?command=deep-hide">Скрыть</a></h2>
+    <pre class="deep-text" id="deep-text"></pre>
+  </article>
+
+  <div class="empty-state" id="empty-state" hidden>
+    <b>Нет данных за выбранный период.</b> Мониторинг не собрал ни одной ошибки: проверьте, что регламенты включены, или выберите период длиннее.
+  </div>
+
+  <section class="kpis" aria-label="Сводка за период">
+    <article class="kpi">
+      <span class="label">Вхождений</span>
+      <span class="value" id="k-total">0</span>
+      <span class="sub"><span>к прошлому периоду</span><span class="delta" id="k-total-delta"></span></span>
+      <div class="spark" id="spark-total"></div>
+    </article>
+    <article class="kpi">
+      <span class="label">Уникальных ошибок</span>
+      <span class="value" id="k-unique">0</span>
+      <span class="sub"><span>из них новых</span><b id="k-new"></b></span>
+      <div class="spark" id="spark-unique"></div>
+    </article>
+    <article class="kpi alert">
+      <span class="label">Критических и высоких</span>
+      <span class="value" id="k-severe">0</span>
+      <span class="sub"><span>вхождений за период</span><span class="delta" id="k-severe-occ"></span></span>
+      <div class="spark" id="spark-severe"></div>
+    </article>
+    <article class="kpi">
+      <span class="label">Разобрано ИИ</span>
+      <span class="value" id="k-analyzed">0%</span>
+      <span class="sub"><span>ждут разбора</span><b id="k-pending"></b></span>
+      <div class="spark" id="spark-analyzed"></div>
+    </article>
+    <article class="kpi">
+      <span class="label">Расходы на ИИ</span>
+      <span class="value" id="k-cost">$0</span>
+      <span class="sub"><span>токенов</span><b id="k-tokens"></b></span>
+      <div class="spark" id="spark-cost"></div>
+    </article>
+  </section>
+
+  <section class="grid">
+    <article class="panel s8">
+      <h2>Вхождения по дням<span class="hint">столбцы по критичности, линия — уникальные ошибки</span></h2>
+      <div class="chart h-main" id="c-days"></div>
+    </article>
+    <article class="panel s4">
+      <h2>Доля по критичности<span class="hint">вхождения за период</span></h2>
+      <div class="chart h-main" id="c-donut"></div>
+    </article>
+
+    <article class="panel s12">
+      <h2>Тепловая карта<span class="hint">вхождения по дням за 17 недель</span></h2>
+      <div class="chart h-heat" id="c-heat"></div>
+    </article>
+
+    <article class="panel s6">
+      <h2>Что болит<span class="hint">топ-10 ошибок по вхождениям</span></h2>
+      <div class="chart h-tall" id="c-top"></div>
+    </article>
+    <article class="panel s6">
+      <h2>Где болит<span class="hint">объекты метаданных или события журнала, цвет — худшая критичность</span></h2>
+      <div class="chart h-tall" id="c-tree"></div>
+    </article>
+
+    <article class="panel s4">
+      <h2>Путь ошибки<span class="hint">уникальные за период</span></h2>
+      <div class="chart h-mid" id="c-funnel"></div>
+    </article>
+    <article class="panel s8">
+      <h2>Новые и повторяющиеся<span class="hint">уникальных ошибок в день</span></h2>
+      <div class="chart h-mid" id="c-newrec"></div>
+    </article>
+
+    <article class="panel s12">
+      <h2>Расходы на ИИ<span class="hint">токены по дням и стоимость нарастающим итогом, по данным провайдера</span></h2>
+      <div class="chart h-mid" id="c-cost"></div>
+    </article>
+    <article class="panel s12">
+      <h2>Последние разборы ИИ</h2>
+      <div class="analyses" id="analyses"></div>
+    </article>
+  </section>
+
+  <footer class="sources">
+    Откуда данные: вхождения по дням — регистр статистики мониторинга ошибок; критичность, объект, разбор ИИ и отправка в Телеграм — журнал ошибок мониторинга; токены и стоимость — журнал запросов ИИ (все запросы, стоимость сообщает провайдер).
+  </footer>
+</div>
+<script type="application/json" id="dashboard-data">%DASHBOARD_DATA%</script>
+%ECHARTS_LIBRARY%
+%DASHBOARD_SCRIPT%
+</body>
+</html>

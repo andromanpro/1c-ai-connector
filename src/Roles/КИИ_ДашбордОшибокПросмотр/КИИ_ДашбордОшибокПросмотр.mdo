@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6cbadd61-f89e-44a4-9a6c-981435c27990">
+  <name>КИИ_ДашбордОшибокПросмотр</name>
+  <synonym>
+    <key>ru</key>
+    <value>Просмотр дашборда ошибок</value>
+  </synonym>
+  <comment>Для пользователя веб-доступа к дашборду ошибок: просмотр страницы /hs/iikona-dashboard/. Данные дашборд читает сам после проверки права; прав на регистры роль не дает.</comment>
+</mdclass:Role>

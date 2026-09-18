@@ -214,6 +214,10 @@
   </attributes>
   <attributes uuid="40a7b65f-7703-4f7c-8132-b3dbe5fb27b0">
     <name>ОписаниеОтИИ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Разбор ИИ</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers/>

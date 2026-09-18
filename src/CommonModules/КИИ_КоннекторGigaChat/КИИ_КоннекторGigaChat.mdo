@@ -5,7 +5,7 @@
     <key>ru</key>
     <value>Коннектор GigaChat</value>
   </synonym>
-  <comment>Провайдер-модуль GigaChat (Sber). Отличается от OpenAI только заголовками и авторизацией; формат тела и ответа — OpenAI-совместимый, делегируется на КИИ_КоннекторOpenAI.</comment>
+  <comment>Провайдер-модуль GigaChat (Sber). Текст — OpenAI-совместимое тело (делегируется на КИИ_КоннекторOpenAI) с переводом на legacy functions API; вложения — загрузка в /files и идентификаторы в attachments.</comment>
   <server>true</server>
   <externalConnection>true</externalConnection>
   <clientOrdinaryApplication>true</clientOrdinaryApplication>
