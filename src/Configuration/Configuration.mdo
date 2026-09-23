@@ -24,7 +24,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.5.1</version>
+  <version>1.6.0</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -126,6 +126,10 @@
   <constants>Constant.КИИ_РендерДиаграммДоверенный</constants>
   <constants>Constant.КИИ_ВключенныеПравилаПерсональныхДанных</constants>
   <constants>Constant.КИИ_СрокХраненияСобытийКонтроля</constants>
+  <constants>Constant.КИИ_СтильПодстановокПерсональныхДанных</constants>
+  <constants>Constant.КИИ_АдресСервисаРаспознаванияИмен</constants>
+  <constants>Constant.КИИ_ТаймаутСервисаРаспознаванияИмен</constants>
+  <constants>Constant.КИИ_СервисРаспознаванияИменОбязателен</constants>
   <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
   <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
   <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
@@ -139,6 +143,7 @@
   <enums>Enum.КИИ_ТипыМоделей</enums>
   <enums>Enum.КИИ_БэкендыВекторногоПоиска</enums>
   <enums>Enum.КИИ_РежимыКонтроляПерсональныхДанных</enums>
+  <enums>Enum.КИИ_СтилиПодстановок</enums>
   <dataProcessors>DataProcessor.КИИ_ГенераторДиаграмм</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_АнализаторКонфигурации</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_СерверMCPНастройки</dataProcessors>

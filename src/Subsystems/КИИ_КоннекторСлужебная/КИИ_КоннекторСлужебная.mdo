@@ -22,4 +22,9 @@
   <content>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</content>
   <content>CommonModule.КИИ_КонтрольПерсональныхДанных</content>
   <content>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</content>
+  <content>Enum.КИИ_СтилиПодстановок</content>
+  <content>Constant.КИИ_СтильПодстановокПерсональныхДанных</content>
+  <content>Constant.КИИ_АдресСервисаРаспознаванияИмен</content>
+  <content>Constant.КИИ_ТаймаутСервисаРаспознаванияИмен</content>
+  <content>Constant.КИИ_СервисРаспознаванияИменОбязателен</content>
 </mdclass:Subsystem>

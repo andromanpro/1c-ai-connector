@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="93091c51-559c-47d7-927c-872576457a27">
+  <producedTypes>
+    <managerType typeId="3cf12d00-756e-450a-8c74-4e48e42193c0" valueTypeId="42f7af24-80c6-4571-895b-ec72cd34e3e5"/>
+    <valueManagerType typeId="3f6ec1bc-a646-45ec-a6e9-bd1f62c39456" valueTypeId="fcb299de-7e1c-4fb1-978a-c1b540171c91"/>
+    <valueKeyType typeId="ef626d75-5f54-4a6f-b85c-66d124392c92" valueTypeId="9d6e635c-24d6-4585-9cdc-b4a6206c6e34"/>
+  </producedTypes>
+  <name>КИИ_ТаймаутСервисаРаспознаванияИмен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Таймаут сервиса распознавания имен, секунд</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>3</precision>
+    </numberQualifiers>
+  </type>
+</mdclass:Constant>

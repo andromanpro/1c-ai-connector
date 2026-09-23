@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e2b76e52-ea53-43bf-8c1f-d8177f719a3e">
+  <producedTypes>
+    <managerType typeId="dc94bafd-95d9-43e1-96e2-74e4fbb7ca1b" valueTypeId="75637f66-5999-45f1-b8ce-49e7b9c69cb9"/>
+    <valueManagerType typeId="5c3372b1-e627-44de-bd21-4b57d9cc26ed" valueTypeId="517dbe3e-d5a7-4b07-947b-dc1f5b66259a"/>
+    <valueKeyType typeId="91af8448-ca43-430a-9bbf-f1d02d676e6d" valueTypeId="00c64cec-1704-43d8-ac41-d5899c824616"/>
+  </producedTypes>
+  <name>КИИ_СервисРаспознаванияИменОбязателен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Без сервиса распознавания имен не отправлять</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+</mdclass:Constant>

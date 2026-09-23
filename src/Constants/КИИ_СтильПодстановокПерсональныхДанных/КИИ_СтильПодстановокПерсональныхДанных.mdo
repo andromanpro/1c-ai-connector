@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dd549e04-e62f-430d-828b-63986d216d94">
+  <producedTypes>
+    <managerType typeId="d8dd4c5e-5ae6-461e-bf6d-45fae418bd99" valueTypeId="1170a43c-0471-4520-a346-52a699dad9ab"/>
+    <valueManagerType typeId="17892814-65de-4890-b5a2-6fd8191ab667" valueTypeId="bc0e152e-e85b-4019-902d-98186fd6fda0"/>
+    <valueKeyType typeId="1b887903-046f-4a6e-a3e2-4763de79c1bc" valueTypeId="07911731-780d-4baf-bf88-f96ca482f938"/>
+  </producedTypes>
+  <name>КИИ_СтильПодстановокПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стиль подстановок персональных данных</value>
+  </synonym>
+  <type>
+    <types>EnumRef.КИИ_СтилиПодстановок</types>
+  </type>
+</mdclass:Constant>

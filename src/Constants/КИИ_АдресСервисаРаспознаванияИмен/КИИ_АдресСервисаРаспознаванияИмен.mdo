@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="244332e5-4ac4-44eb-8f06-24c4f7917c9b">
+  <producedTypes>
+    <managerType typeId="b0e8fa5f-8e85-4171-bf66-19175fcdc087" valueTypeId="8c33056c-b549-4747-90a3-e72aa94e3ffe"/>
+    <valueManagerType typeId="1e5b8e4a-790c-48f2-a7ca-c771ef6ac8d9" valueTypeId="075a5c7d-54de-4e53-acda-1f90fbb9233c"/>
+    <valueKeyType typeId="a3d16934-729b-4bf0-b047-494a2232f1be" valueTypeId="d6d1bf47-8ea6-4c11-9413-d0ea5bc249dc"/>
+  </producedTypes>
+  <name>КИИ_АдресСервисаРаспознаванияИмен</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адрес сервиса распознавания имен, организаций и адресов</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>200</length>
+    </stringQualifiers>
+  </type>
+</mdclass:Constant>

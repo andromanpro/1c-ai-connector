@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cba1214d-d293-4680-b2ce-7721c3f308ab">
+  <producedTypes>
+    <refType typeId="05011887-edc6-4f3b-b6c2-98410d9499b4" valueTypeId="43c86c76-b859-4b97-887b-9ea0df8e1cb8"/>
+    <listType typeId="a02a4031-4e4a-4e35-bf51-1c8c6ea5e51a" valueTypeId="3ad02f96-f782-4a57-9d99-bf5d56758bb7"/>
+    <managerType typeId="1e79ccd0-3298-4db3-808a-666a8a20734d" valueTypeId="e74b66d0-b5c1-48e8-9d4d-b425971e17db"/>
+  </producedTypes>
+  <name>КИИ_СтилиПодстановок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стили подстановок персональных данных</value>
+  </synonym>
+  <enumValues uuid="5eb8c9d3-97d1-4238-b6ad-e6247a599c8b">
+    <name>Правдоподобные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правдоподобные значения</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f1d9a930-c4c6-4e96-84bf-e62c0b8755dd">
+    <name>Метки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метки вида [ФИО-1]</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="ffcfab59-3f10-4a65-ab33-63c02870456f">
+    <name>Выдуманные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Смешные выдуманные имена</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>
