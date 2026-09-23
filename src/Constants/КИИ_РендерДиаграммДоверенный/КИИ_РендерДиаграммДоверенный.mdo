@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a84aaa0-d36a-4e58-af91-31ebe9f6d238">
+  <producedTypes>
+    <managerType typeId="2b02b38c-936e-43ea-bd07-0538c2b1f34a" valueTypeId="0316e0b4-aaad-4c47-be7f-36b585aed116"/>
+    <valueManagerType typeId="bba7cf55-0dd5-4a49-b026-79984bde4c94" valueTypeId="7f6c09b9-9735-4d87-9007-d398b81cf277"/>
+    <valueKeyType typeId="b6b0633b-bffa-4031-ba2e-f04c422937d0" valueTypeId="740553ca-4834-4058-9e6b-d80383eaac60"/>
+  </producedTypes>
+  <name>КИИ_РендерДиаграммДоверенный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис рендера диаграмм доверенный</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+</mdclass:Constant>

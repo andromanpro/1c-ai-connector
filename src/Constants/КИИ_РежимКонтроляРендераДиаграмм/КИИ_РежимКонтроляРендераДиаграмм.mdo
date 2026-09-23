@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5215f7d4-bd05-4678-8e91-95d3dea40fb2">
+  <producedTypes>
+    <managerType typeId="ae572a06-723f-43fe-9f8c-829d5ba4570a" valueTypeId="89197070-2c5d-4333-8f75-1b37c62ce211"/>
+    <valueManagerType typeId="46eb4bc3-5b66-439c-9eee-c97913e0c164" valueTypeId="b576c422-8250-423c-ada3-f1fac996804e"/>
+    <valueKeyType typeId="1c8b02e9-3a70-4353-8cca-1d86ff1960e7" valueTypeId="29314d32-9169-4c8d-b19b-9946261d1a22"/>
+  </producedTypes>
+  <name>КИИ_РежимКонтроляРендераДиаграмм</name>
+  <synonym>
+    <key>ru</key>
+    <value>Режим контроля персональных данных при рендере диаграмм</value>
+  </synonym>
+  <type>
+    <types>EnumRef.КИИ_РежимыКонтроляПерсональныхДанных</types>
+  </type>
+</mdclass:Constant>

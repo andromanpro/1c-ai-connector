@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c2654288-eadd-454c-8f2f-377d32cf9c8c">
+  <producedTypes>
+    <managerType typeId="0b825651-ddea-4389-89f8-90b756d4b4ea" valueTypeId="95fdb052-8599-4d75-9559-28297413888d"/>
+    <valueManagerType typeId="d5aac145-409b-46dd-8fd7-1e8beeb513a2" valueTypeId="a106f253-4f6e-4070-99ba-605b66034610"/>
+    <valueKeyType typeId="9f95ecc1-922e-414b-9128-c4b68230ade3" valueTypeId="9f378623-5934-426a-a082-5004271e3eef"/>
+  </producedTypes>
+  <name>КИИ_СрокХраненияСобытийКонтроля</name>
+  <synonym>
+    <key>ru</key>
+    <value>Срок хранения событий контроля персональных данных, дней</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>5</precision>
+    </numberQualifiers>
+  </type>
+</mdclass:Constant>

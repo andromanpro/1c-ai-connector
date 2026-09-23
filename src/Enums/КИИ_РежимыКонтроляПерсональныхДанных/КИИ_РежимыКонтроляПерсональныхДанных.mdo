@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a88ecdc0-64c1-43a6-a2a1-a0c13b0a0749">
+  <producedTypes>
+    <refType typeId="8c06c64f-1ec7-4e72-a125-8ad657038cf0" valueTypeId="0d35b1ab-0fe8-4eae-8b72-81f0129bee51"/>
+    <listType typeId="9ff52c5f-aa22-4def-b973-6af93a97b459" valueTypeId="d498b33e-8e66-4251-9a91-0f512e0824c2"/>
+    <managerType typeId="14c9a8d7-f30f-47c4-8bfa-242792befd48" valueTypeId="95de4c71-e771-4886-a5a2-f7f4f6cd239b"/>
+  </producedTypes>
+  <name>КИИ_РежимыКонтроляПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Режимы контроля персональных данных</value>
+  </synonym>
+  <enumValues uuid="414e6d75-7fad-43ae-81c3-581644fa7e94">
+    <name>Выключен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выключен</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f3b610ae-6061-4bf1-a363-a485c41b114a">
+    <name>Логировать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Только записывать в журнал</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="96d97a5d-c37f-402e-a394-7955419ac105">
+    <name>Маскировать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заменять подстановками</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f6c89573-ab97-4ea3-a004-f183f694884c">
+    <name>Блокировать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не отправлять</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

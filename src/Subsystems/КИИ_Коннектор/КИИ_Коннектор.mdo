@@ -42,4 +42,5 @@
   <content>Catalog.КИИ_КатегорииЗнаний</content>
   <content>Catalog.КИИ_БазаЗнаний</content>
   <content>Catalog.КИИ_ФрагментыЗнаний</content>
+  <content>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных</content>
 </mdclass:Subsystem>

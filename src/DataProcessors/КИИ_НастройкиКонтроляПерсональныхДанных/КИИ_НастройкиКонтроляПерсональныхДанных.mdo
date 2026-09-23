@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3caf4d33-3739-41d5-82e5-00f2609b6c31">
+  <producedTypes>
+    <objectType typeId="d85f7f5e-ab31-4a49-bb68-7bc1e9edc73d" valueTypeId="27bbc79d-4b60-469f-8dd5-b084839c1025"/>
+    <managerType typeId="fcb56fd2-04fa-44a8-b3af-dfb771f0e2d7" valueTypeId="0d2456b3-49c4-40e6-a691-d77c45a64f95"/>
+  </producedTypes>
+  <name>КИИ_НастройкиКонтроляПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль персональных данных</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных.Form.Форма</defaultForm>
+  <forms uuid="8eb6cc21-8668-43d9-b9f4-8c0424dac78d">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контроль персональных данных</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

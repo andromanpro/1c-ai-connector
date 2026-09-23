@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f04d81a-ae79-41b7-aeed-386b87fac3f7">
+  <producedTypes>
+    <selectionType typeId="84ef12aa-0784-4814-9ac7-35d0ca32f1c1" valueTypeId="12e8675f-33b5-4609-840c-97f7ed37030d"/>
+    <listType typeId="c4130ff3-b438-41de-85c3-f630a8492b58" valueTypeId="78e06975-8fb4-478c-a327-a0b8b92b7e40"/>
+    <managerType typeId="dd006150-2ac3-4233-9f27-de67d443a3a9" valueTypeId="25aa1564-38a8-4cde-8122-06bf40475268"/>
+    <recordSetType typeId="0d65781f-c197-46be-ab67-49b0da7f5d6c" valueTypeId="e0e1bb85-5c15-4ab5-bec4-c688e4a6171a"/>
+    <recordKeyType typeId="6ca54651-130e-4154-91e1-a50941027a82" valueTypeId="d60c0058-f1eb-4904-8caf-6cc91f4eff21"/>
+    <recordType typeId="89dec991-d40b-4abb-9d7d-f8a2486beb5a" valueTypeId="de531f9d-66d8-4955-bc62-c230017c2304"/>
+    <recordManagerType typeId="90822854-5fbe-4136-acc1-6a8d3f955f83" valueTypeId="16b9e15f-714f-41e2-b031-a87778123d04"/>
+  </producedTypes>
+  <name>КИИ_ЖурналКонтроляПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал контроля персональных данных</value>
+  </synonym>
+  <resources uuid="df5b5ea4-1f09-4c55-9416-f4ab05f21f71">
+    <name>Момент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Момент</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+  </resources>
+  <resources uuid="5b8d183f-75a7-4201-ad7b-4b4c49e12c84">
+    <name>Канал</name>
+    <synonym>
+      <key>ru</key>
+      <value>Канал</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="f372f9cc-16a8-4948-8d29-f799579fc7cd">
+    <name>Модель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КИИ_МоделиИИ</types>
+    </type>
+  </resources>
+  <resources uuid="c1dbeb25-9d82-4d2b-9abc-dfda4519d74b">
+    <name>Операция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="6e4ce5b5-593f-48a8-8b0c-a2f3b75f204a">
+    <name>НомерПопытки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер попытки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="2607a29a-deb3-4f81-909c-3ba43f7928ed">
+    <name>Этап</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этап</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="308a2f3e-1606-4983-882c-e74a9f600469">
+    <name>Режим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КИИ_РежимыКонтроляПерсональныхДанных</types>
+    </type>
+  </resources>
+  <resources uuid="a44100fd-3150-4f58-8820-16f5bc4df994">
+    <name>Маршрут</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маршрут</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="383c81ce-45a0-4248-8281-cc3fed42453a">
+    <name>Решение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Решение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="30ad8ede-4e2b-45e7-98b2-e4d89d9b2db7">
+    <name>КодОтказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код отказа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="bd9ea9e5-6ef0-4826-b0f8-3e8a54b6696a">
+    <name>ТипыСущностей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Типы сущностей</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="72f83ed6-90fe-47b3-91f1-94fe155edef2">
+    <name>КоличествоЗамен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество замен</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="1e5879c8-5466-4a07-bb3e-79a8314ded88">
+    <name>БылиЗамены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Были замены</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </resources>
+  <resources uuid="334423ee-5edf-42c8-8b2f-d96bc291662a">
+    <name>ВерсияПравил</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия правил</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="3dbbf385-a58a-4a48-a6f0-9e0b50e6300a">
+    <name>ВерсияГенератораПодстановок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия генератора подстановок</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="e214eb3e-7480-4110-a09a-eede5f3684ea">
+    <name>СтатусВосстановления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус восстановления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="470eee3b-219c-4804-89e6-b0e69bfe9c85">
+    <name>ДлительностьМиллисекунд</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длительность, миллисекунд</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="f5762b45-dd2a-4b80-b96c-e0cba20a1887">
+    <name>ЕстьВложения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть вложения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </resources>
+  <resources uuid="36fa85cc-aa3a-49c0-837d-f4675ef30b9f">
+    <name>СтатусАудита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус аудита</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <dimensions uuid="ddfcc78d-5db8-477a-853d-ba6364e0de2b">
+    <name>ИдентификаторСобытия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор события</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+</mdclass:InformationRegister>

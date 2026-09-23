@@ -24,44 +24,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.4.0</version>
-  <content>Enum.КИИ_БэкендыВекторногоПоиска</content>
-  <content>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</content>
-  <content>InformationRegister.КИИ_ПоколениеИндексаQdrant</content>
-  <content>Constant.КИИ_ВерсияСхемыQdrant</content>
-  <content>Constant.КИИ_БэкендВекторногоПоиска</content>
-  <content>Constant.КИИ_QdrantАдрес</content>
-  <content>Constant.КИИ_ИдентификаторTenantQdrant</content>
-  <content>CommonModule.КИИ_RAGQdrant</content>
-  <content>ScheduledJob.КИИ_ОбработатьОчередьQdrant</content>
-  <content>ScheduledJob.КИИ_СверкаQdrant</content>
-  <content>ScheduledJob.КИИ_МониторингОшибокСборОшибок</content>
-  <content>ScheduledJob.КИИ_МониторингОшибокАнализИИ</content>
-  <content>CommonModule.КИИ_МониторингОшибокTelegram</content>
-  <content>CommonModule.КИИ_МониторингОшибокРегистры</content>
-  <content>CommonModule.КИИ_МониторингОшибокЖР</content>
-  <content>CommonModule.КИИ_МониторингОшибокАнализ</content>
-  <content>Role.КИИ_СерверMCPДиагностика</content>
-  <content>DataProcessor.КИИ_ДашбордОшибок</content>
-  <content>Constant.КИИ_МониторингОшибокНастройки</content>
-  <content>Constant.КИИ_МониторингОшибокМодельАнализа</content>
-  <content>Constant.КИИ_МониторингОшибокДатаСбора</content>
-  <content>CommonModule.КИИ_АгентАнализа</content>
-  <content>Constant.КИИ_АдресСервераKroki</content>
-  <content>CommonModule.КИИ_СерверMCPИнструментДиаграмма</content>
-  <content>CommonTemplate.КИИ_ПромптМониторингаСистемный</content>
-  <content>CommonTemplate.КИИ_ПромптМониторингаПользовательский</content>
-  <content>CommonTemplate.КИИ_ПромптГлубокогоАнализа</content>
-  <content>CommonModule.КИИ_АудиторКода</content>
-  <content>ScheduledJob.КИИ_АудиторКодаАвтоанализ</content>
-  <content>Constant.КИИ_АдресХостаШимаАудитора</content>
-  <content>Constant.КИИ_ПортШимаАудитора</content>
-  <content>Catalog.КИИ_ПравилаИгнорированияОшибок</content>
-  <content>ScheduledJob.КИИ_СерверMCPАудитОчистка</content>
-  <content>CommonModule.КИИ_МониторингОшибокДашборд</content>
-  <content>HTTPService.КИИ_ДашбордОшибокВеб</content>
-  <content>Role.КИИ_ДашбордОшибокПросмотр</content>
-  <content>CommonModule.КИИ_МониторингОшибокДашбордКлиентСервер</content>
+  <version>1.5.0</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -131,6 +94,8 @@
   <commonModules>CommonModule.КИИ_АудиторКода</commonModules>
   <commonModules>CommonModule.КИИ_МониторингОшибокДашборд</commonModules>
   <commonModules>CommonModule.КИИ_МониторингОшибокДашбордКлиентСервер</commonModules>
+  <commonModules>CommonModule.КИИ_ПравилаПерсональныхДанных</commonModules>
+  <commonModules>CommonModule.КИИ_КонтрольПерсональныхДанных</commonModules>
   <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
@@ -142,6 +107,7 @@
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокАнализИИ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</scheduledJobs>
   <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
   <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
   <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
@@ -154,6 +120,12 @@
   <constants>Constant.КИИ_АдресСервераKroki</constants>
   <constants>Constant.КИИ_АдресХостаШимаАудитора</constants>
   <constants>Constant.КИИ_ПортШимаАудитора</constants>
+  <constants>Constant.КИИ_РежимКонтроляЗапросовКМоделям</constants>
+  <constants>Constant.КИИ_РежимКонтроляУведомленийТелеграм</constants>
+  <constants>Constant.КИИ_РежимКонтроляРендераДиаграмм</constants>
+  <constants>Constant.КИИ_РендерДиаграммДоверенный</constants>
+  <constants>Constant.КИИ_ВключенныеПравилаПерсональныхДанных</constants>
+  <constants>Constant.КИИ_СрокХраненияСобытийКонтроля</constants>
   <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
   <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
   <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
@@ -166,6 +138,7 @@
   <enums>Enum.КИИ_ПолитикиЭмбеддинга</enums>
   <enums>Enum.КИИ_ТипыМоделей</enums>
   <enums>Enum.КИИ_БэкендыВекторногоПоиска</enums>
+  <enums>Enum.КИИ_РежимыКонтроляПерсональныхДанных</enums>
   <dataProcessors>DataProcessor.КИИ_ГенераторДиаграмм</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_АнализаторКонфигурации</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_СерверMCPНастройки</dataProcessors>
@@ -173,6 +146,7 @@
   <dataProcessors>DataProcessor.КИИ_ТестМаркдаунПарсера</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ДашбордОшибок</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных</dataProcessors>
   <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>
@@ -182,4 +156,5 @@
   <informationRegisters>InformationRegister.КИИ_ЭмбеддингиВерсии</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ПоколениеИндексаQdrant</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</informationRegisters>
 </mdclass:Configuration>

@@ -467,6 +467,39 @@
       <types>Boolean</types>
     </type>
   </attributes>
+  <attributes uuid="1328c98e-2429-406a-8025-943f89645627">
+    <name>РежимКонтроляПерсональныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим контроля персональных данных</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КИИ_РежимыКонтроляПерсональныхДанных</types>
+    </type>
+  </attributes>
+  <attributes uuid="d80221bb-fca0-4e2d-8c14-d6023ed4912f">
+    <name>МаршрутДоверенный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маршрут доверенный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="7b46bd20-2230-4dc1-8276-59f60cc3e713">
+    <name>ОтпечатокДоверенногоМаршрута</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отпечаток доверенного маршрута</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
   <tabularSections uuid="bda728b5-d380-45e6-8aac-b991befb5653">
     <producedTypes>
       <objectType typeId="aff00cf8-d6db-4d2e-a33a-d977fe344022" valueTypeId="76d92161-1740-4043-91b4-dc9001e53f7a"/>

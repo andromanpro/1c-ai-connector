@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="34a03a9d-27c0-4105-a931-ac3682e189c1">
+  <producedTypes>
+    <managerType typeId="f57a4df8-c845-49b5-b81b-03524192cdc2" valueTypeId="2e851107-02a2-4e01-9d15-e7194dcf73bb"/>
+    <valueManagerType typeId="a82557de-3b9c-4671-ac19-846e40bca989" valueTypeId="718b56ed-68c8-4425-bd9d-aa0de47f12d3"/>
+    <valueKeyType typeId="4a73845d-15fa-47b4-a661-afecfcd134b5" valueTypeId="c3c8aa8c-80e2-4700-a7dc-838b58ad04f7"/>
+  </producedTypes>
+  <name>КИИ_ВключенныеПравилаПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Включенные правила персональных данных</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>200</length>
+    </stringQualifiers>
+  </type>
+</mdclass:Constant>

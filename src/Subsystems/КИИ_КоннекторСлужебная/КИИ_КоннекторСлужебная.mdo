@@ -11,4 +11,15 @@
   <content>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</content>
   <content>Role.КИИ_БазовыеПрава</content>
   <content>Role.КИИ_ПолныеПрава</content>
+  <content>CommonModule.КИИ_ПравилаПерсональныхДанных</content>
+  <content>Enum.КИИ_РежимыКонтроляПерсональныхДанных</content>
+  <content>Constant.КИИ_РежимКонтроляЗапросовКМоделям</content>
+  <content>Constant.КИИ_РежимКонтроляУведомленийТелеграм</content>
+  <content>Constant.КИИ_РежимКонтроляРендераДиаграмм</content>
+  <content>Constant.КИИ_РендерДиаграммДоверенный</content>
+  <content>Constant.КИИ_ВключенныеПравилаПерсональныхДанных</content>
+  <content>Constant.КИИ_СрокХраненияСобытийКонтроля</content>
+  <content>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</content>
+  <content>CommonModule.КИИ_КонтрольПерсональныхДанных</content>
+  <content>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</content>
 </mdclass:Subsystem>

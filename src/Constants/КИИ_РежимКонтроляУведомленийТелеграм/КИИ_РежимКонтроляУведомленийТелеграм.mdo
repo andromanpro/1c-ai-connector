@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9890a8b5-cebf-403b-9094-65c30cf7c58d">
+  <producedTypes>
+    <managerType typeId="9c43e869-3cd1-47c8-8bcc-c3ea72b66ea1" valueTypeId="f6594ff2-02d9-4c1d-af35-7cea4fad511e"/>
+    <valueManagerType typeId="2c0919a3-9425-4cb8-930e-f1a2ea856c04" valueTypeId="adb6bd53-8798-420b-ad4e-0c6303121091"/>
+    <valueKeyType typeId="d56a7c42-efc3-4b3b-ac96-640a749ec2ab" valueTypeId="f48df99c-3b68-4bb0-82cd-6908aaacb7e1"/>
+  </producedTypes>
+  <name>КИИ_РежимКонтроляУведомленийТелеграм</name>
+  <synonym>
+    <key>ru</key>
+    <value>Режим контроля персональных данных в уведомлениях Telegram</value>
+  </synonym>
+  <type>
+    <types>EnumRef.КИИ_РежимыКонтроляПерсональныхДанных</types>
+  </type>
+</mdclass:Constant>
