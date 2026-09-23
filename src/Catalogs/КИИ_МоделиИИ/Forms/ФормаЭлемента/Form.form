@@ -1342,6 +1342,11 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.РежимКонтроляПерсональныхДанных</segments>
         </dataPath>
+        <toolTip>
+          <key>ru</key>
+          <value>Режим для запросов к этой модели. Пусто - действует режим канала «Запросы к моделям» из обработки «Контроль персональных данных». Например, облачной модели можно задать «Не отправлять».</value>
+        </toolTip>
+        <toolTipRepresentation>Button</toolTipRepresentation>
         <extendedTooltip>
           <name>РежимКонтроляПерсональныхДанныхРасширеннаяПодсказка</name>
           <id>117</id>
@@ -1382,6 +1387,11 @@
         <dataPath xsi:type="form:DataPath">
           <segments>Объект.МаршрутДоверенный</segments>
         </dataPath>
+        <toolTip>
+          <key>ru</key>
+          <value>Для своего сервера модели (Ollama, LM Studio, шлюз в контуре): запросы уходят без проверки персональных данных. При записи фиксируются адрес, прокси и имя модели. Если потом изменить любое из них, доверие снимается само, и запросы снова проверяются. Чтобы доверить новый маршрут, снимите флажок, запишите и установите снова.</value>
+        </toolTip>
+        <toolTipRepresentation>Button</toolTipRepresentation>
         <extendedTooltip>
           <name>МаршрутДоверенныйРасширеннаяПодсказка</name>
           <id>120</id>
@@ -1570,9 +1580,7 @@
     <id>3</id>
     <valueType>
       <types>String</types>
-      <stringQualifiers>
-        <length>150</length>
-      </stringQualifiers>
+      <stringQualifiers/>
     </valueType>
   </attributes>
   <formCommands>
