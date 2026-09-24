@@ -24,7 +24,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.6.0</version>
+  <version>1.6.1</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -152,6 +152,7 @@
   <dataProcessors>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ДашбордОшибок</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_НастройкиМониторингаОшибок</dataProcessors>
   <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>

@@ -36,6 +36,7 @@
   <content>InformationRegister.КИИ_МониторингОшибокСтатистика</content>
   <content>DataProcessor.КИИ_АнализаторКонфигурации</content>
   <content>DataProcessor.КИИ_ДашбордОшибок</content>
+  <content>DataProcessor.КИИ_НастройкиМониторингаОшибок</content>
   <content>Catalog.КИИ_ПравилаИгнорированияОшибок</content>
   <content>Subsystem.КИИ_СерверMCP</content>
   <content>DataProcessor.КИИ_СерверMCPНастройки</content>

@@ -17,6 +17,7 @@
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
   <defaultRecordForm>InformationRegister.КИИ_ЛогЗапросовИИ.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КИИ_ЛогЗапросовИИ.Form.ФормаСписка</defaultListForm>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>Active</name>
@@ -499,6 +500,15 @@
     <synonym>
       <key>ru</key>
       <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="15a5d8bc-5dd3-4c63-84b7-575c3795f50e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Журнал запросов ИИ</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

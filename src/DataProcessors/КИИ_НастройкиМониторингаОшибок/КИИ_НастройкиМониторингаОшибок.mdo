@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="16d77bc5-697e-464d-9829-c0e46ec3a99a">
+  <producedTypes>
+    <objectType typeId="7d359d56-60ba-4a55-96f5-779104ec77a8" valueTypeId="9f80d682-dcf2-4325-a8b4-3e3df06989a8"/>
+    <managerType typeId="a30ecdef-28b6-471b-978b-146182a938d7" valueTypeId="f4bd83af-787b-4155-864b-d81a0d036123"/>
+  </producedTypes>
+  <name>КИИ_НастройкиМониторингаОшибок</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки мониторинга ошибок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КИИ_НастройкиМониторингаОшибок.Form.Форма</defaultForm>
+  <forms uuid="2bab9fba-ad49-4023-bfad-f27463bcfc9e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки мониторинга ошибок</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>
