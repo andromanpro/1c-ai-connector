@@ -5,6 +5,24 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #Область ПрограммныйИнтерфейс
+
+// Собирает самостоятельный HTML-документ для читабельного просмотра разбора.
+// Параметры:
+//  Текст - Строка - текст Markdown; исходный HTML экранируется парсером.
+// Возвращаемое значение:
+//  Строка - HTML с таблицами и блоками кода.
+Функция ДокументРазбора(Знач Текст) Экспорт
+
+	Содержимое = ПреобразоватьВHTML(Текст);
+	Возврат "<!doctype html><html><head><meta charset='utf-8'><style>"
+		+ "body{font:14px Arial,sans-serif;line-height:1.5;margin:16px;color:#202124}"
+		+ "pre{padding:12px;background:#f4f5f7;border:1px solid #ddd;overflow:auto;white-space:pre}"
+		+ "code{font:13px Consolas,monospace}table{border-collapse:collapse}"
+		+ "td,th{border:1px solid #ddd;padding:6px 10px}"
+		+ "</style></head><body>" + Содержимое + "</body></html>";
+
+КонецФункции
+
 // Преобразует текст в формате Markdown в HTML разметку
 //
 // Функция выполняет последовательную обработку Markdown синтаксиса и преобразует

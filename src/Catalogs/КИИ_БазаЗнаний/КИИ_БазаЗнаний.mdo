@@ -22,6 +22,7 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <defaultObjectForm>Catalog.КИИ_БазаЗнаний.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.КИИ_БазаЗнаний.Form.ФормаСписка</defaultListForm>
   <attributes uuid="e7aa6e5a-f85d-488a-974d-c922eafde277">
     <name>Категория</name>
     <synonym>
@@ -83,7 +84,7 @@
     <name>ДатаОбновления</name>
     <synonym>
       <key>ru</key>
-      <value>Дата обновления</value>
+      <value>Дата изменения текста</value>
     </synonym>
     <type>
       <types>Date</types>
@@ -95,5 +96,24 @@
   </attributes>
   <forms uuid="ca38742d-3d0a-4eda-8900-3da4826ad58f">
     <name>ФормаЭлемента</name>
+  </forms>
+  <forms uuid="b87883e7-5dd2-47f9-86f1-2adea658eb73">
+    <name>ПроверкаПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверка поиска знаний</value>
+    </synonym>
+    <comment>Проверка индекса и найденных фрагментов без генерации ответа эксперта</comment>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cbec97db-67c9-452d-a5be-87dccac85f47">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Базы знаний</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
   </forms>
 </mdclass:Catalog>

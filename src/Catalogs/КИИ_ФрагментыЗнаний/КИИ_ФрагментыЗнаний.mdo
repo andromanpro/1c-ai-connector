@@ -13,12 +13,17 @@
     <value>Фрагменты знаний</value>
   </synonym>
   <comment>Подчиненный справочник (владелец = КИИ_БазаЗнаний). Чанки документа с нормализованным эмбеддингом, hash и кодом модели.</comment>
+  <useStandardCommands>true</useStandardCommands>
   <objectPresentation>
     <key>ru</key>
     <value>Фрагмент знаний</value>
   </objectPresentation>
   <owners>Catalog.КИИ_БазаЗнаний</owners>
   <descriptionLength>150</descriptionLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <defaultObjectForm>Catalog.КИИ_ФрагментыЗнаний.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.КИИ_ФрагментыЗнаний.Form.ФормаСписка</defaultListForm>
   <attributes uuid="c3148330-f36a-4ab1-9107-b8c01f05a8d0">
     <name>НомерФрагмента</name>
     <synonym>
@@ -147,4 +152,22 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
+  <forms uuid="5a92d41a-6c7f-4f90-8796-5b4d54c91cc3">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрагменты знаний</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ae425b3d-3bf9-498a-9d18-640095e3e4ae">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фрагмент знаний</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
 </mdclass:Catalog>

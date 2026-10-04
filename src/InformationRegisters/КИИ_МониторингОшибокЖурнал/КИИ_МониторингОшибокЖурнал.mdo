@@ -12,7 +12,7 @@
   <name>КИИ_МониторингОшибокЖурнал</name>
   <synonym>
     <key>ru</key>
-    <value>Мониторинг ошибок журнал</value>
+    <value>Журнал ошибок</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
@@ -20,7 +20,7 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>
     <key>ru</key>
-    <value>Журнал ошибок мониторинга</value>
+    <value>Журнал ошибок</value>
   </listPresentation>
   <resources uuid="f1a2b3c4-d5e6-4f78-9b01-c2d3e4f5a6b7">
     <name>ПерваяДатаВремя</name>

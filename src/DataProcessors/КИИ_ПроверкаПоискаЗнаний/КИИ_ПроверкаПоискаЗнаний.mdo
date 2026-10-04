@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c862cea9-a218-491c-9bba-2e874176dcb4">
+  <producedTypes>
+    <objectType typeId="38f12065-eff5-4553-8b14-9111dad06ef7" valueTypeId="6950aed9-4ad3-4d36-a335-4e982c7d75e1"/>
+    <managerType typeId="116c7e8f-507e-45f5-98e2-9b246ef12e69" valueTypeId="1958dbe1-da57-4558-a40a-7ca547b47516"/>
+  </producedTypes>
+  <name>КИИ_ПроверкаПоискаЗнаний</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка поиска знаний</value>
+  </synonym>
+  <defaultForm>DataProcessor.КИИ_ПроверкаПоискаЗнаний.Form.Форма</defaultForm>
+  <forms uuid="89879144-088a-479d-8306-1207cce644a6">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверка поиска знаний</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

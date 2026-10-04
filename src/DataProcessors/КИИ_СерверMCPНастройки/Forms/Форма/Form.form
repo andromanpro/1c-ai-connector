@@ -8,7 +8,7 @@
       <id>20</id>
       <title>
         <key>ru</key>
-        <value>Пользователь</value>
+        <value>Пользователь API</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -18,6 +18,11 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Пользователь</segments>
       </dataPath>
+      <toolTip>
+        <key>ru</key>
+        <value>Отдельная учетная запись API ИИконы. Имя не означает вход под одноименным пользователем информационной базы.</value>
+      </toolTip>
+      <toolTipRepresentation>Button</toolTipRepresentation>
       <extendedTooltip>
         <name>ПользовательРасширеннаяПодсказка</name>
         <id>21</id>
@@ -53,7 +58,7 @@
       <id>30</id>
       <title>
         <key>ru</key>
-        <value>Пароль</value>
+        <value>Пароль API</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -63,6 +68,11 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Пароль</segments>
       </dataPath>
+      <toolTip>
+        <key>ru</key>
+        <value>Пароль API, заданный здесь, проверяется HTTP-сервисом ИИконы.</value>
+      </toolTip>
+      <toolTipRepresentation>Button</toolTipRepresentation>
       <extendedTooltip>
         <name>ПарольРасширеннаяПодсказка</name>
         <id>31</id>
@@ -131,7 +141,7 @@
       <id>50</id>
       <title>
         <key>ru</key>
-        <value>Адрес сервиса</value>
+        <value>Адрес HTTP-публикации</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -141,6 +151,11 @@
       <dataPath xsi:type="form:DataPath">
         <segments>АдресСервиса</segments>
       </dataPath>
+      <toolTip>
+        <key>ru</key>
+        <value>Настоящий адрес опубликованной базы: http(s)://сервер/база/hs/iikona-mcp/rpc. Проверка использует адрес и учетные данные на этой форме.</value>
+      </toolTip>
+      <toolTipRepresentation>Button</toolTipRepresentation>
       <extendedTooltip>
         <name>АдресСервисаРасширеннаяПодсказка</name>
         <id>51</id>
@@ -157,7 +172,6 @@
         <autoFill>true</autoFill>
       </contextMenu>
       <type>InputField</type>
-      <readOnly>true</readOnly>
       <editMode>Enter</editMode>
       <showInHeader>true</showInHeader>
       <headerHorizontalAlign>Left</headerHorizontalAlign>
@@ -165,6 +179,7 @@
       <extInfo xsi:type="form:InputFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
+        <horizontalStretch>true</horizontalStretch>
         <wrap>true</wrap>
         <extendedEditMultipleValues>true</extendedEditMultipleValues>
         <chooseType>true</chooseType>
@@ -173,11 +188,45 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>ШаблонАдреса</name>
+      <id>76</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ШаблонАдреса</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <extendedTooltip>
+        <name>ШаблонАдресаРасширеннаяПодсказка</name>
+        <id>78</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ШаблонАдресаКонтекстноеМеню</name>
+        <id>77</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo"/>
+    </items>
+    <items xsi:type="form:FormField">
       <name>СтатусПроверки</name>
       <id>60</id>
       <title>
         <key>ru</key>
-        <value>Статус проверки</value>
+        <value>Результат проверки</value>
       </title>
       <visible>true</visible>
       <enabled>true</enabled>
@@ -210,9 +259,10 @@
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:InputFieldExtInfo">
         <autoMaxWidth>true</autoMaxWidth>
-        <height>4</height>
+        <height>5</height>
         <autoMaxHeight>true</autoMaxHeight>
-        <verticalStretch>true</verticalStretch>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>false</verticalStretch>
         <wrap>true</wrap>
         <multiLine>true</multiLine>
         <extendedEditMultipleValues>true</extendedEditMultipleValues>
@@ -220,66 +270,6 @@
         <typeDomainEnabled>true</typeDomainEnabled>
         <textEdit>true</textEdit>
       </extInfo>
-    </items>
-    <items xsi:type="form:Button">
-      <name>КнопкаСохранить</name>
-      <id>70</id>
-      <title>
-        <key>ru</key>
-        <value>Сохранить</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>КнопкаСохранитьРасширеннаяПодсказка</name>
-        <id>71</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Command.Сохранить</commandName>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
-    </items>
-    <items xsi:type="form:Button">
-      <name>КнопкаПроверитьPing</name>
-      <id>72</id>
-      <title>
-        <key>ru</key>
-        <value>Проверить Ping</value>
-      </title>
-      <visible>true</visible>
-      <enabled>true</enabled>
-      <userVisible>
-        <common>true</common>
-      </userVisible>
-      <extendedTooltip>
-        <name>КнопкаПроверитьPingРасширеннаяПодсказка</name>
-        <id>73</id>
-        <type>Label</type>
-        <autoMaxWidth>true</autoMaxWidth>
-        <autoMaxHeight>true</autoMaxHeight>
-        <extInfo xsi:type="form:LabelDecorationExtInfo">
-          <horizontalAlign>Left</horizontalAlign>
-        </extInfo>
-      </extendedTooltip>
-      <type>UsualButton</type>
-      <commandName>Form.Command.ПроверитьPing</commandName>
-      <representation>Auto</representation>
-      <autoMaxWidth>true</autoMaxWidth>
-      <autoMaxHeight>true</autoMaxHeight>
-      <placementArea>UserCmds</placementArea>
-      <representationInContextMenu>Auto</representationInContextMenu>
     </items>
     <visible>true</visible>
     <enabled>true</enabled>
@@ -313,6 +303,89 @@
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>
     <id>-1</id>
+    <items xsi:type="form:Button">
+      <name>КнопкаСохранить</name>
+      <id>70</id>
+      <title>
+        <key>ru</key>
+        <value>Сохранить</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>КнопкаСохранитьРасширеннаяПодсказка</name>
+        <id>71</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.Сохранить</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>КнопкаПроверитьPing</name>
+      <id>72</id>
+      <title>
+        <key>ru</key>
+        <value>Проверить внутренний сервис</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>КнопкаПроверитьPingРасширеннаяПодсказка</name>
+        <id>73</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ПроверитьPing</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
+    <items xsi:type="form:Button">
+      <name>ПроверитьПубликацию</name>
+      <id>74</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <extendedTooltip>
+        <name>ПроверитьПубликациюРасширеннаяПодсказка</name>
+        <id>75</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <commandName>Form.Command.ПроверитьПубликацию</commandName>
+      <representation>Auto</representation>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <placementArea>UserCmds</placementArea>
+      <representationInContextMenu>Auto</representationInContextMenu>
+    </items>
     <horizontalAlign>Left</horizontalAlign>
     <autoFill>true</autoFill>
   </autoCommandBar>
@@ -403,6 +476,14 @@
       <common>true</common>
     </edit>
   </attributes>
+  <attributes>
+    <name>ШаблонАдреса</name>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </attributes>
   <formCommands>
     <name>Сохранить</name>
     <title>
@@ -428,7 +509,7 @@
     <name>ПроверитьPing</name>
     <title>
       <key>ru</key>
-      <value>Проверить Ping</value>
+      <value>Проверить внутренний сервис</value>
     </title>
     <id>2</id>
     <toolTip>
@@ -444,6 +525,22 @@
       </handler>
     </action>
     <currentRowUse>Auto</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ПроверитьПубликацию</name>
+    <title>
+      <key>ru</key>
+      <value>Проверить HTTP-публикацию</value>
+    </title>
+    <id>74</id>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ПроверитьПубликацию</name>
+      </handler>
+    </action>
   </formCommands>
   <commandInterface>
     <navigationPanel/>

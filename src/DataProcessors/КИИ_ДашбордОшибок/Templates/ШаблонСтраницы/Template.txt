@@ -452,7 +452,7 @@
       <div class="spark" id="spark-analyzed"></div>
     </article>
     <article class="kpi">
-      <span class="label">Расходы на ИИ</span>
+      <span class="label">Стоимость запросов, USD</span>
       <span class="value" id="k-cost">$0</span>
       <span class="sub"><span>токенов</span><b id="k-tokens"></b></span>
       <div class="spark" id="spark-cost"></div>
@@ -493,7 +493,7 @@
     </article>
 
     <article class="panel s12">
-      <h2>Расходы на ИИ<span class="hint">токены по дням и стоимость нарастающим итогом, по данным провайдера</span></h2>
+      <h2>Стоимость запросов, USD<span class="hint">токены по дням; сумма только с подтвержденной валютой USD. Старые записи без валюты не включены</span></h2>
       <div class="chart h-mid" id="c-cost"></div>
     </article>
     <article class="panel s12">

@@ -41,9 +41,7 @@
           <name>ПолеДашбордПриНажатии</name>
         </handlers>
         <width>50</width>
-        <autoMaxWidth>true</autoMaxWidth>
-        <height>30</height>
-        <autoMaxHeight>true</autoMaxHeight>
+        <height>18</height>
         <horizontalStretch>true</horizontalStretch>
         <verticalStretch>true</verticalStretch>
       </extInfo>
@@ -147,6 +145,24 @@
       <stringQualifiers>
         <length>5</length>
       </stringQualifiers>
+    </valueType>
+  </attributes>
+  <attributes>
+    <name>ЗаданиеАнализа</name>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </valueType>
+  </attributes>
+  <attributes>
+    <name>АдресРезультатаАнализа</name>
+    <id>7</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
     </valueType>
   </attributes>
   <formCommands>

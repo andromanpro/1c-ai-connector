@@ -16,6 +16,7 @@
   <useStandardCommands>true</useStandardCommands>
   <descriptionLength>150</descriptionLength>
   <defaultPresentation>AsDescription</defaultPresentation>
+  <defaultObjectForm>Catalog.КИИ_ПравилаИгнорированияОшибок.Form.ФормаЭлемента</defaultObjectForm>
   <defaultListForm>Catalog.КИИ_ПравилаИгнорированияОшибок.Form.ФормаСписка</defaultListForm>
   <attributes uuid="3b1d9b68-be72-43f5-ae60-e08e3fed1947">
     <name>Событие</name>
@@ -75,6 +76,15 @@
     <synonym>
       <key>ru</key>
       <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="58885496-7642-4419-aa7d-446bc9192118">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правило игнорирования ошибки</value>
     </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>

@@ -7,7 +7,7 @@
   <name>КИИ_ТестИИ</name>
   <synonym>
     <key>ru</key>
-    <value>Тест ИИ</value>
+    <value>Чат с экспертом</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КИИ_ТестИИ.Form.Форма</defaultForm>

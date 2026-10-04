@@ -12,6 +12,10 @@
   <comment>Форма настройки HTTP Basic учетных данных runtime-MCP сервиса. Чтение/запись Константы КИИ_СерверMCPПользовательAPI + БезопасноеХранилище (пароль). Smoke-проверка ping без HTTP.</comment>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КИИ_СерверMCPНастройки.Form.Форма</defaultForm>
+  <extendedPresentation>
+    <key>ru</key>
+    <value>Настройки сервера MCP</value>
+  </extendedPresentation>
   <forms uuid="3e6e73b2-a295-4456-a337-c8d90125fa45">
     <name>Форма</name>
     <synonym>

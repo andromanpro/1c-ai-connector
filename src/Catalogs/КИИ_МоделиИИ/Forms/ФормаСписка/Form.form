@@ -93,6 +93,10 @@
     <items xsi:type="form:FormField">
       <name>Наименование</name>
       <id>37</id>
+      <title>
+        <key>ru</key>
+        <value>Название</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -122,6 +126,7 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>28</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
@@ -129,7 +134,6 @@
     <items xsi:type="form:FormField">
       <name>Код</name>
       <id>40</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -163,9 +167,48 @@
       </extInfo>
     </items>
     <items xsi:type="form:FormField">
+      <name>ТипМодели</name>
+      <id>82</id>
+      <title>
+        <key>ru</key>
+        <value>Назначение</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>Список.ТипМодели</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ТипМоделиРасширеннаяПодсказка</name>
+        <id>84</id>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ТипМоделиКонтекстноеМеню</name>
+        <id>83</id>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>EnterOnInput</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
       <name>Адрес</name>
       <id>43</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -201,7 +244,6 @@
     <items xsi:type="form:FormField">
       <name>АдресЗапроса</name>
       <id>46</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -237,7 +279,6 @@
     <items xsi:type="form:FormField">
       <name>ИмяПоляТекста</name>
       <id>49</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -273,7 +314,6 @@
     <items xsi:type="form:FormField">
       <name>ИспользоватьЗащищенноеСоединение</name>
       <id>52</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -306,7 +346,6 @@
     <items xsi:type="form:FormField">
       <name>МаксимумТокенов</name>
       <id>55</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -342,6 +381,10 @@
     <items xsi:type="form:FormField">
       <name>НаименованиеПолное</name>
       <id>58</id>
+      <title>
+        <key>ru</key>
+        <value>Идентификатор в API</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -371,6 +414,7 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>32</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
@@ -378,6 +422,10 @@
     <items xsi:type="form:FormField">
       <name>НаименованиеПровайдера</name>
       <id>61</id>
+      <title>
+        <key>ru</key>
+        <value>Провайдер</value>
+      </title>
       <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
@@ -407,6 +455,7 @@
       <headerHorizontalAlign>Left</headerHorizontalAlign>
       <showInFooter>true</showInFooter>
       <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>18</width>
         <autoMaxWidth>true</autoMaxWidth>
         <autoMaxHeight>true</autoMaxHeight>
       </extInfo>
@@ -414,7 +463,6 @@
     <items xsi:type="form:FormField">
       <name>Описание</name>
       <id>64</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -450,7 +498,6 @@
     <items xsi:type="form:FormField">
       <name>Таймаут</name>
       <id>67</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -486,7 +533,6 @@
     <items xsi:type="form:FormField">
       <name>Температура</name>
       <id>70</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -522,7 +568,6 @@
     <items xsi:type="form:FormField">
       <name>ТипАвторизации</name>
       <id>73</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -558,7 +603,6 @@
     <items xsi:type="form:FormField">
       <name>ТипФорматаAPI</name>
       <id>76</id>
-      <visible>true</visible>
       <enabled>true</enabled>
       <userVisible>
         <common>true</common>
@@ -733,6 +777,10 @@
       <segments>Список.DefaultPicture</segments>
     </rowPictureDataPath>
     <extInfo xsi:type="form:DynamicListTableExtInfo">
+      <handlers>
+        <event>OnGetDataAtServer</event>
+        <name>СписокПриПолученииДанныхНаСервере</name>
+      </handlers>
       <autoRefreshPeriod>60</autoRefreshPeriod>
       <period>
         <startDate>0001-01-01T00:00:00</startDate>

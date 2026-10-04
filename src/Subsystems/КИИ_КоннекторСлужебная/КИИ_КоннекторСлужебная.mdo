@@ -27,4 +27,19 @@
   <content>Constant.КИИ_АдресСервисаРаспознаванияИмен</content>
   <content>Constant.КИИ_ТаймаутСервисаРаспознаванияИмен</content>
   <content>Constant.КИИ_СервисРаспознаванияИменОбязателен</content>
+  <content>Enum.КИИ_ТипыФорматовAPI</content>
+  <content>Enum.КИИ_ТипыАвторизации</content>
+  <content>CommonPicture.КИИ_КартинкаПодсистемы</content>
+  <content>DataProcessor.КИИ_ТестМаркдаунПарсера</content>
+  <content>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</content>
+  <content>CommonModule.КИИ_МониторингОшибок</content>
+  <content>CommonModule.КИИ_TelegramУведомления</content>
+  <content>CommonModule.КИИ_АнализКонфигурации</content>
+  <content>CommonModule.КИИ_ВнешнийАнализатор</content>
+  <content>DataProcessor.КИИ_АнализаторКонфигурации</content>
+  <content>Subsystem.КИИ_СерверMCP</content>
+  <content>DataProcessor.КИИ_ПроверкаПоискаЗнаний</content>
+  <content>CommonModule.КИИ_МониторингОшибокКлиент</content>
+  <content>CommonModule.КИИ_ПроверкаПоискаКлиент</content>
+  <content>CommonModule.КИИ_ИнтерфейсВызовСервера</content>
 </mdclass:Subsystem>

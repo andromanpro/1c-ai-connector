@@ -127,6 +127,7 @@
       if (firstIdx < 0) { firstIdx = DAYS.length; }
     }
     return {
+      hash: String(source.hash || ""),
       level: LEVEL[source.level] ? source.level : "none",
       object: source.object || "",
       event: source.event || "",
@@ -369,6 +370,25 @@
     }, true);
 
     var top = d.inPeriod.slice().sort(function (a, b) { return b.occ - a.occ; }).slice(0, 10).reverse();
+    var topLinks = document.getElementById("top-error-links");
+    if (!topLinks) {
+      topLinks = document.createElement("div"); topLinks.id = "top-error-links";
+      topLinks.setAttribute("role", "list");
+      document.getElementById("c-top").parentNode.appendChild(topLinks);
+    }
+    topLinks.textContent = "";
+    if (HOST === "form") {
+      top.slice().reverse().forEach(function (x) {
+        if (!/^[0-9a-f]{32}$/i.test(x.err.hash || "")) { return; }
+        var row = document.createElement("p"); row.setAttribute("role", "listitem");
+        var link = document.createElement("a"); link.className = "btn small";
+        link.href = "#iikona?command=open-error&hash=" + x.err.hash + "&days=" + period + "&theme=" + (isDark() ? "dark" : "light");
+        link.textContent = (x.err.object || x.err.event || "Ошибка") + " — " + fmtNum(x.occ) + " вхождений";
+        link.title = x.err.text || "Открыть журнал ошибки";
+        row.appendChild(link); topLinks.appendChild(row);
+      });
+    }
+
     // Ширина подписи от ширины панели и явный отступ сетки: containLabel в ECharts 6 подписи обрезает.
     var topWidth = document.getElementById("c-top").clientWidth || 600;
     var labelWidth = Math.max(120, Math.min(320, Math.round(topWidth * 0.42)));
@@ -556,6 +576,13 @@
       head.appendChild(obj); head.appendChild(when);
       var errEl = document.createElement("p"); errEl.className = "err"; errEl.textContent = errorGist(x.err); errEl.title = errorLabel(x.err);
       var ai = document.createElement("p"); ai.className = "ai"; ai.textContent = x.err.ai; ai.title = x.err.ai;
+      if (root.getAttribute("data-host") === "form" && /^[0-9a-f]{32}$/i.test(x.err.hash || "")) {
+        var openError = document.createElement("a");
+        openError.className = "btn small";
+        openError.href = "#iikona?command=open-error&hash=" + x.err.hash + "&days=" + period + "&theme=" + (isDark() ? "dark" : "light");
+        openError.textContent = "Открыть журнал ошибки";
+        head.appendChild(openError);
+      }
       var tags = document.createElement("div"); tags.className = "tags";
       var levelTag = document.createElement("span"); levelTag.className = "tag"; levelTag.textContent = LEVEL[x.err.level].name.toLowerCase();
       var occTag = document.createElement("span"); occTag.className = "tag"; occTag.textContent = fmtNum(x.occ) + " вхождений";

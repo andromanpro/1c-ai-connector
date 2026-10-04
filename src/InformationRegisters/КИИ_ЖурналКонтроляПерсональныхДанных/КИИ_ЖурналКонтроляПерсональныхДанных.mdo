@@ -14,6 +14,11 @@
     <key>ru</key>
     <value>Журнал контроля персональных данных</value>
   </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <listPresentation>
+    <key>ru</key>
+    <value>События контроля ПДн</value>
+  </listPresentation>
   <resources uuid="df5b5ea4-1f09-4c55-9416-f4ab05f21f71">
     <name>Момент</name>
     <synonym>

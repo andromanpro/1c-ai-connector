@@ -12,7 +12,7 @@
   <name>КИИ_ЛогЗапросовИИ</name>
   <synonym>
     <key>ru</key>
-    <value>Логирование запросов ИИ</value>
+    <value>Запросы к ИИ</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
@@ -60,7 +60,7 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>
     <key>ru</key>
-    <value>Журнал запросов ИИ</value>
+    <value>Запросы к ИИ</value>
   </listPresentation>
   <resources uuid="d9a3c6a9-057e-4ed1-8263-5ea4ba98a264">
     <name>ВходныеТокены</name>
@@ -454,6 +454,19 @@
       <types>String</types>
       <stringQualifiers>
         <length>36</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="be98ff9d-32e2-4b88-aff5-81bc24851f19">
+    <name>ВалютаСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта стоимости</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
       </stringQualifiers>
     </type>
   </attributes>

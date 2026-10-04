@@ -24,7 +24,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.6.1</version>
+  <version>1.6.2</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -96,6 +96,11 @@
   <commonModules>CommonModule.КИИ_МониторингОшибокДашбордКлиентСервер</commonModules>
   <commonModules>CommonModule.КИИ_ПравилаПерсональныхДанных</commonModules>
   <commonModules>CommonModule.КИИ_КонтрольПерсональныхДанных</commonModules>
+  <commonModules>CommonModule.КИИ_ИнтерфейсКлиент</commonModules>
+  <commonModules>CommonModule.РегламентныеЗаданияПереопределяемый</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокКлиент</commonModules>
+  <commonModules>CommonModule.КИИ_ПроверкаПоискаКлиент</commonModules>
+  <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
   <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
@@ -108,6 +113,10 @@
   <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</scheduledJobs>
+  <commandGroups>CommandGroup.КИИ_РаботаСИИ</commandGroups>
+  <commandGroups>CommandGroup.КИИ_Знания</commandGroups>
+  <commandGroups>CommandGroup.КИИ_Мониторинг</commandGroups>
+  <commandGroups>CommandGroup.КИИ_Администрирование</commandGroups>
   <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
   <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
   <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
@@ -153,6 +162,7 @@
   <dataProcessors>DataProcessor.КИИ_ДашбордОшибок</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_НастройкиМониторингаОшибок</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ПроверкаПоискаЗнаний</dataProcessors>
   <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>

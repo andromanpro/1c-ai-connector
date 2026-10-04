@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommandGroup xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="02a7d2fb-a84d-4a69-9911-ff79776f23e2">
+  <name>КИИ_Мониторинг</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мониторинг</value>
+  </synonym>
+</mdclass:CommandGroup>

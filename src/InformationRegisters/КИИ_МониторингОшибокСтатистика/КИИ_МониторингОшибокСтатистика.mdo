@@ -12,7 +12,7 @@
   <name>КИИ_МониторингОшибокСтатистика</name>
   <synonym>
     <key>ru</key>
-    <value>Мониторинг ошибок статистика</value>
+    <value>Сводка ошибок</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
@@ -21,7 +21,7 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>
     <key>ru</key>
-    <value>Статистика ошибок</value>
+    <value>Сводка ошибок</value>
   </listPresentation>
   <resources uuid="d3001223-3445-4559-b123-c0d1e2f3a4b5">
     <name>Количество</name>
