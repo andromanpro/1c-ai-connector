@@ -24,7 +24,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.6.3</version>
+  <version>1.7.0</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -101,6 +101,7 @@
   <commonModules>CommonModule.КИИ_МониторингОшибокКлиент</commonModules>
   <commonModules>CommonModule.КИИ_ПроверкаПоискаКлиент</commonModules>
   <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
+  <commonModules>CommonModule.КИИ_ОчередьQdrant</commonModules>
   <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
@@ -173,4 +174,6 @@
   <informationRegisters>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ПоколениеИндексаQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ИсполнителиОчередиQdrant</informationRegisters>
 </mdclass:Configuration>

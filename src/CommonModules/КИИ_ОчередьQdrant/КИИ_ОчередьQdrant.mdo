@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonModule xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7139dfe4-4444-420b-b53a-8a9c8ad8c102">
+  <name>КИИ_ОчередьQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пакетная очередь Qdrant</value>
+  </synonym>
+  <comment>Пакетные условные операции Qdrant, версии подтверждений и независимые исполнители через БСП.</comment>
+  <server>true</server>
+  <externalConnection>true</externalConnection>
+  <clientOrdinaryApplication>true</clientOrdinaryApplication>
+</mdclass:CommonModule>

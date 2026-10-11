@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dfc1f103-6352-43c4-940a-e9323704ef7b">
+  <producedTypes>
+    <selectionType typeId="d3d87a1c-e806-477b-8aa1-b68c2d0b719e" valueTypeId="108f739b-9a6f-488b-8396-8278e4e4826b"/>
+    <listType typeId="4731ede2-e8d1-4f46-bcc7-4d5c2bf256f3" valueTypeId="e1a28511-18a0-4c4d-a5a6-0d3660afe031"/>
+    <managerType typeId="d04c90ff-5e0e-41b1-9985-259be9f352a0" valueTypeId="9d2f69cb-d2c6-4f0c-93b2-bde869258f38"/>
+    <recordSetType typeId="cae8d67a-0e81-40a3-8614-57540dc80fca" valueTypeId="8b8320c4-9d8a-4241-8283-bc6fc6ec5d6c"/>
+    <recordKeyType typeId="08a95d60-3a9e-4a1d-b9fd-1e329790e910" valueTypeId="e6ba196e-339a-4937-91af-55d705c265bc"/>
+    <recordType typeId="7c975b6a-c0d7-4fe8-b801-a972e05e58e7" valueTypeId="05054a12-e7c8-4017-8e2d-8045031d3e01"/>
+    <recordManagerType typeId="87ec4106-ca90-45f4-973b-4f471c2e9c4b" valueTypeId="390b4fe1-434a-4ab5-aa95-ea83b2877895"/>
+  </producedTypes>
+  <name>КИИ_ИсполнителиОчередиQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Исполнители очереди Qdrant</value>
+  </synonym>
+  <comment>Исключительное владение фиксированным разделом очереди; сетевой вызов выполняется вне транзакции.</comment>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Владение разделом очереди Qdrant</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Владение разделами очереди Qdrant</value>
+  </listPresentation>
+  <resources uuid="8762ba55-3d69-45b9-a47c-a668b35b09cf">
+    <name>Владелец</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец обработки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="11ad0b15-1929-4f2b-b413-4f556b6c2f63">
+    <name>Задание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фоновое задание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="7284b426-1ae2-4c00-96a6-c877e9c7ffb2">
+    <name>СрокВладения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок владения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+  </resources>
+  <dimensions uuid="8bf7ef4b-75bc-4a55-9b6e-c720ef63822f">
+    <name>Раздел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Раздел очереди</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -15,6 +15,7 @@
     <value>Очередь синхронизации Qdrant</value>
   </synonym>
   <comment>Outbox: очередь upsert/delete точек Qdrant. FIFO по НомерПоПорядку. Независимый непериодический.</comment>
+  <dataLockControlMode>Managed</dataLockControlMode>
   <recordPresentation>
     <key>ru</key>
     <value>Элемент очереди синхронизации Qdrant</value>
@@ -112,6 +113,32 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="545a1e7f-0878-4efe-959d-12f26972d9ab">
+    <name>Версия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия операции</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="7e5ec831-30ee-472f-9bed-c0c5d33fca91">
+    <name>Раздел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Раздел очереди</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
   </resources>
   <dimensions uuid="6abdc6b0-0194-480f-9f2b-c31727f3663c">
     <name>ФрагментИдентификатор</name>

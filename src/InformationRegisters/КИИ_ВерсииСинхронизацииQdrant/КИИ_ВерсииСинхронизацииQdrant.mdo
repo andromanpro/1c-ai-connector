@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="92f1702e-463c-44b2-a2b0-8e5d58b607be">
+  <producedTypes>
+    <selectionType typeId="b89409ce-7afb-4ee1-ba17-3573f25d4c41" valueTypeId="3c0beb4c-8586-4400-86c5-d3e24456744b"/>
+    <listType typeId="0d1900c2-ea66-47a6-bb59-edb207567eb3" valueTypeId="7ef6f1eb-3a4c-4afa-af6a-4dbf36ab0bb8"/>
+    <managerType typeId="a93f75a8-b9c4-4dc3-b55a-4e9503cb06cd" valueTypeId="b02cff03-0563-4f92-88b5-42967af1ef83"/>
+    <recordSetType typeId="3eb3657b-8ee5-4d3e-bb73-efdf7f30639e" valueTypeId="7f7be23f-3c8c-4c4c-aad7-16e573815e43"/>
+    <recordKeyType typeId="a46cd7c2-b358-41d0-8ba7-0c68a5d71b43" valueTypeId="1b8670b1-e7e9-4970-9ac5-7cb586aaec33"/>
+    <recordType typeId="3a459c3c-7ac4-4b76-a54f-d93f8bc5956b" valueTypeId="d9b77652-87b9-42b8-8fef-ee6806f58a40"/>
+    <recordManagerType typeId="d9bd1f64-4dfb-4c60-a281-a5bc462b8733" valueTypeId="1ab5471a-c8bd-4e07-9241-55b67b3568cc"/>
+  </producedTypes>
+  <name>КИИ_ВерсииСинхронизацииQdrant</name>
+  <synonym>
+    <key>ru</key>
+    <value>Версии синхронизации Qdrant</value>
+  </synonym>
+  <comment>Монотонная версия операции по фрагменту и модели. Сохраняется после подтверждения очереди.</comment>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Версия операции Qdrant</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Версии операций Qdrant</value>
+  </listPresentation>
+  <resources uuid="a0167308-def7-4978-b0f4-869045a4cb6e">
+    <name>Версия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия операции</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>16</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <dimensions uuid="7db9f032-374e-4db7-afcd-16664b229856">
+    <name>ФрагментИдентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор фрагмента</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+  <dimensions uuid="498db518-300b-487f-a78e-25b780388d4a">
+    <name>КодМодели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код модели</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -962,4 +962,26 @@
 			<value>true</value>
 		</right>
 	</object>
+	<object>
+		<name>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.КИИ_ИсполнителиОчередиQdrant</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+		</right>
+	</object>
 </Rights>

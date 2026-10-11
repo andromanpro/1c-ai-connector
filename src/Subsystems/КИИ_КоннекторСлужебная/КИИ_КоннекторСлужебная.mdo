@@ -42,4 +42,7 @@
   <content>CommonModule.КИИ_МониторингОшибокКлиент</content>
   <content>CommonModule.КИИ_ПроверкаПоискаКлиент</content>
   <content>CommonModule.КИИ_ИнтерфейсВызовСервера</content>
+  <content>CommonModule.КИИ_ОчередьQdrant</content>
+  <content>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</content>
+  <content>InformationRegister.КИИ_ИсполнителиОчередиQdrant</content>
 </mdclass:Subsystem>
