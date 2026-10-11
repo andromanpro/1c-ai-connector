@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "settings": {
+    "right-delete": {
+      "properties": {
+        "excludeRoleNames": "ПолныеПрава,FullAccess,АдминистраторСистемы,SystemAdministrator,КИИ_ПолныеПрава"
+      }
+    }
+  }
+}

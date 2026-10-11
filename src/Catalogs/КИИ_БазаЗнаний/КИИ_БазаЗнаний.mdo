@@ -94,6 +94,17 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
+  <attributes uuid="6ef9c01a-8f92-4708-a872-e6c25cb6922c">
+    <name>МодельИндекса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель сохраненного индекса</value>
+    </synonym>
+    <comment>Настройка модели фактически построенного индекса сохраняется после успешной индексации и проверяется перед поиском</comment>
+    <type>
+      <types>CatalogRef.КИИ_МоделиИИ</types>
+    </type>
+  </attributes>
   <forms uuid="ca38742d-3d0a-4eda-8900-3da4826ad58f">
     <name>ФормаЭлемента</name>
   </forms>
