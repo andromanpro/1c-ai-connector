@@ -9,11 +9,12 @@
 [![Версия](https://img.shields.io/badge/версия-1.7.1-green)](https://github.com/andromanpro/1c-ai-connector/releases)
 [![Тесты](https://img.shields.io/badge/YAxUnit-700_server-brightgreen)](#-качество-кода)
 
-<a href="https://infostart.ru/1c/articles/2585691/">
+<a href="https://infostart.ru/1c/articles/2814180/">
   <img src="https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg" alt="Инфостарт" width="180">
 </a>
 
-[ИИкона на Инфостарте — статья и обсуждение](https://infostart.ru/1c/articles/2585691/).
+[ИИкона на Инфостарте — статья и обсуждение](https://infostart.ru/1c/articles/2814180/) ·
+[Первая публикация и обсуждение](https://infostart.ru/1c/articles/2585691/).
 
 ## Выпуск 1.7.1
 
