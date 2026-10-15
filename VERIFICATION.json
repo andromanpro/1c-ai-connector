@@ -1,18 +1,17 @@
 {
   "schema": 1,
-  "candidate": "1.7.2-audit-26",
-  "prerelease": true,
-  "product_version": "1.7.2-audit-26",
-  "tests_version": "1.7.2-audit-34",
-  "source_hash": "8a17b0a6fe11ce34b433789c35354a26436f53ba982ef64f7057ed085286052f",
+  "prerelease": false,
+  "product_version": "1.7.2",
+  "tests_version": "1.7.2",
+  "source_hash": "460321254ee45f1ba0df151eeee2c787c9fe27e7e04053637935d2aef79582b1",
   "source_code_commits": {
-    "product": "909ca6950a7be303e7ca9331cb8f00e8d3495ce2",
-    "tests": "90eafb944fa0ad388552121a4b6f52289871e6cb"
+    "product": "bf63e8d968fba9533b422ab9c4d30d7c23786aaa",
+    "tests": "884748118c1fce88248861fed7f58a94efc412d3"
   },
   "raw_git_blobs_equal_frozen_sources": true,
   "artifacts": {
-    "IIkona_ConnectorAI_v1.7.2-audit-26.cfe": "a68ecc07089121b5706c242b8dca3613e0d17863d846eed09a8fbf463928f6ae",
-    "IIkona_Tests_v1.7.2-audit-34.cfe": "d66f02c5b654340f9dee8e6dce55b50503686f188a5b38de59e955665a24e701"
+    "IIkona_ConnectorAI_v1.7.2.cfe": "a5c1c68114a1f47ef64e14dc87d5ea22fa39e575f9eff0a4e13ae6489ffc1a5b",
+    "IIkona_Tests_v1.7.2.cfe": "fe9460fd62957627b417c2c1c3dd7182813f4854b114397597ed7606ad48fdd9"
   },
   "junit": {
     "total": 810,
@@ -20,8 +19,8 @@
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "sha256": "1217e1fe0b3a57768f554ed0fe3b990835a7590ec943bbe84ca4496ae4940ded",
-    "elapsed_s": 105.9,
+    "sha256": "0eb6462a04fe7a1985e6c10015f5edcb9f70f0528f63b097c453afedf246d756",
+    "elapsed_s": 105.7,
     "self_exited": true
   },
   "profile_checks": {
@@ -41,13 +40,14 @@
     "stable_version": "1.7.1",
     "checked_exported_methods": 405,
     "compatible_optional_extensions": 5,
-    "removed_or_incompatibly_changed": 0
+    "removed_or_incompatibly_changed": 0,
+    "executable_source_unchanged_from_prior_compatibility_check": true
   },
   "sonar": {
-    "analysis_id": "AaFAA_a_XCBQGdijVftm",
-    "ce_task_id": "AaFAA-rapVosiOWThJvm",
-    "source_commit": "909ca6950a7be303e7ca9331cb8f00e8d3495ce2",
-    "source_hash": "8a17b0a6fe11ce34b433789c35354a26436f53ba982ef64f7057ed085286052f",
+    "analysis_id": "AaFALwFqXCBQGdijVkNP",
+    "ce_task_id": "AaFALvAZpVosiOWThJvo",
+    "source_commit": "bf63e8d968fba9533b422ab9c4d30d7c23786aaa",
+    "source_hash": "460321254ee45f1ba0df151eeee2c787c9fe27e7e04053637935d2aef79582b1",
     "scope": "full product XML:311 indexed files,85 BSL modules; tests not counted as product code",
     "gate": "OK",
     "active_bugs": 0,
@@ -88,5 +88,11 @@
     "this_slice_separately_tested_on_erp": false,
     "special_erp_restrictions_added": false,
     "confirmed_erp_incompatibility": false
+  },
+  "version": "1.7.2",
+  "provenance": {
+    "run_id": "20261015T151608Z-33be2e84aaec",
+    "only_two_version_values_changed_from_previous_verified_slice": true,
+    "all_other359_files_exact": true
   }
 }
