@@ -1,0 +1,318 @@
+{
+  "analysis_id": "AaFAA_a_XCBQGdijVftm",
+  "ce_task_id": "AaFAA-rapVosiOWThJvm",
+  "source_commit": "909ca6950a7be303e7ca9331cb8f00e8d3495ce2",
+  "source_hash": "8a17b0a6fe11ce34b433789c35354a26436f53ba982ef64f7057ed085286052f",
+  "scope": "full product XML:311 indexed files,85 BSL modules; tests not counted as product code",
+  "gate": "OK",
+  "active_bugs": 0,
+  "active_vulnerabilities": 0,
+  "active_code_smells": 48,
+  "rules": {
+    "bsl-language-server:IncorrectLineBreak": 24,
+    "bsl-language-server:IfConditionComplexity": 7,
+    "bsl-language-server:NumberOfParams": 1,
+    "bsl-language-server:ConsecutiveEmptyLines": 2,
+    "bsl-language-server:IfElseIfEndsWithElse": 4,
+    "bsl-language-server:NumberOfOptionalParams": 1,
+    "bsl-language-server:CognitiveComplexity": 5,
+    "bsl-language-server:CyclomaticComplexity": 1,
+    "bsl-language-server:NumberOfValuesInStructureConstructor": 1,
+    "bsl-language-server:LineLength": 1,
+    "bsl-language-server:NestedConstructorsInStructureDeclaration": 1
+  },
+  "hotspots_reviewed": 28,
+  "hotspots_total": 28,
+  "issues": [
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 124,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 159,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 1453,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:NumberOfParams",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 2367,
+      "message": "Уменьшите количество параметров c 8 до допустимого 7"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 2375,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:ConsecutiveEmptyLines",
+      "path": "Catalogs/КИИ_БазаЗнаний/Ext/ObjectModule.bsl",
+      "line": 30,
+      "message": "Удалите лишние последовательные пустые строки"
+    },
+    {
+      "rule": "bsl-language-server:ConsecutiveEmptyLines",
+      "path": "Catalogs/КИИ_ФрагментыЗнаний/Ext/ObjectModule.bsl",
+      "line": 21,
+      "message": "Удалите лишние последовательные пустые строки"
+    },
+    {
+      "rule": "bsl-language-server:IfElseIfEndsWithElse",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 905,
+      "message": "Синтаксическая конструкция вида \"Если...Тогда...ИначеЕсли...\" должна содержать ветвь \"Иначе\"."
+    },
+    {
+      "rule": "bsl-language-server:NumberOfOptionalParams",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 941,
+      "message": "Уменьшите количество необязательных параметров c 4 до допустимого 3"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 945,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:CognitiveComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1297,
+      "message": "Уменьшите когнитивную сложность \"ОбновитьЭмбеддингиСИтогом\" с 30 до 15"
+    },
+    {
+      "rule": "bsl-language-server:CyclomaticComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1297,
+      "message": "Уменьшите цикломатическую сложность \"ОбновитьЭмбеддингиСИтогом\" с 30 до 20"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1309,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1361,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:CognitiveComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1762,
+      "message": "Уменьшите когнитивную сложность \"ЗаписатьФрагментБазы\" с 19 до 15"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 1839,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:CognitiveComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 2351,
+      "message": "Уменьшите когнитивную сложность \"СведенияОбИндексахБазДляПоиска\" с 21 до 15"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 2475,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAG/Ext/Module.bsl",
+      "line": 2523,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 18,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 32,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 38,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:CognitiveComplexity",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 152,
+      "message": "Уменьшите когнитивную сложность \"ЗаписатьВектор\" с 18 до 15"
+    },
+    {
+      "rule": "bsl-language-server:IfElseIfEndsWithElse",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 195,
+      "message": "Синтаксическая конструкция вида \"Если...Тогда...ИначеЕсли...\" должна содержать ветвь \"Иначе\"."
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 214,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:NumberOfValuesInStructureConstructor",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 335,
+      "message": "Уменьшите количество значений свойств, передаваемых в конструктор структуры"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 341,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IfElseIfEndsWithElse",
+      "path": "CommonModules/КИИ_RAGЭмбеддинги/Ext/Module.bsl",
+      "line": 357,
+      "message": "Синтаксическая конструкция вида \"Если...Тогда...ИначеЕсли...\" должна содержать ветвь \"Иначе\"."
+    },
+    {
+      "rule": "bsl-language-server:IfElseIfEndsWithElse",
+      "path": "CommonModules/КИИ_ВнешнийАнализатор/Ext/Module.bsl",
+      "line": 341,
+      "message": "Синтаксическая конструкция вида \"Если...Тогда...ИначеЕсли...\" должна содержать ветвь \"Иначе\"."
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_ВнешнийАнализатор/Ext/Module.bsl",
+      "line": 366,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_ВнешнийАнализатор/Ext/Module.bsl",
+      "line": 402,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:CognitiveComplexity",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 63,
+      "message": "Уменьшите когнитивную сложность \"ЗапросКМодели\" с 16 до 15"
+    },
+    {
+      "rule": "bsl-language-server:LineLength",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 314,
+      "message": "Длина строки 138 превышает максимально допустимую 120"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 340,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 2099,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_КоннекторИИ/Ext/Module.bsl",
+      "line": 2105,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибок/Ext/Module.bsl",
+      "line": 512,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокTelegram/Ext/Module.bsl",
+      "line": 219,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокTelegram/Ext/Module.bsl",
+      "line": 250,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокTelegram/Ext/Module.bsl",
+      "line": 280,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокTelegram/Ext/Module.bsl",
+      "line": 292,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокАнализ/Ext/Module.bsl",
+      "line": 200,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_МониторингОшибокРегистры/Ext/Module.bsl",
+      "line": 200,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_СерверMCPДиспетчер/Ext/Module.bsl",
+      "line": 258,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_СерверMCPДиспетчер/Ext/Module.bsl",
+      "line": 266,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:IfConditionComplexity",
+      "path": "CommonModules/КИИ_СерверMCPДиспетчер/Ext/Module.bsl",
+      "line": 272,
+      "message": "Выделите условие оператора Если в отдельный метод или переменную"
+    },
+    {
+      "rule": "bsl-language-server:NestedConstructorsInStructureDeclaration",
+      "path": "CommonModules/КИИ_СерверMCPДиспетчер/Ext/Module.bsl",
+      "line": 275,
+      "message": "Не используйте конструкторы с параметрами при объявлении структуры"
+    },
+    {
+      "rule": "bsl-language-server:IncorrectLineBreak",
+      "path": "CommonModules/КИИ_СерверMCPДиспетчер/Ext/Module.bsl",
+      "line": 280,
+      "message": "Проверьте правильность переноса операндов, операторов и параметров"
+    }
+  ],
+  "issue_transitions_applied": false,
+  "new_suppressions_added": false
+}
