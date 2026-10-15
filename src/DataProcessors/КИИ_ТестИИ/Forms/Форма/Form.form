@@ -55,6 +55,47 @@
           </extInfo>
         </items>
         <items xsi:type="form:FormField">
+          <name>ИспользоватьИнструменты</name>
+          <id>148</id>
+          <title>
+            <key>ru</key>
+            <value>Использовать инструменты</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ИспользоватьИнструменты</segments>
+          </dataPath>
+          <toolTip>
+            <key>ru</key>
+            <value>Эксперт сможет уточнять структуру конфигурации и читать доступные вам данные. Запрос может потребовать нескольких обращений к модели.</value>
+          </toolTip>
+          <extendedTooltip>
+            <name>ИспользоватьИнструментыРасширеннаяПодсказка</name>
+            <id>150</id>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ИспользоватьИнструментыКонтекстноеМеню</name>
+            <id>149</id>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>CheckBoxField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:CheckBoxFieldExtInfo"/>
+        </items>
+        <items xsi:type="form:FormField">
           <name>ОтветHTML</name>
           <id>23</id>
           <visible>true</visible>
@@ -1407,6 +1448,13 @@
     <valueType>
       <types>String</types>
       <stringQualifiers/>
+    </valueType>
+  </attributes>
+  <attributes>
+    <name>ИспользоватьИнструменты</name>
+    <id>16</id>
+    <valueType>
+      <types>Boolean</types>
     </valueType>
   </attributes>
   <formCommands>
