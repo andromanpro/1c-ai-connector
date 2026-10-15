@@ -86,6 +86,9 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ПользовательИБ = &amp;КИИ_ПользовательЖурналаИИ</condition>
+			</restrictionByCondition>
 		</right>
 	</object>
 	<object>
@@ -106,6 +109,20 @@
 		<name>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</name>
 		<right>
 			<name>Read</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.КИИ_СерверMCPAPI.URLTemplate.health.Method.GET</name>
+		<right>
+			<name>Use</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>HTTPService.КИИ_СерверMCPAPI.URLTemplate.rpc.Method.POST</name>
+		<right>
+			<name>Use</name>
 			<value>true</value>
 		</right>
 	</object>

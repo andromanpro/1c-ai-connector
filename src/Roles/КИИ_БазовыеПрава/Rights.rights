@@ -68,10 +68,16 @@
 		<right>
 			<name>Read</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ПользовательИБ = &amp;КИИ_ПользовательЖурналаИИ</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>Update</name>
 			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ ПользовательИБ = &amp;КИИ_ПользовательЖурналаИИ</condition>
+			</restrictionByCondition>
 		</right>
 		<right>
 			<name>View</name>
@@ -141,6 +147,13 @@
 		</right>
 		<right>
 			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.КИИ_ПользовательЖурналаИИ</name>
+		<right>
+			<name>Get</name>
 			<value>true</value>
 		</right>
 	</object>

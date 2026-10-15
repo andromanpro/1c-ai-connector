@@ -470,6 +470,21 @@
       </stringQualifiers>
     </type>
   </attributes>
+  <attributes uuid="c2dffac9-524b-4ec1-845f-f910c5a8c080">
+    <name>ПользовательИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь информационной базы</value>
+    </synonym>
+    <comment>Идентификатор пользователя ИБ, выполнившего запрос. Старые записи без владельца сохраняются для общего административного просмотра.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <indexing>Index</indexing>
+  </attributes>
   <dimensions uuid="a87aa4a0-d2e9-49b3-9da6-29bda0d1b114">
     <name>УниверсальнаяДатаВМиллисекундах</name>
     <synonym>

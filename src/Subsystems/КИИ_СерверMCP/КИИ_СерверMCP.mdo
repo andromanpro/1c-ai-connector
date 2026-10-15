@@ -19,4 +19,5 @@
   <content>CommonModule.КИИ_СерверMCPОграничения</content>
   <content>CommonModule.КИИ_СерверMCPСокрытиеСекретов</content>
   <content>DataProcessor.КИИ_СерверMCPНастройки</content>
+  <content>ScheduledJob.КИИ_СерверMCPОграниченияОчистка</content>
 </mdclass:Subsystem>

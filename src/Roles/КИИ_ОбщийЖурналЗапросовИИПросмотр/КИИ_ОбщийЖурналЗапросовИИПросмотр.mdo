@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a4677af-e115-4cfc-b10f-555af2d0d2ad">
+  <name>КИИ_ОбщийЖурналЗапросовИИПросмотр</name>
+  <synonym>
+    <key>ru</key>
+    <value>Просмотр общего журнала запросов ИИ</value>
+  </synonym>
+  <comment>Явный доступ к общему журналу, включая исторические записи без владельца. Не дает изменения журнала.</comment>
+</mdclass:Role>

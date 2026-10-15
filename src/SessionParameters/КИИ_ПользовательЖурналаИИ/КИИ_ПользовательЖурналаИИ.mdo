@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:SessionParameter xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97d273cf-e9dc-4b31-b277-85fba4b611f9">
+  <name>КИИ_ПользовательЖурналаИИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пользователь журнала запросов ИИ</value>
+  </synonym>
+  <comment>Идентификатор текущего пользователя ИБ для ограничения записей журнала. Устанавливается по требованию модулем сеанса.</comment>
+  <type>
+    <types>String</types>
+    <stringQualifiers>
+      <length>36</length>
+    </stringQualifiers>
+  </type>
+</mdclass:SessionParameter>

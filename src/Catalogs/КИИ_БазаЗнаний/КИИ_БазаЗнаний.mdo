@@ -105,6 +105,14 @@
       <types>CatalogRef.КИИ_МоделиИИ</types>
     </type>
   </attributes>
+  <attributes uuid="c269fada-95e7-4024-ae98-a0bb0a5a4160">
+    <name>ХешиФрагментовДляПоиска</name>
+    <comment>Производные хеши нарезки; пересчитываются ПередЗаписью, при импорте сбрасываются. Не являются исходными данными.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+  </attributes>
   <forms uuid="ca38742d-3d0a-4eda-8900-3da4826ad58f">
     <name>ФормаЭлемента</name>
   </forms>

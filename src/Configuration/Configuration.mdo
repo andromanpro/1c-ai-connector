@@ -9,6 +9,7 @@
   <objectBelonging>Adopted</objectBelonging>
   <extension xsi:type="mdclassExtension:ConfigurationExtension">
     <defaultRunMode>Checked</defaultRunMode>
+    <sessionModule>Extended</sessionModule>
     <interfaceCompatibilityMode>Checked</interfaceCompatibilityMode>
   </extension>
   <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="4314dcd3-99b8-44eb-8b37-a724219062f7"/>
@@ -24,7 +25,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.7.1</version>
+  <version>1.7.2-audit-26</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -51,10 +52,12 @@
   <subsystems>Subsystem.КИИ_СерверMCP</subsystems>
   <subsystems>Subsystem.КИИ_СерверMCPИнструменты</subsystems>
   <commonPictures>CommonPicture.КИИ_КартинкаПодсистемы</commonPictures>
+  <sessionParameters>SessionParameter.КИИ_ПользовательЖурналаИИ</sessionParameters>
   <roles>Role.КИИ_БазовыеПрава</roles>
   <roles>Role.КИИ_ПолныеПрава</roles>
   <roles>Role.КИИ_СерверMCPДиагностика</roles>
   <roles>Role.КИИ_ДашбордОшибокПросмотр</roles>
+  <roles>Role.КИИ_ОбщийЖурналЗапросовИИПросмотр</roles>
   <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаСистемный</commonTemplates>
   <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаПользовательский</commonTemplates>
   <commonTemplates>CommonTemplate.КИИ_ПромптГлубокогоАнализа</commonTemplates>
@@ -102,6 +105,7 @@
   <commonModules>CommonModule.КИИ_ПроверкаПоискаКлиент</commonModules>
   <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
   <commonModules>CommonModule.КИИ_ОчередьQdrant</commonModules>
+  <commonModules>CommonModule.КИИ_RAGЭмбеддинги</commonModules>
   <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
@@ -114,6 +118,7 @@
   <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_СерверMCPОграниченияОчистка</scheduledJobs>
   <commandGroups>CommandGroup.КИИ_РаботаСИИ</commandGroups>
   <commandGroups>CommandGroup.КИИ_Знания</commandGroups>
   <commandGroups>CommandGroup.КИИ_Мониторинг</commandGroups>

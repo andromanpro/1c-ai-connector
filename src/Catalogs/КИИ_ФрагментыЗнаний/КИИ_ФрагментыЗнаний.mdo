@@ -152,6 +152,23 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
   </attributes>
+  <attributes uuid="a52ecbe5-b035-418d-8afa-c60b5feef6cc">
+    <name>ХешФактическогоТекста</name>
+    <comment>Версия проверки и SHA256 фактического текста; пересчитываются ПередЗаписью, при импорте сбрасываются.</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>64</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="f68d6bd2-6b3f-4107-a7f9-a8c50ff717c6">
+    <name>ВекторПроверенДляПоиска</name>
+    <comment>Хранилище содержит непустой вектор правильной размерности с положительной нормой; проверяется ПередЗаписью.</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
   <forms uuid="5a92d41a-6c7f-4f90-8796-5b4d54c91cc3">
     <name>ФормаСписка</name>
     <synonym>
