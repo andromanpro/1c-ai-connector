@@ -6,8 +6,8 @@
 
 [![Лицензия: MIT](https://img.shields.io/badge/Лицензия-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
-[![Версия](https://img.shields.io/badge/версия-1.7.3-green)](https://github.com/andromanpro/1c-ai-connector/releases)
-[![Тесты](https://img.shields.io/badge/YAxUnit-827_tests-brightgreen)](#-качество-кода)
+[![Версия](https://img.shields.io/badge/версия-1.7.4-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Тесты](https://img.shields.io/badge/YAxUnit-832_tests-brightgreen)](#-качество-кода)
 
 <a href="https://infostart.ru/1c/articles/2585691/">
   <img src="https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg" alt="Инфостарт" width="180">
@@ -413,16 +413,16 @@ HTML = КИИ_МаркдаунПарсерКлиентСервер.Преобр�
 
 ## 🔍 Качество кода
 
-Для версии 1.7.3 на одном неизменном срезе прошли 827 выбранных проверок
-YAxUnit: 825 серверных и 2 управляемого клиента. Проверены точные имена и контексты,
+Для версии 1.7.4 на одном неизменном срезе прошли 832 выбранные проверки
+YAxUnit: 830 серверных и 2 управляемого клиента. Проверены точные имена и контексты,
 самостоятельное завершение клиента, версии и CFE до и после прогона. HTTP-фикстура
-подтвердила 13 обращений в семи сценариях без платных запросов к моделям.
-[Манифест и границы проверки](https://github.com/andromanpro/1c-ai-connector-tests/blob/v1.7.3/verification/1.7.3/VERIFICATION.json).
+подтвердила 21 обращение в семи сценариях без платных запросов к моделям.
+[Манифест и границы проверки](https://github.com/andromanpro/1c-ai-connector-tests/blob/v1.7.4/verification/1.7.4/VERIFICATION.json).
 
 SonarQube всего продукта: Quality Gate OK, активных ошибок и уязвимостей нет;
 новых замечаний нет, 48 прежних замечаний сопровождения остаются открытыми.
 Все 28 мест, требующих проверки безопасности, имеют статус REVIEWED.
-[Подробный результат](https://github.com/andromanpro/1c-ai-connector-tests/blob/v1.7.3/verification/1.7.3/sonar-analysis.json).
+[Подробный результат](https://github.com/andromanpro/1c-ai-connector-tests/blob/v1.7.4/verification/1.7.4/sonar-analysis.json).
 Прежний долг описаний типов EDT сохраняется; весь проект статически чистым не объявляется.
 
 Нагрузка 50–200 пользователей, полная матрица интерфейсов и все живые облачные
