@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4cab1efe-2df7-494a-9030-ac0d95eec916">
+  <producedTypes>
+    <selectionType typeId="72db6ffa-3d26-47d9-aded-a1faf11b3327" valueTypeId="6836697a-0529-415e-8832-ec7ce8fe8885"/>
+    <listType typeId="536dd00a-135c-4be7-a55b-0c33a610aebe" valueTypeId="802c5592-c929-430e-a60b-60f81651f5fe"/>
+    <managerType typeId="8cb680bd-4a09-490f-bb7e-420384282e36" valueTypeId="21fa0f47-72e8-47c2-9e7f-686045927e04"/>
+    <recordSetType typeId="05d60c58-1ae3-4ca2-9cd3-9f52394a391a" valueTypeId="ce40b70a-7e8a-4d17-add8-058c560b9bd8"/>
+    <recordKeyType typeId="18a4971f-7244-4fac-bfb7-9ea5c35aef9d" valueTypeId="e8448dac-e1e9-4c49-90cd-e7f6a6cffe99"/>
+    <recordType typeId="7e9d7d22-f715-4cc2-b20e-71a10d3997d7" valueTypeId="c3a80f66-3ad2-4bf5-b698-29cc9d3eca41"/>
+    <recordManagerType typeId="292257dd-a662-4245-9035-7093cfb9bdc0" valueTypeId="31f473b7-5dac-474c-b38f-01411f8a3f58"/>
+  </producedTypes>
+  <name>СоставыГруппПользователей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <useStandardCommands>true</useStandardCommands>
+</mdclass:InformationRegister>

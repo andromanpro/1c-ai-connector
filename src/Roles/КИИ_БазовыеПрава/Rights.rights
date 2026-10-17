@@ -157,4 +157,50 @@
 			<value>true</value>
 		</right>
 	</object>
+	<object>
+		<name>Catalog.КИИ_ПодключенияКБазам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Ссылка В (
+ ВЫБРАТЬ Доступ.Ссылка
+ ИЗ Справочник.КИИ_ПодключенияКБазам.Доступ КАК Доступ
+ ГДЕ Доступ.Участник = &amp;ТекущийПользователь
+  ИЛИ Доступ.Участник В (
+   ВЫБРАТЬ Состав.ГруппаПользователей
+   ИЗ РегистрСведений.СоставыГруппПользователей КАК Состав
+   ГДЕ Состав.Пользователь = &amp;ТекущийПользователь
+    И Состав.Используется))</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>View</name>
+			<value>true</value>
+		</right>
+	</object>
+	<object>
+		<name>InformationRegister.КИИ_ЛичныеПодключенияКБазам</name>
+		<right>
+			<name>Read</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Пользователь = &amp;ТекущийПользователь</condition>
+			</restrictionByCondition>
+		</right>
+		<right>
+			<name>Update</name>
+			<value>true</value>
+			<restrictionByCondition>
+				<condition>ГДЕ Пользователь = &amp;ТекущийПользователь</condition>
+			</restrictionByCondition>
+		</right>
+	</object>
+	<object>
+		<name>SessionParameter.ТекущийПользователь</name>
+		<right>
+			<name>Get</name>
+			<value>true</value>
+		</right>
+	</object>
 </Rights>

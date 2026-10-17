@@ -500,6 +500,16 @@
       </stringQualifiers>
     </type>
   </attributes>
+  <attributes uuid="4601b72a-3c35-4c1d-bde9-d03787d8bbe9">
+    <name>НастроитьНаборИнструментов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбирать инструменты для этой модели</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
   <tabularSections uuid="bda728b5-d380-45e6-8aac-b991befb5653">
     <producedTypes>
       <objectType typeId="aff00cf8-d6db-4d2e-a33a-d977fe344022" valueTypeId="76d92161-1740-4043-91b4-dc9001e53f7a"/>
@@ -551,6 +561,30 @@
       <maxValue xsi:type="core:UndefinedValue"/>
       <dataHistory>Use</dataHistory>
       <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="d54c36ff-af26-4965-981d-76000aa1001e">
+    <producedTypes>
+      <objectType typeId="48d98b43-7456-4ae8-b860-9d03c6dce19d" valueTypeId="1a750acf-f851-4717-b3c5-c3896fc87a10"/>
+      <rowType typeId="394a913e-0b57-4d1a-8e53-b73930283112" valueTypeId="c915c268-6229-4ae8-b084-98570c242e3d"/>
+    </producedTypes>
+    <name>Инструменты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструменты</value>
+    </synonym>
+    <attributes uuid="1ee1334f-50e0-419c-a5bf-b1a263267529">
+      <name>ИмяИнструмента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя инструмента</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
     </attributes>
   </tabularSections>
   <forms uuid="1b13a08b-6d7b-4ed2-b2d2-77ea843f00be">

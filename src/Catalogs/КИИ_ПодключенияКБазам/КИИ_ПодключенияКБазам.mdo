@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="58de3a95-2bd3-413c-8043-56383107cb66">
+  <producedTypes>
+    <objectType typeId="caa30fec-6896-4522-a3e2-49138fe1f0d0" valueTypeId="d5e7f7b1-9090-4195-9875-2090debfdab3"/>
+    <refType typeId="63532c5b-8fd1-45b1-97d0-d87c078d4954" valueTypeId="38cf0d29-7393-49ff-8c07-08c5172bb2a5"/>
+    <selectionType typeId="58adfe15-53d1-4882-be8e-01aa75b5f525" valueTypeId="b31e52c2-27cd-4cba-8b12-82196649294b"/>
+    <listType typeId="430d2e94-8721-4bfa-9442-9ebaf957ddfa" valueTypeId="e8a3f2df-9189-4b04-ba77-6f9b5b7c9f2d"/>
+    <managerType typeId="117f8a33-2051-4e41-9e4c-bf36cf2bb746" valueTypeId="eb8055cb-6c44-435d-9a65-9d78995b176a"/>
+  </producedTypes>
+  <name>КИИ_ПодключенияКБазам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подключения к базам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <defaultObjectForm>Catalog.КИИ_ПодключенияКБазам.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.КИИ_ПодключенияКБазам.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="ceb99824-04f2-42c0-867b-0b10ce6da418">
+    <name>Адрес</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес MCP-сервиса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="9b9a61c1-7668-4506-93c8-1a8259751a9e">
+    <name>Описание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение базы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="dc5d25aa-73c0-4509-84b0-7320c07ed615">
+    <name>Используется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Используется</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="577548fe-a488-4611-a8e3-7f9bb315746e">
+    <name>ЛичныйВход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Личный вход пользователей</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="d9f7ddc9-2f0c-4596-bb90-57d5629dfca5">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Служебный пользователь</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="2bbeb52d-5afd-46fe-ad97-ad46df438f84">
+    <name>ИдентификаторБазы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор целевой базы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="0b3a0ec1-e805-4400-a1ab-4d9568ea63ac">
+    <name>ИмяКонфигурации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конфигурация</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="213cbb36-dd59-46c8-adf1-2e45914597a6">
+    <name>ВерсияКонфигурации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия конфигурации</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="b8294023-1029-463a-b112-14231dfce7d6">
+    <name>Таймаут</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таймаут, секунд</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="163ddbcc-95db-4b25-9163-edfbeb5a714a">
+    <name>ДатаПроверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Последняя проверка</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+  </attributes>
+  <attributes uuid="a75cf74f-e5f9-44e2-9931-49c8bffaccea">
+    <name>РезультатПроверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат проверки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <tabularSections uuid="9ee739fa-80da-40f8-b655-452476e414f2">
+    <producedTypes>
+      <objectType typeId="912ccb5e-745b-4fe2-8b25-f5314488df46" valueTypeId="92a28306-cb0e-4550-97e9-fdc7c5ab3155"/>
+      <rowType typeId="54fa4723-db7f-4501-b7be-18c02f100fe2" valueTypeId="8b51cd9e-4a34-499e-abe5-1262bc7715b2"/>
+    </producedTypes>
+    <name>Доступ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кому доступно подключение</value>
+    </synonym>
+    <attributes uuid="f1ff4d3a-ec18-456e-92d2-a454e11b0847">
+      <name>Участник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пользователь или группа</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+        <types>CatalogRef.ГруппыПользователей</types>
+      </type>
+    </attributes>
+  </tabularSections>
+  <forms uuid="62b0d4be-27f4-4ed8-9c84-0575425a9735">
+    <name>ФормаЭлемента</name>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="dc34ccdf-eb89-4f1b-9b63-7579630a9859">
+    <name>ФормаСписка</name>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e0950b31-2aa2-4617-aacf-d61df1d229ef">
+    <name>ЛичныйВход</name>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

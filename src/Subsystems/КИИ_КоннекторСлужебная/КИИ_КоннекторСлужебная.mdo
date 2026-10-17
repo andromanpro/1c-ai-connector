@@ -117,4 +117,13 @@
   <content>ScheduledJob.КИИ_СверкаQdrant</content>
   <content>ScheduledJob.КИИ_СерверMCPАудитОчистка</content>
   <content>SessionParameter.КИИ_ПользовательЖурналаИИ</content>
+  <content>Role.КИИ_ПодключениеMCP</content>
+  <content>SessionParameter.КИИ_ИмяПользователяMCP</content>
+  <content>CommonModule.КИИ_УдаленныеБазыMCP</content>
+  <content>InformationRegister.КИИ_ЛичныеПодключенияКБазам</content>
+  <content>CommonModule.КИИ_ПодключенияКБазам</content>
+  <content>Catalog.Пользователи</content>
+  <content>Catalog.ГруппыПользователей</content>
+  <content>SessionParameter.ТекущийПользователь</content>
+  <content>InformationRegister.СоставыГруппПользователей</content>
 </mdclass:Subsystem>

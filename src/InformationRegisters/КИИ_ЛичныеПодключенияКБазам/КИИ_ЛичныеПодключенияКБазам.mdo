@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8991ae17-7d92-482b-8277-8ec4cf836038">
+  <producedTypes>
+    <selectionType typeId="f7c92b4b-0530-4f91-9c41-eb22af635dab" valueTypeId="d1038cce-35a1-4955-b02b-8bb7ad396955"/>
+    <listType typeId="5efaba61-f419-4315-9522-ce89946e6ea4" valueTypeId="dbac73ad-771a-4b50-9111-e48b6a9573ed"/>
+    <managerType typeId="1fa7f131-87a6-4ede-9c67-6f8e152d0697" valueTypeId="284c4c31-0887-4355-b293-64759c8d587c"/>
+    <recordSetType typeId="f84fb804-9dd2-4036-b6d4-29d113f8ce44" valueTypeId="11b42828-0139-4752-b846-be30ef5245eb"/>
+    <recordKeyType typeId="62eb946f-eabb-48c6-87e1-ae6fba5e4a5e" valueTypeId="4f913f7a-2bbf-49ee-b8c4-9f376a36a55a"/>
+    <recordType typeId="7d87aec6-f180-454e-aa43-8fe723cf0431" valueTypeId="4d253b8f-3573-415b-b813-ad48915ae7bc"/>
+    <recordManagerType typeId="16661cb2-aef4-43be-9388-b797928182dd" valueTypeId="56de8e68-bced-457d-a30b-5372c7555805"/>
+  </producedTypes>
+  <name>КИИ_ЛичныеПодключенияКБазам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Личные реквизиты подключений к базам</value>
+  </synonym>
+  <resources uuid="25a95ce6-5b14-4a59-bc14-b7d4154ca4d6">
+    <name>Логин</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь целевой базы</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+  </resources>
+  <resources uuid="2b760c37-0c99-4ed9-a265-9f3b3d98a323">
+    <name>ПарольСохранен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль сохранён</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </resources>
+  <dimensions uuid="6e921c2e-9182-47f9-8b61-34ac3d279e22">
+    <name>Подключение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КИИ_ПодключенияКБазам</types>
+    </type>
+  </dimensions>
+  <dimensions uuid="7776796d-f68f-43ea-8b06-769f0f3bf9f8">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+  </dimensions>
+</mdclass:InformationRegister>

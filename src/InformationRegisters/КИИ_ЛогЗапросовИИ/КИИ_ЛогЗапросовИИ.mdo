@@ -485,6 +485,42 @@
     </type>
     <indexing>Index</indexing>
   </attributes>
+  <attributes uuid="fa4f4c12-0f4b-4454-88e1-e2883ae79ffc">
+    <name>ДиалогЧата</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="aa3dc307-d346-4765-88e2-a2f27f7bd28e">
+    <name>ЗапросЧата</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="b2dc500a-ec40-419e-ba14-79381e55179f">
+    <name>РаундЧата</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="fbe26910-70b2-45bb-8156-20878efed831">
+    <name>ИнструментыРаунда</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
   <dimensions uuid="a87aa4a0-d2e9-49b3-9da6-29bda0d1b114">
     <name>УниверсальнаяДатаВМиллисекундах</name>
     <synonym>

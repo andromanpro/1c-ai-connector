@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Role xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a87bb8a2-9fb1-4d07-b425-7a0b8b95320e">
+  <name>КИИ_ПодключениеMCP</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подключение к инструментам ИИконы от имени пользователя 1С</value>
+  </synonym>
+</mdclass:Role>

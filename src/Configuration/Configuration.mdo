@@ -25,7 +25,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.7.4</version>
+  <version>1.8.0</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -53,11 +53,14 @@
   <subsystems>Subsystem.КИИ_СерверMCPИнструменты</subsystems>
   <commonPictures>CommonPicture.КИИ_КартинкаПодсистемы</commonPictures>
   <sessionParameters>SessionParameter.КИИ_ПользовательЖурналаИИ</sessionParameters>
+  <sessionParameters>SessionParameter.КИИ_ИмяПользователяMCP</sessionParameters>
+  <sessionParameters>SessionParameter.ТекущийПользователь</sessionParameters>
   <roles>Role.КИИ_БазовыеПрава</roles>
   <roles>Role.КИИ_ПолныеПрава</roles>
   <roles>Role.КИИ_СерверMCPДиагностика</roles>
   <roles>Role.КИИ_ДашбордОшибокПросмотр</roles>
   <roles>Role.КИИ_ОбщийЖурналЗапросовИИПросмотр</roles>
+  <roles>Role.КИИ_ПодключениеMCP</roles>
   <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаСистемный</commonTemplates>
   <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаПользовательский</commonTemplates>
   <commonTemplates>CommonTemplate.КИИ_ПромптГлубокогоАнализа</commonTemplates>
@@ -106,6 +109,9 @@
   <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
   <commonModules>CommonModule.КИИ_ОчередьQdrant</commonModules>
   <commonModules>CommonModule.КИИ_RAGЭмбеддинги</commonModules>
+  <commonModules>CommonModule.КИИ_УдаленныеБазыMCP</commonModules>
+  <commonModules>CommonModule.КИИ_ПодключенияКБазам</commonModules>
+  <commonModules>CommonModule.КИИ_КонтекстДиалога</commonModules>
   <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
@@ -151,6 +157,9 @@
   <catalogs>Catalog.КИИ_БазаЗнаний</catalogs>
   <catalogs>Catalog.КИИ_ФрагментыЗнаний</catalogs>
   <catalogs>Catalog.КИИ_ПравилаИгнорированияОшибок</catalogs>
+  <catalogs>Catalog.Пользователи</catalogs>
+  <catalogs>Catalog.ГруппыПользователей</catalogs>
+  <catalogs>Catalog.КИИ_ПодключенияКБазам</catalogs>
   <enums>Enum.КИИ_ТипыАвторизации</enums>
   <enums>Enum.КИИ_ТипыФорматовAPI</enums>
   <enums>Enum.КИИ_УровниКритичности</enums>
@@ -181,4 +190,6 @@
   <informationRegisters>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ИсполнителиОчередиQdrant</informationRegisters>
+  <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЛичныеПодключенияКБазам</informationRegisters>
 </mdclass:Configuration>
