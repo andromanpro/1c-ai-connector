@@ -1,30 +1,30 @@
 {
   "schema": 1,
-  "run_id": "20261020T070732Z-cc03402a00bc",
-  "source_hash": "f13db4edf690e3bcb07cb14c06071500ec90276b27c0316db9feeb0782ddee29",
-  "product_version": "1.8.1",
-  "tests_version": "1.8.1",
+  "run_id": "20261020T174842Z-b4a71c53f98b",
+  "source_hash": "67e17698cc129e2c8ab6e07ec5c53d34f43a52042aeb602c03d442c040f32a5f",
+  "product_version": "1.8.2",
+  "tests_version": "1.8.2",
   "artifacts": {
-    "IIkona-1.8.1.cfe": {
-      "sha256": "c3ba21b9433855e11003dac5b1b0abc56dca35816c2190f0a072f3c817f31aea",
-      "bytes": 1902742,
+    "IIkona-1.8.2.cfe": {
+      "sha256": "167ce6e3dc22b5b6f83b87b6e6bef199134812a92d5a6bec43632585bec0e24e",
+      "bytes": 1903287,
       "captured_from_installed_extension": true
     },
-    "IIkona-tests-1.8.1.cfe": {
-      "sha256": "227114cba94acf5f3f9e74aca0026a62967868be4b9c5e25d366dbd892f05cb5",
-      "bytes": 237829,
+    "IIkona-tests-1.8.2.cfe": {
+      "sha256": "c229c94b1272ffa8e8dbb2d3b752acc5ffe0e591d89aaff732ecdf7295bc09a8",
+      "bytes": 238486,
       "captured_from_installed_extension": true
     }
   },
   "main": {
-    "passed": 985,
-    "total": 985,
-    "server": 966,
+    "passed": 990,
+    "total": 990,
+    "server": 971,
     "managed_client": 19,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "junit_sha256": "f9ce03761f8974d2d39abb4f0ed7eb9851aae88a6192683320800e5414498520"
+    "junit_sha256": "320a6a91a11662ec4b43b347a7b66b13c6e635154b5beddf07a6e218213e613a"
   },
   "roles": {
     "executions": 130,
@@ -33,64 +33,72 @@
     "monitoring": 35,
     "connections": 41,
     "passed": true,
-    "cleanup_complete": true
+    "cleanup_complete": true,
+    "strict_guard_late_checks": [
+      "journal-prepare",
+      "journal-data-cleanup",
+      "monitoring-system_admin"
+    ],
+    "late_check_reason": "1C background jobs can outlive the client; the unchanged idle guard and current CFE were verified after drain",
+    "session_exceptions_added": false,
+    "original_controller_failures_preserved": true
   },
-  "distinct_methods_exercised": 1025,
-  "environment": {
-    "platform": "8.3.27.1989",
-    "parent": "БиблиотекаСтандартныхПодсистемДемо",
-    "bsp": "3.1.11.392",
-    "yaxunit": "25.12",
-    "kind": "isolated SQL test base"
-  },
+  "distinct_methods_exercised": 1030,
   "configuration_check": {
     "contexts": 7,
     "diagnostics": 0,
     "exit_code": 0,
     "external_http_context_guard_reached": true
   },
+  "environment": {
+    "platform": "8.3.27.1989",
+    "bsp": "3.1.11.392",
+    "yaxunit": "25.12",
+    "kind": "isolated SQL test base"
+  },
   "sonar": {
-    "analysis": "AaFYKfrPXCBQGdijW0YL",
+    "analysis": "AaFad9XnXCBQGdijW5Me",
     "gate": "OK",
     "profile_rules": 160,
     "overall_unresolved": 0,
     "inherited_reviewed_safe": 34,
-    "new_issue_transitions": false,
-    "profile_weakened": false
+    "profile_weakened": false,
+    "new_issue_transitions": false
   },
   "preservation": {
     "passed": true,
     "tables": 24,
-    "old_model_fields": 33,
-    "new_model_defaults": 10,
+    "all_current_fields": true,
     "users": true,
+    "roles": true,
     "constants": true,
     "model_keys": true
   },
-  "forms": {
-    "saved_reopened_fields": 10,
-    "independent_com_readback": true,
-    "cleanup_exact": true,
-    "screenshots": "1.8.1; synthetic model/log values; no provider request"
+  "readability": {
+    "files": 125,
+    "issues": 0,
+    "test_style_cleanup": false
   },
   "standards": {
-    "review": "v8std-evidence.md",
-    "blocking_trace_findings": 0,
-    "trace_warning": "Finalization trace contains review; no new design/implementation records fabricated",
-    "test_code_style_cleanup": false
+    "trace": "v8std-evidence.md",
+    "review": "v8std-review-log.md",
+    "trace_gate": "clean"
+  },
+  "forms": {
+    "changed": false,
+    "new_screenshots": false,
+    "previous_illustrations_retain_actual_versions": true
   },
   "limitations": [
-    "No complete external-provider, web/thin-client or load matrix",
-    "EDT type/documentation markers remain; test module has372 unresolved YAxUnit name markers",
-    "Inherited Sonar SAFE decisions are not a new independent manual audit",
-    "Some tooltip presentation recommendations remain; no1C certification claimed",
-    "Older screenshots retain their actual development versions",
-    "Historical model row-version difference predates deployment; unchanged since predeployment snapshot"
+    "Old customized UT11.5.12.111 from the customer was not provided or executed; its exact BSP version is unknown",
+    "Eliminating two JSON dependencies does not prove compatibility with every old BSP configuration",
+    "No complete live-provider, client or load matrix; seven external-environment scenarios remain outside the accepted main selection",
+    "Existing EDT type/documentation markers remain; test code was not cosmetically standardized",
+    "The 34 inherited Sonar SAFE resolutions are not a new independent manual security review"
   ],
   "source_layout": {
-    "product": "src/ and DT-INF/ in product tag v1.8.1",
-    "tests": "src/ and DT-INF/ in tests tag v1.8.1",
-    "verification_tools": "tools/ in tests tag v1.8.1",
-    "verification_orchestrator": "verification/1.8.1/orchestrator/"
+    "product": "src/ and DT-INF/ at product tag v1.8.2",
+    "tests": "src/ and DT-INF/ at tests tag v1.8.2",
+    "orchestrator": "verification/1.8.2/orchestrator/"
   }
 }
