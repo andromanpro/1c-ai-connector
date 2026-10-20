@@ -6,14 +6,19 @@
 
 [![Лицензия: MIT](https://img.shields.io/badge/Лицензия-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
-[![Версия](https://img.shields.io/badge/версия-1.8.1-green)](https://github.com/andromanpro/1c-ai-connector/releases)
-[![Тесты](https://img.shields.io/badge/YAxUnit-985_main_tests-brightgreen)](#-качество-кода)
+[![Версия](https://img.shields.io/badge/версия-1.8.2-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Тесты](https://img.shields.io/badge/YAxUnit-990_main_tests-brightgreen)](#-качество-кода)
 
 <a href="https://infostart.ru/1c/articles/2585691/">
   <img src="https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg" alt="Инфостарт" width="180">
 </a>
 
 [ИИкона на Инфостарте — описание, файл и обсуждение](https://infostart.ru/1c/articles/2585691/).
+
+## Выпуск 1.8.2
+
+JSON выполняется средствами платформы без зависимости от поздних функций БСП. Уточнены IIS, вход в целевую базу и проверка MCP.
+[Изменения и обновление](RELEASE_NOTES_1.8.2.md) · [Руководство](https://github.com/andromanpro/1c-ai-connector-guide/tree/v1.8.2).
 
 ## Выпуск 1.8.1
 
@@ -423,8 +428,8 @@ HTML = КИИ_МаркдаунПарсерКлиентСервер.Преобр�
 
 ## 🔍 Качество кода
 
-Для версии 1.8.1 на одном срезе прошли 985 основных YAxUnit: 966 серверных и 19 управляемого клиента. Отдельно выполнены 130 проверок в трёх ролевых контурах БСП, охватившие 40 разных методов. Проверка Конфигуратором прошла в семи контекстах. После всех проверок данные 24 таблиц, пользователи, настройки и ключи моделей сохранены.
-[Манифест и JUnit](https://github.com/andromanpro/1c-ai-connector-tests/tree/v1.8.1/verification/1.8.1).
+Для версии 1.8.2 на одном срезе прошли 990 проверок YAxUnit: 971 на сервере и 19 в управляемом клиенте. Отдельно выполнены 130 проверок в трёх ролевых контурах БСП, охватившие 40 разных методов. Проверка Конфигуратором прошла в семи контекстах. После всех проверок данные 24 таблиц, пользователи, настройки и ключи моделей сохранены.
+[Манифест и JUnit](https://github.com/andromanpro/1c-ai-connector-tests/tree/v1.8.2/verification/1.8.2).
 
 Sonar всего продукта: Gate OK, 160 правил, 0 незакрытых замечаний. Сохранены 34 прежних решения SAFE; это не новый независимый ручной аудит всех мест безопасности. Маркеры описаний и типов EDT остаются и общей статической чистоты не доказывают.
 
