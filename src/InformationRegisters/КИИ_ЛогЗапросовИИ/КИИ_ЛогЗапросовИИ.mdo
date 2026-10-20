@@ -191,6 +191,33 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillValue xsi:type="core:UndefinedValue"/>
   </resources>
+  <resources uuid="899a60a8-387b-4bfd-8bf0-19903b2e57a8">
+    <name>ОценкаСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка по тарифам</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>18</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+  </resources>
+  <resources uuid="d8ecc5a0-d812-4b9f-b7c2-f37e8aee5b2c">
+    <name>ВходныеТокеныЗаписиКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Входные токены записи кеша</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+  </resources>
   <attributes uuid="73937ca5-67c5-4b22-9313-31a30ba2b408">
     <name>IDЗапроса</name>
     <synonym>
@@ -519,6 +546,40 @@
       <stringQualifiers>
         <length>150</length>
       </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="69f94811-39e9-4b23-931a-8ef8b377c984">
+    <name>ЕстьОценкаСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценка рассчитана</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="cf501d8d-5b9b-4021-8db3-9833ce0116d1">
+    <name>ВалютаОценкиСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта оценки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="7dc66b2b-c47b-4411-ba6f-1390c9851323">
+    <name>ТарифыОценкиСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тарифы на момент запроса</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
     </type>
   </attributes>
   <dimensions uuid="a87aa4a0-d2e9-49b3-9da6-29bda0d1b114">

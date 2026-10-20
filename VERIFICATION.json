@@ -1,0 +1,96 @@
+{
+  "schema": 1,
+  "run_id": "20261020T070732Z-cc03402a00bc",
+  "source_hash": "f13db4edf690e3bcb07cb14c06071500ec90276b27c0316db9feeb0782ddee29",
+  "product_version": "1.8.1",
+  "tests_version": "1.8.1",
+  "artifacts": {
+    "IIkona-1.8.1.cfe": {
+      "sha256": "c3ba21b9433855e11003dac5b1b0abc56dca35816c2190f0a072f3c817f31aea",
+      "bytes": 1902742,
+      "captured_from_installed_extension": true
+    },
+    "IIkona-tests-1.8.1.cfe": {
+      "sha256": "227114cba94acf5f3f9e74aca0026a62967868be4b9c5e25d366dbd892f05cb5",
+      "bytes": 237829,
+      "captured_from_installed_extension": true
+    }
+  },
+  "main": {
+    "passed": 985,
+    "total": 985,
+    "server": 966,
+    "managed_client": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_sha256": "f9ce03761f8974d2d39abb4f0ed7eb9851aae88a6192683320800e5414498520"
+  },
+  "roles": {
+    "executions": 130,
+    "distinct_methods": 40,
+    "journal": 54,
+    "monitoring": 35,
+    "connections": 41,
+    "passed": true,
+    "cleanup_complete": true
+  },
+  "distinct_methods_exercised": 1025,
+  "environment": {
+    "platform": "8.3.27.1989",
+    "parent": "БиблиотекаСтандартныхПодсистемДемо",
+    "bsp": "3.1.11.392",
+    "yaxunit": "25.12",
+    "kind": "isolated SQL test base"
+  },
+  "configuration_check": {
+    "contexts": 7,
+    "diagnostics": 0,
+    "exit_code": 0,
+    "external_http_context_guard_reached": true
+  },
+  "sonar": {
+    "analysis": "AaFYKfrPXCBQGdijW0YL",
+    "gate": "OK",
+    "profile_rules": 160,
+    "overall_unresolved": 0,
+    "inherited_reviewed_safe": 34,
+    "new_issue_transitions": false,
+    "profile_weakened": false
+  },
+  "preservation": {
+    "passed": true,
+    "tables": 24,
+    "old_model_fields": 33,
+    "new_model_defaults": 10,
+    "users": true,
+    "constants": true,
+    "model_keys": true
+  },
+  "forms": {
+    "saved_reopened_fields": 10,
+    "independent_com_readback": true,
+    "cleanup_exact": true,
+    "screenshots": "1.8.1; synthetic model/log values; no provider request"
+  },
+  "standards": {
+    "review": "v8std-evidence.md",
+    "blocking_trace_findings": 0,
+    "trace_warning": "Finalization trace contains review; no new design/implementation records fabricated",
+    "test_code_style_cleanup": false
+  },
+  "limitations": [
+    "No complete external-provider, web/thin-client or load matrix",
+    "EDT type/documentation markers remain; test module has372 unresolved YAxUnit name markers",
+    "Inherited Sonar SAFE decisions are not a new independent manual audit",
+    "Some tooltip presentation recommendations remain; no1C certification claimed",
+    "Older screenshots retain their actual development versions",
+    "Historical model row-version difference predates deployment; unchanged since predeployment snapshot"
+  ],
+  "source_layout": {
+    "product": "src/ and DT-INF/ in product tag v1.8.1",
+    "tests": "src/ and DT-INF/ in tests tag v1.8.1",
+    "verification_tools": "tools/ in tests tag v1.8.1",
+    "verification_orchestrator": "verification/1.8.1/orchestrator/"
+  }
+}

@@ -510,6 +510,137 @@
       <types>Boolean</types>
     </type>
   </attributes>
+  <attributes uuid="e4887ec2-b4a8-4044-be46-20679bc8c3cb">
+    <name>МаксимумРаундовПетли</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимум раундов модели</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="934c32f2-f792-4360-ac72-5df1ce957198">
+    <name>МаксимумВызововПетли</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимум вызовов инструментов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="81522f8e-20d6-4962-b5d3-5e1523eb0380">
+    <name>МаксимумСимволовРезультатаПетли</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимум символов результата инструмента</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="6f8074b8-335c-42df-832a-cfcea98f7701">
+    <name>МаксимумСимволовДиалогаПетли</name>
+    <synonym>
+      <key>ru</key>
+      <value>Максимум символов диалога петли</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="89493afa-4696-4159-83f6-ae3db8bf3277">
+    <name>РассчитыватьСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оценивать стоимость по тарифам</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+  </attributes>
+  <attributes uuid="1183cacd-ae2c-4210-977b-6af2c8bd692c">
+    <name>ВалютаТарифов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта тарифов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="ef76640c-9230-4233-b8d8-b907df6349ca">
+    <name>ТарифВходныхТокенов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вход, за миллион токенов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="0ce8a1c6-541a-4857-aa8b-6ca16b419167">
+    <name>ТарифВыходныхТокенов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выход, за миллион токенов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="0b0f7272-03bc-4ddb-87b3-8b91d07d1cec">
+    <name>ТарифЧтенияКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Чтение кеша, за миллион токенов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
+  <attributes uuid="1e89c2cf-70da-46e4-b171-4954454dfddf">
+    <name>ТарифЗаписиКеша</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запись кеша, за миллион токенов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+  </attributes>
   <tabularSections uuid="bda728b5-d380-45e6-8aac-b991befb5653">
     <producedTypes>
       <objectType typeId="aff00cf8-d6db-4d2e-a33a-d977fe344022" valueTypeId="76d92161-1740-4043-91b4-dc9001e53f7a"/>
