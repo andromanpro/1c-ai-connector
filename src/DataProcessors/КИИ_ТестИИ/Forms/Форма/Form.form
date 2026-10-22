@@ -3428,9 +3428,7 @@
       <id>14</id>
       <valueType>
         <types>String</types>
-        <stringQualifiers>
-          <length>250</length>
-        </stringQualifiers>
+        <stringQualifiers/>
       </valueType>
       <view>
         <common>true</common>
