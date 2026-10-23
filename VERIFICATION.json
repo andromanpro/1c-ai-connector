@@ -1,35 +1,135 @@
 {
   "schema": 2,
-  "run_id": "20261022T191245Z-e0e4fed1074b",
-  "source_hash": "4b77532af02ff1d077f85560a7730b865f4cc87b6bb2df1950716d146ac9681c",
-  "product_version": "1.8.3",
-  "tests_version": "1.8.3",
+  "run_id": "20261023T154638Z-c9edd43d630f",
+  "build_run": "20261023T154236Z-ff23fca0dde5",
+  "source_hash": "54a31809dc1d49aa1486ade294ceddf54a4a20b1cb97f5bac40760848b2fc880",
+  "product_version": "1.8.4",
+  "tests_version": "1.8.4",
   "artifacts": {
-    "IIkona-1.8.3.cfe": {
-      "sha256": "f50b1dbc554c1ccceea6ac31c475609bcbbfb4caa8dad96522a11ef72f89e114",
-      "bytes": 1903023,
+    "IIkona-1.8.4.cfe": {
+      "sha256": "f4d97db65181f79fa59b98ed4801d7fe6444ada3380980cfbece1b355a99fccb",
+      "bytes": 1905583,
       "captured_from_installed_extension": true
     },
-    "IIkona-tests-1.8.3.cfe": {
-      "sha256": "530a4069dbda45a7a8b36a7c19476c5ea6b3323c322a4542a58b58904d7ce237",
-      "bytes": 239874,
+    "IIkona-tests-1.8.4.cfe": {
+      "sha256": "2047c7682d7a5cf9070f49f9b5b5b5c5f426b9b6080b411b2504b7b67de5879a",
+      "bytes": 242287,
       "captured_from_installed_extension": true
     }
   },
+  "adapter_source": {
+    "accounts.py": "afd91f898bdeb311ad83a4da06bed024e1799cdfe20430f63a7bb615956c2906",
+    "configure_glm.py": "f9b135012f1e96495e32386b2ac0dc7df73d7f1dfc89e544993714a5448f403a",
+    "glm_client.py": "e3edc8ed5480e5747f7ae20c4a6c66bbb4f32d60e8f0695eb9542afaa336f686",
+    "manage.py": "a89b209a94697ae9c4e9fdfe0b07b02ea50976cbe69338b4dece53e9da782fd7",
+    "protocol.py": "076bb6fd323203208fe26fe272143e9f61a6de1eba4788201103451317631b87",
+    "server.py": "9de7a0b91ca231e69bfb7eb7de8cce8f5307236b03cedc53c47043a7666eb0e0",
+    "test_adapter.py": "9d09f52d20f99aa8b9e927b07c8688b4cb0c80cbc4cd007ca75fa9b509cfb652"
+  },
   "main": {
-    "passed": 995,
-    "total": 995,
-    "server": 971,
+    "passed": 1001,
+    "total": 1001,
+    "server": 977,
     "managed_client": 24,
     "failures": 0,
     "errors": 0,
     "skipped": 0,
-    "junit_sha256": "193a5cb762c92b7437f1c19c252746cc1254fe9568ae7ec3a520ac1068a1e04b"
+    "junit_sha256": "8ac3a62ab3d3e55faaa3d1d48ea8df1aaedfdbe2a53904222c78db5debea0dea"
   },
   "native_compiler": {
     "passed": true,
     "contexts": 7,
     "diagnostics": 0
+  },
+  "ordinary_roles": {
+    "passed": true,
+    "actors": 2,
+    "executions": 4,
+    "changed_route_sent_requests": 0
+  },
+  "personal_form_ui": {
+    "passed": true,
+    "cleanup_complete": true,
+    "source_hash": "54a31809dc1d49aa1486ade294ceddf54a4a20b1cb97f5bac40760848b2fc880",
+    "ordinary_bsp_user": true,
+    "saved_in_ui_and_independent_storage_read": true,
+    "field_empty_after_save_and_reopen": true,
+    "deleted_in_ui_and_independent_storage_read": true,
+    "shared_model_unchanged": true,
+    "capture": "authorization.png",
+    "visual_checked": true,
+    "input_desktop_switched": false
+  },
+  "real_models": [
+    {
+      "requested_model": "gpt-6.1-sol",
+      "error": false,
+      "error_text": "",
+      "outcome": "ОтветПолучен",
+      "text": "{\"connection\":\"IikonaFrom1C\",\"answer\":42}",
+      "response_id": "resp_0649ff43c463e237016adb86f1625887d2b761ae137235ed9b",
+      "finish_reason": "stop"
+    },
+    {
+      "requested_model": "glm/glm-5.3",
+      "error": false,
+      "error_text": "",
+      "outcome": "ОтветПолучен",
+      "text": "{\"connection\":\"IikonaFrom1C\",\"answer\":42}",
+      "response_id": "glm_01a16987-6171-72c3-97b0-d6b6ebd6ed01_01a16987-64cc-7f40-9b83-cd599eceb37d",
+      "finish_reason": "stop"
+    }
+  ],
+  "real_tool_dialogs": [
+    {
+      "requested_model": "gpt-6.1-sol",
+      "error": false,
+      "error_text": "",
+      "text": "Точное техническое имя конфигурации: `БиблиотекаСтандартныхПодсистемДемо`.\nВерсия: `3.1.11.392`.\n\nПримечание: инструмент не принимает параметр `database_id`; в результате указан идентификатор базы `98e83d02-cafd-4781-b3a2-a9e44baa1c75`, поэтому соответствие базе `local` не подтверждено.",
+      "rounds": 2,
+      "tool_calls": 1,
+      "finish_reason": "stop",
+      "actual_configuration": "БиблиотекаСтандартныхПодсистемДемо"
+    },
+    {
+      "requested_model": "glm/glm-5.3",
+      "error": false,
+      "error_text": "",
+      "text": "Вызвал `get_configuration_info` (инструмент не принимает параметров и вернул сведения по подключенной базе; `database_id` в ответе — `98e83d02-cafd-4781-b3a2-a9e44baa1c75`, а не строка `local`).\n\nРезультат:\n- **Техническое имя конфигурации:** `БиблиотекаСтандартныхПодсистемДемо`\n- **Версия:** `3.1.11.392`\n\nСиноним: Демонстрационная конфигурация «Библиотека стандартных подсистем», редакция 3.1. Платформа 8.3.27.1989, режим совместимости Версия8_3_24.",
+      "rounds": 2,
+      "tool_calls": 1,
+      "finish_reason": "stop",
+      "actual_configuration": "БиблиотекаСтандартныхПодсистемДемо"
+    }
+  ],
+  "adapter_contract_tests": 25,
+  "final_runtime": {
+    "passed": true,
+    "source_hash": "54a31809dc1d49aa1486ade294ceddf54a4a20b1cb97f5bac40760848b2fc880",
+    "extensions": {
+      "ИИКона": {
+        "sha256": "f4d97db65181f79fa59b98ed4801d7fe6444ada3380980cfbece1b355a99fccb",
+        "version": "1.8.4",
+        "active": true,
+        "safe_mode": false
+      },
+      "Тесты": {
+        "sha256": "2047c7682d7a5cf9070f49f9b5b5b5c5f426b9b6080b411b2504b7b67de5879a",
+        "version": "1.8.4",
+        "active": true,
+        "safe_mode": false
+      }
+    },
+    "configuration": {
+      "name": "БиблиотекаСтандартныхПодсистемДемо",
+      "version": "3.1.11.392"
+    },
+    "live_configuration_answers_exact": true,
+    "sessions_after": {
+      "target": "server:localhost/iikona_perf_20261011",
+      "connected_sessions": 0,
+      "evidenced_disconnected_sessions": []
+    }
   },
   "preservation": {
     "passed": true,
@@ -38,46 +138,42 @@
     "users_settings_model_keys_exact": true
   },
   "sonar": {
-    "analysis_id": "AaFlEmlLgxiJe-SUL5UC",
-    "source_hash": "4b77532af02ff1d077f85560a7730b865f4cc87b6bb2df1950716d146ac9681c",
+    "analysis_id": "AaFpemfdgxiJe-SUMRab",
     "gate": "OK",
     "unresolved_issues": 0,
+    "source_hash": "54a31809dc1d49aa1486ade294ceddf54a4a20b1cb97f5bac40760848b2fc880",
     "active_rules": 160,
-    "previous_safe_hotspots": 34,
-    "new_manual_hotspot_audit": false,
+    "reviewed_safe_hotspots": 46,
+    "inherited_safe_hotspots": 34,
+    "new_reviewed_locations": 12,
     "profile_mutated": false
   },
   "scope": {
     "changed_frozen_files": {
       "product": [
+        "Catalogs/КИИ_МоделиИИ/Forms/ФормаЭлемента/Form.form",
+        "Catalogs/КИИ_МоделиИИ/Forms/ФормаЭлемента/Module.bsl",
+        "CommonModules/КИИ_КоннекторИИ/Module.bsl",
         "Configuration/Configuration.mdo",
-        "DataProcessors/КИИ_ТестИИ/Forms/Форма/Form.form",
-        "DataProcessors/КИИ_ТестИИ/Forms/Форма/Module.bsl"
+        "Enums/КИИ_ТипыФорматовAPI/КИИ_ТипыФорматовAPI.mdo",
+        "Roles/КИИ_БазовыеПрава/Rights.rights"
       ],
-      "product_dt": [],
       "tests": [
-        "CommonModules/Тесты_КИИ_ФормыМоделейВызовСервера/Module.bsl",
-        "CommonModules/Тесты_КИИ_ЧатЭкспертаКлиент/Module.bsl",
+        "CommonModules/Тесты_КИИ_Мультимодал_OpenAI/Module.bsl",
+        "CommonModules/Тесты_КИИ_СерверMCPОграничения/Module.bsl",
         "Configuration/Configuration.mdo"
       ],
+      "product_dt": [],
       "tests_dt": []
     },
     "public_signatures_preserved": true,
-    "persistent_metadata_changed": false,
-    "rights_changed": false,
-    "changed_form_type": "ИсторияДиалога.Метаинформация String(250) -> String(0)"
+    "rights_change": "Read Constant.КИИ_АдресПроксиИнтернет for basic users"
   },
   "verification_limits": {
     "seven_environment_dependent_tests_not_selected": true,
-    "separate_130_role_executions_last_run": "1.8.2",
-    "load_and_all_live_providers_not_repeated": true,
-    "customer_timeout_cause": "not established: original failed-request journal not provided"
-  },
-  "new_client_tests": [
-    "Чат_ПоказываетОценкуВсейПетли",
-    "Чат_НеВыдаетНеполнуюОценкуЗаНоль",
-    "Чат_ПоказываетИзвестнуюНулевуюОценку",
-    "Чат_ПринимаетОтветБезПолейОценки",
-    "Чат_ДлиннаяПодписьСохраняетОценку"
-  ]
+    "all_host_configurations_and_providers_not_exhaustively_checked": true,
+    "subscription_route": "Windows, local 1C server and adapter, text only",
+    "glm_card_max_tokens_applied": false,
+    "customer_timeout_cause": "original failed-request journal not provided"
+  }
 }

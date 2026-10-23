@@ -54,4 +54,11 @@
       <value>OpenAI Генерация изображений</value>
     </synonym>
   </enumValues>
+  <enumValues uuid="ebc5cff0-f68b-485f-bb3c-23c0f58ca3ba">
+    <name>ЛичнаяПодписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Личная подписка (адаптер ИИконы)</value>
+    </synonym>
+  </enumValues>
 </mdclass:Enum>
