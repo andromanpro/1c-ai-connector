@@ -42,6 +42,16 @@ class GLMClient:
         if model not in settings["models"]:
             raise ProtocolError("glm_model_unavailable", "The GLM model is not configured for this personal connection")
         native = chat_to_responses({**body, "model": model})
+        system_instructions = []
+        developer_instructions = []
+        conversation = []
+        for item in native["input"]:
+            if item.get("role") == "system":
+                system_instructions.append(item["content"])
+            elif item.get("role") == "developer":
+                developer_instructions.append(item["content"])
+            else:
+                conversation.append(item)
         home = self.store.directory / ("glm-request-" + str(uuid.uuid4()))
         home.mkdir()
         scratch = home / "scratch"
@@ -55,7 +65,8 @@ class GLMClient:
         environment["CODEX_HOME"] = str(home)
         argv = [settings["binary"], "app-server", "--stdio"]
         overrides = {"project_doc_max_bytes": 0, "web_search": "disabled", "notify": [],
-                     "features.skip_host_skill_discovery": True}
+                     "features.skip_host_skill_discovery": True,
+                     "skills.include_instructions": False, "skills.bundled.enabled": False}
         overrides.update({"features." + name: False for name in DISABLED})
         for name, value in overrides.items():
             argv += ["-c", name + "=" + json.dumps(value)]
@@ -112,8 +123,10 @@ class GLMClient:
             tools = [{"type": "function", "name": tool["name"], "description": tool["description"],
                       "inputSchema": tool["parameters"]} for tool in native.get("tools", [])]
             started = send("thread/start", {"cwd": str(scratch), "model": model, "modelProvider": "zai-coding",
-                "baseInstructions": "You are a model connected to Iikona. Follow the supplied conversation. Only request tools supplied by Iikona.",
-                "developerInstructions": "", "ephemeral": True, "approvalPolicy": "never", "sandbox": "read-only",
+                "baseInstructions": "\n\n".join(system_instructions) or
+                    "You are a model connected to Iikona. Follow the supplied conversation. Only request tools supplied by Iikona.",
+                "developerInstructions": "\n\n".join(developer_instructions),
+                "ephemeral": True, "approvalPolicy": "never", "sandbox": "read-only",
                 "dynamicTools": tools, "selectedCapabilityRoots": [], "allowProviderModelFallback": False})
             thread_id = started["thread"]["id"]
             if started.get("instructionSources") != []:
@@ -121,7 +134,7 @@ class GLMClient:
             inventory = send("mcpServerStatus/list", {"threadId": thread_id, "limit": 100, "detail": "toolsAndAuthOnly"})
             if inventory.get("data") or inventory.get("nextCursor"):
                 raise ProtocolError("glm_ambient_tools", "GLM client loaded unexpected MCP tools")
-            items = list(native["input"])
+            items = conversation
             input_items = []
             if items and items[-1].get("role") == "user":
                 input_items = [{"type": "text", "text": items.pop()["content"]}]
@@ -184,6 +197,8 @@ class GLMClient:
                 code = process.wait(timeout=20)
                 for reader in readers:
                     reader.join(timeout=5)
+                process.stdout.close()
+                process.stderr.close()
                 self.store.write("glm-process-exit-" + request_id, {"pid": process.pid, "exit_code": code, "forced": False})
                 profile.unlink()
                 # Client-owned logs remain protected in its private home.

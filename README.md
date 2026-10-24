@@ -6,8 +6,8 @@
 
 [![Лицензия: MIT](https://img.shields.io/badge/Лицензия-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
-[![Версия](https://img.shields.io/badge/версия-1.8.4-green)](https://github.com/andromanpro/1c-ai-connector/releases)
-[![Тесты](https://img.shields.io/badge/YAxUnit-1001_main_tests-brightgreen)](#-качество-кода)
+[![Версия](https://img.shields.io/badge/версия-1.8.5-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Тесты](https://img.shields.io/badge/YAxUnit-1015_main_tests-brightgreen)](#-качество-кода)
 
 <a href="https://infostart.ru/1c/articles/2585691/">
   <img src="https://infostart.ru/bitrix/templates/sandbox_empty/assets/tpl/abo/img/logo.svg" alt="Инфостарт" width="180">
@@ -16,6 +16,13 @@
 [ИИкона на Инфостарте — описание, файл и обсуждение](https://infostart.ru/1c/articles/2585691/).
 
 [О проекте](#about) · [Установка](#install) · [Быстрый старт](#quick-start) · [Документация](#documentation) · [Качество кода](#quality) · [История выпусков](docs/releases/README.md)
+
+## Выпуск 1.8.5
+
+Понятная ошибка вместо служебной разметки DSML, отдельные сообщения об отказах
+выбранных баз и исправленная передача системной инструкции подписочному GLM.
+
+[Изменения и обновление](RELEASE_NOTES_1.8.5.md) · [Руководство](https://github.com/andromanpro/1c-ai-connector-guide/tree/v1.8.5).
 
 ## Выпуск 1.8.4
 
