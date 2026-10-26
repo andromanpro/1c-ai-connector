@@ -1,29 +1,34 @@
 {
+  "recovery": {
+    "prior_failure": "server_license_unavailable_before_tests",
+    "recovery_passed": true,
+    "installed_cfe_exactly_equal_to_targeted": true
+  },
   "schema": 1,
-  "run_id": "20261026T013217Z-8eb3d3fb30ce",
-  "source_hash": "0434daa4d1103053b287407a6965029a7ee6dfa2a6c4524614b4b72a764b4f33",
-  "product_version": "1.8.6",
-  "tests_version": "1.8.6",
+  "run_id": "20261026T181422Z-eb4acbb296b5",
+  "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049",
+  "product_version": "1.8.7",
+  "tests_version": "1.8.7",
   "artifacts": {
-    "IIkona-1.8.6.cfe": {
-      "sha256": "7710573f7b0b2015aec9f7b37790eace672cdfecec6e87d4bf42ff92387d02ec",
-      "bytes": 1941285
+    "IIkona-1.8.7.cfe": {
+      "sha256": "34aa57928bbc09eb45ffb178e5dee9fca87cc7bde6184abb9cef63c77984d45a",
+      "bytes": 1943028
     },
-    "IIkona-tests-1.8.6.cfe": {
-      "sha256": "b3cd72cd7346f2a5dcb88b008e2ae5c83aecace1eb516d22d3fcce1ead5f62e5",
-      "bytes": 258670
+    "IIkona-tests-1.8.7.cfe": {
+      "sha256": "d35afcdc06903e2c120b3061c58efc646dd16b394d52389b85ddd1715a08acd8",
+      "bytes": 259951
     }
   },
   "main": {
-    "passed": 1076,
+    "passed": 1081,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "contexts": {
-      "Сервер": 1049,
+      "Сервер": 1054,
       "КлиентУправляемоеПриложение": 27
     },
-    "junit_sha256": "9ce1ee882095dea2bd399567bbed2da4736c8b822a189af3e3f509fbc7e177e0"
+    "junit_sha256": "1861ff613b6766837e10b4c7f0e4b371ced469710cd78c796eef65bf44e69965"
   },
   "native_compiler": {
     "passed": true,
@@ -42,26 +47,26 @@
     "cases": {
       "system_admin": {
         "passed": 8,
-        "junit_sha256": "7307136a4f0137384a4332286e4074a3f8cb26edd5bcc52241a8da75bcfb94da"
+        "junit_sha256": "beb0a32777d28b5f2da508361c9d8cfccef8222bed8dcb899f6d41367110ddf9"
       },
       "a": {
         "passed": 8,
-        "junit_sha256": "4ff58fb320147dc7a2464293a614ad597f81252172011ecc2438725da39ca16b"
+        "junit_sha256": "dd7b046ea7fc7ffc1cd2a07cd2a85b87bfb454dbf7261e00f9395d560ac4c116"
       },
       "b": {
         "passed": 8,
-        "junit_sha256": "27efb4c093d4c05b96d7250d544e4d42eb8f424e7fa1f9ff1cb275d300ce8269"
+        "junit_sha256": "0fdd6ad23830ea066d24f5d8fba2dca3215e833c7c6f911eb26b0706385b83b0"
       },
       "viewer": {
         "passed": 8,
-        "junit_sha256": "504b510598b20f93c359c13b168752fac1c082689db0c6c34e1ef8ce40be68f9"
+        "junit_sha256": "26a5c249d136ce65194312ef39fd79b11b5cf470e4bda6ebf1fec8edd4562dc6"
       },
       "diagnostic": {
         "passed": 8,
-        "junit_sha256": "2d84136ff3b79f031d0dee5995a03afdff4a226e7fe9c8cc1b59af6142b199ec"
+        "junit_sha256": "a18b0c2c59ff847810dc0542fb4fdfc505a8bc36b845ed76a2079f28206074b1"
       }
     },
-    "source_hash": "0434daa4d1103053b287407a6965029a7ee6dfa2a6c4524614b4b72a764b4f33"
+    "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049"
   },
   "preservation": {
     "passed": true,
@@ -76,7 +81,7 @@
   "runtime_before_after_equal": true,
   "shared_layer": {
     "passed": true,
-    "manifest_sha256": "561ca39a4d47122ef77382536d89b61d36ed2710ecae4e1b9fc8ff3b50bff419",
+    "manifest_sha256": "41db0631b8f7411f1038758a98bc2a34aeae1d068a6258e6c97a5894f21f819b",
     "product_files": 296,
     "shared_test_files": 71
   },
@@ -96,13 +101,15 @@
     }
   },
   "adapter_contract_tests": {
+    "reused_from_version": "1.8.6",
+    "source_files_exactly_unchanged": true,
     "passed": 33,
     "skipped": 0,
     "native_wire_cases": 2,
     "new_provider_inferences": 0
   },
   "sonar": {
-    "analysis_id": "AaF15utBq1oI51KnoMS_",
+    "analysis_id": "AaF5kr_Rq1oI51KnoYtx",
     "gate": "OK",
     "unresolved_issues": 0,
     "hotspots_safe": 47,
@@ -117,16 +124,37 @@
     "blocking": 0,
     "all_checks_clean": false,
     "classified_events": {
-      "headless_workbench_notice": 4,
-      "unrelated_edt_assistant_timeout": 55,
-      "open_vendor_shutdown_failure": 9
+      "headless_workbench_notice": 4
     }
   },
   "verification_limits": [
     "Controlled HTTP responses do not establish the cause of an incident at a live model provider.",
     "Real managed forms and compiler contexts do not constitute a complete thin/web-client deployment matrix.",
-    "EDT CLI has 121 product diagnostics and vendor shutdown errors; full standards compliance is not claimed.",
+    "EDT CLI has 121 product diagnostics; no unexpected CLI failures in the full run; full standards compliance is not claimed.",
     "Adapter native wire cases use a local API without new subscription inference.",
     "Examiner fixes, its independent version and end-to-end verification remain separate."
-  ]
+  ],
+  "regression_probes": {
+    "new_tests": 5,
+    "red_before_change": {
+      "total": 34,
+      "failures": [
+        "DSML_ВступлениеПередРазметкой",
+        "DSML_ВступлениеВОтветеМодели",
+        "Базы_ОшибкаЛокальногоЗапросаНеОшибкаПодключения",
+        "Базы_ПричинаОшибкиИнструментаВЖурнале"
+      ],
+      "junit_sha256": "dfc95360332b90bbf89b87222bc627da2a18a0b16620df978a69e7c208db815f"
+    },
+    "targeted_after": {
+      "passed": 34,
+      "junit_sha256": "cb38e597943b29b23e79c5089c9c691bf87711edff3cdc8ee13f719a5a0652cc"
+    },
+    "targeted_cases_already_in_full_suite": true
+  },
+  "standards": {
+    "record_gate": "passed",
+    "scope": "Changed implementation and contract reviewed against std498/std499; full product standards compliance is not claimed",
+    "design_and_implementation_review": "retrospective trace from primary source and regression evidence"
+  }
 }
