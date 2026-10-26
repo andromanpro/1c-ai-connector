@@ -1,74 +1,67 @@
 {
   "schema": 1,
-  "run_id": "20261024T185603Z-bb9d0f7b6b9c",
-  "build_run": "20261024T185603Z-bb9d0f7b6b9c",
-  "source_hash": "90aea6bda6ec610cdf22acb68d2d817fb3a34c321217c672619337a8a3fe17dd",
-  "product_version": "1.8.5",
-  "tests_version": "1.8.5",
+  "run_id": "20261026T013217Z-8eb3d3fb30ce",
+  "source_hash": "0434daa4d1103053b287407a6965029a7ee6dfa2a6c4524614b4b72a764b4f33",
+  "product_version": "1.8.6",
+  "tests_version": "1.8.6",
   "artifacts": {
-    "IIkona-1.8.5.cfe": {
-      "sha256": "c75cd22fc84ad4abf6b21e3ae7e6f3787df19f9416d1642750ec207c8fbe7176",
-      "bytes": 1908736
+    "IIkona-1.8.6.cfe": {
+      "sha256": "7710573f7b0b2015aec9f7b37790eace672cdfecec6e87d4bf42ff92387d02ec",
+      "bytes": 1941285
     },
-    "IIkona-tests-1.8.5.cfe": {
-      "sha256": "3a47103e1bcd2bfa53be59baac867a7b7ed4762afa9860000b2f2fe31e4ca7f8",
-      "bytes": 244912
+    "IIkona-tests-1.8.6.cfe": {
+      "sha256": "b3cd72cd7346f2a5dcb88b008e2ae5c83aecace1eb516d22d3fcce1ead5f62e5",
+      "bytes": 258670
     }
   },
   "main": {
-    "passed": 1015,
+    "passed": 1076,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "contexts": {
-      "Сервер": 988,
+      "Сервер": 1049,
       "КлиентУправляемоеПриложение": 27
     },
-    "junit_sha256": "8fba5a8784ecb05ba4c533e4ca734ec27ee5e8afeba7b38df85c2407cf14567a"
-  },
-  "targeted": {
-    "passed": 17,
-    "part_of_main": true,
-    "same_final_run": true
+    "junit_sha256": "9ce1ee882095dea2bd399567bbed2da4736c8b822a189af3e3f509fbc7e177e0"
   },
   "native_compiler": {
     "passed": true,
-    "contexts": 7,
+    "product_contexts": 7,
+    "test_runtime_checked": true,
     "diagnostics": 0
   },
   "ordinary_roles": {
-    "actors": 2,
-    "executions": 4,
-    "passed": 4,
+    "unique_scenarios": 8,
+    "profiles": 5,
+    "executions": 40,
+    "passed": 40,
     "cleanup_complete": true,
-    "source_hash": "90aea6bda6ec610cdf22acb68d2d817fb3a34c321217c672619337a8a3fe17dd",
-    "owner_sequence": [
-      "first",
-      "second",
-      "first"
-    ],
-    "changed_route_sent_requests": 0,
-    "shared_model_key_used": false
-  },
-  "adapter_source": {
-    "files": {
-      "accounts.py": "afd91f898bdeb311ad83a4da06bed024e1799cdfe20430f63a7bb615956c2906",
-      "configure_glm.py": "f9b135012f1e96495e32386b2ac0dc7df73d7f1dfc89e544993714a5448f403a",
-      "glm_client.py": "4e8cb862ff3dfb01e541f9ab4394cc97f84e78c62ff4e1020281262e02368878",
-      "manage.py": "a89b209a94697ae9c4e9fdfe0b07b02ea50976cbe69338b4dece53e9da782fd7",
-      "protocol.py": "076bb6fd323203208fe26fe272143e9f61a6de1eba4788201103451317631b87",
-      "requirements.txt": "afce9f76c28036a32a8f1dd9c2a1cd83486bf072975433a288f2bd157ea64d82",
-      "server.py": "9de7a0b91ca231e69bfb7eb7de8cce8f5307236b03cedc53c47043a7666eb0e0",
-      "test_adapter.py": "9d09f52d20f99aa8b9e927b07c8688b4cb0c80cbc4cd007ca75fa9b509cfb652",
-      "test_glm_wire.py": "bbcd95df7fa62c1861ee66cf50c60f492bc9d89250492269b1800d7cc5f4f6ca"
-    }
-  },
-  "adapter_contract_tests": {
-    "passed": 27,
-    "skipped": 0,
-    "native_wire_cases": 2,
-    "new_provider_inferences": 0,
-    "same_frozen_adapter": true
+    "additional_product_roles": [],
+    "privileged_bypass": false,
+    "cases": {
+      "system_admin": {
+        "passed": 8,
+        "junit_sha256": "7307136a4f0137384a4332286e4074a3f8cb26edd5bcc52241a8da75bcfb94da"
+      },
+      "a": {
+        "passed": 8,
+        "junit_sha256": "4ff58fb320147dc7a2464293a614ad597f81252172011ecc2438725da39ca16b"
+      },
+      "b": {
+        "passed": 8,
+        "junit_sha256": "27efb4c093d4c05b96d7250d544e4d42eb8f424e7fa1f9ff1cb275d300ce8269"
+      },
+      "viewer": {
+        "passed": 8,
+        "junit_sha256": "504b510598b20f93c359c13b168752fac1c082689db0c6c34e1ef8ce40be68f9"
+      },
+      "diagnostic": {
+        "passed": 8,
+        "junit_sha256": "2d84136ff3b79f031d0dee5995a03afdff4a226e7fe9c8cc1b59af6142b199ec"
+      }
+    },
+    "source_hash": "0434daa4d1103053b287407a6965029a7ee6dfa2a6c4524614b4b72a764b4f33"
   },
   "preservation": {
     "passed": true,
@@ -79,17 +72,61 @@
     "model_keys": 1,
     "all_current_fields": true
   },
+  "source_export_installed_equal": true,
+  "runtime_before_after_equal": true,
+  "shared_layer": {
+    "passed": true,
+    "manifest_sha256": "561ca39a4d47122ef77382536d89b61d36ed2710ecae4e1b9fc8ff3b50bff419",
+    "product_files": 296,
+    "shared_test_files": 71
+  },
+  "adapter_source": {
+    "files": {
+      "accounts.py": "afd91f898bdeb311ad83a4da06bed024e1799cdfe20430f63a7bb615956c2906",
+      "configure_glm.py": "f9b135012f1e96495e32386b2ac0dc7df73d7f1dfc89e544993714a5448f403a",
+      "glm_client.py": "4e8cb862ff3dfb01e541f9ab4394cc97f84e78c62ff4e1020281262e02368878",
+      "manage.py": "43a12b7672e94317527a837b6f83e007c0a7ee26b2cd4ea928149a59e798b6f1",
+      "protocol.py": "076bb6fd323203208fe26fe272143e9f61a6de1eba4788201103451317631b87",
+      "receipt_maintenance.py": "4f624b1c92d9deb3fb8269511c76d09894845a7bf7edbff7b9497f8aa030e207",
+      "requirements.txt": "afce9f76c28036a32a8f1dd9c2a1cd83486bf072975433a288f2bd157ea64d82",
+      "server.py": "9d0f2fa215b3be7b072583c21520c7c4ee9cb2fec7aa811cf7dde71bdec4f5cc",
+      "test_adapter.py": "9d09f52d20f99aa8b9e927b07c8688b4cb0c80cbc4cd007ca75fa9b509cfb652",
+      "test_glm_wire.py": "bbcd95df7fa62c1861ee66cf50c60f492bc9d89250492269b1800d7cc5f4f6ca",
+      "test_receipt_maintenance.py": "571e970228df433df74eeed16d6d0650bb15e88af7d1b09bac927a862575094c"
+    }
+  },
+  "adapter_contract_tests": {
+    "passed": 33,
+    "skipped": 0,
+    "native_wire_cases": 2,
+    "new_provider_inferences": 0
+  },
   "sonar": {
-    "analysis_id": "AaFvU6aiG1uCtqFpVRVo",
+    "analysis_id": "AaF15utBq1oI51KnoMS_",
     "gate": "OK",
     "unresolved_issues": 0,
-    "hotspots_safe": 46,
-    "profile_rules_unchanged": true
+    "hotspots_safe": 47,
+    "profile_active_rules": 160
+  },
+  "readability": {
+    "files": 125,
+    "issues": 0
+  },
+  "edt_diagnostics": {
+    "product_rows": 121,
+    "blocking": 0,
+    "all_checks_clean": false,
+    "classified_events": {
+      "headless_workbench_notice": 4,
+      "unrelated_edt_assistant_timeout": 55,
+      "open_vendor_shutdown_failure": 9
+    }
   },
   "verification_limits": [
-    "DSML and HTTP503 were checked with controlled local HTTP servers, not Sergey's live provider.",
-    "Client assertions used real managed forms without opening a foreground window; not a complete web/thin-client matrix.",
-    "The 27 adapter checks include native wire tests without provider inference; no new live subscription generation was requested.",
-    "This patch release does not complete the planned full refactoring or certify all deployment configurations."
+    "Controlled HTTP responses do not establish the cause of an incident at a live model provider.",
+    "Real managed forms and compiler contexts do not constitute a complete thin/web-client deployment matrix.",
+    "EDT CLI has 121 product diagnostics and vendor shutdown errors; full standards compliance is not claimed.",
+    "Adapter native wire cases use a local API without new subscription inference.",
+    "Examiner fixes, its independent version and end-to-end verification remain separate."
   ]
 }

@@ -234,6 +234,18 @@ class AdapterHandler(BaseHTTPRequestHandler):
             with self.adapter.inference_lock:
                 self.adapter.account.logout()
             return self.reply(200, self.adapter.account.status())
+        if method == "POST" and parsed.path == "/maintenance/receipts":
+            size = int(self.headers.get("Content-Length", "0"))
+            if size < 1 or size > 4096:
+                raise ValueError("Invalid maintenance request size")
+            body = json.loads(self.rfile.read(size))
+            if not isinstance(body, dict) or set(body) - {"older_than_days", "apply_plan_sha256"}:
+                raise ValueError("Invalid receipt maintenance parameters")
+            from receipt_maintenance import maintain_receipts
+            with self.adapter.inference_lock:
+                result = maintain_receipts(self.adapter.store, body.get("older_than_days", 90),
+                                           body.get("apply_plan_sha256"))
+            return self.reply(200, result)
         if method == "POST" and parsed.path == "/v1/chat/completions":
             size = int(self.headers.get("Content-Length", "0"))
             if size < 1 or size > 16 * 1024 * 1024:

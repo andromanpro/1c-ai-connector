@@ -11,7 +11,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', required=True, help='The same private folder passed to server.py')
     parser.add_argument('--port', type=int, default=18743)
-    parser.add_argument('action', choices=['status', 'login', 'logout', 'models', 'pairing'])
+    parser.add_argument('action', choices=['status', 'login', 'logout', 'models', 'pairing', 'receipts'])
+    parser.add_argument('--older-than-days', type=int, default=90)
+    parser.add_argument('--apply-plan', help='Apply exactly the reviewed receipt archive plan SHA-256')
     args = parser.parse_args()
     store = ProtectedStore(args.data)
     host = store.read('host')
@@ -22,8 +24,15 @@ def main():
         print(host['pairing_token'])
         return
     path = '/v1/models' if args.action == 'models' else '/connection/' + args.action
+    body = b'{}' if args.action in ['login', 'logout'] else None
+    if args.action == 'receipts':
+        path = '/maintenance/receipts'
+        parameters = {'older_than_days': args.older_than_days}
+        if args.apply_plan is not None:
+            parameters['apply_plan_sha256'] = args.apply_plan
+        body = json.dumps(parameters).encode('utf-8')
     request = urllib.request.Request(f'http://127.0.0.1:{args.port}' + path,
-        data=b'{}' if args.action in ['login', 'logout'] else None,
+        data=body,
         headers={'Authorization': 'Bearer ' + host['pairing_token'], 'Content-Type': 'application/json'})
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
     try:

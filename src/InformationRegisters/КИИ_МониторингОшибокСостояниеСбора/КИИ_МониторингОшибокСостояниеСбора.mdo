@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9081404f-8cf1-46c5-a0d9-22d7b4f9a37f">
+  <producedTypes>
+    <selectionType typeId="0be8e1d7-baf1-4ff8-ae85-ab6cba4345e8" valueTypeId="9327a7df-e00e-4dbe-8faf-b877eb2fb040"/>
+    <listType typeId="8857aa2d-3d3e-47f5-96d3-4ddbf4f8109a" valueTypeId="3e05387e-fc3b-4225-a7af-aa8c0743361d"/>
+    <managerType typeId="540539c3-0362-4d2e-aae3-43a1766df0e1" valueTypeId="7bd2d297-d484-439b-b3ff-f4bbbb0111dd"/>
+    <recordSetType typeId="313448ee-70f5-4c68-ba9b-060369edf5ae" valueTypeId="b0b6a54d-92f7-468d-8b7a-30b8edc80f42"/>
+    <recordKeyType typeId="96c8ef02-4071-4818-a15a-5ba69ab2551a" valueTypeId="326ecbab-e58a-4822-a0b7-865162395df5"/>
+    <recordType typeId="034ad0b3-16b5-4750-b621-e52d2036feb3" valueTypeId="bcddacde-6f7a-4881-a5f5-85ce339c4374"/>
+    <recordManagerType typeId="8140e1e6-061d-4406-82c5-14276973dd17" valueTypeId="2e050a70-cc30-4407-94ed-ed4f3fcd49a2"/>
+  </producedTypes>
+  <name>КИИ_МониторингОшибокСостояниеСбора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние сбора ошибок</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a732d16c-6b0c-4d6b-bda7-6484c509fe54">
+    <name>Данные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+  </resources>
+  <dimensions uuid="bd29768a-b1e1-45b0-8d48-903923349934">
+    <name>ИмяСборщика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя сборщика</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+  </dimensions>
+</mdclass:InformationRegister>

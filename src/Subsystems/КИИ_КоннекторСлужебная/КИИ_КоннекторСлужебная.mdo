@@ -126,4 +126,5 @@
   <content>Catalog.ГруппыПользователей</content>
   <content>SessionParameter.ТекущийПользователь</content>
   <content>InformationRegister.СоставыГруппПользователей</content>
+  <content>InformationRegister.КИИ_МониторингОшибокСостояниеСбора</content>
 </mdclass:Subsystem>
