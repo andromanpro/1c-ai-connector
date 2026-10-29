@@ -1,142 +1,181 @@
 {
   "schema": 2,
-  "run_id": "20261029T122210Z-774372de09df",
-  "source_hash": "3069b77c8f1808c69ff75ef9689089761e4327332997ed2873a199e86c1a3bf5",
-  "product_version": "1.8.8",
-  "tests_version": "1.8.7",
+  "run_id": "20261029T170601Z-4ce21ac16331",
+  "source_hash": "316e20591faf5288e82b88d444897b2d490aa6cb435a50431520d9549aa6f939",
+  "product_version": "1.8.9",
+  "tests_version": "1.8.9",
   "artifacts": {
-    "IIkona-1.8.8.cfe": {
-      "sha256": "3c155a9294d7d23ee784364b9e1476780337afa140a7bae573157a3f4e382102",
-      "bytes": 1945903
+    "IIkona-1.8.9.cfe": {
+      "sha256": "c3534a8e8d14ef5c3b15b118fbf0692a9be0e310237203880998d09898a1ab2e",
+      "bytes": 1947027
     },
-    "IIkona-tests-1.8.7.cfe": {
-      "sha256": "d35afcdc06903e2c120b3061c58efc646dd16b394d52389b85ddd1715a08acd8",
-      "bytes": 259951
+    "IIkona-tests-1.8.9.cfe": {
+      "sha256": "64431f7aaa97b457010083ab0d32509cd11b4df775b95ec733c8c75d9bec5bb1",
+      "bytes": 261237
     }
   },
   "main": {
-    "passed": 1081,
+    "passed": 1085,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "contexts": {
-      "Сервер": 1054,
+      "Сервер": 1058,
       "КлиентУправляемоеПриложение": 27
     },
-    "junit_sha256": "c8a26eb1671c6b555b16eee0516c6bfe519090315dc12a6dde10cc31ca5a3810",
-    "engine": "EDT RuntimeClient"
+    "junit_sha256": "c7ad26b4038c7cdb23052651774a67cdfffd0a6d0ad2d9bb4e33d18c0e30f60f",
+    "engine": "EDT RuntimeClient",
+    "repeated_cli_context_export": false
   },
   "native_compiler": {
     "passed": true,
     "diagnostics": 0,
     "product_contexts": 7,
-    "test_runtime_checked": true,
-    "target": "disposable factory; exact tested CFEs and original SQL-stand base CF"
+    "test_contexts": [
+      "thin",
+      "server",
+      "external"
+    ],
+    "exact_tested_cfes": true,
+    "target": "disposable factory; original SQL stand base CF"
   },
   "ordinary_roles": {
-    "unique_scenarios": 8,
-    "profiles": 5,
-    "executions": 40,
-    "passed": 40,
+    "passed": 8,
+    "profiles": [
+      "basic",
+      "viewer"
+    ],
     "cleanup_complete": true,
-    "additional_product_roles": [],
-    "privileged_bypass": false,
-    "cases": {
-      "system_admin": {
-        "passed": 8,
-        "junit_sha256": "beb0a32777d28b5f2da508361c9d8cfccef8222bed8dcb899f6d41367110ddf9"
-      },
-      "a": {
-        "passed": 8,
-        "junit_sha256": "dd7b046ea7fc7ffc1cd2a07cd2a85b87bfb454dbf7261e00f9395d560ac4c116"
-      },
-      "b": {
-        "passed": 8,
-        "junit_sha256": "0fdd6ad23830ea066d24f5d8fba2dca3215e833c7c6f911eb26b0706385b83b0"
-      },
-      "viewer": {
-        "passed": 8,
-        "junit_sha256": "26a5c249d136ce65194312ef39fd79b11b5cf470e4bda6ebf1fec8edd4562dc6"
-      },
-      "diagnostic": {
-        "passed": 8,
-        "junit_sha256": "a18b0c2c59ff847810dc0542fb4fdfc505a8bc36b845ed76a2079f28206074b1"
-      }
-    },
-    "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049",
-    "reused_from_version": "1.8.7",
-    "new_role_executions": 0,
-    "roles_and_monitoring_consumers_unchanged": true
+    "bsp_provisioned": true,
+    "new_executions": 8,
+    "system_administration_roles": false,
+    "ordinary_com_connections": 0,
+    "privileged_bypass": false
   },
   "preservation": {
     "passed": true,
-    "business_values_exact": true,
+    "strict_serialized_comparison": true,
     "tables": 25,
     "rows": 526,
-    "users": 2,
     "constants": 22,
+    "users": 2,
     "model_keys": 1,
-    "strict_serialized_comparison": false,
-    "technical_differences": {
-      "model_row_revision": true,
-      "token_column_precision": [
-        5,
-        10
-      ]
-    },
-    "strict_refusal_retained": true
+    "differences": {
+      "data": [],
+      "constants": [],
+      "users": [],
+      "catalog_ids": [],
+      "model_keys": []
+    }
   },
   "native_delivery_readback": {
-    "all_product_bsl_modules": 92,
-    "all_product_bsl_exact": true,
-    "changed_template_exact": true,
-    "version_exact": true,
-    "token_precision_exact": true,
+    "product": {
+      "bsl_modules": 92,
+      "all_bsl_exact": true,
+      "version_exact": true,
+      "decode_seconds": 3.72
+    },
+    "tests": {
+      "bsl_modules": 35,
+      "all_bsl_exact": true,
+      "version_exact": true,
+      "decode_seconds": 4.76
+    },
     "independent_full_edt_xml_comparison": false,
-    "unchanged_test_xml_reused_from": "1.8.7",
-    "native_update_job": "fdd12569-00fa-4eee-a599-e50ca4b0c16d"
+    "all_product_bsl_exact": true,
+    "all_test_bsl_exact": true,
+    "method": "Final exact installed CFE decoded offline by ibcmd; no repeated EDT export"
   },
   "runtime_before_after_equal": true,
   "shared_layer": {
     "passed": true,
-    "manifest_sha256": "c45fd6454b89813cef25283a1ea1cca873888650fd7327ff0c2a6b56ac1e41f0",
+    "manifest_sha256": "8a29f1299c84c8425a195215fe3dd6c35e01a20107da5f65b9612b3e3f5c575c",
     "product_files": 296,
     "shared_test_files": 71
   },
   "sonar": {
-    "analysis_id": "AaGHsRvUq1oI51Knpac_",
+    "analysis_id": "AaGIp5hxq1oI51KnpkJY",
     "gate": "OK",
     "unresolved_issues": 0,
     "hotspots_safe": 47
   },
-  "mermaid_native": {
-    "passed": 4,
-    "entries_per_case": [
-      "1C",
-      "browser-load"
-    ],
-    "installed_cfe_exact": true,
-    "provider_calls": 0
+  "journal": {
+    "passed": true,
+    "target": "server:localhost/iikona_perf_20261011",
+    "paid_calls": 0,
+    "transaction_rollback": true,
+    "register_event_present_in_transaction": true,
+    "correlation_id": "259782ba-5b99-4e6d-a62d-bb6dbe2e2d0e",
+    "code": "query_failed",
+    "source_events": 1,
+    "deduplicated_events": 1,
+    "registers_before": {
+      "КИИ_МониторингОшибокЖурнал": {
+        "rows": 24,
+        "sha256": "6b9439d2527c919a170b05821911c1d9ad7f09d945deddd058fbd9cf090c40f8"
+      },
+      "КИИ_МониторингОшибокСтатистика": {
+        "rows": 48,
+        "sha256": "d555a532e1956ce46c25dd80a2408662dafc1a913fcaa5320fa34a507f9946ed"
+      },
+      "КИИ_МониторингОшибокСостояниеСбора": {
+        "rows": 0,
+        "sha256": "ae4c10cc66715936a27e3e9dc630cce240ba2a02e5dddd3b1840bb6119fc5217"
+      }
+    },
+    "registers_after": {
+      "КИИ_МониторингОшибокЖурнал": {
+        "rows": 24,
+        "sha256": "6b9439d2527c919a170b05821911c1d9ad7f09d945deddd058fbd9cf090c40f8"
+      },
+      "КИИ_МониторингОшибокСтатистика": {
+        "rows": 48,
+        "sha256": "d555a532e1956ce46c25dd80a2408662dafc1a913fcaa5320fa34a507f9946ed"
+      },
+      "КИИ_МониторингОшибокСостояниеСбора": {
+        "rows": 0,
+        "sha256": "ae4c10cc66715936a27e3e9dc630cce240ba2a02e5dddd3b1840bb6119fc5217"
+      }
+    },
+    "monitoring_exact": true,
+    "collector_job_invoked": false,
+    "scope": "Actual MCP event; normal journal reader, deduplication and transactional register writer; outer rollback",
+    "limitation": "Does not establish the settings or collection history in Sergey Boyko database"
   },
   "readability": {
-    "files": 125,
+    "files": 92,
     "issues": 0
   },
-  "adapter_contract_tests": {
-    "reused_from_version": "1.8.7",
-    "source_files_exactly_unchanged": true,
-    "new_provider_inferences": 0
+  "test_eol_normalization": {
+    "passed": true,
+    "lines": 1711,
+    "before_cr": 1711,
+    "before_lf": 0,
+    "after_cr": 0,
+    "after_lf": 1711,
+    "all_logical_lines_exact": true,
+    "method": "CodePilot.write_file"
+  },
+  "mermaid": {
+    "reused_from": "1.8.8",
+    "cases": 4,
+    "exact_unchanged_files": {
+      "DataProcessors/КИИ_ГенераторДиаграмм/ObjectModule.bsl": "90211f50f8f5387c06e99d5739e8d9c368fe571082ad3dc5c1bb447894f20733",
+      "DataProcessors/КИИ_ГенераторДиаграмм/Templates/ШаблонMermaid/Template.txt": "6e1d79556dfa1701ca42da469d9d84557f21d44470922d7a5cd7a953c5cfc0a2"
+    },
+    "new_render_executions": 0
   },
   "verification_limits": [
-    "The tests extension is unchanged version 1.8.7, rerun against product 1.8.8.",
-    "The separate 40 role executions belong to 1.8.7 and are explicitly reused; roles and monitoring consumers are unchanged.",
-    "Seven-context compiler verification is on a disposable file factory built from the original SQL stand base CF, not a second run on the occupied SQL Designer.",
-    "Native delivery and installed-source readback replace the repeated full EDT CLI export; no independent second full EDT XML comparison is claimed.",
-    "Technical model row revision and token-column precision changed; every business value, key, constant and user is exact. The first strict refusal is retained.",
-    "Mermaid render calls are observed in Node on actual BSL output, not every visual 1C HTML engine.",
-    "No new provider generation or confirmation of the remote Boyko incident was performed."
+    "No new paid model generation; local HTTP fixtures were used.",
+    "Boyko platform8.5.1 and UT11.5.12.111 were not reproduced exactly: the defect was independently reproduced on the original SQL stand8.3.27.1989.",
+    "Journal reader, deduplication and register writer checked on a real MCP event with rollback; no change to scheduled-job settings.",
+    "Two ordinary BSP profiles were checked for the changed query-failure chain, eight executions; no new broad monitoring role suite is claimed.",
+    "Compiler check uses disposable file factory and exact tested CFEs; original SQL stand remains owned by live EDT.",
+    "CFE modules and versions are read back independently; no second complete EDT XML export is claimed.",
+    "Four prior Mermaid render cases are reused only for byte-identical unchanged files."
   ],
   "adapter_source": {
+    "changed": false,
     "files": {
       "accounts.py": "afd91f898bdeb311ad83a4da06bed024e1799cdfe20430f63a7bb615956c2906",
       "configure_glm.py": "f9b135012f1e96495e32386b2ac0dc7df73d7f1dfc89e544993714a5448f403a",
@@ -150,6 +189,6 @@
       "test_glm_wire.py": "bbcd95df7fa62c1861ee66cf50c60f492bc9d89250492269b1800d7cc5f4f6ca",
       "test_receipt_maintenance.py": "571e970228df433df74eeed16d6d0650bb15e88af7d1b09bac927a862575094c"
     },
-    "changed": false
+    "new_provider_inferences": 0
   }
 }

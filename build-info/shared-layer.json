@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source_versions": {
-    "product": "1.8.8",
-    "shared_tests": "1.8.7"
+    "product": "1.8.9",
+    "shared_tests": "1.8.9"
   },
   "comparison": "Canonical bytes exact; examiner text permits only UTF-8 BOM and line endings",
   "product": {
     "canonical_files": {
       "Configuration/Configuration.mdo": {
-        "sha256": "d8206d1bf3adcf88deb29142fd54f6bf8fb3d935f534a5aac57d44f4324d50c2",
-        "normalized_sha256": "59c73e62f02a2b9020070ef4509aa2c6424632b2ca2673bd9496c4f9c638e7de"
+        "sha256": "bea9b64ddad87117aa9307689b84c990ec03ab9be3ef116a7b2c9b848f6ac286",
+        "normalized_sha256": "8c02e2ae68554c03519b59cc1be8e55977a33abe9e6604a098fadddb6bcec946"
       },
       "Configuration/SessionModule.bsl": {
         "sha256": "7892fcc980ee2e8b9fb1a7e964e00d542c7b26b6ae8533cd3f3514b5c515b5e2",
@@ -660,8 +660,8 @@
         "normalized_sha256": "9b6b3ec554520dd3d1f62c45acaf257f1e3a8df3bf3b3e07df6e664fc3fe2e64"
       },
       "CommonModules/КИИ_АгентАнализа/Module.bsl": {
-        "sha256": "d2f98830c262fd8b0c3724473e2cb09d8596a13b2be035bbec9c6e40b053f8d6",
-        "normalized_sha256": "d2f98830c262fd8b0c3724473e2cb09d8596a13b2be035bbec9c6e40b053f8d6"
+        "sha256": "9c71c9fce4f72314e6514ccd2da5c0baf7626019e8780ce12a4253d491d89dc6",
+        "normalized_sha256": "9c71c9fce4f72314e6514ccd2da5c0baf7626019e8780ce12a4253d491d89dc6"
       },
       "CommonModules/КИИ_АгентАнализа/КИИ_АгентАнализа.mdo": {
         "sha256": "7401fd193dc54b6cefc0fba1dff44b735da2af20b8a12a7028bcc4e21535fca6",
@@ -908,8 +908,8 @@
         "normalized_sha256": "07c7e225494f6e626877cc78ff24a634ee4b540be9199758b342efc51c806164"
       },
       "CommonModules/КИИ_СерверMCPДиспетчер/Module.bsl": {
-        "sha256": "64608463a3ebb16a9180a371c296eac6b06d918c2c1afe98d172454393fea446",
-        "normalized_sha256": "64608463a3ebb16a9180a371c296eac6b06d918c2c1afe98d172454393fea446"
+        "sha256": "41036ff427f85e1187eb5b63d1e33afbd037c1556bbc3a7d019a66633a0c9961",
+        "normalized_sha256": "41036ff427f85e1187eb5b63d1e33afbd037c1556bbc3a7d019a66633a0c9961"
       },
       "CommonModules/КИИ_СерверMCPДиспетчер/КИИ_СерверMCPДиспетчер.mdo": {
         "sha256": "a0108cf2a85edeac2b99e7e98833a4f6b89d9eef26806015d0b462ce08c60faf",
@@ -924,8 +924,8 @@
         "normalized_sha256": "3191cfcb407a265aad546fc19d9add7cf8e9b85babbcce5a3808a6444391fbc8"
       },
       "CommonModules/КИИ_СерверMCPИнструментВыполнитьЗапрос/Module.bsl": {
-        "sha256": "8efcb9ac1699784ef76d09081aff44aa8cb33542e04cb5423391b8993e413b93",
-        "normalized_sha256": "5c2808592ae29c890908692fe1654d45c97b498c4be06305b3aa5a147d4f68e0"
+        "sha256": "e5fd5e90c92aeee5d0400d5c30fc8ced99a6a7f026a2850bde3bfca4140cad32",
+        "normalized_sha256": "15e5b2a842906a012b942d020390366ba49d12fdff26532870f6ec94d3850d1b"
       },
       "CommonModules/КИИ_СерверMCPИнструментВыполнитьЗапрос/КИИ_СерверMCPИнструментВыполнитьЗапрос.mdo": {
         "sha256": "4d637938b21a946571fad846d50088ee02ded8c709f3f5f35b6c2f157e63a988",
@@ -988,8 +988,8 @@
         "normalized_sha256": "97fcd66da2192cb3cded184326629daafded571749364e02b6921ddced9fae26"
       },
       "CommonModules/КИИ_УдаленныеБазыMCP/Module.bsl": {
-        "sha256": "2f60b46d73fd14e7208235ccf167302fc522cc85bc7f9a8081b4d5f2e67da84c",
-        "normalized_sha256": "2f60b46d73fd14e7208235ccf167302fc522cc85bc7f9a8081b4d5f2e67da84c"
+        "sha256": "9adff5b179a6ece25eb6437cd8fbf2b07f43c82e305115e4189d438f4daafeac",
+        "normalized_sha256": "9adff5b179a6ece25eb6437cd8fbf2b07f43c82e305115e4189d438f4daafeac"
       },
       "CommonModules/КИИ_УдаленныеБазыMCP/КИИ_УдаленныеБазыMCP.mdo": {
         "sha256": "0bfb57bd62d43eac032646c2a3c7540dd01d0ab7648d518982c24cd57886ec2c",
@@ -1196,8 +1196,8 @@
   "shared_tests": {
     "canonical_files": {
       "Configuration/Configuration.mdo": {
-        "sha256": "7b34cb8f4fe81615ef8c03e910806861b122fe576829a4eac2115fee3c608e5d",
-        "normalized_sha256": "2412dfc8cd1fc93fc7eda4400020174b706ef09d8067b16f5dd951cadebcbdd6"
+        "sha256": "9685ed1f33930204cb40a52c5e27b1156fd35b722e7e49ea87258812842851b5",
+        "normalized_sha256": "b4785f7dc67137ea8aa5dbb066edc26169eee9047d94a495994e166a5fb50810"
       },
       "CommonModules/Тесты_КИИ_RAG/Module.bsl": {
         "sha256": "e8709d9cca9e4d52d27c0bdb769016cbd875bf5d9e2ee6d19aec40b5a1537118",
@@ -1232,8 +1232,8 @@
         "normalized_sha256": "a5d27a144c616c8a8ccda870d6caedb3e4a8bd9c3a568f19f83cf96dd8ae55d8"
       },
       "CommonModules/Тесты_КИИ_АгентАнализа/Module.bsl": {
-        "sha256": "10eabcc4544a23fe7725aa108f6b578faf5b983394634fd7ebaef85576aefffe",
-        "normalized_sha256": "10eabcc4544a23fe7725aa108f6b578faf5b983394634fd7ebaef85576aefffe"
+        "sha256": "31d340537a5502b588cad529fdbe6d1c8991650bdbe7d24b0536b85be7ea035a",
+        "normalized_sha256": "31d340537a5502b588cad529fdbe6d1c8991650bdbe7d24b0536b85be7ea035a"
       },
       "CommonModules/Тесты_КИИ_АгентАнализа/Тесты_КИИ_АгентАнализа.mdo": {
         "sha256": "285bf2874321b5dea9afce85f3ecca44254b1ab11562d8f9593641dbcfb4bdc0",
@@ -1296,7 +1296,7 @@
         "normalized_sha256": "3810a659bb2b817c0cb38ceececccf5bbfb3805259143e8bdbd0a038561ad443"
       },
       "CommonModules/Тесты_КИИ_МониторингОшибок/Module.bsl": {
-        "sha256": "72c0b81fd4ca6fccb69625c8841b277ed49d561c069d242b71e9ea218c7357c5",
+        "sha256": "c36c4e414cda9acad2c9c459caadb9ae462ece5aef947e89dbe0f873bd5a9879",
         "normalized_sha256": "c36c4e414cda9acad2c9c459caadb9ae462ece5aef947e89dbe0f873bd5a9879"
       },
       "CommonModules/Тесты_КИИ_МониторингОшибок/Тесты_КИИ_МониторингОшибок.mdo": {
@@ -1416,8 +1416,8 @@
         "normalized_sha256": "f1e5756c058249d9fb4b248942343e015b21853d3341b26b9be1cb710ab71b18"
       },
       "CommonModules/Тесты_КИИ_СерверMCP_Foundation/Module.bsl": {
-        "sha256": "fb6ef74aca929cc94265b5f702eba4cf5d04fc603a1192dd38a3851a62669cab",
-        "normalized_sha256": "fb6ef74aca929cc94265b5f702eba4cf5d04fc603a1192dd38a3851a62669cab"
+        "sha256": "51c5ac34ae01c388b5fa99913ae521dbc162e74d3f39279d2b8dcb639f5848c4",
+        "normalized_sha256": "51c5ac34ae01c388b5fa99913ae521dbc162e74d3f39279d2b8dcb639f5848c4"
       },
       "CommonModules/Тесты_КИИ_СерверMCP_Foundation/Тесты_КИИ_СерверMCP_Foundation.mdo": {
         "sha256": "78f30b95079b7b383ec685ebabaff9e5654e48abf90193faac41dccacdeaef25",
@@ -1440,8 +1440,8 @@
         "normalized_sha256": "2d06a54ff656df43839748012e0cd950d3c5d2c414df5f2e728d687e73a63d2c"
       },
       "CommonModules/Тесты_КИИ_УдаленныеБазыMCP/Module.bsl": {
-        "sha256": "32bee9efc75fc3e4ba369b5d39c35097d91819b778bcd3d4a66776d4cb28b418",
-        "normalized_sha256": "32bee9efc75fc3e4ba369b5d39c35097d91819b778bcd3d4a66776d4cb28b418"
+        "sha256": "265ed427a192b1f1beecdfaf08590186dbb7be2321a5fd05b3971d4d9fdd2d54",
+        "normalized_sha256": "265ed427a192b1f1beecdfaf08590186dbb7be2321a5fd05b3971d4d9fdd2d54"
       },
       "CommonModules/Тесты_КИИ_УдаленныеБазыMCP/Тесты_КИИ_УдаленныеБазыMCP.mdo": {
         "sha256": "3912fd59b545df7c9d54b721f1607765e5732e7e401ae0ce2c980fbdc01c5b2e",
@@ -1480,5 +1480,6 @@
         "normalized_sha256": "fb994748ffaa3d8c64e7344817c5e94eca35cdb43337392c7154a7311866c90a"
       }
     }
-  }
+  },
+  "canonical_version": "1.8.9"
 }
