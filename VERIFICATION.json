@@ -1,18 +1,13 @@
 {
-  "recovery": {
-    "prior_failure": "server_license_unavailable_before_tests",
-    "recovery_passed": true,
-    "installed_cfe_exactly_equal_to_targeted": true
-  },
-  "schema": 1,
-  "run_id": "20261026T181422Z-eb4acbb296b5",
-  "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049",
-  "product_version": "1.8.7",
+  "schema": 2,
+  "run_id": "20261029T122210Z-774372de09df",
+  "source_hash": "3069b77c8f1808c69ff75ef9689089761e4327332997ed2873a199e86c1a3bf5",
+  "product_version": "1.8.8",
   "tests_version": "1.8.7",
   "artifacts": {
-    "IIkona-1.8.7.cfe": {
-      "sha256": "34aa57928bbc09eb45ffb178e5dee9fca87cc7bde6184abb9cef63c77984d45a",
-      "bytes": 1943028
+    "IIkona-1.8.8.cfe": {
+      "sha256": "3c155a9294d7d23ee784364b9e1476780337afa140a7bae573157a3f4e382102",
+      "bytes": 1945903
     },
     "IIkona-tests-1.8.7.cfe": {
       "sha256": "d35afcdc06903e2c120b3061c58efc646dd16b394d52389b85ddd1715a08acd8",
@@ -28,13 +23,15 @@
       "Сервер": 1054,
       "КлиентУправляемоеПриложение": 27
     },
-    "junit_sha256": "1861ff613b6766837e10b4c7f0e4b371ced469710cd78c796eef65bf44e69965"
+    "junit_sha256": "c8a26eb1671c6b555b16eee0516c6bfe519090315dc12a6dde10cc31ca5a3810",
+    "engine": "EDT RuntimeClient"
   },
   "native_compiler": {
     "passed": true,
+    "diagnostics": 0,
     "product_contexts": 7,
     "test_runtime_checked": true,
-    "diagnostics": 0
+    "target": "disposable factory; exact tested CFEs and original SQL-stand base CF"
   },
   "ordinary_roles": {
     "unique_scenarios": 8,
@@ -66,25 +63,79 @@
         "junit_sha256": "a18b0c2c59ff847810dc0542fb4fdfc505a8bc36b845ed76a2079f28206074b1"
       }
     },
-    "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049"
+    "source_hash": "d85dcf8a94ed823b6f6d77f7208563c2867bd49330a697f82cdc7513dfd7c049",
+    "reused_from_version": "1.8.7",
+    "new_role_executions": 0,
+    "roles_and_monitoring_consumers_unchanged": true
   },
   "preservation": {
     "passed": true,
-    "tables": 24,
+    "business_values_exact": true,
+    "tables": 25,
     "rows": 526,
     "users": 2,
     "constants": 22,
     "model_keys": 1,
-    "all_current_fields": true
+    "strict_serialized_comparison": false,
+    "technical_differences": {
+      "model_row_revision": true,
+      "token_column_precision": [
+        5,
+        10
+      ]
+    },
+    "strict_refusal_retained": true
   },
-  "source_export_installed_equal": true,
+  "native_delivery_readback": {
+    "all_product_bsl_modules": 92,
+    "all_product_bsl_exact": true,
+    "changed_template_exact": true,
+    "version_exact": true,
+    "token_precision_exact": true,
+    "independent_full_edt_xml_comparison": false,
+    "unchanged_test_xml_reused_from": "1.8.7",
+    "native_update_job": "fdd12569-00fa-4eee-a599-e50ca4b0c16d"
+  },
   "runtime_before_after_equal": true,
   "shared_layer": {
     "passed": true,
-    "manifest_sha256": "41db0631b8f7411f1038758a98bc2a34aeae1d068a6258e6c97a5894f21f819b",
+    "manifest_sha256": "c45fd6454b89813cef25283a1ea1cca873888650fd7327ff0c2a6b56ac1e41f0",
     "product_files": 296,
     "shared_test_files": 71
   },
+  "sonar": {
+    "analysis_id": "AaGHsRvUq1oI51Knpac_",
+    "gate": "OK",
+    "unresolved_issues": 0,
+    "hotspots_safe": 47
+  },
+  "mermaid_native": {
+    "passed": 4,
+    "entries_per_case": [
+      "1C",
+      "browser-load"
+    ],
+    "installed_cfe_exact": true,
+    "provider_calls": 0
+  },
+  "readability": {
+    "files": 125,
+    "issues": 0
+  },
+  "adapter_contract_tests": {
+    "reused_from_version": "1.8.7",
+    "source_files_exactly_unchanged": true,
+    "new_provider_inferences": 0
+  },
+  "verification_limits": [
+    "The tests extension is unchanged version 1.8.7, rerun against product 1.8.8.",
+    "The separate 40 role executions belong to 1.8.7 and are explicitly reused; roles and monitoring consumers are unchanged.",
+    "Seven-context compiler verification is on a disposable file factory built from the original SQL stand base CF, not a second run on the occupied SQL Designer.",
+    "Native delivery and installed-source readback replace the repeated full EDT CLI export; no independent second full EDT XML comparison is claimed.",
+    "Technical model row revision and token-column precision changed; every business value, key, constant and user is exact. The first strict refusal is retained.",
+    "Mermaid render calls are observed in Node on actual BSL output, not every visual 1C HTML engine.",
+    "No new provider generation or confirmation of the remote Boyko incident was performed."
+  ],
   "adapter_source": {
     "files": {
       "accounts.py": "afd91f898bdeb311ad83a4da06bed024e1799cdfe20430f63a7bb615956c2906",
@@ -98,63 +149,7 @@
       "test_adapter.py": "9d09f52d20f99aa8b9e927b07c8688b4cb0c80cbc4cd007ca75fa9b509cfb652",
       "test_glm_wire.py": "bbcd95df7fa62c1861ee66cf50c60f492bc9d89250492269b1800d7cc5f4f6ca",
       "test_receipt_maintenance.py": "571e970228df433df74eeed16d6d0650bb15e88af7d1b09bac927a862575094c"
-    }
-  },
-  "adapter_contract_tests": {
-    "reused_from_version": "1.8.6",
-    "source_files_exactly_unchanged": true,
-    "passed": 33,
-    "skipped": 0,
-    "native_wire_cases": 2,
-    "new_provider_inferences": 0
-  },
-  "sonar": {
-    "analysis_id": "AaF5kr_Rq1oI51KnoYtx",
-    "gate": "OK",
-    "unresolved_issues": 0,
-    "hotspots_safe": 47,
-    "profile_active_rules": 160
-  },
-  "readability": {
-    "files": 125,
-    "issues": 0
-  },
-  "edt_diagnostics": {
-    "product_rows": 121,
-    "blocking": 0,
-    "all_checks_clean": false,
-    "classified_events": {
-      "headless_workbench_notice": 4
-    }
-  },
-  "verification_limits": [
-    "Controlled HTTP responses do not establish the cause of an incident at a live model provider.",
-    "Real managed forms and compiler contexts do not constitute a complete thin/web-client deployment matrix.",
-    "EDT CLI has 121 product diagnostics; no unexpected CLI failures in the full run; full standards compliance is not claimed.",
-    "Adapter native wire cases use a local API without new subscription inference.",
-    "Examiner fixes, its independent version and end-to-end verification remain separate."
-  ],
-  "regression_probes": {
-    "new_tests": 5,
-    "red_before_change": {
-      "total": 34,
-      "failures": [
-        "DSML_ВступлениеПередРазметкой",
-        "DSML_ВступлениеВОтветеМодели",
-        "Базы_ОшибкаЛокальногоЗапросаНеОшибкаПодключения",
-        "Базы_ПричинаОшибкиИнструментаВЖурнале"
-      ],
-      "junit_sha256": "dfc95360332b90bbf89b87222bc627da2a18a0b16620df978a69e7c208db815f"
     },
-    "targeted_after": {
-      "passed": 34,
-      "junit_sha256": "cb38e597943b29b23e79c5089c9c691bf87711edff3cdc8ee13f719a5a0652cc"
-    },
-    "targeted_cases_already_in_full_suite": true
-  },
-  "standards": {
-    "record_gate": "passed",
-    "scope": "Changed implementation and contract reviewed against std498/std499; full product standards compliance is not claimed",
-    "design_and_implementation_review": "retrospective trace from primary source and regression evidence"
+    "changed": false
   }
 }

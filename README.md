@@ -14,7 +14,7 @@
 
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
 
-[![Версия](https://img.shields.io/badge/версия-1.8.7-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Версия](https://img.shields.io/badge/версия-1.8.8-green)](https://github.com/andromanpro/1c-ai-connector/releases)
 [![Тесты](https://img.shields.io/badge/YAxUnit-1081_main_tests-brightgreen)](#-качество-кода)
 
 
@@ -31,6 +31,14 @@
 
 
 [О проекте](#about) · [Установка](#install) · [Быстрый старт](#quick-start) · [Документация](#documentation) · [Качество кода](#quality) · [История выпусков](docs/releases/README.md)
+
+## Выпуск 1.8.8
+
+Исправлены автозапуск Mermaid и вставка текста диаграммы в HTML, полная очистка
+вспомогательной формы Markdown. Поле максимума токенов поддерживает до 10 цифр;
+фактический бюджет задаётся для модели и ограничивается её API.
+
+[Изменения и обновление](RELEASE_NOTES_1.8.8.md) · [Руководство](https://github.com/andromanpro/1c-ai-connector-guide/tree/v1.8.8).
 
 ## Выпуск 1.8.7
 

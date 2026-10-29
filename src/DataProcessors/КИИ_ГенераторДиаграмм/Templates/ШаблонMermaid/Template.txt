@@ -239,7 +239,8 @@
             var embeddedCurve    = '%MERMAID_CURVE%';
             var embeddedBgPage   = '%MERMAID_BGPAGE%';
             // Если код не встроен (форма 1С или пустой вызов) — выходим
-            if (!embeddedCode || embeddedCode === '%MERMAID_CODE%') { return; }
+            // Маркер разбит, чтобы серверная подстановка не меняла само сравнение.
+            if (!embeddedCode || embeddedCode === '%' + 'MERMAID_CODE%') { return; }
             if (typeof mermaid === 'undefined') {
                 document.getElementById('diagram').innerHTML =
                     '<div class="error">Mermaid не загружен</div>';
@@ -248,10 +249,10 @@
             window.initMermaid();
             window.renderMermaid(
                 embeddedCode,
-                embeddedTheme    !== '%MERMAID_THEME%'    ? embeddedTheme    : undefined,
-                embeddedFontSize !== '%MERMAID_FONTSIZE%' ? embeddedFontSize : undefined,
-                embeddedCurve    !== '%MERMAID_CURVE%'    ? embeddedCurve    : undefined,
-                embeddedBgPage   !== '%MERMAID_BGPAGE%'   ? embeddedBgPage   : undefined
+                embeddedTheme    !== '%' + 'MERMAID_THEME%'    ? embeddedTheme    : undefined,
+                embeddedFontSize !== '%' + 'MERMAID_FONTSIZE%' ? embeddedFontSize : undefined,
+                embeddedCurve    !== '%' + 'MERMAID_CURVE%'    ? embeddedCurve    : undefined,
+                embeddedBgPage   !== '%' + 'MERMAID_BGPAGE%'   ? embeddedBgPage   : undefined
             );
         };
 

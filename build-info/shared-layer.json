@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source_versions": {
-    "product": "1.8.7",
+    "product": "1.8.8",
     "shared_tests": "1.8.7"
   },
   "comparison": "Canonical bytes exact; examiner text permits only UTF-8 BOM and line endings",
   "product": {
     "canonical_files": {
       "Configuration/Configuration.mdo": {
-        "sha256": "babfd13de7b27884abc244c02f1ad6b63b0700e5ae5bd5a8c4fb501df2e77fd4",
-        "normalized_sha256": "e00b6d3279971de4a54b3d6b9e277afae04a4c18da92cc919adbc598abf3e259"
+        "sha256": "d8206d1bf3adcf88deb29142fd54f6bf8fb3d935f534a5aac57d44f4324d50c2",
+        "normalized_sha256": "59c73e62f02a2b9020070ef4509aa2c6424632b2ca2673bd9496c4f9c638e7de"
       },
       "Configuration/SessionModule.bsl": {
         "sha256": "7892fcc980ee2e8b9fb1a7e964e00d542c7b26b6ae8533cd3f3514b5c515b5e2",
@@ -316,8 +316,8 @@
         "normalized_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       },
       "DataProcessors/КИИ_ГенераторДиаграмм/ObjectModule.bsl": {
-        "sha256": "c7bafc13225f8ac2aea3d5512a4999a6c2b2b790f32579e9b8070a218c3e4571",
-        "normalized_sha256": "c7bafc13225f8ac2aea3d5512a4999a6c2b2b790f32579e9b8070a218c3e4571"
+        "sha256": "90211f50f8f5387c06e99d5739e8d9c368fe571082ad3dc5c1bb447894f20733",
+        "normalized_sha256": "90211f50f8f5387c06e99d5739e8d9c368fe571082ad3dc5c1bb447894f20733"
       },
       "DataProcessors/КИИ_ГенераторДиаграмм/КИИ_ГенераторДиаграмм.mdo": {
         "sha256": "3c9c51fa4672ddb6536a38b1bcc047217cbf8008a56c69ae6a372d9f4cdd65e1",
@@ -384,8 +384,8 @@
         "normalized_sha256": "2aef088d948d51626089f629270c87ee12f30bb2fc1a32ed81c1cd3a6aea728a"
       },
       "DataProcessors/КИИ_ТестМаркдаунПарсера/Forms/Форма/Module.bsl": {
-        "sha256": "1cb8ce64a13532097ec4b6a223eb4764acdbbec8683cebc1f0482a9865fed838",
-        "normalized_sha256": "36dd89abe949aa1c27ee562e9b4c0c9737cb248f9703c3d87ed5f469aefc1184"
+        "sha256": "3f108c38e18b61e96c9251cb89a34ce5752ec584ee95ff8b327722a635d514cf",
+        "normalized_sha256": "70b012fac53ced1fa3f0f95c145ed268868f7c571016734649c079a6c0bb57d6"
       },
       "DataProcessors/КИИ_ТестИИ/Help/ru.html": {
         "sha256": "61bdc9379f1caee3af51500125316345016ba0cf1e22e5815c0d6c7eaf08b745",
@@ -472,8 +472,8 @@
         "normalized_sha256": "99e6da733b57ac64c7cf37b7769fd04d76c5966c135c341b0dee4da50cb4a51d"
       },
       "DataProcessors/КИИ_ГенераторДиаграмм/Templates/ШаблонMermaid/Template.txt": {
-        "sha256": "54600725670a273b39617846b28ff5a0d7027f306c2dd822ccd715c1d84fbd31",
-        "normalized_sha256": "c1d37c6757b3a3838196d66b2b71164bfcb66e3219f45d436dd117adb5901204"
+        "sha256": "6e1d79556dfa1701ca42da469d9d84557f21d44470922d7a5cd7a953c5cfc0a2",
+        "normalized_sha256": "999afab1d5257488069b95296398ff3a0580ffc80380a89c9d7bde24506a1f4e"
       },
       "DataProcessors/КИИ_ГенераторДиаграмм/Forms/Форма/Form.form": {
         "sha256": "37bf5d7e6d4d91c8710fd1be7a876399bde56ce5524c250649a5629c0df7a4f1",
@@ -1044,8 +1044,8 @@
         "normalized_sha256": "325eb193c19d58cef7cd4bd0e1607aec524142c828f91afd76aec67cc63138c6"
       },
       "Catalogs/КИИ_МоделиИИ/КИИ_МоделиИИ.mdo": {
-        "sha256": "d91644c1855a046b22f0a5ad3a90ceaed775db78a83d013765eb50fdc2618551",
-        "normalized_sha256": "cb6780a6ed63e62edcc9cf2ab3b939bb7f81861fc5626bd2966aaf1af54085c2"
+        "sha256": "8778c9f0214cc12ff3fadecf1c5037b25a122dc60e237792bd1ae3ded694615c",
+        "normalized_sha256": "0dd6849561e0ac86f82a724ec4179f256bb492eb6d97d5b181480c22ed596713"
       },
       "Catalogs/КИИ_ПодключенияКБазам/ObjectModule.bsl": {
         "sha256": "db1ef3be07c8d451130d5646ec16ecb2cee359253972aacd9fc724f70eaaee0b",
