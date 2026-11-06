@@ -14,6 +14,12 @@
     <key>ru</key>
     <value>Сообщения сохраненных диалогов</value>
   </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <resources uuid="cc041d8d-da0e-451a-b3e4-3659ed24e9c1">
     <name>Владелец</name>

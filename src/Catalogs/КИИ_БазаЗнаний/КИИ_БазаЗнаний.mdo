@@ -14,6 +14,12 @@
   </synonym>
   <comment>Документ-уровень базы знаний RAG. Разбивается на фрагменты (КИИ_ФрагментыЗнаний). Эмбеддинг хранится на фрагменте.</comment>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <objectPresentation>
     <key>ru</key>
     <value>База знаний</value>
@@ -107,6 +113,10 @@
   </attributes>
   <attributes uuid="c269fada-95e7-4024-ae98-a0bb0a5a4160">
     <name>ХешиФрагментовДляПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеши фрагментов для поиска</value>
+    </synonym>
     <comment>Производные хеши нарезки; пересчитываются ПередЗаписью, при импорте сбрасываются. Не являются исходными данными.</comment>
     <type>
       <types>String</types>
@@ -115,6 +125,10 @@
   </attributes>
   <forms uuid="ca38742d-3d0a-4eda-8900-3da4826ad58f">
     <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>База знаний</value>
+    </synonym>
   </forms>
   <forms uuid="b87883e7-5dd2-47f9-86f1-2adea658eb73">
     <name>ПроверкаПоиска</name>

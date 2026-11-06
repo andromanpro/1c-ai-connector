@@ -14,6 +14,12 @@
     <key>ru</key>
     <value>Личные реквизиты подключений к базам</value>
   </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <resources uuid="25a95ce6-5b14-4a59-bc14-b7d4154ca4d6">
     <name>Логин</name>
     <synonym>
@@ -31,7 +37,7 @@
     <name>ПарольСохранен</name>
     <synonym>
       <key>ru</key>
-      <value>Пароль сохранён</value>
+      <value>Пароль сохранен</value>
     </synonym>
     <type>
       <types>Boolean</types>

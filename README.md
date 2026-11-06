@@ -14,7 +14,7 @@
 
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
 
-[![Версия](https://img.shields.io/badge/версия-1.9.1-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Версия](https://img.shields.io/badge/версия-1.9.2-green)](https://github.com/andromanpro/1c-ai-connector/releases)
 [![Тесты](https://img.shields.io/badge/YAxUnit-1147_main_tests-brightgreen)](#-качество-кода)
 
 
@@ -31,6 +31,13 @@
 
 
 [О проекте](#about) · [Установка](#install) · [Быстрый старт](#quick-start) · [Документация](#documentation) · [Качество кода](#quality) · [История выпусков](docs/releases/README.md)
+
+## Выпуск 1.9.2
+
+Исправлен выход из программы с открытым чатом. Предупреждения источников сохраняются в истории. Добавлены встроенная справка и доработки общего слоя после АПК.
+
+1147/1147 основных тестов через EDT, 102 ролевых выполнения, штатный выход в настоящей форме, чистая БСП и Sonar 0/OK.
+[Изменения и обновление](RELEASE_NOTES_1.9.2.md).
 
 ## Выпуск 1.9.1
 

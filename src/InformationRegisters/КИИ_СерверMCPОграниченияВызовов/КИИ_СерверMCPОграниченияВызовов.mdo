@@ -15,6 +15,12 @@
     <value>Сервер MCP - Ограничения вызовов</value>
   </synonym>
   <comment>Скользящее окно для rate-limit: счетчик вызовов на (Вызывающий, КодМинуты). Чистка старых записей вне scope v0.1.</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <recordPresentation>
     <key>ru</key>
     <value>Счетчик вызовов MCP за минуту</value>

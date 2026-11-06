@@ -10,6 +10,12 @@
     <value>Проверка поиска знаний</value>
   </synonym>
   <defaultForm>DataProcessor.КИИ_ПроверкаПоискаЗнаний.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <forms uuid="89879144-088a-479d-8306-1207cce644a6">
     <name>Форма</name>
     <synonym>

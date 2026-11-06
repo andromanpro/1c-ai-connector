@@ -14,6 +14,12 @@
   </synonym>
   <comment>Подчиненный справочник (владелец = КИИ_БазаЗнаний). Чанки документа с нормализованным эмбеддингом, hash и кодом модели.</comment>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <objectPresentation>
     <key>ru</key>
     <value>Фрагмент знаний</value>
@@ -127,7 +133,7 @@
       <key>ru</key>
       <value>Размерность</value>
     </synonym>
-    <comment>assert (1536/256).</comment>
+    <comment>Число координат сохраненного вектора; используется для проверки совместимости с моделью поиска.</comment>
     <type>
       <types>Number</types>
       <numberQualifiers>
@@ -154,6 +160,10 @@
   </attributes>
   <attributes uuid="a52ecbe5-b035-418d-8afa-c60b5feef6cc">
     <name>ХешФактическогоТекста</name>
+    <synonym>
+      <key>ru</key>
+      <value>Хеш фактического текста</value>
+    </synonym>
     <comment>Версия проверки и SHA256 фактического текста; пересчитываются ПередЗаписью, при импорте сбрасываются.</comment>
     <type>
       <types>String</types>
@@ -164,6 +174,10 @@
   </attributes>
   <attributes uuid="f68d6bd2-6b3f-4107-a7f9-a8c50ff717c6">
     <name>ВекторПроверенДляПоиска</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вектор проверен для поиска</value>
+    </synonym>
     <comment>Хранилище содержит непустой вектор правильной размерности с положительной нормой; проверяется ПередЗаписью.</comment>
     <type>
       <types>Boolean</types>

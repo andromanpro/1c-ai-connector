@@ -9,6 +9,12 @@
     <key>ru</key>
     <value>Тест API Генератора Диаграмм</value>
   </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <forms uuid="68293509-d446-472e-8a30-651243cee917">
     <name>Форма</name>
     <synonym>

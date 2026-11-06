@@ -17,6 +17,12 @@
   <useStandardCommands>true</useStandardCommands>
   <editType>InDialog</editType>
   <defaultListForm>InformationRegister.КИИ_МониторингОшибокЖурнал.Form.ФормаСписка</defaultListForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>
     <key>ru</key>
@@ -228,6 +234,10 @@
   </attributes>
   <attributes uuid="91f0d844-2380-403c-987e-540014bb1864">
     <name>Событие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Событие</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -240,6 +250,10 @@
   </attributes>
   <attributes uuid="f48d8ffe-eca9-42c0-9a13-d63e1966a823">
     <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -252,6 +266,10 @@
   </attributes>
   <attributes uuid="218b4cf8-6fbb-4f26-b2b3-bb779125d013">
     <name>Компьютер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компьютер</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
@@ -264,6 +282,10 @@
   </attributes>
   <attributes uuid="aaefc0d3-7394-428c-9ad3-65ff847e1897">
     <name>Метаданные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метаданные</value>
+    </synonym>
     <type>
       <types>String</types>
       <stringQualifiers/>
@@ -290,6 +312,10 @@
   </dimensions>
   <forms uuid="98b3783d-d957-423e-8cac-ffc3218a3149">
     <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Журнал ошибок</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>

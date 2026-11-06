@@ -18,6 +18,12 @@
   <editType>InDialog</editType>
   <defaultListForm>InformationRegister.КИИ_МониторингОшибокСтатистика.Form.ФормаСписка</defaultListForm>
   <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <listPresentation>
     <key>ru</key>
@@ -60,6 +66,10 @@
   </dimensions>
   <forms uuid="5b78308c-865a-468b-8323-e6e1224a0089">
     <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статистика ошибок</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>

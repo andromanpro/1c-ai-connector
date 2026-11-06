@@ -15,6 +15,12 @@
     <value>Журнал контроля персональных данных</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <listPresentation>
     <key>ru</key>
     <value>События контроля ПДн</value>

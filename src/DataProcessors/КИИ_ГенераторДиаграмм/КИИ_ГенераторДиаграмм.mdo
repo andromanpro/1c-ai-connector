@@ -11,6 +11,12 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КИИ_ГенераторДиаграмм.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <attributes uuid="9c76074b-f1a7-46a9-8482-369dfff48db5">
     <name>ТекстЗапроса</name>
     <synonym>

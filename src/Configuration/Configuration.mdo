@@ -25,7 +25,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.9.1</version>
+  <version>1.9.2</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -52,151 +52,151 @@
   <subsystems>Subsystem.КИИ_СерверMCP</subsystems>
   <subsystems>Subsystem.КИИ_СерверMCPИнструменты</subsystems>
   <commonPictures>CommonPicture.КИИ_КартинкаПодсистемы</commonPictures>
-  <sessionParameters>SessionParameter.КИИ_ПользовательЖурналаИИ</sessionParameters>
   <sessionParameters>SessionParameter.КИИ_ИмяПользователяMCP</sessionParameters>
+  <sessionParameters>SessionParameter.КИИ_ПользовательЖурналаИИ</sessionParameters>
   <sessionParameters>SessionParameter.ТекущийПользователь</sessionParameters>
   <roles>Role.КИИ_БазовыеПрава</roles>
-  <roles>Role.КИИ_ПолныеПрава</roles>
-  <roles>Role.КИИ_СерверMCPДиагностика</roles>
   <roles>Role.КИИ_ДашбордОшибокПросмотр</roles>
   <roles>Role.КИИ_ОбщийЖурналЗапросовИИПросмотр</roles>
   <roles>Role.КИИ_ПодключениеMCP</roles>
-  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаСистемный</commonTemplates>
-  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаПользовательский</commonTemplates>
+  <roles>Role.КИИ_ПолныеПрава</roles>
+  <roles>Role.КИИ_СерверMCPДиагностика</roles>
   <commonTemplates>CommonTemplate.КИИ_ПромптГлубокогоАнализа</commonTemplates>
+  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаПользовательский</commonTemplates>
+  <commonTemplates>CommonTemplate.КИИ_ПромптМониторингаСистемный</commonTemplates>
   <commonTemplates>CommonTemplate.КИИ_СловариПодстановокПД</commonTemplates>
   <commonModules>CommonModule.КИИ_HTTPКлиент</commonModules>
-  <commonModules>CommonModule.КИИ_TelegramУведомления</commonModules>
-  <commonModules>CommonModule.КИИ_АнализКонфигурации</commonModules>
-  <commonModules>CommonModule.КИИ_ВнешнийАнализатор</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторИИ</commonModules>
-  <commonModules>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</commonModules>
-  <commonModules>CommonModule.КИИ_МониторингОшибок</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторOpenAI</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторИИОбщий</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторAnthropic</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторGoogle</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторYandex</commonModules>
-  <commonModules>CommonModule.КИИ_КоннекторGigaChat</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPДиспетчер</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPРеестр</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментPing</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPAuth</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPАудит</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментИнфоКонфигурации</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментДеревоМетаданных</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментСтруктураОбъекта</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментВыполнитьЗапрос</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPБезопасностьЗапросов</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPОграничения</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPСокрытиеСекретов</commonModules>
   <commonModules>CommonModule.КИИ_RAG</commonModules>
   <commonModules>CommonModule.КИИ_RAGQdrant</commonModules>
-  <commonModules>CommonModule.КИИ_МониторингОшибокTelegram</commonModules>
-  <commonModules>CommonModule.КИИ_МониторингОшибокРегистры</commonModules>
-  <commonModules>CommonModule.КИИ_МониторингОшибокЖР</commonModules>
-  <commonModules>CommonModule.КИИ_МониторингОшибокАнализ</commonModules>
+  <commonModules>CommonModule.КИИ_RAGЭмбеддинги</commonModules>
+  <commonModules>CommonModule.КИИ_TelegramУведомления</commonModules>
   <commonModules>CommonModule.КИИ_АгентАнализа</commonModules>
-  <commonModules>CommonModule.КИИ_СерверMCPИнструментДиаграмма</commonModules>
+  <commonModules>CommonModule.КИИ_АнализКонфигурации</commonModules>
   <commonModules>CommonModule.КИИ_АудиторКода</commonModules>
+  <commonModules>CommonModule.КИИ_ВнешнийАнализатор</commonModules>
+  <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
+  <commonModules>CommonModule.КИИ_ИнтерфейсКлиент</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторAnthropic</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторGigaChat</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторGoogle</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторOpenAI</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторYandex</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторИИ</commonModules>
+  <commonModules>CommonModule.КИИ_КоннекторИИОбщий</commonModules>
+  <commonModules>CommonModule.КИИ_КонтекстДиалога</commonModules>
+  <commonModules>CommonModule.КИИ_КонтрольПерсональныхДанных</commonModules>
+  <commonModules>CommonModule.КИИ_МаркдаунПарсерКлиентСервер</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибок</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокTelegram</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокАнализ</commonModules>
   <commonModules>CommonModule.КИИ_МониторингОшибокДашборд</commonModules>
   <commonModules>CommonModule.КИИ_МониторингОшибокДашбордКлиентСервер</commonModules>
-  <commonModules>CommonModule.КИИ_ПравилаПерсональныхДанных</commonModules>
-  <commonModules>CommonModule.КИИ_КонтрольПерсональныхДанных</commonModules>
-  <commonModules>CommonModule.КИИ_ИнтерфейсКлиент</commonModules>
-  <commonModules>CommonModule.РегламентныеЗаданияПереопределяемый</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокЖР</commonModules>
   <commonModules>CommonModule.КИИ_МониторингОшибокКлиент</commonModules>
-  <commonModules>CommonModule.КИИ_ПроверкаПоискаКлиент</commonModules>
-  <commonModules>CommonModule.КИИ_ИнтерфейсВызовСервера</commonModules>
+  <commonModules>CommonModule.КИИ_МониторингОшибокРегистры</commonModules>
   <commonModules>CommonModule.КИИ_ОчередьQdrant</commonModules>
-  <commonModules>CommonModule.КИИ_RAGЭмбеддинги</commonModules>
-  <commonModules>CommonModule.КИИ_УдаленныеБазыMCP</commonModules>
   <commonModules>CommonModule.КИИ_ПодключенияКБазам</commonModules>
-  <commonModules>CommonModule.КИИ_КонтекстДиалога</commonModules>
+  <commonModules>CommonModule.КИИ_ПравилаПерсональныхДанных</commonModules>
+  <commonModules>CommonModule.КИИ_ПроверкаПоискаКлиент</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPAuth</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPАудит</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPБезопасностьЗапросов</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPДиспетчер</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментPing</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментВыполнитьЗапрос</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментДеревоМетаданных</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментДиаграмма</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментИнфоКонфигурации</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPИнструментСтруктураОбъекта</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPОграничения</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPРеестр</commonModules>
+  <commonModules>CommonModule.КИИ_СерверMCPСокрытиеСекретов</commonModules>
+  <commonModules>CommonModule.КИИ_УдаленныеБазыMCP</commonModules>
   <commonModules>CommonModule.КИИ_ХранениеДиалогов</commonModules>
-  <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
+  <commonModules>CommonModule.РегламентныеЗаданияПереопределяемый</commonModules>
   <httpServices>HTTPService.КИИ_ДашбордОшибокВеб</httpServices>
+  <httpServices>HTTPService.КИИ_СерверMCPAPI</httpServices>
+  <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокАнализИИ</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокОчистка</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_ОчисткаКеша</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокСборОшибок</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_ОбновитьЭмбеддинги</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_ОбработатьОчередьQdrant</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_СверкаQdrant</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокСборОшибок</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_МониторингОшибокАнализИИ</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_АудиторКодаАвтоанализ</scheduledJobs>
-  <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_ОчисткаЖурналаКонтроляПерсональныхДанных</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_ОчисткаКеша</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_СверкаQdrant</scheduledJobs>
+  <scheduledJobs>ScheduledJob.КИИ_СерверMCPАудитОчистка</scheduledJobs>
   <scheduledJobs>ScheduledJob.КИИ_СерверMCPОграниченияОчистка</scheduledJobs>
-  <commandGroups>CommandGroup.КИИ_РаботаСИИ</commandGroups>
+  <commandGroups>CommandGroup.КИИ_Администрирование</commandGroups>
   <commandGroups>CommandGroup.КИИ_Знания</commandGroups>
   <commandGroups>CommandGroup.КИИ_Мониторинг</commandGroups>
-  <commandGroups>CommandGroup.КИИ_Администрирование</commandGroups>
-  <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
-  <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
-  <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
-  <constants>Constant.КИИ_БэкендВекторногоПоиска</constants>
+  <commandGroups>CommandGroup.КИИ_РаботаСИИ</commandGroups>
   <constants>Constant.КИИ_QdrantАдрес</constants>
-  <constants>Constant.КИИ_ИдентификаторTenantQdrant</constants>
-  <constants>Constant.КИИ_МониторингОшибокНастройки</constants>
-  <constants>Constant.КИИ_МониторингОшибокМодельАнализа</constants>
-  <constants>Constant.КИИ_МониторингОшибокДатаСбора</constants>
+  <constants>Constant.КИИ_АдресПроксиИнтернет</constants>
   <constants>Constant.КИИ_АдресСервераKroki</constants>
+  <constants>Constant.КИИ_АдресСервисаРаспознаванияИмен</constants>
   <constants>Constant.КИИ_АдресХостаШимаАудитора</constants>
+  <constants>Constant.КИИ_БэкендВекторногоПоиска</constants>
+  <constants>Constant.КИИ_ВерсияСхемыQdrant</constants>
+  <constants>Constant.КИИ_ВключенныеПравилаПерсональныхДанных</constants>
+  <constants>Constant.КИИ_ИдентификаторTenantQdrant</constants>
+  <constants>Constant.КИИ_МониторингОшибокДатаСбора</constants>
+  <constants>Constant.КИИ_МониторингОшибокМодельАнализа</constants>
+  <constants>Constant.КИИ_МониторингОшибокНастройки</constants>
   <constants>Constant.КИИ_ПортШимаАудитора</constants>
   <constants>Constant.КИИ_РежимКонтроляЗапросовКМоделям</constants>
-  <constants>Constant.КИИ_РежимКонтроляУведомленийТелеграм</constants>
   <constants>Constant.КИИ_РежимКонтроляРендераДиаграмм</constants>
+  <constants>Constant.КИИ_РежимКонтроляУведомленийТелеграм</constants>
   <constants>Constant.КИИ_РендерДиаграммДоверенный</constants>
-  <constants>Constant.КИИ_ВключенныеПравилаПерсональныхДанных</constants>
+  <constants>Constant.КИИ_СерверMCPПользовательAPI</constants>
+  <constants>Constant.КИИ_СервисРаспознаванияИменОбязателен</constants>
   <constants>Constant.КИИ_СрокХраненияСобытийКонтроля</constants>
   <constants>Constant.КИИ_СтильПодстановокПерсональныхДанных</constants>
-  <constants>Constant.КИИ_АдресСервисаРаспознаванияИмен</constants>
   <constants>Constant.КИИ_ТаймаутСервисаРаспознаванияИмен</constants>
-  <constants>Constant.КИИ_СервисРаспознаванияИменОбязателен</constants>
-  <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
-  <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
-  <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
-  <catalogs>Catalog.КИИ_БазаЗнаний</catalogs>
-  <catalogs>Catalog.КИИ_ФрагментыЗнаний</catalogs>
-  <catalogs>Catalog.КИИ_ПравилаИгнорированияОшибок</catalogs>
-  <catalogs>Catalog.Пользователи</catalogs>
   <catalogs>Catalog.ГруппыПользователей</catalogs>
+  <catalogs>Catalog.КИИ_БазаЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_КатегорииЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_МоделиИИ</catalogs>
   <catalogs>Catalog.КИИ_ПодключенияКБазам</catalogs>
-  <enums>Enum.КИИ_ТипыАвторизации</enums>
-  <enums>Enum.КИИ_ТипыФорматовAPI</enums>
-  <enums>Enum.КИИ_УровниКритичности</enums>
-  <enums>Enum.КИИ_ПолитикиЭмбеддинга</enums>
-  <enums>Enum.КИИ_ТипыМоделей</enums>
+  <catalogs>Catalog.КИИ_ПравилаИгнорированияОшибок</catalogs>
+  <catalogs>Catalog.КИИ_ФрагментыЗнаний</catalogs>
+  <catalogs>Catalog.КИИ_ЭкспертыИИ</catalogs>
+  <catalogs>Catalog.Пользователи</catalogs>
   <enums>Enum.КИИ_БэкендыВекторногоПоиска</enums>
+  <enums>Enum.КИИ_ПолитикиЭмбеддинга</enums>
   <enums>Enum.КИИ_РежимыКонтроляПерсональныхДанных</enums>
   <enums>Enum.КИИ_СтилиПодстановок</enums>
-  <dataProcessors>DataProcessor.КИИ_ГенераторДиаграмм</dataProcessors>
+  <enums>Enum.КИИ_ТипыАвторизации</enums>
+  <enums>Enum.КИИ_ТипыМоделей</enums>
+  <enums>Enum.КИИ_ТипыФорматовAPI</enums>
+  <enums>Enum.КИИ_УровниКритичности</enums>
   <dataProcessors>DataProcessor.КИИ_АнализаторКонфигурации</dataProcessors>
-  <dataProcessors>DataProcessor.КИИ_СерверMCPНастройки</dataProcessors>
-  <dataProcessors>DataProcessor.КИИ_ТестИИ</dataProcessors>
-  <dataProcessors>DataProcessor.КИИ_ТестМаркдаунПарсера</dataProcessors>
-  <dataProcessors>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ГенераторДиаграмм</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ДашбордОшибок</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_НастройкиМониторингаОшибок</dataProcessors>
   <dataProcessors>DataProcessor.КИИ_ПроверкаПоискаЗнаний</dataProcessors>
-  <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_СерверMCPАудитВызовов</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_СерверMCPОграниченияВызовов</informationRegisters>
+  <dataProcessors>DataProcessor.КИИ_СерверMCPНастройки</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ТестAPIГенераторДиаграмм</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ТестИИ</dataProcessors>
+  <dataProcessors>DataProcessor.КИИ_ТестМаркдаунПарсера</dataProcessors>
+  <informationRegisters>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ДиалогиЧата</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЗапросыЧата</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ИсполнителиОчередиQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_КешОтветовИИ</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ЭмбеддингиВерсии</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЛичныеПодключенияКБазам</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЛогЗапросовИИ</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МатериалыЧата</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МониторингОшибокЖурнал</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МониторингОшибокСостояниеСбора</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_МониторингОшибокСтатистика</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ОчередьСинхронизацииQdrant</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_ПоколениеИндексаQdrant</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ВерсииСинхронизацииQdrant</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ИсполнителиОчередиQdrant</informationRegisters>
-  <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ЛичныеПодключенияКБазам</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_МониторингОшибокСостояниеСбора</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ДиалогиЧата</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_СерверMCPАудитВызовов</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_СерверMCPОграниченияВызовов</informationRegisters>
   <informationRegisters>InformationRegister.КИИ_СообщенияЧата</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_МатериалыЧата</informationRegisters>
-  <informationRegisters>InformationRegister.КИИ_ЗапросыЧата</informationRegisters>
+  <informationRegisters>InformationRegister.КИИ_ЭмбеддингиВерсии</informationRegisters>
+  <informationRegisters>InformationRegister.СоставыГруппПользователей</informationRegisters>
 </mdclass:Configuration>

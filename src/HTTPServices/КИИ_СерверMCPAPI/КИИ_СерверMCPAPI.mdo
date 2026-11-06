@@ -42,9 +42,17 @@
   </urlTemplates>
   <urlTemplates uuid="6a4bbcc0-00c5-41fc-96c9-6e54d8567e61">
     <name>connection</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключение к базе</value>
+    </synonym>
     <template>/connection</template>
     <methods uuid="cd02a14c-152d-47b0-98c8-ad2ac8307721">
       <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST: подключение к базе</value>
+      </synonym>
       <httpMethod>POST</httpMethod>
       <handler>ПодключениеPOST</handler>
     </methods>

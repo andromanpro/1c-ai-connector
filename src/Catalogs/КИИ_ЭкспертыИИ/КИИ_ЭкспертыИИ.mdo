@@ -160,6 +160,10 @@
     </synonym>
     <attributes uuid="a2b7230b-086f-48f8-bcbe-3e009ae539f6">
       <name>Категория</name>
+      <synonym>
+        <key>ru</key>
+        <value>Категория</value>
+      </synonym>
       <type>
         <types>CatalogRef.КИИ_КатегорииЗнаний</types>
       </type>

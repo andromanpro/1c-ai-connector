@@ -11,6 +11,12 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КИИ_НастройкиМониторингаОшибок.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <forms uuid="2bab9fba-ad49-4023-bfad-f27463bcfc9e">
     <name>Форма</name>
     <synonym>

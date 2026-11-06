@@ -12,8 +12,14 @@
     <key>ru</key>
     <value>Правила игнорирования ошибок</value>
   </synonym>
-  <comment>Правила подавления ошибок мониторинга: совпавшая ошибка помечается Игнорировать на этапе сбора (не идёт ни в анализ, ни в телеграм).</comment>
+  <comment>Правила подавления ошибок мониторинга: совпавшая ошибка помечается Игнорировать на этапе сбора и не передается в анализ или Telegram.</comment>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <descriptionLength>150</descriptionLength>
   <defaultPresentation>AsDescription</defaultPresentation>
   <defaultObjectForm>Catalog.КИИ_ПравилаИгнорированияОшибок.Form.ФормаЭлемента</defaultObjectForm>

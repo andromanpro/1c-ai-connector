@@ -10,6 +10,12 @@
     <value>Анализатор конфигурации</value>
   </synonym>
   <comment>Интерактивный инструмент анализа конфигурации: дерево метаданных, XML-дамп, EDT-интеграция</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <attributes uuid="558e5161-b3f0-4c50-a7d9-29cb4b282ab5">
     <name>ФильтрТиповМетаданных</name>
     <synonym>

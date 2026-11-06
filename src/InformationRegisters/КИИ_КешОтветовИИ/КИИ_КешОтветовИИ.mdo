@@ -15,6 +15,12 @@
     <value>Кеш ответов ИИ</value>
   </synonym>
   <comment>Локальный 1С-кеш ответов ИИ (Phase 1). Ключ = SHA256 по нормализованному запросу (модель+промпт+инструменты+вложения). TTL через реквизит ДатаДо + регламентное задание КИИ_ОчисткаКеша.</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <recordPresentation>
     <key>ru</key>
     <value>Кешированный ответ ИИ</value>

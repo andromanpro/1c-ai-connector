@@ -14,6 +14,12 @@
     <key>ru</key>
     <value>Сохраненные диалоги ИИ</value>
   </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <dataLockControlMode>Managed</dataLockControlMode>
   <resources uuid="d717d4d4-99c9-4ebf-8882-ee48fdd5916f">
     <name>Владелец</name>

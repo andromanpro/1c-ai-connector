@@ -11,6 +11,12 @@
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <defaultForm>DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <forms uuid="8eb6cc21-8668-43d9-b9f4-8c0424dac78d">
     <name>Форма</name>
     <synonym>

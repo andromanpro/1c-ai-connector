@@ -15,6 +15,12 @@
     <value>Сервер MCP - Аудит вызовов</value>
   </synonym>
   <comment>Audit log JSON-RPC вызовов MCP. Источник: КИИ_СерверMCPАудит.ЗаписатьВызов. Параллельно пишется в журнал регистрации.</comment>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <recordPresentation>
     <key>ru</key>
     <value>Запись аудита вызова MCP</value>

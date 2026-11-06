@@ -13,6 +13,12 @@
     <value>Подключения к базам</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <descriptionLength>150</descriptionLength>
   <codeType>String</codeType>
   <codeAllowedLength>Variable</codeAllowedLength>
@@ -179,16 +185,28 @@
   </tabularSections>
   <forms uuid="62b0d4be-27f4-4ed8-9c84-0575425a9735">
     <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключение к базе</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
   <forms uuid="dc34ccdf-eb89-4f1b-9b63-7579630a9859">
     <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключения к базам</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
   <forms uuid="e0950b31-2aa2-4617-aacf-d61df1d229ef">
     <name>ЛичныйВход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Личный вход в базу</value>
+    </synonym>
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>

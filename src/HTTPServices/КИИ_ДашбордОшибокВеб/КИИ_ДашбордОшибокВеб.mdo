@@ -9,25 +9,49 @@
   <rootURL>iikona-dashboard</rootURL>
   <urlTemplates uuid="6e20f80f-e222-4278-bfb4-68862dcfc152">
     <name>page</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страница сводки ошибок</value>
+    </synonym>
     <template>/page</template>
     <methods uuid="22050453-93d3-43bc-ac49-fb473f10ec8d">
       <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET: страница сводки ошибок</value>
+      </synonym>
       <handler>ПолучитьСтраницу</handler>
     </methods>
   </urlTemplates>
   <urlTemplates uuid="5e6c5eb6-7ae8-4ba1-8967-2c1a45d2d01c">
     <name>library</name>
+    <synonym>
+      <key>ru</key>
+      <value>Библиотека графиков</value>
+    </synonym>
     <template>/echarts</template>
     <methods uuid="607398df-8455-44b2-8bd2-3e5136619fea">
       <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET: библиотека графиков</value>
+      </synonym>
       <handler>ПолучитьБиблиотеку</handler>
     </methods>
   </urlTemplates>
   <urlTemplates uuid="30d4dc90-be73-4b07-9362-9be5eca912e7">
     <name>script</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий сводки ошибок</value>
+    </synonym>
     <template>/script</template>
     <methods uuid="7c566e5d-e83e-417b-a6c2-1da5144842bc">
       <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET: сценарий сводки ошибок</value>
+      </synonym>
       <handler>ПолучитьСкрипт</handler>
     </methods>
   </urlTemplates>

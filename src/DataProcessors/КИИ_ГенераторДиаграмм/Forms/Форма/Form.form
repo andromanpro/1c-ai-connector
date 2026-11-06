@@ -1429,10 +1429,6 @@
         <headerHorizontalAlign>Left</headerHorizontalAlign>
         <showInFooter>true</showInFooter>
         <extInfo xsi:type="form:HtmlFieldExtInfo">
-          <handlers>
-            <event>DocumentComplete</event>
-            <name>HTMLДокументДокументСформирован</name>
-          </handlers>
           <width>30</width>
           <height>6</height>
           <horizontalStretch>true</horizontalStretch>
