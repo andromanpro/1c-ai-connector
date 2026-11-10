@@ -14,8 +14,8 @@
 
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
 
-[![Версия](https://img.shields.io/badge/версия-1.9.2-green)](https://github.com/andromanpro/1c-ai-connector/releases)
-[![Тесты](https://img.shields.io/badge/YAxUnit-1147_main_tests-brightgreen)](#-качество-кода)
+[![Версия](https://img.shields.io/badge/версия-1.9.3-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Тесты](https://img.shields.io/badge/YAxUnit-1159_main_tests-brightgreen)](#-качество-кода)
 
 
 <a href="https://infostart.ru/1c/articles/2585691/">
@@ -31,6 +31,13 @@
 
 
 [О проекте](#about) · [Установка](#install) · [Быстрый старт](#quick-start) · [Документация](#documentation) · [Качество кода](#quality) · [История выпусков](docs/releases/README.md)
+
+## Выпуск 1.9.3
+
+Исправлены обработка DOCX, связь фоновых заданий с запросами и открытие сохранённых бесед. Материалы показывают состояние запроса, execute_query поддерживает явные параметры даты. В комплект добавлена диагностика 1.0.2.
+
+1159/1159 основных тестов через EDT, 102 ролевых выполнения, настоящие формы, чистая БСП и Sonar 0/OK.
+[Изменения и обновление](RELEASE_NOTES_1.9.3.md).
 
 ## Выпуск 1.9.2
 

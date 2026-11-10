@@ -1,29 +1,29 @@
 {
   "schema": 3,
-  "run_id": "20261106T171313Z-776161123f64",
-  "source_hash": "4bdb0bbb927aae8fc020d887ebb78b7511001ca0a0c6c1e959175f6133719624",
-  "product_version": "1.9.2",
-  "tests_version": "1.9.2",
+  "run_id": "20261110T002710Z-01d2aab2d9ff",
+  "source_hash": "fa02b3d4578c7239f5eb152431a49e35942aacdfad3e27b8b50a60f177b8d5c6",
+  "product_version": "1.9.3",
+  "tests_version": "1.9.3",
   "artifacts": {
-    "IIkona-1.9.2.cfe": {
-      "sha256": "0819823ddfff96cd597ad079306a568bd883e816d4a22d62aae0ec47bc369527",
-      "bytes": 2019805
+    "IIkona-1.9.3.cfe": {
+      "sha256": "8f0624ac5dc1c5af89a307f6e3bf989fa3471b4748f7ea1bd99f878a6c949da9",
+      "bytes": 2021918
     },
-    "IIkona-tests-1.9.2.cfe": {
-      "sha256": "f06098d2c27638d6016eef4bf61dcde7efe08016ff358f8922c7649d5defc5ef",
-      "bytes": 274712
+    "IIkona-tests-1.9.3.cfe": {
+      "sha256": "7a3b3ee5a799a8dc7191fe77ec734085393d65e8d67d024b31012a2866943df1",
+      "bytes": 279095
     }
   },
   "main": {
-    "passed": 1147,
+    "passed": 1159,
     "failed": 0,
     "errors": 0,
     "skipped": 0,
     "contexts": {
-      "Сервер": 1111,
+      "Сервер": 1123,
       "КлиентУправляемоеПриложение": 36
     },
-    "junit_sha256": "86d4a2ebe74bdc6bfc38141f3489f9af212565bca9658373fce0ebffcf9685db",
+    "junit_sha256": "b406f62ea6a3b8f7ec0d97374847211a860b5d28b7f92e01f7c51ccb024fa4ef",
     "engine": "EDT RuntimeClient",
     "repeated_cli_context_export": false,
     "exact_case_names_and_contexts_verified": true
@@ -44,11 +44,11 @@
     "passed": true,
     "cleanup_complete": true,
     "actor": {
-      "name": "K09_bsp_0d1c1b7b2f_forms",
-      "ib_uid": "9c038712-b247-4df5-8b67-6b9d82fdf3e0",
-      "catalog_uid": "fe6a6ab2-58da-471a-bee5-4ed37e9f344c",
-      "group_uid": "71eaf6f0-6423-4e95-bb7c-7057fd0047d1",
-      "profile_uid": "7587e4cd-56a4-4366-8e43-eb5e6352e2fb",
+      "name": "K09_bsp_abd5dcb07f_forms",
+      "ib_uid": "6c416d15-c224-4d5c-a28c-8677e91b1847",
+      "catalog_uid": "c5dfbb66-d93a-4bc3-b853-cf1233745cba",
+      "group_uid": "4f0f1599-f2f9-4073-b2c4-cca32eba841b",
+      "profile_uid": "0d177528-42be-4880-9d34-c0b87dfa5751",
       "roles": [
         "_ДемоБазовыеПраваБСП",
         "БазовыеПраваБСП",
@@ -72,18 +72,67 @@
       "creation": "Catalog.Пользователи + ОписаниеПользователяИБ",
       "rights": "Catalog.ПрофилиГруппДоступа + Catalog.ГруппыДоступа + УправлениеДоступом.ОбновитьРолиПользователей"
     },
+    "native_row_choice_opened_dialogue": true,
     "two_independent_drafts": true,
     "closed_dialogue_draft_restored": true,
+    "context_choice_preserved_mode_and_draft": true,
     "application_exit": {
       "dialogue_open_on_exit": true,
       "shutdown": "graceful"
     }
   },
+  "native_materials": {
+    "passed": true,
+    "cleanup_complete": true,
+    "actor": {
+      "name": "K09_bsp_f9540fc4ec_forms",
+      "ib_uid": "a4e5c1c8-61c7-424a-876b-dedfd54b0aee",
+      "catalog_uid": "e236827e-c923-4869-9f5c-fab7695ed4df",
+      "group_uid": "421ff0e9-b5ed-4f78-a6aa-cea0de322a22",
+      "profile_uid": "40302938-0cde-403b-ade7-d0eefd08ed65",
+      "roles": [
+        "_ДемоБазовыеПраваБСП",
+        "БазовыеПраваБСП",
+        "ЗапускВнешнегоСоединения",
+        "ЗапускТолстогоКлиента",
+        "ЗапускТонкогоКлиента",
+        "ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок",
+        "КИИ_БазовыеПрава",
+        "СохранениеДанныхПользователя"
+      ],
+      "requested_roles": [
+        "БазовыеПраваБСП",
+        "_ДемоБазовыеПраваБСП",
+        "ЗапускТолстогоКлиента",
+        "ЗапускТонкогоКлиента",
+        "ЗапускВнешнегоСоединения",
+        "КИИ_БазовыеПрава",
+        "СохранениеДанныхПользователя",
+        "ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок"
+      ],
+      "creation": "Catalog.Пользователи + ОписаниеПользователяИБ",
+      "rights": "Catalog.ПрофилиГруппДоступа + Catalog.ГруппыДоступа + УправлениеДоступом.ОбновитьРолиПользователей"
+    },
+    "native_row_choice_opened_dialogue": true,
+    "two_independent_drafts": true,
+    "closed_dialogue_draft_restored": true,
+    "context_choice_preserved_mode_and_draft": true,
+    "material_statuses": {
+      "draft": true,
+      "accepted": true,
+      "processing": true,
+      "uncertain_with_same_counters": true,
+      "failed": true,
+      "completed": true,
+      "explicit_reuse_preserved_previous_status": true,
+      "provider_calls": 0
+    }
+  },
   "native_compiler": {
     "passed": true,
     "scratch": "F:\\temp\\iikona-clean-190\\5ff058c2fcaa",
-    "source_hash": "4bdb0bbb927aae8fc020d887ebb78b7511001ca0a0c6c1e959175f6133719624",
-    "product_cfe_sha256": "0819823ddfff96cd597ad079306a568bd883e816d4a22d62aae0ec47bc369527",
+    "source_hash": "fa02b3d4578c7239f5eb152431a49e35942aacdfad3e27b8b50a60f177b8d5c6",
+    "product_cfe_sha256": "8f0624ac5dc1c5af89a307f6e3bf989fa3471b4748f7ea1bd99f878a6c949da9",
     "base_cf_sha256": "bdbeab61b6d1da71854584ead54f7c1a335b7ef2fa65e712693be0a898f8791c",
     "base_kind": "vendor SSL 3.1.11.466, 1Cv8.cf, not 1Cv8_demo.cf",
     "steps": [
@@ -101,7 +150,7 @@
     "extensions": [
       {
         "name": "ИИКона",
-        "version": "1.9.2"
+        "version": "1.9.3"
       }
     ],
     "compiler": {
@@ -133,10 +182,14 @@
       "model_keys": []
     }
   },
+  "scheduler_policy": {
+    "scheduled-jobs-deny": "on",
+    "sessions-deny": "off"
+  },
   "native_delivery_readback": {
     "product": {
-      "cfe_sha256": "0819823ddfff96cd597ad079306a568bd883e816d4a22d62aae0ec47bc369527",
-      "source_hash": "4bdb0bbb927aae8fc020d887ebb78b7511001ca0a0c6c1e959175f6133719624",
+      "cfe_sha256": "8f0624ac5dc1c5af89a307f6e3bf989fa3471b4748f7ea1bd99f878a6c949da9",
+      "source_hash": "fa02b3d4578c7239f5eb152431a49e35942aacdfad3e27b8b50a60f177b8d5c6",
       "expected_count": 94,
       "actual_count": 94,
       "missing": [],
@@ -147,8 +200,8 @@
     },
     "tests": {
       "passed": true,
-      "cfe_sha256": "f06098d2c27638d6016eef4bf61dcde7efe08016ff358f8922c7649d5defc5ef",
-      "source_hash": "4bdb0bbb927aae8fc020d887ebb78b7511001ca0a0c6c1e959175f6133719624",
+      "cfe_sha256": "7a3b3ee5a799a8dc7191fe77ec734085393d65e8d67d024b31012a2866943df1",
+      "source_hash": "fa02b3d4578c7239f5eb152431a49e35942aacdfad3e27b8b50a60f177b8d5c6",
       "expected_count": 36,
       "actual_count": 36,
       "all_bsl_equal": true,
@@ -159,11 +212,13 @@
     "full_edt_import_used": false
   },
   "sonar": {
-    "analysis_id": "AaGx39BXq1oI51KnsCka",
+    "analysis_id": "AaHC3NsttrLX0xnSKEX_",
     "gate": "OK",
     "unresolved_issues": 0,
     "profile_unchanged": true,
-    "rules_or_issue_status_not_changed": true
+    "rules_or_issue_status_not_changed": true,
+    "hotspots_reviewed": 110,
+    "hotspots_pending": 0
   },
   "runtime_before_after_equal": true,
   "readability": {
@@ -180,472 +235,472 @@
     "lexer_sha256": "56f1d091ba343c695e918f1b676c453427efda61234b273c71fb5301b35d63cf",
     "files": [
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ПроверкаПоиска\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ПроверкаПоиска\\Module.bsl",
         "sha256": "253f0079a47cd38320741c5bce033935b2c933c85987e0eab3a51c938b160b51",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "ee03cc2f0a3d118a22b8d0d12c14a503345dbbd60d3d96d20107b98498ddf752",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "5d623eb48a095e72bba623b5c7fb0cd0ee1e1b092d982e54f5b1aae00b81bb4d",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_БазаЗнаний\\ObjectModule.bsl",
         "sha256": "957f6c1e73af3babf2e6d0a0942459038cbd4884ae4f076fff0299c7f6b40e67",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "957251d2a6c46fdd988eba34fa7755d6cf97319de9323333e16be2091bbcc531",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "3e7ef2eeae4d7c8e70b29d890e04b02a3055ac60e0d34589837a9e22a4aef9eb",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\ManagerModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\ManagerModule.bsl",
         "sha256": "9e7d3f7b595d0c03d0885ce264bc2003c486532511bf3175ce1f5575024f62cd",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_МоделиИИ\\ObjectModule.bsl",
         "sha256": "325eb193c19d58cef7cd4bd0e1607aec524142c828f91afd76aec67cc63138c6",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ЛичныйВход\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ЛичныйВход\\Module.bsl",
         "sha256": "6c13180cbdab8ab06eefbdf2ba7615f69accc9d66806787783b0a999c9f359fb",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "3261bb834d9611b987fe53b8d3293a64931131121cddaffe6b99e9d3a1e653c3",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "dba07c358e6e6c08aa9b74d6d30a5f127b7607927075daabd1175f10eff673fc",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ПодключенияКБазам\\ObjectModule.bsl",
         "sha256": "db1ef3be07c8d451130d5646ec16ecb2cee359253972aacd9fc724f70eaaee0b",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ПравилаИгнорированияОшибок\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ПравилаИгнорированияОшибок\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "c2437458dffad5397608e9d8e713a452b1169154740e80472dec6e59b1c89f80",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "6b3d76176204142cef4127d3dfda29ae362a1ec2f8427884e17c0cab599777a2",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "3e03b6db9aeaf9b75822f82b1326450e156456e67cf7ea8554826fcb22f660e6",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ФрагментыЗнаний\\ObjectModule.bsl",
         "sha256": "6f0a2add475fe9d2675291a913fae6ea9affc9efcedd798679b1b96b7993a0f4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Catalogs\\КИИ_ЭкспертыИИ\\Forms\\ФормаЭлемента\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Catalogs\\КИИ_ЭкспертыИИ\\Forms\\ФормаЭлемента\\Module.bsl",
         "sha256": "0864e78d23037f89f9ba0bcf28f7fdd09c4112b404c87abb916472cb039e0d8a",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_HTTPКлиент\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_HTTPКлиент\\Module.bsl",
         "sha256": "a31fef7a4eb16374b5d12bb9e55f6f7d3a8e4b28cc7863f0ab32efca3cca7e88",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_RAG\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_RAG\\Module.bsl",
         "sha256": "035285b5631d379d2a6cb235ee9347dfa2478dee0bd603fff2e197576da6ada0",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_RAGQdrant\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_RAGQdrant\\Module.bsl",
         "sha256": "d18eb467ac41c5dd606b9ee9ac287f872bd97aee759b8d5dc134bfd3b7f203fd",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_RAGЭмбеддинги\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_RAGЭмбеддинги\\Module.bsl",
         "sha256": "315725b7dd12be5d45045329d30bcaae274d7917527918556e12cc5b64afe5ef",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_TelegramУведомления\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_TelegramУведомления\\Module.bsl",
         "sha256": "fc841dfb911460dd34541729bee16a45d4c7d8f0291c34977b3f0a1854fedbe4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_АгентАнализа\\Module.bsl",
-        "sha256": "435c2e5516b32bc7beca4e2ca06cd03da6822b6b99c0135d470ccf0f489559f1",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_АгентАнализа\\Module.bsl",
+        "sha256": "137b35a5ee7a10d33b71c3c4fe49bfef887a2f5bce3a9b3f16ce101a5f81e38b",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_АнализКонфигурации\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_АнализКонфигурации\\Module.bsl",
         "sha256": "8d7937edfeb0da7afca3f8d9f48252b600d5087c3100b54420dfcd70b16011ba",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_АудиторКода\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_АудиторКода\\Module.bsl",
         "sha256": "9e80b977f57d91a8124f6b7809f2c618af4fed8df65380b52d7a052023360ae9",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ВнешнийАнализатор\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ВнешнийАнализатор\\Module.bsl",
         "sha256": "a669d3f9eb3f4fcf436610365f96faa70f0c9f5b96e52c9119bbf7d488ced47a",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ИнтерфейсВызовСервера\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ИнтерфейсВызовСервера\\Module.bsl",
         "sha256": "d6032d6b98ab644fb5b622c34c133512aa5ac7947042877485cdc8e616ec8326",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ИнтерфейсКлиент\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ИнтерфейсКлиент\\Module.bsl",
         "sha256": "3a5ce95f57ad897e4e934f211a66efd8d171972874771e9363452bac949ace53",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторAnthropic\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторAnthropic\\Module.bsl",
         "sha256": "198dd646e7f9d9ca3b165b0ead788f1891f1123a5fa18cbaf44feec7472468ad",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторGigaChat\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторGigaChat\\Module.bsl",
         "sha256": "e15eda025488749fa5d906a5d97f3495e9e143059703ec0390cb77b0c753bcc4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторGoogle\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторGoogle\\Module.bsl",
         "sha256": "d5fdc4765bc68d78db3cfc0de1ba04352b1f6b4e3b0371ba8a3f69e432f4a429",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторOpenAI\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторOpenAI\\Module.bsl",
         "sha256": "16a0030aeefd45dcc2afd2f2e337f3c7a9d97f3c248836d29202ebae2b41b5f3",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторYandex\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторYandex\\Module.bsl",
         "sha256": "46f092da78026eba7d25b865854ee32a1f74bd5bae9749ec2446d098101bad60",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторИИ\\Module.bsl",
-        "sha256": "3c2db9277993a7bfec397d3845a190c8d695d53ee8fa4fd9250fad7ed827a743",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторИИ\\Module.bsl",
+        "sha256": "ef2ffc353165f921908d47e836a77633a8313835015d0f4ee1091f3294c5459c",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КоннекторИИОбщий\\Module.bsl",
-        "sha256": "1eab0b38253b1e1402e4a27c8f631e3f4314f751274baa884bba1f1f858387bc",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КоннекторИИОбщий\\Module.bsl",
+        "sha256": "d6164308f190714ecff7f4e6a46fb4ccd4dedb4daaf8bea93cdab1eb09bd5d03",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КонтекстДиалога\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КонтекстДиалога\\Module.bsl",
         "sha256": "4ffb34d2432814faec1dc0b4734d11eb1a4c47dcf7fa88d53dbcde1d6f6b86e4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_КонтрольПерсональныхДанных\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_КонтрольПерсональныхДанных\\Module.bsl",
         "sha256": "d262b8442c580c2eb8dd8032af46741229b0bef47c79678085260f787e1767ba",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МаркдаунПарсерКлиентСервер\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МаркдаунПарсерКлиентСервер\\Module.bsl",
         "sha256": "1ffab95ca2a4eba3c4ddaf730f2e05b6e52f26f80c0223de26a22bbc55ee43ec",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибок\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибок\\Module.bsl",
         "sha256": "bdd0e9d192af802209bddcbd63446f59f69c7d2747e1f30a0c8db5e32dfd1673",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокTelegram\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокTelegram\\Module.bsl",
         "sha256": "5947af4395251ac24a15fc3a59691443045690c17af84383a4a7052eb75081f5",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокАнализ\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокАнализ\\Module.bsl",
         "sha256": "0218933b08ccb79848e0f09a69ca72adc267f691cf3626fa26094e619bcc6f02",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокДашборд\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокДашборд\\Module.bsl",
         "sha256": "d0d7e942689cd64e14d513f5cedc9a59433c5c47c020ac4acbab4cb26eebb841",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокДашбордКлиентСервер\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокДашбордКлиентСервер\\Module.bsl",
         "sha256": "afb09f09e6c834c966d48d32e2f437b34a8a4e1dd4b591aa6169e83afc1c285f",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокЖР\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокЖР\\Module.bsl",
         "sha256": "2c4150ac6b0d4335413e62e2e9d2512d3054ba1c4b2a8d6e0ad9c54cabfc84b6",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокКлиент\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокКлиент\\Module.bsl",
         "sha256": "360f20f82756f65b19746bb7542ddc1dcaf6714cfd3fbe1ba5f29eba8aeff902",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокРегистры\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_МониторингОшибокРегистры\\Module.bsl",
         "sha256": "155ffd77e952dd97439a060acd3b9fe93105c3c92a167c9c4493932208394ea3",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ОчередьQdrant\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ОчередьQdrant\\Module.bsl",
         "sha256": "d6065ff1306da3dfedd256f833380f0b731bf2b423979ed842002127ed9f74d7",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ПодключенияКБазам\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ПодключенияКБазам\\Module.bsl",
         "sha256": "28ff489e81f65b05a3e950f8f71589e1c3dbdfd276d1d6856226849382f9b964",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ПравилаПерсональныхДанных\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ПравилаПерсональныхДанных\\Module.bsl",
         "sha256": "9f9c1da8547ff56f917852a7a57b2a86afb1f767937e99fe1c0feb0999436467",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ПроверкаПоискаКлиент\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ПроверкаПоискаКлиент\\Module.bsl",
         "sha256": "229574215d0d887592b98f4c479c1f25d46cbeb8513788f96127f275b87cfadb",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPAuth\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPAuth\\Module.bsl",
         "sha256": "cf170b620fc74cc7402c96e16fc290446b91a977fd8362cf1973a9903e1d3de4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPАудит\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPАудит\\Module.bsl",
         "sha256": "1f625ded318ebb6539a965510992f604752402e908684bf8134bf3ca28ff4890",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPБезопасностьЗапросов\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPБезопасностьЗапросов\\Module.bsl",
         "sha256": "e5575fbf3ab99bc7cabbdf5a3bfc5824233791ac04b4a4701a8e0d9b8eddb92f",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPДиспетчер\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPДиспетчер\\Module.bsl",
         "sha256": "603aa228bad550c0b8280e588de1e30114595ee12ea193948e0e9e99171e3d69",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментPing\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментPing\\Module.bsl",
         "sha256": "96824433ec6a154072249760d5a355801baf8d9c1d6675fa89b95c1c687ae357",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментВыполнитьЗапрос\\Module.bsl",
-        "sha256": "e5fd5e90c92aeee5d0400d5c30fc8ced99a6a7f026a2850bde3bfca4140cad32",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментВыполнитьЗапрос\\Module.bsl",
+        "sha256": "d23d661222a8faa626e00c2001637330605d4615f78b4ac6f9f6d83eec230b31",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментДеревоМетаданных\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментДеревоМетаданных\\Module.bsl",
         "sha256": "7b77aec11be0ae5943627f5b34be07d08e731c8434c1543531b056d614a1d371",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментДиаграмма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментДиаграмма\\Module.bsl",
         "sha256": "9519784de06a1ee5de32f60c433a6aec321184327bf322267e722c7c66b06c72",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментИнфоКонфигурации\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментИнфоКонфигурации\\Module.bsl",
         "sha256": "08b7245171b80c021aa69be9fb94051ee04f1240bfce067c831d211549a213b2",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментСтруктураОбъекта\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPИнструментСтруктураОбъекта\\Module.bsl",
         "sha256": "21d17b965220a58b90885c8732928a931a9318589363df8b6dff78b1c910509b",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPОграничения\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPОграничения\\Module.bsl",
         "sha256": "f966500d39d2b71fb6119810e0c70ba04716a16be4767ad46006f26bea86ab65",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPРеестр\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPРеестр\\Module.bsl",
         "sha256": "8ed2c04728cfcb9e26b63b784eac91838b888f4047b926f3d9ca5bc75dc42ed4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_СерверMCPСокрытиеСекретов\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_СерверMCPСокрытиеСекретов\\Module.bsl",
         "sha256": "78577c4e70f74f92f93be39826b71550c3d69efd3fd1cb67df0509f1d2f09a1b",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_УдаленныеБазыMCP\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_УдаленныеБазыMCP\\Module.bsl",
         "sha256": "9adff5b179a6ece25eb6437cd8fbf2b07f43c82e305115e4189d438f4daafeac",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\КИИ_ХранениеДиалогов\\Module.bsl",
-        "sha256": "c09fde862dcf95907c55441a1aa3b3668119e5b6291d61fd91f1f2dcb9cd7124",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\КИИ_ХранениеДиалогов\\Module.bsl",
+        "sha256": "17d3fe703488884e37d54dd2878e1e3d128002dc8bfb11cea877770070cb8136",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\CommonModules\\РегламентныеЗаданияПереопределяемый\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\CommonModules\\РегламентныеЗаданияПереопределяемый\\Module.bsl",
         "sha256": "fa7c92b05988352d31a62f36168ca4fa637bd7851c79f0a954031a482e9a6a99",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\Configuration\\SessionModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\Configuration\\SessionModule.bsl",
         "sha256": "7892fcc980ee2e8b9fb1a7e964e00d542c7b26b6ae8533cd3f3514b5c515b5e2",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_АнализаторКонфигурации\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_АнализаторКонфигурации\\Forms\\Форма\\Module.bsl",
         "sha256": "5cb963fb019acae805d414f8d5be3d9dc1e1b3d1c5b4ff2faad690f1e93e0722",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\Forms\\Форма\\Module.bsl",
         "sha256": "cd29e638fe2a64cd8ff3e77597e13ca1f13cd6b53ee9704b6e07f1555ba4099f",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\ManagerModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\ManagerModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ГенераторДиаграмм\\ObjectModule.bsl",
         "sha256": "4d83f5ffc0b12218919682015dcb1480e32abc9f249515f04d39297a3d3ad7c8",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ДашбордОшибок\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ДашбордОшибок\\Forms\\Форма\\Module.bsl",
         "sha256": "46bdb690909b789310037bbed6883120dfbef2fc1d8e1fb84672489558ec5538",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ДашбордОшибок\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ДашбордОшибок\\ObjectModule.bsl",
         "sha256": "43d232a49a6bff53eed93952d9ba47b4f7132c1f956ada5e038276710e80690c",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_НастройкиКонтроляПерсональныхДанных\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_НастройкиКонтроляПерсональныхДанных\\Forms\\Форма\\Module.bsl",
         "sha256": "16a245c9a0c453341ebe9d4c07a8c0247b0c5bd183c5485c3494d8a810dd2a88",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_НастройкиМониторингаОшибок\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_НастройкиМониторингаОшибок\\Forms\\Форма\\Module.bsl",
         "sha256": "aa5034e6946f0089d90df33cb86bb847f6ada6b7bfeebc3a38ed1f7a5fb8af80",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ПроверкаПоискаЗнаний\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ПроверкаПоискаЗнаний\\Forms\\Форма\\Module.bsl",
         "sha256": "a28eb304b4e9c8239d8576b3440915d66db13f4e53f3aaee9dc77ee48f0d5275",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_СерверMCPНастройки\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_СерверMCPНастройки\\Forms\\Форма\\Module.bsl",
         "sha256": "52319117b4d9d373fa79fa7ecd3214f670a22c7939a4e709715f12a4503071f4",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестAPIГенераторДиаграмм\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестAPIГенераторДиаграмм\\Forms\\Форма\\Module.bsl",
         "sha256": "724ceff1313e925f322151478c2e216d913907943fa621c9461d6c7a0fc563a5",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестAPIГенераторДиаграмм\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестAPIГенераторДиаграмм\\ObjectModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\Forms\\Диалоги\\Module.bsl",
-        "sha256": "f6fa5c759c2562056f714453f21dae437e45ea309410a05e859127e86d881925",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\Forms\\Диалоги\\Module.bsl",
+        "sha256": "b226d5f029f15556345f06b1ad9d9a94542a0da78cd48abdac6a64314d7ec941",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\Forms\\Форма\\Module.bsl",
-        "sha256": "bbdb8350449e4a58f2f219444b6d81e9fff15cb2e6fe9e33f75fdcfbcfdefef7",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\Forms\\Форма\\Module.bsl",
+        "sha256": "e2f8a90bbfc6823dbbc2e8882aa98f23ba5b15087ded7fb7950c44e191d6ae16",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\ManagerModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\ManagerModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\ObjectModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестИИ\\ObjectModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\DataProcessors\\КИИ_ТестМаркдаунПарсера\\Forms\\Форма\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\DataProcessors\\КИИ_ТестМаркдаунПарсера\\Forms\\Форма\\Module.bsl",
         "sha256": "3f108c38e18b61e96c9251cb89a34ce5752ec584ee95ff8b327722a635d514cf",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\HTTPServices\\КИИ_ДашбордОшибокВеб\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\HTTPServices\\КИИ_ДашбордОшибокВеб\\Module.bsl",
         "sha256": "5f07e87d51ceb8e93e815dd672c561bdf66aadc3524af0a210e4f594c1559d8c",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\HTTPServices\\КИИ_СерверMCPAPI\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\HTTPServices\\КИИ_СерверMCPAPI\\Module.bsl",
         "sha256": "06c02cb527759fd33162b5058872ba5cb79d78ea85e5d242cb95406d92845358",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_ЛогЗапросовИИ\\Forms\\ФормаЗаписи\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_ЛогЗапросовИИ\\Forms\\ФормаЗаписи\\Module.bsl",
         "sha256": "ab0aa0cdd2a1a3bd3eb994aebf95676ea225309eb1de77370fc2993ab709b79f",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_ЛогЗапросовИИ\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_ЛогЗапросовИИ\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "09f2b5b2fd40a06615513c6c03f53d99ad0c2521dd3620ef1d9d9f4ff5b92576",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "99ef4258685bd09329124a990cacce207c8bc95e2d970f9ed18abd604f2ce148",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\ManagerModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\ManagerModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\RecordSetModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокЖурнал\\RecordSetModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\Forms\\ФормаСписка\\Module.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\Forms\\ФормаСписка\\Module.bsl",
         "sha256": "7c002842898b3537e41e1a0c3e912c22e107aa88ac245889f0fd70ad9fe82bac",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\ManagerModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\ManagerModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       },
       {
-        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.2\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\RecordSetModule.bsl",
+        "path": "F:\\WorkAI\\ИИконаДокументы\\Поставки\\1.9.3\\_frozen\\product\\InformationRegisters\\КИИ_МониторингОшибокСтатистика\\RecordSetModule.bsl",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "issues": []
       }
@@ -653,14 +708,10 @@
     "issues": 0
   },
   "harness": {
-    "python_unittests_passed": 232,
+    "python_unittests_passed": 258,
     "post_regression_alignment": {
       "passed": true,
-      "changed_files": [
-        "mechanism/check_saved_dialog_forms.py",
-        "mechanism/owned_forms_cleanup.py",
-        "mechanism/test_owned_forms_cleanup.py"
-      ],
+      "changed_files": [],
       "final_files": {
         "mechanism/agent_database_model_fixture.py": "d2770859abdae875c88dab22a604b6291c38e5f0b4da4a3400b54c0a230a73c6",
         "mechanism/bsl_readability_check.py": "322529dc40f339da26db9c57d2b0e4ac2996463a3e983daed60792274beb963f",
@@ -669,7 +720,7 @@
         "mechanism/chat_context_fixture.py": "47210ae6bf4aa2e4ebbb653672a5a3c51cefba6d5bbf37c155674b92eec3b58b",
         "mechanism/check_saved_dialog_access.py": "f6a9411c5027fbd88f83a131fe95810285814fe93882f97f0f3d4e21ed434727",
         "mechanism/check_saved_dialog_compact.py": "c426973f59c3e7ace363a202e93b4af8200ca6e60edfbcad26451cddbe174e35",
-        "mechanism/check_saved_dialog_forms.py": "479746e602e4a08ad2e88aae5db68bf3eedfad63a779ea69ef8e8075c17f70f7",
+        "mechanism/check_saved_dialog_forms.py": "191870aa528162e86a2e5f5c097f59d5590ca401ab1abf326dd9f292d44cf396",
         "mechanism/diagram_fixture.py": "a7cfccae83a6bbb58b1a29912031ab9e9ce0bd5f35067cb005fe9be9fde8a650",
         "mechanism/dsml_fixture.py": "61586dca6cf4313eb573fb1cd8740a4345e76b30ded042b98e7e23d20e71c263",
         "mechanism/edt_cli_profile/com.github.otymko.dt.bsl.lspconnector_0.3.0.startupfix20261026.jar": "0ff9f6ad7f58b187a62e0e74493244496fea5f695542384973c4311472a6d28e",
@@ -680,14 +731,14 @@
         "mechanism/edt_cli_profile/org.eclipse.lsp4j-0.23.1.jar": "b16bbc6232a3946e03d537bb9be74e18489dbc6a8b8c5ab6cb7980854df8440f",
         "mechanism/edt_cli_profile/org.eclipse.lsp4j.jsonrpc-0.23.1.jar": "4e1aa77474de1791d96dc55932fb46efdf53233548f38f62ba7376f8b0bc6650",
         "mechanism/edt_export_retention.py": "8179c967fdb39c4a613da150b9895e673bbc17ad7dd95cc4e3f9e765bc130dc0",
-        "mechanism/edt_yaxunit.py": "4741b8f3eff38ecc46549a7f2edcc82207a1bd781ad927fb1ea0b875edcb07ee",
+        "mechanism/edt_yaxunit.py": "492f6fc19638703fd872d6bc380fb470525042d647943670131f8716986a6d9e",
         "mechanism/expert_tools_fixture.py": "703b860e5d42095628b030415f7b48ae1741ea28e520c14576869a64c1fbd622",
         "mechanism/export_verified_sources.py": "1ac4b353436156243a31e0a69ac5dc684cfbc86bd3228e0cc59609bc6c1d68fa",
         "mechanism/legacy-regression-selection.json": "4dc6ae8711e4476a776892067c2c7aaf3a5ef43bf1b211adbdc6e3c8634f98cf",
         "mechanism/legacy_model_fixture.py": "3715d7382962a5f0a4de1cffa9b4c92fe1efe2055ec7e05d8167b6193631b5e0",
         "mechanism/mcp_database_fixtures.py": "23c5a0a996845fd21daacb1c73ae2a55f637eae4d8d6279279cad7286c35090f",
         "mechanism/model_tools_fixture.py": "8b3d21f1cd3e2c16d01f5727a336146bbbcadf6c51a4bb60328331ad7f43bfc7",
-        "mechanism/owned_forms_cleanup.py": "0244aa20fe35e9d6925ab5cba6cefd02765e8a7e4f8e13cc13393937344f99b9",
+        "mechanism/owned_forms_cleanup.py": "e5f68f1280b30578bfd7afd4ca613d1796aef3c357521bc5a0208a9e238be201",
         "mechanism/platform_config_check.py": "09d87f264c994f19e2b492da77fad1ea4d86a512a37194afa492e465ecdd2c85",
         "mechanism/preserve_product_data.py": "91a3ad2fe7c7d88be193a0ea73a7d7960f8df508d072be5cd1f16eb00467342d",
         "mechanism/qdrant_fixture.py": "733981cf0397d77b6704f5a5d3f6d1cc46a8574521e2db69b9a4e34857dcdb39",
@@ -696,9 +747,9 @@
         "mechanism/RAS_RUNTIME.md": "6d7efbd8381d775be9186b105d4825b6ba7025761438fdc048df5a617e30f154",
         "mechanism/ras_runtime.py": "3cdd28e6eaa961d7bbf3c5175649c5d7c196fb0692d531e69a9e19bb3cbbfb28",
         "mechanism/README-retention.md": "adfa0140f146661ab69dc8f049e431c639e8fdf844554d1168a48979a5b81359",
-        "mechanism/README-verified-edt.md": "2a455cf70dd77b2a67f462bc80bd5aac04eba49fe2f6c5f356ff2407989a9085",
+        "mechanism/README-verified-edt.md": "25fc102cd9413c952a9cddb610585d75478e0c237fd85e2fe1b40935c5b2de9d",
         "mechanism/run-legacy-regression-tests.py": "cd71e3153c392261573fc28bad423dd75323af8e180e22171b64e5865a48cdad",
-        "mechanism/run-query-rights-tests.py": "5314af8386cdd77c32e97daadd46b9a1bb231863f2ef96d01b2273de9e1fa20c",
+        "mechanism/run-query-rights-tests.py": "2a0050f8e1f2f5877f08d97413e37f1a26721784613b595fddc6eef5fe1db7e9",
         "mechanism/run-return-contract-tests.py": "5a3dc60cb5f5ee88008486c2d019c7d6c8e881d5748f9e6f4c89a0a637438b2b",
         "mechanism/run-warning-form-tests.py": "26f8b0a42f4294fdec2297ae90957028e27ade0d86b00740d60156213f598311",
         "mechanism/run_bsp_journal_rights.py": "6652d6578383cc4b9fb70f484c4c6cdda53cd9e934660521526225d0cc5c5990",
@@ -707,31 +758,33 @@
         "mechanism/run_expert_tools_suite.py": "fbb63f0447690dc962e63a0c23b89761282357aab6eb600bbe2fc7dd39c05641",
         "mechanism/run_saved_dialog_rights.py": "580de65abeda1196da0229398af92a7531e92108e1a635e9b48cff106439d561",
         "mechanism/runtime_session_guard.py": "7a40ada5ce09dc5ee74493b7c2c6c89dfc49f937e1c93785098e29a573d9c0b5",
+        "mechanism/saved_dialog_form_fixtures.py": "89356c1f13288060f0c13d7ea939eb8fc8bb6b51b2164a60bf2f120ebbe13ff5",
         "mechanism/shared_layer_guard.py": "97ff81106c05572f482d9b1c129e36d59077c70df9513bb051268f4faca220b1",
         "mechanism/structure_fixture.py": "332d081bfbd082096e516d21460db9ae97d1f6004263c65308e7dd423d2a0e10",
         "mechanism/test_agent_database_model_fixture.py": "6085ea248eacb67db4d89034cd433aac1c1ea6a3922429042577999e952fbac0",
         "mechanism/test_build_version_guard.py": "fce273e955a970f77ab7c692b3ba6db7b28373afa6e088f300f3a5ebbb6b8c70",
         "mechanism/test_busy_client_log.py": "ae8c25fa957dff4080c62b06bd87d2f181007133d2c646bb0031a3850432d848",
-        "mechanism/test_client_lifecycle.py": "5f11441b8f1024ae026aad716db17ce93d1ab14a56197bb4d23b7e1e7b9b9a92",
-        "mechanism/test_client_preflight.py": "b51d296e282eb4efb036297cdda14437a499b69f99db6b102f81cdbcbfb1ac39",
+        "mechanism/test_client_lifecycle.py": "c537eaf859be1efcf62b8079df23e01f8b656ccd45a8ec48996700589327023e",
+        "mechanism/test_client_preflight.py": "dc1e6767274cdee8838f0a3406ac925e8fbc9be0a5a30c71745ff2740e96f580",
         "mechanism/test_database_fixture_selection.py": "4dbe370369024e18d80aa851dde8a476ac61e5b56d7404c52164ca6a42c9ae14",
         "mechanism/test_designer_authentication.py": "8d239305ecb7a3940a3c1a72b78fb63543c3cc43534b059fe2cd9e568fb87ffb",
         "mechanism/test_edt_diagnostics_review.py": "4b01828cea728a63d7359de40beeaf1c365c360f1fc7805053ede81b1d8a68c2",
         "mechanism/test_edt_export_retention.py": "979a7ca64c6a356674ad7bb2e43b7d491e0362df3521f37068de63c8bbae1969",
-        "mechanism/test_edt_yaxunit.py": "1d43efc43d6e0645ceafb2674b2c900f5e7b5e7877e32f2d1bdf878244a8a07a",
+        "mechanism/test_edt_yaxunit.py": "d0701af327d7a60fbcbb4c978e5fafd0fd53352b2fada037a34ae59a7b7014af",
         "mechanism/test_embedding_fixture.py": "064a0da1ecc40c3b5c38ab06ebd705f733f2c9ef4a58cf69eb845708292076ef",
         "mechanism/test_export_line_endings.py": "c5119ca2d01c3493b8e8ca0b1418fbfe3193e4b5e2a50ad7d32fe31f0cf32b0c",
         "mechanism/test_mcp_database_fixtures.py": "706e6d52531ca1da590df1a4a64b7e87f62d777404eb4fcc9194c45dbf196488",
-        "mechanism/test_owned_forms_cleanup.py": "4ecd2e66520e13a4c813f77269fac7b9c1013ecbbd93453becd91cd9cacd44b1",
+        "mechanism/test_owned_forms_cleanup.py": "4eca2c5553b1ac2fb984c42f0befd6f2d44e541b20e82431abae1dd0a505dce7",
         "mechanism/test_owned_session_cleanup.py": "37a1c03b232c2ff21a5f53e7380f29fa45baffd9d1e7c72ba893a51d7038e582",
         "mechanism/test_platform_config_check.py": "a4bfdef39e131ac72afceb177aa85e0681450b29a073c7e357250113d3f73d12",
         "mechanism/test_project_snapshot.py": "297cc216a6d7528ad4d3a1b9aff45631f3073768ada6393ae9390552089254d5",
         "mechanism/test_ras_runtime.py": "1cd3a3498016ba95d19dec3e9ebce16bbcf38a437445d9b2b3f239ad406f3085",
         "mechanism/test_readability_gate.py": "fbd19b34e31d5cd365ed06d62877f43d362f9363a7de4f06e4d38f50257e050e",
-        "mechanism/test_retained_lease.py": "8a4eca3ee436a8d8b8845cdf187cff2858893142b9395a46c00d5e961c37844c",
+        "mechanism/test_retained_lease.py": "93286baf34a6f089772b815e9d27eebb633c228c6c4f4495b48ede72f2243558",
         "mechanism/test_runtime_session_guard.py": "0fbb5e405bdb155f00f22aef2e1510fe4b23889d3ded2a97c10b687adb0081dd",
         "mechanism/test_saved_dialog_access.py": "bd1a0b90a25cab017054dccabc3ef263a4a5147fb98a001d7a2fdea6dcdf7065",
         "mechanism/test_saved_dialog_application_exit.py": "aba38dbac1e0453c87fc7fac474b3f372602f917f92dec169b31034735b44f3f",
+        "mechanism/test_saved_dialog_form_fixtures.py": "fd58e14c6bd841b6171474bd67b769bc3d3617af8f299581b2d608c2b5434c1d",
         "mechanism/test_saved_dialog_role_selection.py": "4742297e80a90f3572c25fda9e8af6933546ad9afe163b770837b6f747810a21",
         "mechanism/test_saved_dialog_screenshots.py": "fbd9890a86d71bb7f55d4d703c5f7a35861bb626a42306e8e74b154b59d45fda",
         "mechanism/test_shared_layer_guard.py": "8cdbae33cab6cb3da2df90b901c0ac50dc010256920c8e8d0e6166f04473410a",
@@ -740,192 +793,21 @@
         "mechanism/test_yaxunit_selection.py": "c549a6803f1c9b97a554cde32a59347d4fb371d94e7dfb361fed98d8d7411de5",
         "mechanism/test_yaxunit_startup_guard.py": "f9da0e93eec7bf3278fbb2aa3ee865d949be2aee73d439b3c677525c1bf667fe",
         "mechanism/verification_receipt.py": "661253f05c2d96ebd80cc0c08ac932c6ec9290a2f3c03c672b6f38b0c18ea063",
-        "mechanism/verified_yaxunit.py": "e0ff19b3caeb7831a3e42147307393d3d1bc1ad900a511d28a357aca4071355c",
+        "mechanism/verified_yaxunit.py": "c458c634e6732d9124aefe27f2670aa057cadc2810eda52a259c2ff0dcfa1bf6",
         "mechanism/yaxunit_startup_guard.py": "ede4c253f32d2ebdff76fb148869928e059d37d2631c48eae8e8bc98f26bcc69"
       },
       "product_and_tests_changed": false,
-      "reason": "Product and test files and installed CFE remain exact. Only failed-launch ownership, its recovery path and four negative/positive unit checks changed in the harness after the native regression.",
-      "harness_tests": 232
-    },
-    "testpilot_identity_fix": {
-      "base_commit": "d8cfbba",
-      "upstream_checked": "46eaa7454292e3e8a8159f631190221b5ffdce72",
-      "SDK_unit_tests": 5,
-      "old_normal_entry_failed": true,
-      "runtime_native_identity_resolved": true,
-      "live_form_exit_verified": true,
-      "helper_file_sha256": "6da9cf3d62a5c62fe5f49122ae0c86a55c84eaf63fabb1f7a30cd26960caef9e",
-      "harness_unit_tests": 232,
-      "failed_UI_attempts_preserved": 2,
-      "UI_passed_attempt": "ui-final-03",
-      "unrelated_code_execution_change_preserved": true,
-      "local_patch": true
+      "reason": "Product, tests, build metadata and the permanent test harness match the frozen full-regression input.",
+      "harness_tests": 258
     }
   },
   "verification_limits": [
-    "Boyko UT and IIS environment was not reproduced exactly.",
-    "All-provider live certification and all target configurations are outside this patch-release verification.",
+    "External UT and IIS installations require their own environment verification.",
+    "Live-provider behavior and external configuration deployments have their own verification scope.",
+    "Provider responses in regression scenarios use controlled local fixtures.",
+    "The Sonar scanner reports Node.js 24 outside its recommended Node.js 16/18 versions; analysis completed successfully.",
     "The native compiler check covers the exact product CFE on pure BSP; tests compile through real server and managed-client execution.",
-    "CFE BSL comparison normalizes BOM/line endings; no second full EDT XML export was performed.",
-    "A source dialogue whose material is used by another selected dialogue remains protected; graph deletion is not implemented.",
-    "Two failed isolated UI launches were retained. A missing Windows username environment caused the original Testpilot getpass failure. The installed SDK was fixed and tested with five checks and a successful live retry. Failed-launch ownership and recovery were fixed separately in the permanent harness. Product/test sources and CFE did not change."
-  ],
-  "help": {
-    "passed": true,
-    "pages": 30,
-    "checks": [
-      {
-        "fqn": "Catalog.КИИ_БазаЗнаний",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "Catalog.КИИ_КатегорииЗнаний",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "Catalog.КИИ_ПодключенияКБазам",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "Catalog.КИИ_ПравилаИгнорированияОшибок",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "Catalog.КИИ_ФрагментыЗнаний",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_АнализаторКонфигурации",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_ГенераторДиаграмм",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_ДашбордОшибок",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_НастройкиКонтроляПерсональныхДанных",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_НастройкиМониторингаОшибок",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_ПроверкаПоискаЗнаний",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_СерверMCPНастройки",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "DataProcessor.КИИ_ТестAPIГенераторДиаграмм",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ВерсииСинхронизацииQdrant",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ДиалогиЧата",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ЖурналКонтроляПерсональныхДанных",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ЗапросыЧата",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ИсполнителиОчередиQdrant",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_КешОтветовИИ",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ЛичныеПодключенияКБазам",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_МатериалыЧата",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_МониторингОшибокЖурнал",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_МониторингОшибокСостояниеСбора",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_МониторингОшибокСтатистика",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ОчередьСинхронизацииQdrant",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ПоколениеИндексаQdrant",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_СерверMCPАудитВызовов",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_СерверMCPОграниченияВызовов",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_СообщенияЧата",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      },
-      {
-        "fqn": "InformationRegister.КИИ_ЭмбеддингиВерсии",
-        "same_html_tokens": true,
-        "included_in_contents": true
-      }
-    ],
-    "CFE_sha256": "0819823ddfff96cd597ad079306a568bd883e816d4a22d62aae0ec47bc369527",
-    "native_F1_window_opened": false
-  }
+    "CFE BSL comparison normalizes BOM and line endings.",
+    "Deletion of a source dialogue referenced by another selected dialogue is rejected."
+  ]
 }

@@ -305,6 +305,10 @@
       <event>OnActivateRow</event>
       <name>ДиалогиПриАктивизацииСтроки</name>
     </handlers>
+    <handlers>
+      <event>Selection</event>
+      <name>ДиалогиВыбор</name>
+    </handlers>
     <searchStringAddition>
       <name>СписокДиалоговСтрокаПоиска</name>
       <id>5</id>

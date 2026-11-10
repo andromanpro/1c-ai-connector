@@ -483,8 +483,9 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
+                <width>9</width>
                 <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>false</horizontalStretch>
                 <wrap>true</wrap>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
@@ -528,8 +529,9 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
-                <autoMaxWidth>true</autoMaxWidth>
+                <width>14</width>
                 <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>false</horizontalStretch>
                 <wrap>true</wrap>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
@@ -573,9 +575,9 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:InputFieldExtInfo">
-                <width>32</width>
-                <autoMaxWidth>true</autoMaxWidth>
+                <width>26</width>
                 <autoMaxHeight>true</autoMaxHeight>
+                <horizontalStretch>true</horizontalStretch>
                 <wrap>true</wrap>
                 <chooseType>true</chooseType>
                 <typeDomainEnabled>true</typeDomainEnabled>
@@ -739,7 +741,8 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:LabelFieldExtInfo">
-                <width>12</width>
+                <width>7</width>
+                <horizontalStretch>false</horizontalStretch>
               </extInfo>
             </items>
             <items xsi:type="form:FormField">
@@ -747,7 +750,7 @@
               <id>145</id>
               <title>
                 <key>ru</key>
-                <value>Отправка</value>
+                <value>Состояние</value>
               </title>
               <visible>true</visible>
               <enabled>true</enabled>
@@ -779,7 +782,8 @@
               <headerHorizontalAlign>Left</headerHorizontalAlign>
               <showInFooter>true</showInFooter>
               <extInfo xsi:type="form:LabelFieldExtInfo">
-                <width>28</width>
+                <width>25</width>
+                <horizontalStretch>false</horizontalStretch>
               </extInfo>
             </items>
             <autoCommandBar>
@@ -3571,6 +3575,7 @@
   <autoFillCheck>true</autoFillCheck>
   <allowFormCustomize>true</allowFormCustomize>
   <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
   <showTitle>true</showTitle>
   <showCloseButton>true</showCloseButton>
   <attributes>
