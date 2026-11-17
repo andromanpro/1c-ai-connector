@@ -14,8 +14,8 @@
 
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
 
-[![Версия](https://img.shields.io/badge/версия-1.9.3-green)](https://github.com/andromanpro/1c-ai-connector/releases)
-[![Тесты](https://img.shields.io/badge/YAxUnit-1159_main_tests-brightgreen)](#-качество-кода)
+[![Версия](https://img.shields.io/badge/версия-1.9.4-green)](https://github.com/andromanpro/1c-ai-connector/releases)
+[![Тесты](https://img.shields.io/badge/YAxUnit-1171_main_tests-brightgreen)](#-качество-кода)
 
 
 <a href="https://infostart.ru/1c/articles/2585691/">
@@ -31,6 +31,13 @@
 
 
 [О проекте](#about) · [Установка](#install) · [Быстрый старт](#quick-start) · [Документация](#documentation) · [Качество кода](#quality) · [История выпусков](docs/releases/README.md)
+
+## Выпуск 1.9.4
+
+Единое окно бесед со сворачиваемой левой панелью, поиском и отборами. Сохранены собственные черновики, модели, материалы и фоновые ответы каждой беседы.
+
+1171/1171 через EDT, 102 ролевых выполнения, 276 проверок оснастки, настоящие формы и Sonar OK/0.
+[Изменения и обновление](RELEASE_NOTES_1.9.4.md).
 
 ## Выпуск 1.9.3
 

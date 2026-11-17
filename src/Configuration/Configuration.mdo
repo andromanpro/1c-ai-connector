@@ -25,7 +25,7 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <scriptVariant>Russian</scriptVariant>
   <vendor>Androman.pro</vendor>
-  <version>1.9.3</version>
+  <version>1.9.4</version>
   <copyright>
     <key>ru</key>
     <value>Copyright (c) 2026 Androman.pro </value>
@@ -51,6 +51,7 @@
   <subsystems>Subsystem.КИИ_КоннекторСлужебная</subsystems>
   <subsystems>Subsystem.КИИ_СерверMCP</subsystems>
   <subsystems>Subsystem.КИИ_СерверMCPИнструменты</subsystems>
+  <styleItems>StyleItem.КИИ_ФонАктивнойБеседы</styleItems>
   <commonPictures>CommonPicture.КИИ_КартинкаПодсистемы</commonPictures>
   <sessionParameters>SessionParameter.КИИ_ИмяПользователяMCP</sessionParameters>
   <sessionParameters>SessionParameter.КИИ_ПользовательЖурналаИИ</sessionParameters>

@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "source_versions": {
-    "product": "1.9.3",
-    "shared_tests": "1.9.3"
+    "product": "1.9.4",
+    "shared_tests": "1.9.4"
   },
   "comparison": "Canonical bytes exact; examiner text permits only UTF-8 BOM and line endings",
   "product": {
     "canonical_files": {
       "Configuration/Configuration.mdo": {
-        "sha256": "76899a7b8227e0861f47d663bfad55b61ba3f86e89593b3c26a54c5329383af8",
-        "normalized_sha256": "d37b5a73067c443b095de6960ae74e7a2912f4b56f40ed838b074d6461af213f"
+        "sha256": "2825d9433adf7d1ce1c080b8e49a9e9a08f53ea01f5d63d6e868611ba265fb7f",
+        "normalized_sha256": "324d002f599b26ef6c12750427559725f27203e31b9998ea3a3e3c73bcba7a57"
       },
       "Configuration/SessionModule.bsl": {
         "sha256": "7892fcc980ee2e8b9fb1a7e964e00d542c7b26b6ae8533cd3f3514b5c515b5e2",
@@ -38,6 +38,10 @@
       "Subsystems/КИИ_Коннектор/Help/ru.html": {
         "sha256": "4408a2e158a6d48478ddb396f3d3269248aaf24096288a5d64d436ea33a034b5",
         "normalized_sha256": "3efaa6cad5e7bf433398ddcb42bea9f3bb6f7fe17fe41ed6f7b166e1d7c52aae"
+      },
+      "StyleItems/КИИ_ФонАктивнойБеседы/КИИ_ФонАктивнойБеседы.mdo": {
+        "sha256": "70d5cac2f5661e199d8bfbd16f81a65e8dde8387aee717192d92bc5eafd74380",
+        "normalized_sha256": "304f0eac3705db273726211913864b486b38234c458d5c1a557baa403a042de1"
       },
       "SessionParameters/КИИ_ИмяПользователяMCP/КИИ_ИмяПользователяMCP.mdo": {
         "sha256": "6c49d9474bc48e31762680ba231d1770b8cdcb831c6bf41457a066ca5f91b6d0",
@@ -488,12 +492,12 @@
         "normalized_sha256": "b226d5f029f15556345f06b1ad9d9a94542a0da78cd48abdac6a64314d7ec941"
       },
       "DataProcessors/КИИ_ТестИИ/Forms/Форма/Form.form": {
-        "sha256": "1b52e3b184cb9477661c8ecccf69437bbf5061ba587ba7c873930aaa357fd305",
-        "normalized_sha256": "c691029ee62e3bea7566906e001f6024874e1bf93d012ba7c73398c150cbc7be"
+        "sha256": "3ccaff987850e6382c4b8590e3a35238f3a4153f954de58b232bda0e0b0a9391",
+        "normalized_sha256": "134a2def915f672a711f3520b4882dedf6feb31ac840b35e903ea90512179d0f"
       },
       "DataProcessors/КИИ_ТестИИ/Forms/Форма/Module.bsl": {
-        "sha256": "e2f8a90bbfc6823dbbc2e8882aa98f23ba5b15087ded7fb7950c44e191d6ae16",
-        "normalized_sha256": "e2f8a90bbfc6823dbbc2e8882aa98f23ba5b15087ded7fb7950c44e191d6ae16"
+        "sha256": "b008ad382d4cf7cdba67114f0494c01737b8c3095113db68b95e155186a40535",
+        "normalized_sha256": "b008ad382d4cf7cdba67114f0494c01737b8c3095113db68b95e155186a40535"
       },
       "DataProcessors/КИИ_ТестAPIГенераторДиаграмм/Help/ru.html": {
         "sha256": "915c39ffe0af99fae116732dd9a2bb9459aed403c165eeeb6e9f5c649c98eb10",
@@ -1120,8 +1124,8 @@
         "normalized_sha256": "c26cd6b9071181b30d7600344a44cd10a1329c685aae6d5c0984a4255e7cd0c3"
       },
       "CommonModules/КИИ_ХранениеДиалогов/Module.bsl": {
-        "sha256": "17d3fe703488884e37d54dd2878e1e3d128002dc8bfb11cea877770070cb8136",
-        "normalized_sha256": "17d3fe703488884e37d54dd2878e1e3d128002dc8bfb11cea877770070cb8136"
+        "sha256": "03daa17a03bb939a6ccbd26b6b05f7f9d05d57a6d8cb00db5df88d93a03163a0",
+        "normalized_sha256": "03daa17a03bb939a6ccbd26b6b05f7f9d05d57a6d8cb00db5df88d93a03163a0"
       },
       "CommonModules/КИИ_ХранениеДиалогов/КИИ_ХранениеДиалогов.mdo": {
         "sha256": "66962ade0be9d06e8c7b076f61389be485ae0cc2976e05c202e32c4b1b7da928",
@@ -1348,8 +1352,8 @@
   "shared_tests": {
     "canonical_files": {
       "Configuration/Configuration.mdo": {
-        "sha256": "0e767028abc8209ce5c81e3e0ba902aebb7ee1108c69189593f9782246b80ea3",
-        "normalized_sha256": "20933f1423d54dfa33740c8a3406e88d7d3ce7b09156614437024a43e8306ed0"
+        "sha256": "2dd93bdbf004cbbc08241495e863b6fc4f19fc84a5a94e8e27af8299f1892f3c",
+        "normalized_sha256": "a53713535d58eece3ea850aad22b3044afaf9b5a83facfa00286bf0100768547"
       },
       "CommonModules/Тесты_КИИ_RAG/Module.bsl": {
         "sha256": "e8709d9cca9e4d52d27c0bdb769016cbd875bf5d9e2ee6d19aec40b5a1537118",
@@ -1600,8 +1604,8 @@
         "normalized_sha256": "19ee9ba3577a20f6cc3b5ecdf3eeceafc97b4bad3bb3d30e62377f2fd3804559"
       },
       "CommonModules/Тесты_КИИ_ФормыМоделейВызовСервера/Module.bsl": {
-        "sha256": "972ab59123973b2c74cfa32f5d0a794ec80dfabac3f85b2df9dfb980de9b61d4",
-        "normalized_sha256": "972ab59123973b2c74cfa32f5d0a794ec80dfabac3f85b2df9dfb980de9b61d4"
+        "sha256": "937550f023707869d975fa44972f0e58612a2a23356e05eab305555e44a9c707",
+        "normalized_sha256": "937550f023707869d975fa44972f0e58612a2a23356e05eab305555e44a9c707"
       },
       "CommonModules/Тесты_КИИ_ФормыМоделейВызовСервера/Тесты_КИИ_ФормыМоделейВызовСервера.mdo": {
         "sha256": "804117ab95e3f70dad3ab0e8e5f6103f55c4c47b7b37bd89e913368b500473c6",
@@ -1616,8 +1620,8 @@
         "normalized_sha256": "20509fd3bcfb5529ab6d698ab54aa83bbdc858c079587731db8b543f3319d82a"
       },
       "CommonModules/Тесты_КИИ_ЧатЭкспертаКлиент/Module.bsl": {
-        "sha256": "6db1d0d3952f0955665f0a02f51b9f4b2ac76172aefacf2556cb34efdf2fd58b",
-        "normalized_sha256": "6db1d0d3952f0955665f0a02f51b9f4b2ac76172aefacf2556cb34efdf2fd58b"
+        "sha256": "748cf9d508a829d7919ae670b1245a962d1b9a8fcddaa0c0bd69a834e0bc0c5c",
+        "normalized_sha256": "748cf9d508a829d7919ae670b1245a962d1b9a8fcddaa0c0bd69a834e0bc0c5c"
       },
       "CommonModules/Тесты_КИИ_ЧатЭкспертаКлиент/Тесты_КИИ_ЧатЭкспертаКлиент.mdo": {
         "sha256": "31829b48ccfd7c893b83af35644827a4b5a6472d6ad4334853879bf1183b9180",
@@ -1641,5 +1645,5 @@
       }
     }
   },
-  "canonical_version": "1.9.3"
+  "canonical_version": "1.9.4"
 }
