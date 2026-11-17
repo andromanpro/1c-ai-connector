@@ -1,17 +1,17 @@
 {
   "product_version": "1.9.4",
-  "run_id": "20261117T175615Z-f34c8b8b968c",
-  "source_hash": "f2bae8900b5f69eff834c978f562bed0e33031238bc1cbb2128ff2a31744c4cc",
+  "run_id": "20261117T220543Z-8f7e3818b16d",
+  "source_hash": "7107baf4810de87460873a15edbfefe6a07ef2178bba06012ef4fc8d81a8f7d7",
   "artifacts": {
-    "ИИКона": "6166b1d0ca0adc0bd6dbb4cab3204e707796fec049bc857ac41143a677a76a95",
-    "Тесты": "edcc18048a5e3ab7818aeac5826e1181c9cb3c20b3f8128eb322d4317dfb23c6"
+    "ИИКона": "a82b01d331242af7e9f3b30fac347a3bdfc65450a5cfe66bbbc2c8e68d2c7668",
+    "Тесты": "d4b5379cf198b97f6efd1086e0e08d132367a65019ee8f33a8b0c683daa1ac92"
   },
   "main": {
-    "passed": 1171,
+    "passed": 1175,
     "failed": 0,
     "skipped": 0,
     "contexts": {
-      "server": 1123,
+      "server": 1127,
       "client": 48
     }
   },
@@ -36,7 +36,7 @@
   "sonar": {
     "gate": "OK",
     "unresolved_issues": 0,
-    "analysis_id": "AaHqqSjDtrLX0xnSKvsN",
+    "analysis_id": "AaHrmbwhtrLX0xnSLCRh",
     "profile_unchanged": true,
     "scanner_warning": "Node.js 24; scanner recommends 16/18; analysis completed successfully"
   },
@@ -96,9 +96,14 @@
     "auditor": "Astra",
     "scope": "Conversation navigation and isolation",
     "findings_closed": true,
-    "followup": "Root reviewed later readability and native layout changes"
+    "followup": "Root reviewed all subsequent changes, including Google schemas, signed content and period hints"
   },
   "scope": "Windows thin client 8.3.27.1989, authorized local SQL stand and separate vendor BSP",
-  "provider_tests": "Managed local fixtures",
-  "stand_scheduled_jobs_deny": "on"
+  "provider_tests": "Managed local fixtures and unauthenticated Google countTokens parser probe",
+  "stand_scheduled_jobs_deny": "on",
+  "gemini_live_generation": false,
+  "historical_support_limits": [
+    "Original Gemini error response body unavailable",
+    "Exact failed PeriodMonth tool query unavailable"
+  ]
 }
