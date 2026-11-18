@@ -1,109 +1,46 @@
 {
-  "product_version": "1.9.4",
-  "run_id": "20261117T220543Z-8f7e3818b16d",
-  "source_hash": "7107baf4810de87460873a15edbfefe6a07ef2178bba06012ef4fc8d81a8f7d7",
+  "version": "1.9.5",
+  "run_id": "20261118T182110Z-658ce3a38138",
+  "source_hash": "5c4bc15c30b126f44c0ff89f1ad7cccf7ac9a555592110fad7014c8c79e14984",
   "artifacts": {
-    "ИИКона": "a82b01d331242af7e9f3b30fac347a3bdfc65450a5cfe66bbbc2c8e68d2c7668",
-    "Тесты": "d4b5379cf198b97f6efd1086e0e08d132367a65019ee8f33a8b0c683daa1ac92"
+    "ИИКона": "f78e2636b07439efab639eb635f0ab531ab1d0292702b9775ed7a3f641e38870",
+    "Тесты": "76ecd11e028c69d74e9586f9ca4fd54fb2190c4a85f7c17fb72c010d8e7a33bb"
   },
-  "main": {
-    "passed": 1175,
+  "tests": {
+    "total": 1175,
     "failed": 0,
     "skipped": 0,
-    "contexts": {
-      "server": 1127,
-      "client": 48
-    }
+    "runner": "EDT/YAxUnit"
   },
   "roles": [
     {
       "profile": "a",
-      "tests": 34,
-      "passed": true
+      "passed": 35
     },
     {
       "profile": "b",
-      "tests": 34,
-      "passed": true
+      "passed": 35
     },
     {
       "profile": "viewer",
-      "tests": 34,
-      "passed": true
+      "passed": 35
     }
   ],
-  "harness_tests": 276,
+  "test_harness": {
+    "passed": 279
+  },
   "sonar": {
     "gate": "OK",
-    "unresolved_issues": 0,
-    "analysis_id": "AaHrmbwhtrLX0xnSLCRh",
-    "profile_unchanged": true,
-    "scanner_warning": "Node.js 24; scanner recommends 16/18; analysis completed successfully"
+    "open_issues": 0,
+    "analysis_id": "AaHv52xstrLX0xnSLbLF"
   },
-  "edt": {
-    "errors": 0,
-    "warnings": 0
+  "product_bsl_verified": 94,
+  "native_compiler": {
+    "product": true,
+    "independent_vendor_bsp": "3.1.11.466"
   },
-  "preservation": {
-    "passed": true,
+  "data_preservation": {
     "tables": 29,
-    "all_fields": true,
-    "constants_users_and_model_keys_equal": true
-  },
-  "native_forms": [
-    {
-      "width": 3440,
-      "height": 1380,
-      "form_scale": 100
-    },
-    {
-      "width": 1600,
-      "height": 1000,
-      "form_scale": 80
-    },
-    {
-      "width": 1280,
-      "height": 768,
-      "form_scale": 60
-    }
-  ],
-  "source_counts": {
-    "product": 335,
-    "tests": 73,
-    "product_bsl": 94
-  },
-  "clean_bsp": {
-    "passed": true,
-    "version": "3.1.11.466",
-    "compiler": {
-      "exit_code": 0,
-      "diagnostic_count": 0,
-      "flags": [
-        "-ThinClient",
-        "-WebClient",
-        "-Server",
-        "-ExternalConnection",
-        "-ExternalConnectionServer",
-        "-ThickClientManagedApplication",
-        "-ThickClientServerManagedApplication",
-        "-ConfigLogIntegrity",
-        "-IncorrectReferences",
-        "-HandlersExistence"
-      ]
-    }
-  },
-  "review": {
-    "auditor": "Astra",
-    "scope": "Conversation navigation and isolation",
-    "findings_closed": true,
-    "followup": "Root reviewed all subsequent changes, including Google schemas, signed content and period hints"
-  },
-  "scope": "Windows thin client 8.3.27.1989, authorized local SQL stand and separate vendor BSP",
-  "provider_tests": "Managed local fixtures and unauthenticated Google countTokens parser probe",
-  "stand_scheduled_jobs_deny": "on",
-  "gemini_live_generation": false,
-  "historical_support_limits": [
-    "Original Gemini error response body unavailable",
-    "Exact failed PeriodMonth tool query unavailable"
-  ]
+    "verified": true
+  }
 }

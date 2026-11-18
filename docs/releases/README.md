@@ -4,6 +4,7 @@
 
 [Обзор изменений](overview.md) · [Переход с ранних версий](migration.md)
 
+- [1.9.5](RELEASE_NOTES_1.9.5.md)
 - [1.9.4](RELEASE_NOTES_1.9.4.md)
 - [1.9.3](RELEASE_NOTES_1.9.3.md)
 - [1.9.2](RELEASE_NOTES_1.9.2.md)

@@ -6,7 +6,7 @@
 
 [![Лицензия MIT](https://img.shields.io/badge/Лицензия-MIT-yellow.svg)](LICENSE)
 [![1С:Предприятие](https://img.shields.io/badge/1С-8.3-blue)](https://1c.ru)
-[![Версия](https://img.shields.io/badge/версия-1.9.4-green)](https://github.com/andromanpro/1c-ai-connector/releases/latest)
+[![Версия](https://img.shields.io/badge/версия-1.9.5-green)](https://github.com/andromanpro/1c-ai-connector/releases/latest)
 [![Тесты](https://img.shields.io/badge/YAxUnit-1175_main_tests-brightgreen)](#quality)
 
 [Скачать готовый выпуск](https://github.com/andromanpro/1c-ai-connector/releases/latest) ·
@@ -88,12 +88,10 @@ API-ключи хранятся в защищённом хранилище БС�
 
 ## Проверки
 
-Выпуск **1.9.4** прошёл **1175 основных тестов через EDT**, **102 ролевых выполнения**,
-проверки настоящих форм и установку на чистую БСП. Sonar Quality Gate — **OK**,
-открытых замечаний **0**. Контрольные суммы и границы проверки приведены в квитанциях.
+Выпуск **1.9.5** прошёл **1175 основных тестов через EDT**, **105 ролевых выполнений** и проверку компиляции. Sonar Quality Gate — **OK**, открытых замечаний **0**.
 
 [Квитанция выпуска](VERIFICATION.json) ·
-[JUnit и проверочная оснастка](https://github.com/andromanpro/1c-ai-connector-tests/tree/v1.9.4/verification/1.9.4) ·
+[JUnit и проверочная оснастка](https://github.com/andromanpro/1c-ai-connector-tests/tree/v1.9.5/verification/1.9.5) ·
 [Открытые issues](https://github.com/andromanpro/1c-ai-connector/issues)
 
 ## Участие в проекте

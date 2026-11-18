@@ -2894,6 +2894,13 @@
       </stringQualifiers>
     </valueType>
   </attributes>
+  <attributes>
+    <name>КлючAPIИзменен</name>
+    <id>10</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+  </attributes>
   <formCommands>
     <name>ПроверитьПодключение</name>
     <title>
