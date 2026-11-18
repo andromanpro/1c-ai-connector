@@ -1,31 +1,30 @@
 # История выпусков ИИконы
 
+[Описание продукта](../../README.md) · [Готовые выпуски](https://github.com/andromanpro/1c-ai-connector/releases)
 
-- [1.9.4 — единое окно и панель бесед](../../RELEASE_NOTES_1.9.4.md).
-- [1.9.3 — беседы, вложения и даты MCP](../../RELEASE_NOTES_1.9.3.md).
-- [1.9.2 — закрытие программы и встроенная справка](../../RELEASE_NOTES_1.9.2.md).
-- [1.9.1 — компактные команды и удаление бесед](../../RELEASE_NOTES_1.9.1.md).
-- [1.9.0 — сохранённые беседы и схема запросов](../../RELEASE_NOTES_1.9.0.md).
-- [1.8.9 — ошибки запросов и исходная корреляция](../../RELEASE_NOTES_1.8.9.md).
-- [1.8.8 — Mermaid, очистка формы и большие бюджеты токенов](../../RELEASE_NOTES_1.8.8.md).
-[Описание и установка](../../README.md) · [Готовые выпуски](https://github.com/andromanpro/1c-ai-connector/releases)
+[Обзор изменений](overview.md) · [Переход с ранних версий](migration.md)
 
-Перед обновлением прочитайте порядок перехода и ограничения нужной версии.
+- [1.9.4](RELEASE_NOTES_1.9.4.md)
+- [1.9.3](RELEASE_NOTES_1.9.3.md)
+- [1.9.2](RELEASE_NOTES_1.9.2.md)
+- [1.9.1](RELEASE_NOTES_1.9.1.md)
+- [1.9.0](RELEASE_NOTES_1.9.0.md)
+- [1.8.9](RELEASE_NOTES_1.8.9.md)
+- [1.8.8](RELEASE_NOTES_1.8.8.md)
+- [1.8.7](RELEASE_NOTES_1.8.7.md)
+- [1.8.6](RELEASE_NOTES_1.8.6.md)
+- [1.8.5](RELEASE_NOTES_1.8.5.md)
+- [1.8.4](RELEASE_NOTES_1.8.4.md)
+- [1.8.3](RELEASE_NOTES_1.8.3.md)
+- [1.8.2](RELEASE_NOTES_1.8.2.md)
+- [1.8.1](RELEASE_NOTES_1.8.1.md)
+- [1.8.0](RELEASE_NOTES_1.8.0.md)
+- [1.7.4](RELEASE_NOTES_1.7.4.md)
+- [1.7.3](RELEASE_NOTES_1.7.3.md)
+- [1.7.2](RELEASE_NOTES_1.7.2.md)
+- [1.7.1](RELEASE_NOTES_1.7.1.md)
+- [1.7.0](RELEASE_NOTES_1.7.0.md)
+- [1.6.3](RELEASE_NOTES_1.6.3.md)
+- [1.6.2](RELEASE_NOTES_1.6.2.md)
 
-- [1.8.7](../../RELEASE_NOTES_1.8.7.md)
-- [1.8.6](../../RELEASE_NOTES_1.8.6.md)
-- [1.8.5](../../RELEASE_NOTES_1.8.5.md)
-- [1.8.4](../../RELEASE_NOTES_1.8.4.md)
-- [1.8.3](../../RELEASE_NOTES_1.8.3.md)
-- [1.8.2](../../RELEASE_NOTES_1.8.2.md)
-- [1.8.1](../../RELEASE_NOTES_1.8.1.md)
-- [1.8.0](../../RELEASE_NOTES_1.8.0.md)
-- [1.7.4](../../RELEASE_NOTES_1.7.4.md)
-- [1.7.3](../../RELEASE_NOTES_1.7.3.md)
-- [1.7.2](../../RELEASE_NOTES_1.7.2.md)
-- [1.7.1](../../RELEASE_NOTES_1.7.1.md)
-- [1.7.0](../../RELEASE_NOTES_1.7.0.md)
-- [1.6.3](../../RELEASE_NOTES_1.6.3.md)
-- [1.6.2](../../RELEASE_NOTES_1.6.2.md)
-
-Файлы описаний остаются по прежним адресам в корне репозитория, чтобы ссылки из статей и обсуждений продолжали работать.
+Описания содержат порядок обновления и границы проверки соответствующей версии.
