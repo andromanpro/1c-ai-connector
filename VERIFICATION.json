@@ -1,13 +1,13 @@
 {
-  "version": "1.9.6",
-  "run_id": "20261120T074317Z-ec02863b9583",
-  "source_hash": "9fd4e3be96ec6f097db16d52aec8a861abbf7a340ab4debbcdb125e908555b92",
+  "version": "1.9.7",
+  "run_id": "20261127T192728Z-c899154adbe2",
+  "source_hash": "677101ad9d4923d95f452f9b91c0b027ce9ef47fcbd5b629abb4c28b62452b2f",
   "artifacts": {
-    "ИИКона": "4616d76800ad2bb642f71b632072b34e70f5a8898cdb8329ae8ced6730556e72",
-    "Тесты": "979176cd83a6e62f00edc79c0ab1d44f7110f5f7d59dcd2cd4ba01769e574f8a"
+    "ИИКона": "04ea1450f15b8df769256227a1412cdfd9ff8255666c6c9f9ffaf49eb94512df",
+    "Тесты": "bd7f81a64b6fb8eecd8a0f9a3588105982245ba6b766d6090209162ca1326943"
   },
   "tests": {
-    "total": 1176,
+    "total": 1178,
     "failed": 0,
     "skipped": 0,
     "runner": "EDT/YAxUnit"
@@ -26,18 +26,13 @@
       "passed": 35
     }
   ],
-  "draft_input_testpilot": {
-    "preserved_during_timer": true,
-    "restored_after_leaving_field": true,
-    "restored_after_closing_active_field": true
-  },
-  "test_harness": {
-    "passed": 279
+  "local_personal_data_preview": {
+    "passed": 11
   },
   "sonar": {
     "gate": "OK",
     "open_issues": 0,
-    "analysis_id": "AaH37DuKtrLX0xnSMCTU"
+    "analysis_id": "AaIefgnLdPZq2gVTJvK5"
   },
   "product_bsl_verified": 94,
   "native_compiler": {
